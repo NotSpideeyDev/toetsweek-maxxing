@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>H6 Mens en milieu — Leerhulp</title>
+<style>
+  :root{
+    --ink:#14241c;
+    --moss:#3c6e54;
+    --moss-d:#2a5340;
+    --soil:#8a6d4a;
+    --leaf:#e8efe7;
+    --leaf-d:#cfe0cd;
+    --paper:#fbfaf6;
+    --amber:#c47a2c;
+    --line:#d8ddd4;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;
+    line-height:1.55;font-size:17px;
+  }
+  header{
+    background:linear-gradient(160deg,var(--moss-d),var(--moss));
+    color:#f4f8f3;padding:34px 20px 26px;
+  }
+  header .kicker{
+    font-family:ui-sans-serif,system-ui,sans-serif;
+    text-transform:uppercase;letter-spacing:.18em;font-size:12px;
+    opacity:.8;margin:0 0 6px;
+  }
+  header h1{margin:0;font-size:30px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.9;max-width:60ch;
+    font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{
+    position:sticky;top:0;z-index:5;background:var(--paper);
+    border-bottom:1px solid var(--line);padding:10px 14px;
+    display:flex;gap:8px;overflow-x:auto;
+    font-family:ui-sans-serif,system-ui,sans-serif;
+  }
+  nav a{
+    flex:0 0 auto;text-decoration:none;color:var(--moss-d);
+    background:var(--leaf);border:1px solid var(--leaf-d);
+    padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600;
+  }
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:34px;scroll-margin-top:60px}
+  .bs{
+    font-family:ui-sans-serif,system-ui,sans-serif;
+    display:inline-block;background:var(--moss);color:#fff;
+    font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    padding:3px 10px;border-radius:5px;font-weight:700;
+  }
+  h2{font-size:23px;margin:10px 0 4px;letter-spacing:-.01em}
+  h3{font-size:18px;margin:22px 0 4px;color:var(--moss-d)}
+  ul{margin:8px 0 8px;padding-left:20px}
+  li{margin:5px 0}
+  li ul{margin:4px 0}
+  b.t{color:var(--moss-d)}
+  .step{background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:4px 16px;margin:12px 0}
+  .step ol{padding-left:20px;margin:10px 0}
+  table{border-collapse:collapse;width:100%;margin:14px 0;
+    font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+  th{background:var(--moss);color:#fff;font-weight:600}
+  tr:nth-child(even) td{background:#f3f5f0}
+  .tip{background:#fdf4e7;border:1px solid #f0dcc0;border-radius:8px;
+    padding:10px 14px;margin:14px 0;font-size:15px;
+    font-family:ui-sans-serif,system-ui,sans-serif}
+  .tip b{color:var(--amber)}
+  .quiz{background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:6px 16px;margin-top:14px}
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:none}
+  summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;
+    display:flex;gap:8px;align-items:flex-start}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"?";flex:0 0 auto;width:22px;height:22px;
+    background:var(--moss);color:#fff;border-radius:50%;font-size:13px;
+    display:flex;align-items:center;justify-content:center;
+    font-family:ui-sans-serif,system-ui,sans-serif}
+  details[open] summary::before{content:"✓";background:var(--amber)}
+  .ans{margin:8px 0 2px 30px;font-size:15px;color:#2c3a32}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;
+    color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;
+    color:var(--soil);text-align:center;padding:0 18px 40px}
+</style>
+</head>
+<body>
+<header>
+  <p class="kicker">Thema 6 · Mens en milieu</p>
+  <h1>Mens en milieu — alles wat je moet kennen</h1>
+  <p>De volledige stof per basisstof, met begrippen vetgedrukt. De twee kringlopen staan stap-voor-stap zodat je ze kunt navertellen. Onderaan elk blok kun je jezelf testen.</p>
+</header>
+
+<nav>
+  <a href="#bs1">6.1 Kringlopen</a>
+  <a href="#bs2">6.2 Voedsel & water</a>
+  <a href="#bs3">6.3 Broeikaseffect</a>
+  <a href="#bs4">6.4 Milieu & duurzaamheid</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<!-- ===================== BASISSTOF 1 ===================== -->
+<section id="bs1">
+  <span class="bs">Basisstof 1</span>
+  <h2>6.1 · Kringlopen van stoffen</h2>
+
+  <h3>6.1.1 De koolstofkringloop</h3>
+  <div class="step">
+    <ol>
+      <li><b class="t">Producenten</b> nemen CO₂ uit de lucht op en maken er via <b class="t">fotosynthese</b> organische stoffen van (glucose, C₆H₁₂O₆).</li>
+      <li><b class="t">Consumenten</b> nemen die organische stoffen op als voedsel.</li>
+      <li><b class="t">Reducenten</b> breken organische resten af tot anorganische stoffen, waaronder weer CO₂.</li>
+    </ol>
+  </div>
+  <ul>
+    <li><b class="t">Kortlopende kringloop</b>: koolstof gaat hooguit een paar honderd jaar één keer rond.</li>
+    <li><b class="t">Langlopende kringloop</b>: fossiele brandstoffen, miljoenen jaren geleden gevormd en opgeslagen. Door <b class="t">verbranding</b> ervan komt er extra CO₂ in de kortlopende kringloop → versterkt broeikaseffect.</li>
+  </ul>
+
+  <h3>6.1.2 De stikstofkringloop</h3>
+  <p style="margin:6px 0 2px">De vier sleutelprocessen (ken de bacteriën!):</p>
+  <table>
+    <tr><th>Proces</th><th>Wat gebeurt er</th><th>Bacteriën</th></tr>
+    <tr><td><b>Ammonificatie</b></td><td>Eiwitten/urineresten → ammoniak (NH₃)</td><td>rottings- en urobacteriën</td></tr>
+    <tr><td><b>Nitrificatie</b></td><td>NH₃/NH₄⁺ → nitriet (NO₂⁻) → nitraat (NO₃⁻)</td><td>nitriet- en nitraatbacteriën (<b>aeroob</b>, zuurstofrijk)</td></tr>
+    <tr><td><b>Denitrificatie</b></td><td>Nitraat (NO₃⁻) → gasvormig stikstof (N₂)</td><td>denitrificerende bacteriën (<b>anaeroob</b>, zuurstofarm)</td></tr>
+    <tr><td><b>Stikstofbinding</b><br>(fixatie)</td><td>Gasvormig N₂ → ammoniak/ammonium</td><td>stikstofbindende bacteriën (<b>anaeroob</b>)</td></tr>
+  </table>
+  <ul>
+    <li><b class="t">Stikstofassimilatie</b>: producenten nemen stikstof op (vooral als nitraat NO₃⁻) en maken met glucose stikstofhoudende stoffen zoals eiwitten.</li>
+    <li>Consumenten maken eigen aminozuren uit aminozuren in voedsel en scheiden stikstof uit via urine (ammoniak, ureum of urinezuur).</li>
+    <li>Stikstofbindende bacteriën leven vrij in de bodem én in de <b class="t">wortelknolletjes van vlinderbloemigen</b>.</li>
+    <li><b class="t">Fotochemische stikstofbinding</b>: bij onweer reageert N₂ met ozon (O₃) → nitraat ontstaat.</li>
+  </ul>
+
+  <div class="tip"><b>Ezelsbruggetje:</b> nitri<b>ficatie</b> heeft zuurstof nodig (aeroob), de<b>nitri</b>ficatie juist niet (anaeroob). "De-" haalt de stikstof er weer áf naar de lucht.</div>
+</section>
+
+<!-- ===================== BASISSTOF 2 ===================== -->
+<section id="bs2">
+  <span class="bs">Basisstof 2</span>
+  <h2>6.2 · Voedselproductie & water</h2>
+
+  <h3>6.2.1 Eutrofiëring (vermesting)</h3>
+  <ul>
+    <li><b class="t">Zelfreinigend vermogen</b>: reducenten zetten organische afvalstoffen om in anorganische. In stabiel zoet water is productie in evenwicht met afbraak.</li>
+    <li><b class="t">Eutrofiëring</b>: sterke toename van anorganische stoffen (vooral <b class="t">fosfaat en nitraat</b>) in oppervlaktewater.</li>
+    <li>Oorzaken: overbemesting met drijfmest en bemesting met kunstmest. Via <b class="t">afspoeling</b> (over het land) en <b class="t">uitspoeling</b> (via grondwater) komen die stoffen in het water.</li>
+  </ul>
+  <p style="margin:6px 0 2px">Gevolg: <b class="t">waterbloei</b> (algen/waterplanten exploderen, water wordt groen). Wat er dan gebeurt:</p>
+  <div class="step">
+    <ol>
+      <li>Algen blokkeren licht → ondergedoken planten sterven.</li>
+      <li>Algen leven kort en sterven snel → veel organisch afval.</li>
+      <li>Reducenten vermeerderen zich snel en verbruiken veel zuurstof.</li>
+      <li>Waterdieren sterven door <b class="t">zuurstofgebrek</b>.</li>
+      <li>Nog meer dood materiaal → nog meer reducenten → nog meer zuurstoftekort. Uiteindelijk leeft er vrijwel niets meer.</li>
+    </ol>
+  </div>
+
+  <h3>6.2.2 Voedselproductie verhogen — en de gevolgen</h3>
+  <p style="margin:6px 0 2px">Drie manieren: bemesting, bescherming tegen ziekten/plagen, en aanpassing van erfelijke eigenschappen.</p>
+  <ul>
+    <li><b class="t">Bemesting</b>: oogst + uitspoeling halen voedingszouten weg → met drijfmest, kunstmest of groenbemesting worden vooral nitraat en fosfaat aangevuld. <b class="t">Overbemesting</b> = meer mest dan planten kunnen opnemen.</li>
+    <li><b class="t">Chemische bestrijding (pesticiden)</b> — voordeel: effectief. Nadelen:
+      <ul>
+        <li>niet soortspecifiek;</li>
+        <li><b class="t">resistentie</b>: de bestreden soort wordt ongevoelig;</li>
+        <li><b class="t">persistentie</b>: de stof breekt niet/nauwelijks natuurlijk af;</li>
+        <li><b class="t">accumulatie</b>: de stof hoopt op en wordt per schakel van de voedselketen geconcentreerder.</li>
+      </ul>
+    </li>
+    <li><b class="t">Mechanische bestrijding</b> (werktuigen/handmatig): minder gif, maar arbeidsintensief en machines stoten CO₂ uit.</li>
+    <li><b class="t">Biologische bestrijding</b>: natuurlijke vijanden inzetten (witte vlieg ↔ sluipwesp) of <b class="t">wisselteelt</b> (vruchtwisseling).</li>
+    <li><b class="t">Aanpassing erfelijke eigenschappen</b>: <b class="t">veredeling</b> via <b class="t">kunstmatige selectie</b> en kruising, of <b class="t">genetische modificatie</b> (recombinant-DNA-technieken).</li>
+    <li><b class="t">Overbevissing</b>: er wordt meer gevangen dan er aangroeit → aantasting ecosystemen, minder biodiversiteit in oceanen.</li>
+  </ul>
+
+  <h3>6.2.3 Gangbare vs. biologische landbouw</h3>
+  <table>
+    <tr><th></th><th>Gangbaar</th><th>Biologisch</th></tr>
+    <tr><td>Schaal</td><td>grootschalig, monocultuur</td><td>kleinschalig, meerdere soorten</td></tr>
+    <tr><td>Mest/bestrijding</td><td>kunstmest + pesticiden</td><td>geen kunstmest, mechanisch + biologisch</td></tr>
+    <tr><td>Voordeel</td><td>efficiënt, veel betaalbaar voedsel</td><td>duurzamer, diervriendelijker</td></tr>
+    <tr><td>Nadeel</td><td>milieuproblemen, meer ziekten/plagen</td><td>lagere productiviteit, tijdrovend</td></tr>
+  </table>
+</section>
+
+<!-- ===================== BASISSTOF 3 ===================== -->
+<section id="bs3">
+  <span class="bs">Basisstof 3</span>
+  <h2>6.3 · Het versterkte broeikaseffect</h2>
+  <ul>
+    <li><b class="t">Broeikaseffect</b>: gassen in de atmosfeer houden warmtestraling van de aarde vast. Natuurlijke broeikasgassen: <b class="t">CO₂, methaan, lachgas, waterdamp</b>.</li>
+    <li><b class="t">Versterkt broeikaseffect</b>: door extra uitstoot door de mens houdt de atmosfeer méér warmte vast → de temperatuur stijgt.</li>
+  </ul>
+  <p style="margin:6px 0 2px">Oorzaken (ken de bronnen per gas):</p>
+  <ul>
+    <li><b class="t">CO₂</b> (belangrijkste): verbranding van fossiele brandstoffen, verandering van landgebruik, ontbossing.</li>
+    <li><b class="t">Methaan (CH₄)</b>: afbraak van organisch materiaal door anaerobe bacteriën — veeteelt, fossiele brandstofwinning, vuilstort, rijstvelden.</li>
+    <li><b class="t">Lachgas (N₂O)</b>: door bacteriën bij nitrificatie/denitrificatie in bodem, water, mestopslag, compost. Veeteelt is een belangrijke bron.</li>
+    <li><b class="t">Fluorgassen</b>: de enige zonder natuurlijke oorsprong (industrieel). Weinig uitstoot, maar zeer sterk.</li>
+    <li><b class="t">Waterdamp (H₂O)</b>: versterkt de opwarming die door de andere gassen ontstaat.</li>
+  </ul>
+  <p style="margin:6px 0 2px">Gevolg = <b class="t">klimaatverandering</b> (stijging gemiddelde temperatuur). Effecten:</p>
+  <ul>
+    <li>zeespiegelstijging (zeewater zet uit, pool- en gletsjerijs smelt);</li>
+    <li>extremer weer (droogte, extreme neerslag, overstromingen, orkanen);</li>
+    <li>tekort aan zoetwater en lagere landbouwopbrengst;</li>
+    <li>verzuring van oceanen;</li>
+    <li>verschuiving van soorten → veranderde soortensamenstelling en afname biodiversiteit.</li>
+  </ul>
+</section>
+
+<!-- ===================== BASISSTOF 4 ===================== -->
+<section id="bs4">
+  <span class="bs">Basisstof 4</span>
+  <h2>6.4 · Milieuproblemen & duurzaamheid</h2>
+
+  <h3>6.4.1 Oorzaken & gevolgen van milieuproblemen</h3>
+  <ul>
+    <li>Oorzaken: hoge <b class="t">bevolkingsdruk</b> (bevolking groeit, hulpbronnen niet) en de <b class="t">veranderde manier van leven</b> (industrie, grootschalige landbouw, welvaartsgroei).</li>
+    <li>Gevolgen: <b class="t">milieuvervuiling</b> (lucht: fijnstof; bodem: persistente gifstoffen; water: microplastics), <b class="t">uitputting</b> van grondstoffen, aantasting van landschap, ontbossing en <b class="t">versnippering</b> van habitats, klimaatverandering en <b class="t">verlies aan biodiversiteit</b> (soorten kunnen niet snel genoeg evolueren).</li>
+  </ul>
+
+  <h3>6.4.2 Duurzame ontwikkeling</h3>
+  <ul>
+    <li><b class="t">Duurzame ontwikkeling</b>: voorzien in de behoeften van de huidige generatie zónder die van toekomstige generaties en de natuur in gevaar te brengen.</li>
+    <li><b class="t">Hergebruik</b> (producten opnieuw gebruiken) en <b class="t">recyclen</b> (grondstoffen opnieuw inzetten) → minder grondstoffen nodig, minder afval.</li>
+    <li><b class="t">Energietransitie</b>: overstap van fossiele brandstoffen naar <b class="t">duurzame</b> (geen milieueffect, geen broeikasgassen) en <b class="t">hernieuwbare</b> (raken niet op) bronnen: zon, wind, waterkracht, aardwarmte, biobrandstof.</li>
+    <li>Verder: energiebesparing (isolatie), <b class="t">duurzame voedselproductie</b> (kleinere veestapel, lokaal, minder gif/mest, precisielandbouw, verticale landbouw, ledlampen) en het tegengaan van voedselverspilling.</li>
+  </ul>
+
+  <h3>Natuurbeheer & -bescherming</h3>
+  <ul>
+    <li><b class="t">Natuurbeheer</b>: natuur beheren en beschermen om de biodiversiteit te behouden.</li>
+    <li><b class="t">Indicatorsoorten</b> signaleren verandering of verontreiniging van het milieu.</li>
+    <li><b class="t">Rode lijst</b>: overzicht van soorten die in Nederland voortplanten maar verdwenen zijn of dreigen te verdwijnen; bescherming via de <b class="t">Wet natuurbescherming</b>.</li>
+    <li>Maatregelen: natuur haar gang laten gaan (spontane successie), actief beheer (kappen, maaien, laten grazen), variatie aanbrengen, en versnippering tegengaan met <b class="t">ecoducten, dassentunnels, boombruggen en ecoduikers</b>.</li>
+  </ul>
+</section>
+
+<!-- ===================== ZELFTOETS ===================== -->
+<section id="toets">
+  <span class="bs">Check jezelf</span>
+  <h2>Zelftoets</h2>
+  <p class="goal">Tik op een vraag om het antwoord te zien. Probeer 'm eerst hardop te beantwoorden.</p>
+  <div class="quiz">
+    <details><summary>Welke drie groepen organismen sturen de koolstofkringloop, en wat doen ze?</summary>
+      <p class="ans">Producenten (CO₂ → glucose via fotosynthese), consumenten (eten organische stoffen), reducenten (breken af tot anorganisch, incl. CO₂).</p></details>
+    <details><summary>Wat is het verschil tussen de kort- en langlopende koolstofkringloop?</summary>
+      <p class="ans">Kort: koolstof gaat in hooguit een paar honderd jaar rond. Lang: vastgelegd in fossiele brandstoffen (miljoenen jaren); verbranden brengt die koolstof extra in de korte kringloop.</p></details>
+    <details><summary>Zet op volgorde: nitrificatie, ammonificatie, stikstofbinding, denitrificatie — wat doet elk?</summary>
+      <p class="ans">Stikstofbinding: N₂ → ammoniak. Ammonificatie: eiwitten/urine → ammoniak. Nitrificatie: ammoniak → nitriet → nitraat. Denitrificatie: nitraat → N₂ (terug de lucht in).</p></details>
+    <details><summary>Welke stikstofprocessen hebben zuurstof nodig en welke juist niet?</summary>
+      <p class="ans">Nitrificatie heeft zuurstof nodig (aeroob). Denitrificatie en stikstofbinding gebeuren juist anaeroob (zuurstofarm).</p></details>
+    <details><summary>Waar leven stikstofbindende bacteriën?</summary>
+      <p class="ans">Vrij in de bodem én in de wortelknolletjes van vlinderbloemige planten.</p></details>
+    <details><summary>Wat is eutrofiëring en welke stoffen veroorzaken het?</summary>
+      <p class="ans">Sterke toename van anorganische stoffen — vooral fosfaat en nitraat — in oppervlaktewater, door over-/bemesting via af- en uitspoeling.</p></details>
+    <details><summary>Leg uit hoe waterbloei uiteindelijk tot een "dood" water leidt.</summary>
+      <p class="ans">Algen blokkeren licht → planten sterven; algen sterven snel → veel organisch afval → reducenten nemen toe en verbruiken zuurstof → zuurstofgebrek → waterdieren sterven, steeds erger.</p></details>
+    <details><summary>Verklaar de begrippen resistentie, persistentie en accumulatie bij pesticiden.</summary>
+      <p class="ans">Resistentie = bestreden soort wordt ongevoelig. Persistentie = stof breekt niet/nauwelijks af. Accumulatie = stof hoopt op en wordt per schakel van de voedselketen sterker geconcentreerd.</p></details>
+    <details><summary>Verschil tussen veredeling en genetische modificatie?</summary>
+      <p class="ans">Veredeling = erfelijke eigenschappen veranderen via kunstmatige selectie en kruising. Genetische modificatie = het DNA direct aanpassen met recombinant-DNA-technieken.</p></details>
+    <details><summary>Noem twee voordelen en twee nadelen van gangbare landbouw.</summary>
+      <p class="ans">Voordelen: grootschalig/efficiënt, veel betaalbaar voedsel. Nadelen: milieuproblemen en grotere kans op ziekten/plagen (monocultuur).</p></details>
+    <details><summary>Wat is het verschil tussen het natuurlijke en het versterkte broeikaseffect?</summary>
+      <p class="ans">Natuurlijk: gassen houden warmte vast (nodig voor leven). Versterkt: extra uitstoot door de mens → méér warmte vast → temperatuurstijging.</p></details>
+    <details><summary>Noem per broeikasgas (CH₄ en N₂O) een belangrijke bron.</summary>
+      <p class="ans">Methaan: o.a. veeteelt, rijstvelden, vuilstort. Lachgas: bacteriën bij nitrificatie/denitrificatie, mestopslag, compost (veeteelt belangrijk).</p></details>
+    <details><summary>Noem vier effecten van klimaatverandering.</summary>
+      <p class="ans">Bijv.: zeespiegelstijging, extremer weer, zoetwatertekort/lagere landbouwopbrengst, oceaanverzuring, verschuiving van soorten en afname biodiversiteit.</p></details>
+    <details><summary>Wat is duurzame ontwikkeling (definitie)?</summary>
+      <p class="ans">Voorzien in de behoeften van de huidige generatie zonder die van toekomstige generaties en de natuur in gevaar te brengen.</p></details>
+    <details><summary>Verschil tussen duurzame en hernieuwbare energiebronnen?</summary>
+      <p class="ans">Duurzaam = geen effect op het milieu (geen broeikasgassen). Hernieuwbaar = raakt niet op. Zon en wind zijn beide.</p></details>
+    <details><summary>Wat is een Rode lijst en hoe worden die soorten beschermd?</summary>
+      <p class="ans">Overzicht van soorten die in NL voortplanten maar (dreigen te) verdwijnen; bescherming via opname in de Wet natuurbescherming.</p></details>
+    <details><summary>Hoe ga je versnippering van natuurgebieden tegen?</summary>
+      <p class="ans">Gebieden verbinden met ecoducten, dassentunnels, boombruggen en ecoduikers.</p></details>
+  </div>
+</section>
+
+<footer>Succes, Imran — werk de basisstoffen één voor één af en sluit elk blok af met de zelftoets. De twee kringlopen en het rijtje broeikasgassen leveren de meeste punten op.</footer>
+</main>
+</body>
+</html>

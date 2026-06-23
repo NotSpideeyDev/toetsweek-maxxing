@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>H5 Ecologie — Leerhulp</title>
+<style>
+  :root{
+    --ink:#14241c;
+    --moss:#3c6e54;
+    --moss-d:#2a5340;
+    --soil:#8a6d4a;
+    --leaf:#e8efe7;
+    --leaf-d:#cfe0cd;
+    --paper:#fbfaf6;
+    --amber:#c47a2c;
+    --line:#d8ddd4;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;
+    line-height:1.55;font-size:17px;
+  }
+  header{
+    background:linear-gradient(160deg,var(--moss-d),var(--moss));
+    color:#f4f8f3;padding:34px 20px 26px;
+  }
+  header .kicker{
+    font-family:ui-sans-serif,system-ui,sans-serif;
+    text-transform:uppercase;letter-spacing:.18em;font-size:12px;
+    opacity:.8;margin:0 0 6px;
+  }
+  header h1{margin:0;font-size:30px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.9;max-width:60ch;
+    font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{
+    position:sticky;top:0;z-index:5;background:var(--paper);
+    border-bottom:1px solid var(--line);padding:10px 14px;
+    display:flex;gap:8px;overflow-x:auto;
+    font-family:ui-sans-serif,system-ui,sans-serif;
+  }
+  nav a{
+    flex:0 0 auto;text-decoration:none;color:var(--moss-d);
+    background:var(--leaf);border:1px solid var(--leaf-d);
+    padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600;
+  }
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:34px;scroll-margin-top:60px}
+  .bs{
+    font-family:ui-sans-serif,system-ui,sans-serif;
+    display:inline-block;background:var(--moss);color:#fff;
+    font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    padding:3px 10px;border-radius:5px;font-weight:700;
+  }
+  h2{font-size:23px;margin:10px 0 4px;letter-spacing:-.01em}
+  h3{font-size:18px;margin:22px 0 4px;color:var(--moss-d)}
+  .goal{
+    font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;
+    font-style:normal;color:var(--soil);font-weight:600;margin:0 0 10px;
+  }
+  ul{margin:8px 0 8px;padding-left:20px}
+  li{margin:5px 0}
+  li ul{margin:4px 0}
+  b.t{color:var(--moss-d)}
+  .def{background:var(--leaf);border-left:3px solid var(--moss);
+    padding:2px 8px;border-radius:0 4px 4px 0}
+  table{border-collapse:collapse;width:100%;margin:14px 0;
+    font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+  th{background:var(--moss);color:#fff;font-weight:600}
+  tr:nth-child(even) td{background:#f3f5f0}
+  .tip{background:#fdf4e7;border:1px solid #f0dcc0;border-radius:8px;
+    padding:10px 14px;margin:14px 0;font-size:15px;
+    font-family:ui-sans-serif,system-ui,sans-serif}
+  .tip b{color:var(--amber)}
+  /* zelftoets */
+  .quiz{background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:6px 16px;margin-top:14px}
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:none}
+  summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;
+    display:flex;gap:8px;align-items:flex-start}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"?";flex:0 0 auto;width:22px;height:22px;
+    background:var(--moss);color:#fff;border-radius:50%;font-size:13px;
+    display:flex;align-items:center;justify-content:center;
+    font-family:ui-sans-serif,system-ui,sans-serif}
+  details[open] summary::before{content:"✓";background:var(--amber)}
+  .ans{margin:8px 0 2px 30px;font-size:15px;color:#2c3a32}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;
+    color:var(--soil);text-align:center;padding:0 18px 40px}
+</style>
+</head>
+<body>
+<header>
+  <p class="kicker">Thema 5 · Inleiding tot de ecologie</p>
+  <h1>Ecologie — alles wat je moet kennen</h1>
+  <p>De volledige stof per basisstof, met de begrippen vetgedrukt. Onderaan elk onderdeel kun je jezelf testen door op een vraag te tikken.</p>
+</header>
+
+<nav>
+  <a href="#bs1">5.1 Ecosysteem</a>
+  <a href="#bs2">5.2 Relaties</a>
+  <a href="#bs3">5.3 Voedsel & energie</a>
+  <a href="#bs4">5.4 Verandering</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<!-- ===================== BASISSTOF 1 ===================== -->
+<section id="bs1">
+  <span class="bs">Basisstof 1</span>
+  <h2>5.1 · Ecosystemen & factoren</h2>
+
+  <h3>5.1.1 Wat is een ecosysteem?</h3>
+  <ul>
+    <li><b class="t">Ecologie</b>: de wetenschap die de wisselwerking tussen organismen en hun omgeving bestudeert.</li>
+    <li><b class="t">Ecosysteem</b>: een min of meer begrensd gebied waarin wisselwerking plaatsvindt tussen <b class="t">biotische</b> en <b class="t">abiotische</b> factoren.</li>
+    <li><b class="t">Biotische factoren</b> = invloeden van de <i>levende</i> natuur. <b class="t">Abiotische factoren</b> = invloeden van de <i>levenloze</i> natuur → samen vormen ze de <b class="t">biotoop</b>.</li>
+    <li><b class="t">Habitat</b>: het leefgebied van een organisme.</li>
+  </ul>
+  <p style="margin:6px 0 2px">Organisatieniveaus van klein naar groot:</p>
+  <ul>
+    <li><b class="t">Organisme (individu)</b>: één levend wezen.</li>
+    <li><b class="t">Populatie</b>: groep organismen van dezelfde soort in een gebied die zich onderling voortplanten.</li>
+    <li><b class="t">Levensgemeenschap</b>: alle populaties samen in een ecosysteem.</li>
+    <li><b class="t">Systeem aarde</b>: alle ecosystemen bij elkaar.</li>
+  </ul>
+
+  <h3>5.1.2 Biotische & abiotische factoren</h3>
+  <ul>
+    <li><b class="t">Biotisch</b> (voorbeelden): voedselaanbod, parasitisme, ziekten, concurrentie, predatie, bescherming door vegetatie.</li>
+    <li><b class="t">Abiotisch</b> — <u>bodem</u>:
+      <ul>
+        <li><b class="t">Zand</b>: grote deeltjes, open structuur, veel lucht, weinig water → houdt water slecht vast.</li>
+        <li><b class="t">Klei</b>: kleine deeltjes, weinig lucht, veel water → houdt water + voedingszouten goed vast.</li>
+        <li><b class="t">Humus</b>: mengsel van organische + anorganische stoffen en micro-organismen → verbetert de bodemstructuur en gaat uitspoeling van voedingszouten tegen.</li>
+        <li>Ook: pH (zuurgraad), grondwaterstand, gehalte voedingszouten.</li>
+      </ul>
+    </li>
+    <li><b class="t">Licht</b>: nodig voor fotosynthese. Zonplanten = hoge lichtintensiteit, schaduwplanten = lage. Daglengte stuurt voortplanting (bloei, paring, eileg). In water dringt licht alleen in de bovenste lagen door.</li>
+    <li><b class="t">Water</b>: vochtig milieu → zwak wortelstelsel, dunne cuticula, veel huidmondjes. Droog milieu → sterk wortelstelsel, dikke cuticula, weinig huidmondjes (vooral onderkant blad).</li>
+    <li><b class="t">Temperatuur</b>: bepaalt de enzymactiviteit.</li>
+    <li><b class="t">Microklimaat</b>: abiotische factoren verschillen per plekje binnen het ecosysteem.</li>
+  </ul>
+
+  <h3>5.1.3 Invloed van abiotische factoren</h3>
+  <ul>
+    <li>Abiotische factoren bepalen de <b class="t">soortensamenstelling</b> (welke soorten in een gebied voorkomen).</li>
+    <li><b class="t">Tolerantie</b>: het vermogen om schommelingen in een abiotische factor te verdragen. <b class="t">Tolerantiegrens</b> = de uiterste waarde waarbij de soort nog kan overleven.</li>
+    <li><b class="t">Optimum</b>: de waarde van een factor die het gunstigst is. In een <b class="t">optimumkromme</b> zet je het aantal individuen uit tegen een abiotische factor.</li>
+    <li><b class="t">Beperkende factor</b>: de abiotische factor die bepaalt hoeveel organismen kunnen overleven.</li>
+    <li>Grote tolerantie → groot <b class="t">verspreidingsgebied</b> (het gebied op aarde waar een soort voorkomt).</li>
+  </ul>
+
+  <div class="tip"><b>Onthoud:</b> tolerantie = hoeveel een soort <i>aankan</i>; beperkende factor = de factor die als eerste in de weg zit. Grote tolerantie ⇒ je vindt de soort overal.</div>
+</section>
+
+<!-- ===================== BASISSTOF 2 ===================== -->
+<section id="bs2">
+  <span class="bs">Basisstof 2</span>
+  <h2>5.2 · Relaties & populaties</h2>
+
+  <h3>5.2.1 Concurrentie & coöperatie</h3>
+  <ul>
+    <li><b class="t">Concurrentie binnen een populatie</b>: om voedsel, ruimte, partner, licht. Leidt tot <b class="t">natuurlijke selectie</b> — best aangepaste organismen overleven het vaakst.</li>
+    <li><b class="t">Concurrentie tussen populaties</b>: meestal minder sterk. <b class="t">Niche</b> = de rol die een soort speelt in het geheel van relaties in een ecosysteem.</li>
+    <li><b class="t">Coöperatie</b> (samenwerking): binnen een populatie (bescherming, voortplanting; in paren, groepen of staten) of tussen populaties.</li>
+    <li><b class="t">Symbiose</b>: langdurige samenleving van organismen van <i>verschillende</i> soorten. Drie vormen:
+      <ul>
+        <li><b class="t">Mutualisme</b>: beide voordeel (schimmels + algen = korstmossen).</li>
+        <li><b class="t">Commensalisme</b>: één voordeel, de ander geen voor- of nadeel (koereigers + grote grazers).</li>
+        <li><b class="t">Parasitisme</b>: parasiet leeft op/in een ander en onttrekt voedsel (vlooien, luizen, lintworm, maretak).</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>5.2.2 Dynamiek & evenwicht</h3>
+  <ul>
+    <li><b class="t">Populatiegrootte</b> = totaal aantal individuen in een gebied. <b class="t">Populatiedichtheid</b> = gemiddeld aantal per oppervlakte- of volume-eenheid.</li>
+    <li>Factoren op de dichtheid:
+      <ul>
+        <li><b class="t">Dichtheidsafhankelijk</b>: predatie, parasitisme, ziekte, voedselconcurrentie.</li>
+        <li><b class="t">Dichtheidsonafhankelijk</b>: meestal klimaat of de mens.</li>
+      </ul>
+    </li>
+    <li><b class="t">Negatieve terugkoppeling</b>: populatie groeit → meer predatie/ziekte/concurrentie + minder voedsel → krimpt weer. Populatie krimpt → omgekeerd → groeit weer.</li>
+    <li><b class="t">Dynamiek</b> = het schommelen van biotische factoren. <b class="t">Dynamisch evenwicht</b> = de dichtheid schommelt rond een bepaalde waarde.</li>
+    <li>Grootte verandert ook door <b class="t">geboorte, sterfte en migratie</b>: geboortecijfer, sterftecijfer (per 1000/jaar), immigratie (intrekkend), emigratie (wegtrekkend).</li>
+    <li><b class="t">Inheems</b> = van nature aanwezig; <b class="t">uitheems</b> = van nature niet; <b class="t">exoot</b> = door menselijk handelen ergens terechtgekomen. <b class="t">Invasieve exoten</b> verspreiden zich snel en verdringen inheemse soorten.</li>
+    <li>Groeicurves:
+      <ul>
+        <li>Hulpbronnen beperkt + natuurlijke vijanden → <b class="t">biologisch evenwicht</b> (<b class="t">S-curve</b>).</li>
+        <li>Hulpbronnen onbeperkt + geen vijanden → <b class="t">exponentiële groei</b> (<b class="t">J-curve</b>) → kan een <b class="t">plaag</b> worden.</li>
+      </ul>
+    </li>
+    <li><b class="t">Draagkracht</b>: de maximale populatiegrootte die langdurig te handhaven is. Overschrijding → instorten → nieuw evenwicht met een <i>lagere</i> draagkracht.</li>
+  </ul>
+
+  <div class="tip"><b>Valkuil:</b> S-curve = geremde groei (loopt vast op draagkracht), J-curve = ongeremde groei. De pijl-richting bij terugkoppeling klopt altijd "tegen de verandering in".</div>
+</section>
+
+<!-- ===================== BASISSTOF 3 ===================== -->
+<section id="bs3">
+  <span class="bs">Basisstof 3</span>
+  <h2>5.3 · Voedselrelaties & energie</h2>
+
+  <h3>5.3.1 Voedselrelaties & informatienetwerken</h3>
+  <ul>
+    <li><b class="t">Vraat</b> = het eten van planten door dieren. <b class="t">Predatie</b> = het eten van dieren.</li>
+    <li><b class="t">Signaalstoffen</b>: chemische verbindingen die informatie overdragen tussen/binnen organismen. Planten kunnen erop reageren (bijv. gifstoffen aanmaken tegen vraat).</li>
+    <li><b class="t">Voedselketen</b>: reeks soorten waarbij elke soort voedselbron is voor de volgende. De <b class="t">pijlen</b> geven de <i>energiestroom</i> weer. <b class="t">Voedselweb</b> = alle voedselrelaties in een levensgemeenschap samen.</li>
+    <li><b class="t">Trofisch niveau</b> = een schakel in de keten. Het eerste niveau bestaat uit <b class="t">autotrofe</b> organismen.</li>
+    <li><b class="t">Producenten</b>: maken eigen voedsel via <b class="t">assimilatie</b> (vorming van grote organische moleculen uit kleine anorganische; energie wordt vastgelegd).
+      <ul>
+        <li><b class="t">Koolstofassimilatie</b>: glucose maken uit CO₂ en water.</li>
+        <li>Energie uit <b class="t">fotosynthese</b> (foto-autotroof, licht) of <b class="t">chemosynthese</b> (chemo-autotroof, oxidatie).</li>
+        <li><b class="t">Voortgezette assimilatie</b>: uit glucose worden koolhydraten, eiwitten, vetten en DNA gevormd.</li>
+      </ul>
+    </li>
+    <li><b class="t">Consumenten</b>: hebben andere organismen als voedsel nodig (<b class="t">heterotroof</b>): herbivoren, carnivoren, omnivoren. Consument 1e orde wordt gegeten door 2e orde, enz.</li>
+    <li><b class="t">Reducenten</b> (bacteriën, schimmels): breken dood organisch materiaal af tot anorganische stoffen.</li>
+    <li><b class="t">Dissimilatie</b>: afbraak van organische moleculen; hierbij komt energie vrij die in de verbindingen was opgeslagen.</li>
+  </ul>
+
+  <h3>5.3.2 Energiestromen</h3>
+  <ul>
+    <li><b class="t">Biomassa</b>: het totale gewicht van alle organische stoffen.</li>
+    <li><b class="t">Ecologische piramiden</b>: piramide van <b class="t">aantallen</b> en piramide van <b class="t">biomassa</b> (per trofisch niveau).</li>
+    <li><b class="t">Productiviteit</b>: de energie die per niveau wordt vastgelegd in organische stoffen.
+      <ul>
+        <li><b class="t">BPP</b> (bruto primaire productie): alle biomassa die bij de fotosynthese wordt gevormd.</li>
+        <li>Een deel wordt verbruikt bij de <b class="t">dissimilatie</b> in de autotrofe organismen.</li>
+        <li><b class="t">NPP</b> (netto primaire productie): de biomassa waarmee nieuwe weefsels worden gevormd. <i>(NPP = BPP − dissimilatie)</i></li>
+      </ul>
+    </li>
+    <li><b class="t">Energieverlies</b>: in elke schakel gaat energie verloren door afgestorven weefsels, onverteerd voedsel en dissimilatie. Daarom wordt elk hoger niveau "kleiner".</li>
+  </ul>
+
+  <div class="tip"><b>Rekenhulp:</b> per stap blijft grofweg ~10% van de energie over. Vraag jezelf bij berekeningen altijd af: BPP, of NPP? NPP is wat er <i>overblijft</i> voor groei.</div>
+</section>
+
+<!-- ===================== BASISSTOF 4 ===================== -->
+<section id="bs4">
+  <span class="bs">Basisstof 4</span>
+  <h2>5.4 · Verandering in ecosystemen</h2>
+
+  <h3>5.4.1 Successie</h3>
+  <ul>
+    <li><b class="t">Successie</b>: verandering van de soortensamenstelling; het ene ecosysteem gaat geleidelijk over in een ander.</li>
+    <li><b class="t">Pionierecosysteem</b>: ontstaat als eerste in onbegroeid gebied. <b class="t">Pioniersoorten</b> = de eerste planten/dieren op kale grond.</li>
+    <li><b class="t">Gelaagdheid</b>: de vegetatie krijgt lagen (mossen → kruiden → struiken → bomen).</li>
+    <li><b class="t">Climaxecosysteem</b>: het eindstadium (tropisch regenwoud, koraalrif, in NL het loofbos).</li>
+    <li><b class="t">Primaire successie</b>: op een bodem <i>zonder</i> humus. <b class="t">Secundaire successie</b>: er is al humus → verloopt sneller (bijv. na het kappen van een bos).</li>
+    <li>Overige: <b class="t">erosie</b> (bovenste bodemlaag spoelt/waait weg), <b class="t">verlanding</b> (successie in een plas), <b class="t">gradiëntecosysteem</b> (geleidelijke overgangen), <b class="t">indicatorsoorten</b> (geven een aanwijzing over een milieukenmerk).</li>
+  </ul>
+
+  <table>
+    <tr><th>Factor</th><th>Pionier</th><th>Climax</th></tr>
+    <tr><td>Abiotische factoren</td><td>sterk wisselend</td><td>gematigd</td></tr>
+    <tr><td>Kringlopen</td><td>open</td><td>gesloten</td></tr>
+    <tr><td>Biomassa</td><td>neemt toe</td><td>blijft gelijk</td></tr>
+    <tr><td>Bodem</td><td>humusarm</td><td>humusrijk</td></tr>
+    <tr><td>Vegetatie</td><td>één laag</td><td>meerdere lagen</td></tr>
+    <tr><td>Biodiversiteit</td><td>soortenarm</td><td>soortenrijk</td></tr>
+    <tr><td>Voedselweb</td><td>eenvoudig</td><td>ingewikkeld</td></tr>
+    <tr><td>Snelheid successie</td><td>snelle wisseling</td><td>weinig verandering</td></tr>
+  </table>
+
+  <h3>5.4.2 Modellen van een ecosysteem</h3>
+  <ul>
+    <li><b class="t">Model</b>: een vereenvoudigde voorstelling van de werkelijkheid.</li>
+    <li><b class="t">Ecologisch model</b>: biotische factoren kunnen in verschillende <b class="t">evenwichtssituaties</b> verkeren. Kleine verstoring → evenwicht blijft gehandhaafd. Flinke verstoring → blijvend een <i>nieuwe</i> evenwichtssituatie.</li>
+    <li><b class="t">Omslagpunt (kantelpunt)</b>: de overgang tussen twee evenwichtssituaties.</li>
+  </ul>
+</section>
+
+<!-- ===================== ZELFTOETS ===================== -->
+<section id="toets">
+  <span class="bs">Check jezelf</span>
+  <h2>Zelftoets</h2>
+  <p class="goal">Tik op een vraag om het antwoord te zien. Probeer 'm eerst hardop te beantwoorden.</p>
+  <div class="quiz">
+    <details><summary>Wat is het verschil tussen een biotoop en een habitat?</summary>
+      <p class="ans">Biotoop = alle abiotische factoren samen in een ecosysteem. Habitat = het leefgebied van één bepaald organisme/soort.</p></details>
+    <details><summary>Wat houdt zand slecht vast en klei goed vast, en waarom?</summary>
+      <p class="ans">Zand heeft grote deeltjes en veel lucht → houdt water slecht vast. Klei heeft kleine deeltjes → houdt water én voedingszouten goed vast.</p></details>
+    <details><summary>Verklaar: een plant in een droog milieu heeft een dikke cuticula en weinig huidmondjes.</summary>
+      <p class="ans">Om verdamping (waterverlies) tegen te gaan: dikke waslaag + weinig huidmondjes (vooral aan de onderkant) beperken het waterverlies.</p></details>
+    <details><summary>Wat is een beperkende factor?</summary>
+      <p class="ans">De abiotische factor die bepaalt hoeveel organismen van een soort in een gebied kunnen overleven.</p></details>
+    <details><summary>Noem de drie vormen van symbiose met wie er voordeel heeft.</summary>
+      <p class="ans">Mutualisme = beide voordeel. Commensalisme = één voordeel, ander neutraal. Parasitisme = parasiet voordeel, gastheer nadeel.</p></details>
+    <details><summary>Wat is een niche?</summary>
+      <p class="ans">De rol die een soort speelt in het geheel van relaties binnen een ecosysteem.</p></details>
+    <details><summary>Leg negatieve terugkoppeling uit bij een groeiende populatie.</summary>
+      <p class="ans">Populatie groeit → meer predatie, parasitisme, ziekte en voedselconcurrentie + minder voedsel → de populatie krimpt weer richting evenwicht.</p></details>
+    <details><summary>Verschil tussen een S-curve en een J-curve?</summary>
+      <p class="ans">S-curve = groei loopt vast op de draagkracht (beperkte hulpbronnen/vijanden). J-curve = exponentiële, ongeremde groei (onbeperkte hulpbronnen, geen vijanden) → kan plaag worden.</p></details>
+    <details><summary>Wat betekenen de pijlen in een voedselketen?</summary>
+      <p class="ans">De richting van de energiestroom (van de gegeten soort naar de eter).</p></details>
+    <details><summary>Verschil tussen foto-autotroof en chemo-autotroof?</summary>
+      <p class="ans">Foto-autotroof gebruikt licht (fotosynthese), chemo-autotroof gebruikt oxidatie van stoffen (chemosynthese) als energiebron voor koolstofassimilatie.</p></details>
+    <details><summary>Wat is het verschil tussen BPP en NPP?</summary>
+      <p class="ans">BPP = alle biomassa gevormd bij de fotosynthese. NPP = wat overblijft voor nieuwe weefsels, ná aftrek van de dissimilatie (NPP = BPP − dissimilatie).</p></details>
+    <details><summary>Waardoor gaat in elke schakel energie verloren?</summary>
+      <p class="ans">Door afgestorven weefsels, onverteerd voedsel en dissimilatie.</p></details>
+    <details><summary>Verschil tussen primaire en secundaire successie?</summary>
+      <p class="ans">Primair = op een bodem zonder humus. Secundair = er is al humus aanwezig, gaat daardoor sneller.</p></details>
+    <details><summary>Noem 3 verschillen tussen een pionier- en een climaxecosysteem.</summary>
+      <p class="ans">Bijv.: pionier is soortenarm/climax soortenrijk; pionier humusarm/climax humusrijk; pionier open kringloop/climax gesloten; pionier één vegetatielaag/climax meerdere.</p></details>
+    <details><summary>Wat is een omslagpunt (kantelpunt)?</summary>
+      <p class="ans">De overgang tussen twee evenwichtssituaties; na een flinke verstoring slaat het ecosysteem blijvend om naar een nieuw evenwicht.</p></details>
+    <details><summary>Inheems, uitheems, exoot — wat is het verschil?</summary>
+      <p class="ans">Inheems = van nature aanwezig. Uitheems = van nature niet aanwezig. Exoot = door menselijk handelen ergens beland; invasieve exoten verdringen inheemse soorten.</p></details>
+  </div>
+</section>
+
+<footer>Succes met leren, Imran — werk de basisstoffen één voor één af en sluit elk blokje af met de zelftoets.</footer>
+</main>
+</body>
+</html>
