@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AK H2 — Actieve aarde: exogene processen</title>
+<style>
+  :root{
+    --ink:#14241c;--moss:#3c6e54;--moss-d:#2a5340;--soil:#6e7d5e;
+    --leaf:#e8efe7;--leaf-d:#cfe0cd;--paper:#f8faf7;--amber:#c47a2c;--line:#d6ddd2;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55;font-size:17px}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#f4f8f3;padding:34px 20px 26px}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.85;margin:0 0 6px}
+  header h1{margin:0;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.92;max-width:60ch;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:8px;overflow-x:auto;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav a{flex:0 0 auto;text-decoration:none;color:var(--moss-d);background:var(--leaf);
+    border:1px solid var(--leaf-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:30px;scroll-margin-top:60px}
+  .num{font-family:ui-sans-serif,system-ui,sans-serif;display:inline-flex;width:26px;height:26px;
+    background:var(--moss);color:#fff;border-radius:6px;align-items:center;justify-content:center;
+    font-size:14px;font-weight:700;margin-right:8px;vertical-align:middle}
+  h2{font-size:20px;margin:10px 0 6px;letter-spacing:-.01em;display:flex;align-items:flex-start;gap:0}
+  h2 span.q{flex:1}
+  h3{font-size:17px;margin:18px 0 2px;color:var(--moss-d)}
+  ul{margin:6px 0 8px;padding-left:20px}
+  li{margin:4px 0}
+  li ul{margin:3px 0}
+  b.t{color:var(--moss-d)}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+  th{background:var(--moss);color:#fff;font-weight:600}
+  tr:nth-child(even) td{background:#f1f5ef}
+  .tip{background:#fdf4e7;border:1px solid #f0dcc0;border-radius:8px;padding:10px 14px;margin:12px 0;
+    font-size:15px;font-family:ui-sans-serif,system-ui,sans-serif}
+  .tip b{color:var(--amber)}
+  .quiz{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 16px;margin-top:14px}
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:none}
+  summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;gap:8px;align-items:flex-start}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"?";flex:0 0 auto;width:22px;height:22px;background:var(--moss);color:#fff;
+    border-radius:50%;font-size:13px;display:flex;align-items:center;justify-content:center;font-family:ui-sans-serif,system-ui,sans-serif}
+  details[open] summary::before{content:"✓";background:var(--amber)}
+  .ans{margin:8px 0 2px 30px;font-size:15px;color:#2c3a32}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);text-align:center;padding:0 18px 40px}
+</style>
+</head>
+<body>
+<header>
+  <p class="kicker">Aardrijkskunde · Thema 2</p>
+  <h1>Actieve aarde: exogene processen</h1>
+  <p>Hoofdvraag: hoe werken exogene processen en welke gevolgen hebben ze aan het aardoppervlak? Per deelvraag de kern, begrippen vetgedrukt. Zelftoets onderaan.</p>
+</header>
+
+<nav>
+  <a href="#d1">1 Vier sferen</a>
+  <a href="#d2">2–3 Straling</a>
+  <a href="#d4">4 Kringlopen</a>
+  <a href="#d5">5 Temp.factoren</a>
+  <a href="#d6">6–7 Circulatie</a>
+  <a href="#d8">8 Köppen</a>
+  <a href="#d9">9 Verwering</a>
+  <a href="#d10">10–11 Massabeweging & erosie</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="d1">
+  <h2><span class="num">1</span><span class="q">Hoe hangen vier sferen samen in systeem aarde?</span></h2>
+  <p><b class="t">Systeem aarde</b> bestaat uit vier samenhangende sferen: de <b class="t">atmosfeer</b> (lucht), <b class="t">hydrosfeer</b> (water), <b class="t">lithosfeer</b> (vaste aarde) en <b class="t">biosfeer</b> (leven). Voorbeeld van samenhang: regen (atmosfeer) → rivier (hydrosfeer) → erodeert gesteente (lithosfeer) → beïnvloedt planten (biosfeer). Kringlopen verbinden de sferen.</p>
+</section>
+
+<section id="d2">
+  <h2><span class="num">2</span><span class="q">Hoe werkt de stralingsbalans van de aarde?</span></h2>
+  <p>De <b class="t">stralingsbalans</b> is het evenwicht tussen inkomende <b class="t">kortgolvige</b> zonnestraling en uitgaande <b class="t">langgolvige</b> warmtestraling. Onderdelen: inkomend zonlicht, reflectie (<b class="t">albedo</b>), absorptie door atmosfeer en oppervlak, uitstraling, en het <b class="t">broeikaseffect</b> dat warmte vasthoudt. In evenwicht blijft de temperatuur stabiel.</p>
+
+  <h2><span class="num">3</span><span class="q">Waardoor zijn er variaties in instraling?</span></h2>
+  <ul>
+    <li><b class="t">Bolvorm</b>: bij de evenaar valt zonlicht loodrecht → geconcentreerd → veel instraling. Bij de polen valt het schuin → uitgesmeerd over een groter oppervlak en een langere weg door de atmosfeer → minder instraling.</li>
+    <li><b class="t">Schuine stand aardas</b> (23,5°): zorgt voor de seizoenen en voor verschillen in instraling per breedtegraad door het jaar.</li>
+    <li><b class="t">Albedo</b> = weerkaatsingsvermogen. Hoog (sneeuw, ijs, wolken) → veel reflectie → minder instraling blijft. Laag (water, bos, asfalt) → veel absorptie.</li>
+    <li>Herverdeling: overschot bij de evenaar, tekort bij de polen → <b class="t">atmosferische circulatie</b> (wind) en <b class="t">oceanische circulatie</b> (zeestromen) transporteren warmte poolwaarts.</li>
+  </ul>
+</section>
+
+<section id="d4">
+  <h2><span class="num">4</span><span class="q">Hoe hangen koolstof- en hydrologische kringloop samen met systeem aarde?</span></h2>
+  <ul>
+    <li><b class="t">Hydrologische kringloop</b>: verdamping → condensatie → neerslag → afstroming/infiltratie → terug naar zee. Verbindt alle vier de sferen.</li>
+    <li><b class="t">Koolstofkringloop</b>: CO₂ wisselt tussen atmosfeer, oceaan, gesteente (kalk, fossiele brandstof) en biosfeer (fotosynthese/ademhaling). Korte en lange kringloop.</li>
+    <li>In een gebied hangen deze kringlopen en de sferen samen (bv. een bos neemt CO₂ op en verdampt water).</li>
+  </ul>
+</section>
+
+<section id="d5">
+  <h2><span class="num">5</span><span class="q">De vijf temperatuurfactoren</span></h2>
+  <table>
+    <tr><th>Factor</th><th>Invloed op temperatuur/neerslag</th></tr>
+    <tr><td><b>Breedteligging</b></td><td>verder van de evenaar = kouder (minder instraling)</td></tr>
+    <tr><td><b>Hoogteligging</b></td><td>hoger = kouder (~0,6 °C per 100 m)</td></tr>
+    <tr><td><b>Ligging t.o.v. zee</b></td><td>zeeklimaat = mild, kleine jaaramplitude; landklimaat = grote extremen</td></tr>
+    <tr><td><b>Zeestromen</b></td><td>warme stroom (Golfstroom) = warmer/natter; koude stroom = koeler/droger</td></tr>
+    <tr><td><b>Ligging t.o.v. gebergte</b></td><td>loefzijde nat (stijgingsregen), lijzijde droog (regenschaduw)</td></tr>
+  </table>
+  <p>Samen bepalen deze vijf de gemiddelde temperatuur én de neerslag — dus het <b class="t">klimaat</b> van een gebied.</p>
+</section>
+
+<section id="d6">
+  <h2><span class="num">6</span><span class="q">Atmosferische circulatie &amp; mondiale windsystemen</span></h2>
+  <ul>
+    <li>Met de hoogte verandert de luchtdruk (lager) en in de troposfeer de temperatuur (lager).</li>
+    <li>Per halfrond drie cellen: <b class="t">Hadley‑cel</b> (0–30°), <b class="t">Ferrel‑cel</b> (30–60°), <b class="t">polaire cel</b> (60–90°). Bij de evenaar stijgt warme lucht (lagedruk, veel regen, <b class="t">ITCZ</b>); bij ~30° daalt lucht (hogedruk → woestijngordel).</li>
+    <li><b class="t">Passaten</b>: waaien van de subtropische hogedruk (30°) naar de ITCZ, afgebogen door de <b class="t">corioliskracht</b> (NO‑passaat op het noordelijk, ZO‑passaat op het zuidelijk halfrond).</li>
+    <li><b class="t">Moessons</b>: seizoenswind door verschil in opwarming van land en zee — zomermoesson (zee→land, nat), wintermoesson (land→zee, droog).</li>
+  </ul>
+
+  <h2><span class="num">7</span><span class="q">Hoe werkt de oceanische circulatie?</span></h2>
+  <p>Aan het oppervlak drijft de <b class="t">wind</b> grote draaiende stromen (gyres) aan. In de diepte werkt de <b class="t">thermohaliene circulatie</b>: verschillen in temperatuur en zoutgehalte bepalen de dichtheid en zo een wereldwijde "lopende band" die warmte transporteert (warme stromen zoals de Golfstroom, koude stromen).</p>
+</section>
+
+<section id="d8">
+  <h2><span class="num">8</span><span class="q">De klimaten volgens Köppen</span></h2>
+  <p>Köppen deelt klimaten in op basis van <b class="t">temperatuur en neerslag</b> (gekoppeld aan vegetatie). De hoofdletters:</p>
+  <table>
+    <tr><th>Letter</th><th>Klimaat</th><th>Voorbeeld</th></tr>
+    <tr><td><b>A</b></td><td>tropisch (warm, geen koude maand)</td><td>regenwoud (Af), savanne (Aw)</td></tr>
+    <tr><td><b>B</b></td><td>droog (aride/semi‑aride)</td><td>woestijn (BW), steppe (BS)</td></tr>
+    <tr><td><b>C</b></td><td>gematigd (zachte winter)</td><td>zeeklimaat NL (Cfb)</td></tr>
+    <tr><td><b>D</b></td><td>landklimaat (strenge winter)</td><td>continentaal</td></tr>
+    <tr><td><b>E</b></td><td>polair</td><td>toendra (ET), ijs (EF)</td></tr>
+  </table>
+  <p>De tweede/derde letter geeft de neerslagverdeling en temperatuur. Je koppelt een <b class="t">klimaatdiagram</b> aan de juiste naam/afkorting, en bepaalt voor een gebied uit bronnen welke klimaten er voorkomen.</p>
+</section>
+
+<section id="d9">
+  <h2><span class="num">9</span><span class="q">Welke typen verwering zijn er?</span></h2>
+  <p><b class="t">Verwering</b> = gesteente ter plekke afbreken (geen transport).</p>
+  <table>
+    <tr><th>Type</th><th>Hoe</th><th>Vooral waar</th></tr>
+    <tr><td><b>Mechanisch/fysisch</b></td><td>uiteenvallen zonder dat de samenstelling verandert — o.a. <b>vorstverwering</b> (water bevriest in scheuren), temperatuurverwering</td><td>koud/gematigd met vorst‑dooiwisselingen; woestijn</td></tr>
+    <tr><td><b>Chemisch</b></td><td>samenstelling verandert door reactie met water/zuur/zuurstof — oplossing (karst), oxidatie</td><td>warm en vochtig (tropen)</td></tr>
+    <tr><td><b>Biologisch</b></td><td>door organismen (wortels, zuren)</td><td>overal met begroeiing</td></tr>
+  </table>
+  <p>Snelheid hangt af van <b class="t">klimaat</b> (temperatuur, neerslag), <b class="t">gesteentesoort</b>, begroeiing en tijd. Chemische verwering is snel in warm + nat; vorstverwering in koud met vorstwisselingen.</p>
+</section>
+
+<section id="d10">
+  <h2><span class="num">10</span><span class="q">Hoe ontstaan massabewegingen?</span></h2>
+  <ul>
+    <li><b class="t">Massabeweging</b> = verplaatsing van gesteente/bodem hellingafwaarts onder invloed van de zwaartekracht.</li>
+    <li>Factoren: <b class="t">steilheid</b> van de helling, <b class="t">water</b> (verzadiging), <b class="t">begroeiing</b> (wortels houden vast), gesteente en menselijk ingrijpen.</li>
+    <li>Soorten: vallen (steenval), glijden (aardverschuiving), vloeien (modderstroom, solifluctie) en kruip (langzaam). Effect op het landschap: puinhellingen, littekens, afgevlakte hellingen.</li>
+  </ul>
+
+  <h2><span class="num">11</span><span class="q">Transport, erosie &amp; sedimentatie door water, ijs en wind</span></h2>
+  <table>
+    <tr><th>Agens</th><th>Erosie → terreinvorm</th><th>Sedimentatie → terreinvorm</th></tr>
+    <tr><td><b>Water</b> (rivier)</td><td>V‑dal, meanders, watervallen, insnijding</td><td>riviervlakte, oeverwallen, <b>delta</b>, alluviale waaier</td></tr>
+    <tr><td><b>IJs</b> (gletsjer)</td><td><b>U‑dal</b>, kaar, horn, gletsjerkrassen</td><td>morenen, keileem, zwerfkeien</td></tr>
+    <tr><td><b>Wind</b> (eolisch)</td><td>deflatie, paddenstoelrotsen (vooral aride)</td><td><b>duinen</b>, löss</td></tr>
+  </table>
+  <p>Transport gebeurt opgelost, zwevend (slib/stof) of over de bodem (zand, grind). Je herkent de terreinvormen op afbeeldingen.</p>
+</section>
+
+<section id="toets">
+  <h2 style="color:var(--moss-d)">Zelftoets</h2>
+  <p class="goal">Tik op een vraag voor het antwoord. Probeer 'm eerst hardop te beantwoorden.</p>
+  <div class="quiz">
+    <details><summary>Noem de vier sferen van systeem aarde.</summary>
+      <p class="ans">Atmosfeer (lucht), hydrosfeer (water), lithosfeer (vaste aarde), biosfeer (leven).</p></details>
+    <details><summary>Wat is de stralingsbalans?</summary>
+      <p class="ans">Het evenwicht tussen inkomende kortgolvige zonnestraling en uitgaande langgolvige warmtestraling.</p></details>
+    <details><summary>Waarom krijgt de evenaar meer instraling dan de polen?</summary>
+      <p class="ans">Door de bolvorm valt zonlicht bij de evenaar loodrecht (geconcentreerd) en bij de polen schuin (uitgesmeerd + langere weg door de atmosfeer).</p></details>
+    <details><summary>Wat is albedo en geef een hoog- en laag-albedo voorbeeld.</summary>
+      <p class="ans">Het weerkaatsingsvermogen. Hoog: sneeuw/ijs/wolken. Laag: water, bos, asfalt.</p></details>
+    <details><summary>Noem de vijf temperatuurfactoren.</summary>
+      <p class="ans">Breedteligging, hoogteligging, ligging t.o.v. zee, zeestromen, ligging t.o.v. gebergte.</p></details>
+    <details><summary>Wat is de ITCZ en wat gebeurt daar?</summary>
+      <p class="ans">De zone bij de evenaar waar warme lucht stijgt → lagedruk en veel regen (tropisch regenwoud).</p></details>
+    <details><summary>Hoe ontstaan passaten?</summary>
+      <p class="ans">Lucht stroomt van de subtropische hogedruk (30°) naar de ITCZ en wordt afgebogen door de corioliskracht (NO- en ZO-passaat).</p></details>
+    <details><summary>Wat is een moesson?</summary>
+      <p class="ans">Een seizoenswind door het verschil in opwarming van land en zee: natte zomermoesson (zee→land), droge wintermoesson (land→zee).</p></details>
+    <details><summary>Waarop baseert Köppen zijn klimaatindeling?</summary>
+      <p class="ans">Op temperatuur en neerslag (gekoppeld aan vegetatie). A=tropisch, B=droog, C=gematigd, D=landklimaat, E=polair.</p></details>
+    <details><summary>Verschil tussen mechanische en chemische verwering?</summary>
+      <p class="ans">Mechanisch: uiteenvallen zonder samenstellingsverandering (vorstverwering). Chemisch: samenstelling verandert door reactie (oplossing/oxidatie), vooral warm en nat.</p></details>
+    <details><summary>Welke factoren bepalen of een massabeweging plaatsvindt?</summary>
+      <p class="ans">Steilheid, water/verzadiging, begroeiing, gesteente en menselijk ingrijpen.</p></details>
+    <details><summary>Welke terreinvorm hoort bij gletsjererosie, en welke bij windsedimentatie?</summary>
+      <p class="ans">Gletsjererosie → U-dal (kaar, horn). Windsedimentatie → duinen en löss.</p></details>
+  </div>
+</section>
+
+<footer>Gemaakt op basis van de leerdoelen uit het leeroverzicht. Vetgedrukte begrippen leveren de meeste punten op.</footer>
+</main>
+</body>
+</html>

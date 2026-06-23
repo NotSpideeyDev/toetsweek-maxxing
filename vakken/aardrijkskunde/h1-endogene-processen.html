@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AK H3 — Landschappen</title>
+<style>
+  :root{
+    --ink:#16202a;--moss:#4a77a8;--moss-d:#345a82;--soil:#5e6e7d;
+    --leaf:#e7eef6;--leaf-d:#cdddec;--paper:#f7f9fb;--amber:#c47a2c;--line:#d2d9e0;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55;font-size:17px}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#f2f7fc;padding:34px 20px 26px}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.85;margin:0 0 6px}
+  header h1{margin:0;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.92;max-width:60ch;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:8px;overflow-x:auto;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav a{flex:0 0 auto;text-decoration:none;color:var(--moss-d);background:var(--leaf);
+    border:1px solid var(--leaf-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:30px;scroll-margin-top:60px}
+  .num{font-family:ui-sans-serif,system-ui,sans-serif;display:inline-flex;width:26px;height:26px;
+    background:var(--moss);color:#fff;border-radius:6px;align-items:center;justify-content:center;
+    font-size:14px;font-weight:700;margin-right:8px;vertical-align:middle}
+  h2{font-size:20px;margin:10px 0 6px;letter-spacing:-.01em;display:flex;align-items:flex-start;gap:0}
+  h2 span.q{flex:1}
+  h3{font-size:17px;margin:18px 0 2px;color:var(--moss-d)}
+  ul{margin:6px 0 8px;padding-left:20px}
+  li{margin:4px 0}
+  li ul{margin:3px 0}
+  b.t{color:var(--moss-d)}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+  th{background:var(--moss);color:#fff;font-weight:600}
+  tr:nth-child(even) td{background:#eef3f8}
+  .tip{background:#fdf4e7;border:1px solid #f0dcc0;border-radius:8px;padding:10px 14px;margin:12px 0;
+    font-size:15px;font-family:ui-sans-serif,system-ui,sans-serif}
+  .tip b{color:var(--amber)}
+  .quiz{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 16px;margin-top:14px}
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:none}
+  summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;gap:8px;align-items:flex-start}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"?";flex:0 0 auto;width:22px;height:22px;background:var(--moss);color:#fff;
+    border-radius:50%;font-size:13px;display:flex;align-items:center;justify-content:center;font-family:ui-sans-serif,system-ui,sans-serif}
+  details[open] summary::before{content:"✓";background:var(--amber)}
+  .ans{margin:8px 0 2px 30px;font-size:15px;color:#2a343e}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);text-align:center;padding:0 18px 40px}
+</style>
+</head>
+<body>
+<header>
+  <p class="kicker">Aardrijkskunde · Thema 3</p>
+  <h1>Landschappen</h1>
+  <p>Hoofdvraag: hoe ontstaan verschillende landschappen en stroomgebieden, en welke invloed heeft de mens op de ecologische draagkracht? Per deelvraag de kern, begrippen vetgedrukt. Zelftoets onderaan.</p>
+</header>
+
+<nav>
+  <a href="#d1">1 Geofactoren</a>
+  <a href="#d2">2 Klimaat & vegetatie</a>
+  <a href="#d3">3 Landschapszones</a>
+  <a href="#d4">4 Mens & degradatie</a>
+  <a href="#d5">5–6 Stroomgebieden</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="d1">
+  <h2><span class="num">1</span><span class="q">Hoe ontstaan landschappen door samenhangende geofactoren?</span></h2>
+  <ul>
+    <li><b class="t">Geofactoren</b>: klimaat, reliëf/gesteente, water, bodem, vegetatie (flora), fauna én de mens. In <b class="t">samenhang</b> en na verloop van tijd vormen ze een <b class="t">landschap</b>.</li>
+    <li>Een landschap is een <b class="t">dynamisch systeem</b>: de geofactoren beïnvloeden elkaar voortdurend, dus het landschap verandert (door endogene, exogene én menselijke processen).</li>
+  </ul>
+</section>
+
+<section id="d2">
+  <h2><span class="num">2</span><span class="q">Waarom vallen klimaatgebieden, vegetatiezones en landschapszones grotendeels samen?</span></h2>
+  <ul>
+    <li>Het <b class="t">klimaat</b> (temperatuur + neerslag) is bepalend voor de natuurlijke <b class="t">vegetatie</b>. De vegetatiezones volgen daarom de klimaatzones, en die bepalen samen de landschapszones.</li>
+    <li>De grenzen vallen niet altijd precies samen: er zijn <b class="t">geleidelijke overgangen</b> (gradiënten), en bodem, reliëf of de mens kunnen lokaal afwijken.</li>
+  </ul>
+</section>
+
+<section id="d3">
+  <h2><span class="num">3</span><span class="q">Kenmerken en ligging van de zes landschapszones</span></h2>
+  <table>
+    <tr><th>Zone (evenaar → pool)</th><th>Klimaat &amp; vegetatie</th></tr>
+    <tr><td><b>Tropische zone</b></td><td>warm, nat → tropisch regenwoud / savanne</td></tr>
+    <tr><td><b>Aride zone</b></td><td>droog (dalende lucht bij ~30°) → woestijn / steppe</td></tr>
+    <tr><td><b>Subtropische zone</b></td><td>mediterraan, droge zomer → hardbladige struiken</td></tr>
+    <tr><td><b>Gematigde zone</b></td><td>zacht, voldoende neerslag → loofbos</td></tr>
+    <tr><td><b>Boreale zone</b></td><td>koud → naaldwoud (taiga)</td></tr>
+    <tr><td><b>Polaire zone</b></td><td>zeer koud → toendra / ijs</td></tr>
+  </table>
+  <p>De ligging verklaar je met de geofactoren, vooral het <b class="t">klimaat</b>: de instraling neemt af richting de polen, en de <b class="t">atmosferische circulatie</b> zorgt voor de droge woestijngordel bij 30° (dalende lucht).</p>
+</section>
+
+<section id="d4">
+  <h2><span class="num">4</span><span class="q">Invloed van de mens op natuur en milieu</span></h2>
+  <ul>
+    <li><b class="t">Ecologische draagkracht</b>: het vermogen van een ecosysteem om gebruik/belasting te verdragen zonder blijvende schade.</li>
+    <li>Menselijke activiteiten (ontbossing, overbegrazing, vervuiling) beïnvloeden de draagkracht → <b class="t">milieuproblemen</b> en milieurampen.</li>
+    <li><b class="t">Klimaatverandering</b> laat klimaatgebieden en landschapszones <b class="t">verschuiven</b>.</li>
+    <li><b class="t">Landdegradatie</b>: achteruitgang van het land — bodemerosie, <b class="t">verwoestijning (desertificatie)</b>, verzilting, ontbossing.</li>
+    <li>Niet alle zones zijn even gevoelig: <b class="t">aride en semi‑aride</b> gebieden en berggebieden zijn kwetsbaarder (langzaam herstel, weinig vegetatie).</li>
+    <li><b class="t">Duurzaam landgebruik</b>: zó gebruiken dat ook toekomstige generaties het kunnen (herbebossing, terrassenbouw, vruchtwisseling).</li>
+  </ul>
+</section>
+
+<section id="d5">
+  <h2><span class="num">5</span><span class="q">Ontwikkeling van stroomgebieden: aride (Colorado) vs. gematigd (Donau)</span></h2>
+  <ul>
+    <li><b class="t">Stroomgebied</b>: het gebied waarvan al het water naar één rivier afwatert; de grens is de <b class="t">waterscheiding</b>.</li>
+    <li>Met <b class="t">paleogeografische kaarten</b> reconstrueer je de ontwikkeling. <b class="t">Endogene</b> processen (opheffing, tektoniek) en <b class="t">exogene</b> processen (erosie, sedimentatie) vormen samen het stroomgebied.</li>
+    <li><b class="t">Colorado</b> (aride): diepe insnijding (Grand Canyon) door opheffing van het plateau + insnijding van de rivier; weinig neerslag.</li>
+    <li><b class="t">Donau</b> (gematigd): groot stroomgebied, meer neerslag, gematigd klimaat.</li>
+  </ul>
+
+  <h2><span class="num">6</span><span class="q">Mens, milieu en ecologische draagkracht in het stroomgebied</span></h2>
+  <ul>
+    <li><b class="t">Functies van de rivier</b> voor de mens: drinkwater, transport/scheepvaart, energie (waterkracht), landbouw (irrigatie), recreatie.</li>
+    <li>Menselijke activiteiten: stuwdammen (Hoover Dam op de Colorado), irrigatie, kanalisatie.</li>
+    <li>Milieuproblemen: door wateronttrekking bereikt de <b class="t">Colorado</b> de zee soms niet meer; verzilting; aantasting van de ecologische draagkracht. Bij de <b class="t">Donau</b>: vervuiling, kanalisatie en verlies van natuur.</li>
+  </ul>
+</section>
+
+<section id="toets">
+  <h2 style="color:var(--moss-d)">Zelftoets</h2>
+  <p class="goal">Tik op een vraag voor het antwoord. Probeer 'm eerst hardop te beantwoorden.</p>
+  <div class="quiz">
+    <details><summary>Noem de geofactoren.</summary>
+      <p class="ans">Klimaat, reliëf/gesteente, water, bodem, vegetatie (flora), fauna en de mens.</p></details>
+    <details><summary>Waarom is een landschap een dynamisch systeem?</summary>
+      <p class="ans">Omdat de geofactoren elkaar voortdurend beïnvloeden, waardoor het landschap blijft veranderen.</p></details>
+    <details><summary>Waarom vallen klimaatzones en vegetatiezones grotendeels samen?</summary>
+      <p class="ans">Het klimaat (temperatuur + neerslag) bepaalt de natuurlijke vegetatie, dus de vegetatiezones volgen de klimaatzones.</p></details>
+    <details><summary>Waarom vallen de grenzen niet altijd precies samen?</summary>
+      <p class="ans">Er zijn geleidelijke overgangen (gradiënten); bodem, reliëf of de mens kunnen lokaal afwijken.</p></details>
+    <details><summary>Noem de zes landschapszones van evenaar naar pool.</summary>
+      <p class="ans">Tropisch, aride, subtropisch, gematigd, boreaal, polair.</p></details>
+    <details><summary>Waarom ligt de woestijngordel rond 30° breedte?</summary>
+      <p class="ans">Daar daalt lucht in de atmosferische circulatie (hogedruk) → droog, weinig neerslag.</p></details>
+    <details><summary>Wat is ecologische draagkracht?</summary>
+      <p class="ans">Het vermogen van een ecosysteem om gebruik/belasting te verdragen zonder blijvende schade.</p></details>
+    <details><summary>Wat is landdegradatie? Geef twee vormen.</summary>
+      <p class="ans">Achteruitgang van het land, bv. bodemerosie en verwoestijning (ook verzilting, ontbossing).</p></details>
+    <details><summary>Waarom zijn niet alle zones even gevoelig voor degradatie?</summary>
+      <p class="ans">Aride/semi-aride en berggebieden herstellen langzaam en hebben weinig vegetatie, dus ze zijn kwetsbaarder.</p></details>
+    <details><summary>Wat is een stroomgebied en een waterscheiding?</summary>
+      <p class="ans">Een stroomgebied is het gebied dat naar één rivier afwatert; de waterscheiding is de grens ertussen.</p></details>
+    <details><summary>Welke processen vormen samen een stroomgebied?</summary>
+      <p class="ans">Endogene (opheffing/tektoniek) en exogene (erosie/sedimentatie) processen.</p></details>
+    <details><summary>Noem een milieuprobleem in het stroomgebied van de Colorado.</summary>
+      <p class="ans">Door wateronttrekking (irrigatie, stuwdammen) bereikt de rivier de zee soms niet meer; ook verzilting.</p></details>
+  </div>
+</section>
+
+<footer>Gemaakt op basis van de leerdoelen uit het leeroverzicht. Vetgedrukte begrippen leveren de meeste punten op.</footer>
+</main>
+</body>
+</html>
