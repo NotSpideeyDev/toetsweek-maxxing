@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studiehulp — kies wat je wilt leren</title>
+<style>
+  :root{
+    --ink:#14241c;--moss:#3c6e54;--moss-d:#2a5340;--soil:#8a6d4a;
+    --leaf:#e8efe7;--leaf-d:#cfe0cd;--paper:#fbfaf6;--amber:#c47a2c;--line:#d8ddd4;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#f4f8f3;
+    padding:48px 22px 38px}
+  .wrap{max-width:860px;margin:0 auto}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.8;margin:0 0 8px}
+  header h1{margin:0;font-size:34px;line-height:1.08;letter-spacing:-.01em}
+  header p{margin:12px 0 0;font-size:16px;opacity:.92;max-width:60ch;
+    font-family:ui-sans-serif,system-ui,sans-serif}
+  main{max-width:860px;margin:0 auto;padding:30px 22px 70px}
+  .filterbar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px;
+    font-family:ui-sans-serif,system-ui,sans-serif}
+  .chip{cursor:pointer;border:1px solid var(--leaf-d);background:var(--leaf);
+    color:var(--moss-d);padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600}
+  .chip.active{background:var(--moss);color:#fff;border-color:var(--moss)}
+  .vak{margin-bottom:34px}
+  .vak-head{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+  .badge{flex:0 0 auto;width:46px;height:46px;border-radius:12px;display:flex;
+    align-items:center;justify-content:center;font-weight:700;font-size:20px;color:#fff;
+    font-family:ui-sans-serif,system-ui,sans-serif}
+  .vak h2{margin:0;font-size:22px;letter-spacing:-.01em}
+  .vak .sub{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);margin:2px 0 0}
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin-top:14px}
+  a.card{display:block;text-decoration:none;color:inherit;background:#fff;
+    border:1px solid var(--line);border-radius:12px;padding:16px 18px;transition:.15s}
+  a.card:hover{border-color:var(--moss);transform:translateY(-2px);
+    box-shadow:0 6px 18px rgba(42,83,64,.10)}
+  a.card .ch{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;
+    letter-spacing:.06em;text-transform:uppercase;color:var(--amber);font-weight:700}
+  a.card h3{margin:4px 0 4px;font-size:18px}
+  a.card p{margin:0;font-size:14px;color:#4a5a50;
+    font-family:ui-sans-serif,system-ui,sans-serif}
+  .soon{display:flex;align-items:center;justify-content:center;text-align:center;
+    border:1px dashed var(--line);border-radius:12px;padding:16px;color:var(--soil);
+    font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;background:#faf8f2}
+  footer{max-width:860px;margin:0 auto;padding:0 22px 50px;
+    font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil)}
+  footer code{background:var(--leaf);padding:1px 6px;border-radius:4px;color:var(--moss-d)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p class="kicker">Studiehulp · samen leren</p>
+    <h1>Kies wat je wilt leren</h1>
+    <p>Interactieve samenvattingen met begrippen en zelftoetsen. Klik op een hoofdstuk om te beginnen. Meer vakken volgen — iedereen mag bijdragen.</p>
+  </div>
+</header>
+
+<main>
+  <div class="filterbar" id="filters"></div>
+  <div id="vakken"></div>
+</main>
+
+<footer>
+  Nieuw vak of hoofdstuk toevoegen? Zet je <code>.html</code>-bestand in <code>vakken/&lt;vaknaam&gt;/</code> en voeg één regel toe aan de lijst boven in <code>index.html</code>. Uitleg staat in <code>README.md</code>.
+</footer>
+
+<script>
+/* =======================================================================
+   HIER VAKKEN & HOOFDSTUKKEN TOEVOEGEN
+   - kleur: hex-code voor de badge
+   - status "klaar" = klikbaar, "binnenkort" = grijze placeholder
+   ======================================================================= */
+const VAKKEN = [
+  {
+    naam: "Biologie",
+    initiaal: "Bi",
+    kleur: "#3c6e54",
+    omschrijving: "VWO · Inleiding in de biologie & ecologie",
+    hoofdstukken: [
+      { code:"H5", titel:"Ecologie", omschrijving:"Ecosystemen, voedselrelaties, energie en successie.", link:"vakken/biologie/h5-ecologie.html", status:"klaar" },
+      { code:"H6", titel:"Mens en milieu", omschrijving:"Kringlopen, eutrofiëring, broeikaseffect en duurzaamheid.", link:"vakken/biologie/h6-mens-en-milieu.html", status:"klaar" }
+    ]
+  },
+  {
+    naam: "Scheikunde",
+    initiaal: "Sk",
+    kleur: "#8a6d4a",
+    omschrijving: "VWO · nog toe te voegen",
+    hoofdstukken: []
+  },
+  {
+    naam: "Natuurkunde",
+    initiaal: "Na",
+    kleur: "#2a5340",
+    omschrijving: "VWO · nog toe te voegen",
+    hoofdstukken: []
+  }
+];
+
+/* ---- render (hier hoef je niets aan te passen) ---- */
+const vakkenEl = document.getElementById('vakken');
+const filtersEl = document.getElementById('filters');
+let actief = "Alle";
+
+function maakFilters(){
+  const namen = ["Alle", ...VAKKEN.map(v=>v.naam)];
+  filtersEl.innerHTML = "";
+  namen.forEach(n=>{
+    const c = document.createElement('button');
+    c.className = "chip" + (n===actief?" active":"");
+    c.textContent = n;
+    c.onclick = ()=>{ actief=n; maakFilters(); render(); };
+    filtersEl.appendChild(c);
+  });
+}
+
+function render(){
+  vakkenEl.innerHTML = "";
+  VAKKEN.filter(v=> actief==="Alle" || v.naam===actief).forEach(v=>{
+    const sec = document.createElement('section');
+    sec.className = "vak";
+    sec.innerHTML = `
+      <div class="vak-head">
+        <div class="badge" style="background:${v.kleur}">${v.initiaal}</div>
+        <div>
+          <h2>${v.naam}</h2>
+          <p class="sub">${v.omschrijving}</p>
+        </div>
+      </div>`;
+    const cards = document.createElement('div');
+    cards.className = "cards";
+    if(v.hoofdstukken.length === 0){
+      cards.innerHTML = `<div class="soon">Nog geen hoofdstukken — voeg ze toe in <b>index.html</b></div>`;
+    } else {
+      v.hoofdstukken.forEach(h=>{
+        if(h.status === "klaar"){
+          const a = document.createElement('a');
+          a.className = "card";
+          a.href = h.link;
+          a.innerHTML = `<span class="ch">${h.code}</span><h3>${h.titel}</h3><p>${h.omschrijving}</p>`;
+          cards.appendChild(a);
+        } else {
+          const d = document.createElement('div');
+          d.className = "soon";
+          d.innerHTML = `${h.code} · ${h.titel}<br><small>binnenkort</small>`;
+          cards.appendChild(d);
+        }
+      });
+    }
+    sec.appendChild(cards);
+    vakkenEl.appendChild(sec);
+  });
+}
+
+maakFilters();
+render();
+</script>
+</body>
+</html>
