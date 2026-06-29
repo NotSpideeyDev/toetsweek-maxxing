@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SK 6.3 — Evenwichtsreacties</title>
+<style>
+  :root{
+    --ink:#241c12;--moss:#8a6d4a;--moss-d:#5f4a30;--soil:#8a7a5e;
+    --leaf:#f1ebe2;--leaf-d:#e0d4c2;--paper:#faf8f4;--amber:#c47a2c;--line:#ded5c6;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55;font-size:17px}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#f7f2ea;padding:34px 20px 26px}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.85;margin:0 0 6px}
+  header h1{margin:0;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.92;max-width:60ch;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:8px;overflow-x:auto;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav a{flex:0 0 auto;text-decoration:none;color:var(--moss-d);background:var(--leaf);
+    border:1px solid var(--leaf-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:30px;scroll-margin-top:60px}
+  .bs{font-family:ui-sans-serif,system-ui,sans-serif;display:inline-block;background:var(--moss);
+    color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:5px;font-weight:700}
+  h2{font-size:21px;margin:10px 0 4px;letter-spacing:-.01em}
+  h3{font-size:17px;margin:18px 0 2px;color:var(--moss-d)}
+  ul{margin:6px 0 8px;padding-left:20px}
+  li{margin:4px 0}
+  b.t{color:var(--moss-d)}
+  .term{background:#fff;border:1px solid var(--line);border-radius:10px;padding:2px 16px;margin:12px 0}
+  .term dt{font-weight:700;color:var(--moss-d);margin-top:12px;font-family:ui-sans-serif,system-ui,sans-serif;font-size:15px}
+  .term dd{margin:3px 0 12px;font-size:15px}
+  .formule{background:#fff;border:1px solid var(--line);border-left:4px solid var(--moss);border-radius:8px;
+    padding:10px 16px;margin:12px 0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:16px;text-align:center}
+  .tip{background:#fdf4e7;border:1px solid #f0dcc0;border-radius:8px;padding:10px 14px;margin:12px 0;
+    font-size:15px;font-family:ui-sans-serif,system-ui,sans-serif}
+  .tip b{color:var(--amber)}
+  .quiz{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 16px;margin-top:14px}
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:none}
+  summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;gap:8px;align-items:flex-start}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"?";flex:0 0 auto;width:22px;height:22px;background:var(--moss);color:#fff;
+    border-radius:50%;font-size:13px;display:flex;align-items:center;justify-content:center;font-family:ui-sans-serif,system-ui,sans-serif}
+  details[open] summary::before{content:"✓";background:var(--amber)}
+  .ans{margin:8px 0 2px 30px;font-size:15px;color:#3a2f1f}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);text-align:center;padding:0 18px 40px}
+</style>
+</head>
+<body>
+<header>
+  <p class="kicker">Scheikunde · Hoofdstuk 6 · §3</p>
+  <h1>Evenwichtsreacties</h1>
+  <p>Wat een evenwichtsreactie is, en wat een oplosevenwicht en een verdelingsevenwicht is.</p>
+</header>
+
+<nav>
+  <a href="#chem">Chemisch evenwicht</a>
+  <a href="#ligging">Ligging</a>
+  <a href="#oplos">Oplosevenwicht</a>
+  <a href="#verdeling">Verdelingsevenwicht</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="chem">
+  <span class="bs">Kern</span>
+  <h2>Chemisch evenwicht</h2>
+  <dl class="term">
+    <dt>Omkeerbare reactie</dt>
+    <dd>Een reactie die heen én terug kan verlopen.</dd>
+    <dt>Evenwichtsreactie</dt>
+    <dd>Een omkeerbare reactie waarbij het omkeren vanzelf gaat. Je schrijft dit met de <b class="t">evenwichtspijlen</b> ⇌.</dd>
+  </dl>
+  <div class="formule">PCl₃ (g) + Cl₂ (g) ⇌ PCl₅ (g)</div>
+  <p>In het begin is er alleen PCl₃ en Cl₂; de reactie naar rechts gaat snel. Naarmate de beginstoffen opraken neemt de snelheid naar rechts af, en naarmate er PCl₅ ontstaat neemt de snelheid naar links toe. Op een bepaald moment zijn beide snelheden gelijk → <b class="t">chemisch evenwicht</b>.</p>
+  <dl class="term">
+    <dt>Chemisch (dynamisch) evenwicht</dt>
+    <dd>De heen- en teruggaande reactie verlopen tegelijk en met dezelfde snelheid. De hoeveelheden van de stoffen veranderen dan niet meer, en er zijn zowel beginstoffen als reactieproducten aanwezig.</dd>
+  </dl>
+</section>
+
+<section id="ligging">
+  <span class="bs">Ligging</span>
+  <h2>Ligging van het evenwicht</h2>
+  <p>De <b class="t">ligging van het evenwicht</b> geeft aan of er meer beginstoffen of meer reactieproducten in het mengsel zitten:</p>
+  <ul>
+    <li>relatief veel <b class="t">beginstoffen</b> → "het evenwicht ligt links";</li>
+    <li>relatief veel <b class="t">reactieproducten</b> → "het evenwicht ligt rechts".</li>
+  </ul>
+</section>
+
+<section id="oplos">
+  <span class="bs">Bijzonder geval</span>
+  <h2>Oplosevenwicht</h2>
+  <dl class="term">
+    <dt>Oplosevenwicht</dt>
+    <dd>Het dynamische evenwicht dat ontstaat bij het oplossen van een (matig of slecht oplosbaar) zout, tussen de opgeloste ionen en de vaste stof op de bodem.</dd>
+  </dl>
+  <div class="formule">Ca₃(PO₄)₂ (s) ⇌ 3 Ca²⁺ (aq) + 2 PO₄³⁻ (aq)</div>
+</section>
+
+<section id="verdeling">
+  <span class="bs">Bijzonder geval</span>
+  <h2>Verdelingsevenwicht</h2>
+  <dl class="term">
+    <dt>Verdelingsevenwicht</dt>
+    <dd>Het dynamische evenwicht dat ontstaat als een stof zich verdeelt over twee oplosmiddelen die niet in elkaar oplossen (de een hydrofiel, de ander hydrofoob), bijvoorbeeld jood in water en wasbenzine.</dd>
+  </dl>
+  <div class="formule">I₂ (aq) ⇌ I₂ (wasbenzine)</div>
+</section>
+
+<section id="toets">
+  <h2 style="color:var(--moss-d)">Zelftoets</h2>
+  <p class="goal">Tik op een vraag voor het antwoord.</p>
+  <div class="quiz">
+    <details><summary>Wat is een omkeerbare reactie?</summary>
+      <p class="ans">Een reactie die zowel heen als terug kan verlopen.</p></details>
+    <details><summary>Wanneer noem je een omkeerbare reactie een evenwichtsreactie?</summary>
+      <p class="ans">Als het omkeren vanzelf gaat (genoteerd met ⇌).</p></details>
+    <details><summary>Noem de drie kenmerken van een chemisch evenwicht.</summary>
+      <p class="ans">Heen- en teruggaande reactie verlopen tegelijk met dezelfde snelheid; de hoeveelheden veranderen niet meer; er zijn zowel beginstoffen als producten aanwezig.</p></details>
+    <details><summary>Wat betekent "het evenwicht ligt rechts"?</summary>
+      <p class="ans">Er zijn relatief veel reactieproducten in het evenwichtsmengsel.</p></details>
+    <details><summary>Wat is een oplosevenwicht?</summary>
+      <p class="ans">Een dynamisch evenwicht bij het oplossen van een zout, tussen opgeloste ionen en de vaste stof op de bodem.</p></details>
+    <details><summary>Wat is een verdelingsevenwicht?</summary>
+      <p class="ans">Een dynamisch evenwicht waarbij een stof zich verdeelt over twee niet-mengende oplosmiddelen (bv. jood in water en wasbenzine).</p></details>
+    <details><summary>Waarom is een dynamisch evenwicht "dynamisch" en niet stilstaand?</summary>
+      <p class="ans">Beide reacties blijven doorgaan; alleen de netto hoeveelheden veranderen niet meer.</p></details>
+  </div>
+</section>
+
+<footer>Hoofdstuk 6, §3. Vetgedrukte begrippen leveren de meeste punten op.</footer>
+</main>
+</body>
+</html>

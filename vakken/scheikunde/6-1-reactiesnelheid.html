@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SK 6.1 — Reactiesnelheid</title>
+<style>
+  :root{
+    --ink:#241c12;--moss:#8a6d4a;--moss-d:#5f4a30;--soil:#8a7a5e;
+    --leaf:#f1ebe2;--leaf-d:#e0d4c2;--paper:#faf8f4;--amber:#c47a2c;--line:#ded5c6;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55;font-size:17px}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#f7f2ea;padding:34px 20px 26px}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.85;margin:0 0 6px}
+  header h1{margin:0;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.92;max-width:60ch;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:8px;overflow-x:auto;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav a{flex:0 0 auto;text-decoration:none;color:var(--moss-d);background:var(--leaf);
+    border:1px solid var(--leaf-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:30px;scroll-margin-top:60px}
+  .bs{font-family:ui-sans-serif,system-ui,sans-serif;display:inline-block;background:var(--moss);
+    color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:5px;font-weight:700}
+  h2{font-size:21px;margin:10px 0 4px;letter-spacing:-.01em}
+  h3{font-size:17px;margin:18px 0 2px;color:var(--moss-d)}
+  ul{margin:6px 0 8px;padding-left:20px}
+  li{margin:4px 0}
+  b.t{color:var(--moss-d)}
+  .term{background:#fff;border:1px solid var(--line);border-radius:10px;padding:2px 16px;margin:12px 0}
+  .term dt{font-weight:700;color:var(--moss-d);margin-top:12px;font-family:ui-sans-serif,system-ui,sans-serif;font-size:15px}
+  .term dd{margin:3px 0 12px;font-size:15px}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+  th{background:var(--moss);color:#fff;font-weight:600}
+  tr:nth-child(even) td{background:#f3eee5}
+  .tip{background:#fdf4e7;border:1px solid #f0dcc0;border-radius:8px;padding:10px 14px;margin:12px 0;
+    font-size:15px;font-family:ui-sans-serif,system-ui,sans-serif}
+  .tip b{color:var(--amber)}
+  .quiz{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 16px;margin-top:14px}
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:none}
+  summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;gap:8px;align-items:flex-start}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"?";flex:0 0 auto;width:22px;height:22px;background:var(--moss);color:#fff;
+    border-radius:50%;font-size:13px;display:flex;align-items:center;justify-content:center;font-family:ui-sans-serif,system-ui,sans-serif}
+  details[open] summary::before{content:"✓";background:var(--amber)}
+  .ans{margin:8px 0 2px 30px;font-size:15px;color:#3a2f1f}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);text-align:center;padding:0 18px 40px}
+</style>
+</head>
+<body>
+<header>
+  <p class="kicker">Scheikunde · Hoofdstuk 6 · §1</p>
+  <h1>Reactiesnelheid</h1>
+  <p>Wat reactiesnelheid is, hoe je verschillen verklaart met het botsende-deeltjesmodel en met de activeringsenergie. Begrippen vetgedrukt, zelftoets onderaan.</p>
+</header>
+
+<nav>
+  <a href="#snelheid">Reactiesnelheid</a>
+  <a href="#botsing">Botsende deeltjes</a>
+  <a href="#factoren">5 factoren</a>
+  <a href="#ea">Activeringsenergie</a>
+  <a href="#kat">Katalysator</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="snelheid">
+  <span class="bs">Kern</span>
+  <h2>Wat is reactiesnelheid?</h2>
+  <dl class="term">
+    <dt>Reactiesnelheid</dt>
+    <dd>Geeft aan hoeveel stof er per seconde ontstaat of verdwijnt. De snelheid waarmee een reactie verloopt kan sterk verschillen (roest = langzaam, ijzerslijpsel ontbranden = snel).</dd>
+  </dl>
+  <p>De reactiesnelheid hangt af van <b class="t">vijf factoren</b>: verdelingsgraad · concentratie (of druk bij gassen) · temperatuur · soort stof · katalysator.</p>
+</section>
+
+<section id="botsing">
+  <span class="bs">Model</span>
+  <h2>Het botsende-deeltjesmodel</h2>
+  <p>Deeltjes (atomen, ionen, moleculen) in de opgeloste, vloeibare of gasvormige fase bewegen continu en botsen tegen elkaar. Botsen twee deeltjes <b class="t">hard genoeg</b>, dan kan er een reactie optreden.</p>
+  <dl class="term">
+    <dt>Effectieve botsing</dt>
+    <dd>Een botsing die tot een reactie leidt. Hoe vaker én harder deeltjes botsen, hoe groter de kans op effectieve botsingen en hoe sneller de reactie verloopt.</dd>
+  </dl>
+</section>
+
+<section id="factoren">
+  <span class="bs">Verklaren met het model</span>
+  <h2>De vijf factoren</h2>
+  <table>
+    <tr><th>Factor</th><th>Effect en uitleg met het model</th></tr>
+    <tr><td><b>Verdelingsgraad</b></td><td>de mate waarin een stof verdeeld is over de ruimte. Hoger → groter oppervlak → meer botsingskans → meer effectieve botsingen/sec → sneller. (Daarom brandt ijzerpoeder sneller dan een ijzerstaaf.)</td></tr>
+    <tr><td><b>Concentratie / druk</b></td><td>meer opgeloste stof (hogere concentratie) of meer gas in een afgesloten ruimte (hogere druk) → meer deeltjes in hetzelfde volume → meer botsingskans → sneller.</td></tr>
+    <tr><td><b>Temperatuur</b></td><td>hoger → deeltjes bewegen sneller → méér botsingen én heftiger, dus méér botsingen zijn effectief → sneller.</td></tr>
+    <tr><td><b>Soort stof</b></td><td>elke reactie heeft een eigen activeringsenergie (zie hieronder).</td></tr>
+    <tr><td><b>Katalysator</b></td><td>verlaagt de activeringsenergie (zie hieronder).</td></tr>
+  </table>
+  <div class="tip"><b>Rekenfeitje verdelingsgraad:</b> een kubus van 4 cm heeft oppervlak 6 × 4 × 4 = 96 cm². Verdeel je hem in 8 kubussen van 2 cm, dan is het oppervlak 8 × 6 × 2 × 2 = 192 cm² — twee keer zo groot.</div>
+</section>
+
+<section id="ea">
+  <span class="bs">Energie</span>
+  <h2>Activeringsenergie</h2>
+  <dl class="term">
+    <dt>Geactiveerde toestand</dt>
+    <dd>De korte tussentoestand die reagerende deeltjes bereiken vlak voor de reactie.</dd>
+    <dt>Activeringsenergie</dt>
+    <dd>De energie die nodig is om de geactiveerde toestand te bereiken. Hoe lager de activeringsenergie, hoe meer deeltjes die kunnen bereiken en hoe sneller de reactie verloopt.</dd>
+  </dl>
+  <p>Dit verklaart de factor <b class="t">soort stof</b>: magnesium + zoutzuur heeft een lagere activeringsenergie dan zink + zoutzuur, dus die reactie verloopt sneller. In een <b class="t">energiediagram</b> staan: beginstoffen, geactiveerde toestand, activeringsenergie, reactie-energie en reactieproduct(en).</p>
+</section>
+
+<section id="kat">
+  <span class="bs">Katalysator</span>
+  <h2>Invloed van een katalysator</h2>
+  <dl class="term">
+    <dt>Katalysator</dt>
+    <dd>Een stof die een reactie sneller laat verlopen zonder zelf verbruikt te worden. Hij <b class="t">verlaagt de activeringsenergie</b>.</dd>
+    <dt>Enzym</dt>
+    <dd>De naam van een katalysator in levende wezens.</dd>
+  </dl>
+  <div class="tip"><b>Let op:</b> een katalysator verandert het verschil tussen de energieniveaus van beginstoffen en producten <b>niet</b> — de <b>reactie-energie blijft dus hetzelfde</b>. Alleen de activeringsenergie wordt lager.</div>
+</section>
+
+<section id="toets">
+  <h2 style="color:var(--moss-d)">Zelftoets</h2>
+  <p class="goal">Tik op een vraag voor het antwoord.</p>
+  <div class="quiz">
+    <details><summary>Wat is de reactiesnelheid?</summary>
+      <p class="ans">Hoeveel stof er per seconde ontstaat of verdwijnt.</p></details>
+    <details><summary>Van welke vijf factoren hangt de reactiesnelheid af?</summary>
+      <p class="ans">Verdelingsgraad, concentratie/druk, temperatuur, soort stof en katalysator.</p></details>
+    <details><summary>Wat is een effectieve botsing?</summary>
+      <p class="ans">Een botsing die tot een reactie leidt (deeltjes botsen hard genoeg).</p></details>
+    <details><summary>Waarom brandt poedersuiker boven een kaars wél fel, maar een suikerklontje niet?</summary>
+      <p class="ans">Poeder heeft een veel hogere verdelingsgraad → groter oppervlak → meer botsingskans → meer effectieve botsingen → snellere reactie.</p></details>
+    <details><summary>Waarom gaat een reactie sneller bij hogere temperatuur (twee redenen)?</summary>
+      <p class="ans">Deeltjes bewegen sneller (meer botsingen) én botsen heftiger (meer botsingen zijn effectief).</p></details>
+    <details><summary>Wat is activeringsenergie?</summary>
+      <p class="ans">De energie die nodig is om de geactiveerde toestand te bereiken.</p></details>
+    <details><summary>Wat doet een katalysator met de activeringsenergie en met de reactie-energie?</summary>
+      <p class="ans">Hij verlaagt de activeringsenergie, maar laat de reactie-energie ongewijzigd.</p></details>
+    <details><summary>Hoe heet een katalysator in een levend organisme?</summary>
+      <p class="ans">Een enzym.</p></details>
+  </div>
+</section>
+
+<footer>Hoofdstuk 6, §1. Vetgedrukte begrippen leveren de meeste punten op.</footer>
+</main>
+</body>
+</html>

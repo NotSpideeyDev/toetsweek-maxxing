@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SK 6.4 — Rekenen aan evenwichten</title>
+<style>
+  :root{
+    --ink:#241c12;--moss:#8a6d4a;--moss-d:#5f4a30;--soil:#8a7a5e;
+    --leaf:#f1ebe2;--leaf-d:#e0d4c2;--paper:#faf8f4;--amber:#c47a2c;--line:#ded5c6;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55;font-size:17px}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#f7f2ea;padding:34px 20px 26px}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.85;margin:0 0 6px}
+  header h1{margin:0;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.92;max-width:60ch;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:8px;overflow-x:auto;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav a{flex:0 0 auto;text-decoration:none;color:var(--moss-d);background:var(--leaf);
+    border:1px solid var(--leaf-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:30px;scroll-margin-top:60px}
+  .bs{font-family:ui-sans-serif,system-ui,sans-serif;display:inline-block;background:var(--moss);
+    color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:5px;font-weight:700}
+  h2{font-size:21px;margin:10px 0 4px;letter-spacing:-.01em}
+  h3{font-size:17px;margin:18px 0 2px;color:var(--moss-d)}
+  ul{margin:6px 0 8px;padding-left:20px}
+  li{margin:4px 0}
+  b.t{color:var(--moss-d)}
+  .term{background:#fff;border:1px solid var(--line);border-radius:10px;padding:2px 16px;margin:12px 0}
+  .term dt{font-weight:700;color:var(--moss-d);margin-top:12px;font-family:ui-sans-serif,system-ui,sans-serif;font-size:15px}
+  .term dd{margin:3px 0 12px;font-size:15px}
+  .formule{background:#fff;border:1px solid var(--line);border-left:4px solid var(--moss);border-radius:8px;
+    padding:10px 16px;margin:12px 0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:16px;text-align:center}
+  .ex{background:#fbf7f0;border:1px solid var(--leaf-d);border-radius:10px;padding:4px 16px 12px;margin:14px 0}
+  .ex h4{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--moss-d);margin:12px 0 4px;text-transform:uppercase;letter-spacing:.06em}
+  .ex p{font-size:15px;margin:6px 0}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+  th{background:var(--moss);color:#fff;font-weight:600}
+  tr:nth-child(even) td{background:#f3eee5}
+  .tip{background:#fdf4e7;border:1px solid #f0dcc0;border-radius:8px;padding:10px 14px;margin:12px 0;
+    font-size:15px;font-family:ui-sans-serif,system-ui,sans-serif}
+  .tip b{color:var(--amber)}
+  .quiz{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 16px;margin-top:14px}
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:none}
+  summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;gap:8px;align-items:flex-start}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"?";flex:0 0 auto;width:22px;height:22px;background:var(--moss);color:#fff;
+    border-radius:50%;font-size:13px;display:flex;align-items:center;justify-content:center;font-family:ui-sans-serif,system-ui,sans-serif}
+  details[open] summary::before{content:"✓";background:var(--amber)}
+  .ans{margin:8px 0 2px 30px;font-size:15px;color:#3a2f1f}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);text-align:center;padding:0 18px 40px}
+</style>
+</head>
+<body>
+<header>
+  <p class="kicker">Scheikunde · Hoofdstuk 6 · §4</p>
+  <h1>Rekenen aan evenwichten</h1>
+  <p>Concentratiebreuk, evenwichtsvoorwaarde en evenwichtsconstante K — met de begin-omgezet-eind-tabel en het oplosbaarheidsproduct.</p>
+</header>
+
+<nav>
+  <a href="#q">Concentratiebreuk Q</a>
+  <a href="#k">Constante K</a>
+  <a href="#regels">Regels</a>
+  <a href="#boe">BOE-tabel</a>
+  <a href="#ks">Oplosbaarheidsproduct</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="q">
+  <span class="bs">Opstellen</span>
+  <h2>Concentratiebreuk (Q)</h2>
+  <dl class="term">
+    <dt>Concentratiebreuk (Q)</dt>
+    <dd>Een breuk met de molariteit van de <b class="t">reactieproducten in de teller</b> en de <b class="t">beginstoffen in de noemer</b>. Coëfficiënten ≠ 1 komen terug als machten.</dd>
+  </dl>
+  <div class="formule">SO₂ + Cl₂ ⇌ SO₂Cl₂ &nbsp; → &nbsp; Q = [SO₂Cl₂] ÷ ( [SO₂] · [Cl₂] )</div>
+  <div class="formule">2 HCl ⇌ H₂ + Cl₂ &nbsp; → &nbsp; Q = ( [H₂] · [Cl₂] ) ÷ [HCl]²</div>
+</section>
+
+<section id="k">
+  <span class="bs">Kern</span>
+  <h2>Evenwichtsconstante (K)</h2>
+  <dl class="term">
+    <dt>Evenwichtsconstante (K)</dt>
+    <dd>Zodra het evenwicht is ingesteld heeft de concentratiebreuk een constante waarde: dat is K. Er is pas evenwicht als <b class="t">Q = K</b>. De ingevulde breuk heet dan de <b class="t">evenwichtsvoorwaarde</b>.</dd>
+  </dl>
+</section>
+
+<section id="regels">
+  <span class="bs">Onthouden</span>
+  <h2>Belangrijke regels</h2>
+  <ul>
+    <li>De waarde van K is <b class="t">alleen afhankelijk van de temperatuur</b> — niet van druk, volume, een katalysator of de beginconcentraties.</li>
+    <li>K heeft <b class="t">geen eenheid</b>.</li>
+    <li><b class="t">Vaste stoffen (s) en vloeistoffen (l) komen niet voor</b> in de concentratiebreuk: hun "molariteit" verandert niet en is dus een constante.</li>
+  </ul>
+  <div class="tip"><b>Veelgemaakte fout:</b> bij een oplosevenwicht zoals <i>2 HgO (s) ⇌ 2 Hg (l) + O₂ (g)</i> vallen de vaste stof en de vloeistof weg, dus K = [O₂]. De concentratie zuurstof is dan gewoon gelijk aan K.</div>
+</section>
+
+<section id="boe">
+  <span class="bs">Rekenmethode</span>
+  <h2>De begin-omgezet-eind-tabel</h2>
+  <p>Handig bij het berekenen van K: zet begin, omgezet en eind onder elkaar en gebruik de molverhoudingen.</p>
+  <div class="ex">
+    <h4>Voorbeeld</h4>
+    <p>0,50 mol H₂O en 0,50 mol CO in 1,0 dm³ bij 350 K. In evenwicht is er 0,27 mol H₂O over.<br>H₂O (g) + CO (g) ⇌ H₂ (g) + CO₂ (g)</p>
+    <table>
+      <tr><th></th><th>[H₂O]</th><th>[CO]</th><th>[H₂]</th><th>[CO₂]</th></tr>
+      <tr><td>begin</td><td>0,50</td><td>0,50</td><td>0</td><td>0</td></tr>
+      <tr><td>omgezet</td><td>−0,23</td><td>−0,23</td><td>+0,23</td><td>+0,23</td></tr>
+      <tr><td>eind</td><td>0,27</td><td>0,27</td><td>0,23</td><td>0,23</td></tr>
+    </table>
+    <p>Er reageerde 0,50 − 0,27 = 0,23 M H₂O; via de molverhoudingen (alle 1:1:1:1) volgt de rest.</p>
+    <p>K = (0,23 × 0,23) ÷ (0,27 × 0,27) = <b class="t">0,73</b>.</p>
+  </div>
+</section>
+
+<section id="ks">
+  <span class="bs">Soorten K</span>
+  <h2>Oplosbaarheidsproduct (Ks) en Kv</h2>
+  <p>Voor een <b class="t">oplosevenwicht</b> heet de constante het <b class="t">oplosbaarheidsproduct K<sub>s</sub></b> (s = solubility). Voor een <b class="t">verdelingsevenwicht</b> schrijf je <b class="t">K<sub>v</sub></b>.</p>
+  <div class="formule">Ca₃(PO₄)₂ (s) ⇌ 3 Ca²⁺ + 2 PO₄³⁻ &nbsp; → &nbsp; K<sub>s</sub> = [Ca²⁺]³ · [PO₄³⁻]²</div>
+  <div class="ex">
+    <h4>Voorbeeld — ionconcentratie uit K<sub>s</sub></h4>
+    <p>Ag₂SO₄ (s) ⇌ 2 Ag⁺ + SO₄²⁻, met K<sub>s</sub> = 1,2 · 10⁻⁵. Bereken [Ag⁺] in een verzadigde oplossing.</p>
+    <p>Stel [SO₄²⁻] = x, dan [Ag⁺] = 2x (molverhouding 2 : 1).</p>
+    <p>K<sub>s</sub> = (2x)² · x = 4x³ = 1,2 · 10⁻⁵ → x³ = 3,0 · 10⁻⁶ → x = 0,014 M.</p>
+    <p>[Ag⁺] = 2 × 0,014 = <b class="t">0,028 mol L⁻¹</b>.</p>
+  </div>
+</section>
+
+<section id="toets">
+  <h2 style="color:var(--moss-d)">Zelftoets</h2>
+  <p class="goal">Tik op een vraag voor het antwoord. Reken eerst zelf.</p>
+  <div class="quiz">
+    <details><summary>Wat staat er in de teller en in de noemer van de concentratiebreuk?</summary>
+      <p class="ans">Teller: de reactieproducten; noemer: de beginstoffen (coëfficiënten worden machten).</p></details>
+    <details><summary>Wat is het verband tussen Q en K bij evenwicht?</summary>
+      <p class="ans">Bij evenwicht geldt Q = K.</p></details>
+    <details><summary>Waarvan is de waarde van K afhankelijk?</summary>
+      <p class="ans">Alleen van de temperatuur.</p></details>
+    <details><summary>Welke stoffen laat je weg uit de concentratiebreuk?</summary>
+      <p class="ans">Vaste stoffen (s) en vloeistoffen (l).</p></details>
+    <details><summary>Stel de evenwichtsvoorwaarde op voor 2 SO₂ + O₂ ⇌ 2 SO₃.</summary>
+      <p class="ans">K = [SO₃]² ÷ ( [SO₂]² · [O₂] ).</p></details>
+    <details><summary>Wat is K<sub>s</sub> en waar staat de s voor?</summary>
+      <p class="ans">Het oplosbaarheidsproduct van een oplosevenwicht; s staat voor solubility (oplosbaarheid).</p></details>
+    <details><summary>Voor CaF₂ (s) ⇌ Ca²⁺ + 2 F⁻: geef K<sub>s</sub>.</summary>
+      <p class="ans">K<sub>s</sub> = [Ca²⁺] · [F⁻]².</p></details>
+  </div>
+</section>
+
+<footer>Hoofdstuk 6, §4. Vetgedrukte begrippen leveren de meeste punten op.</footer>
+</main>
+</body>
+</html>

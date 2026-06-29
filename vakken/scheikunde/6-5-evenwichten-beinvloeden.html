@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SK 6.5 — Evenwichten beïnvloeden</title>
+<style>
+  :root{
+    --ink:#241c12;--moss:#8a6d4a;--moss-d:#5f4a30;--soil:#8a7a5e;
+    --leaf:#f1ebe2;--leaf-d:#e0d4c2;--paper:#faf8f4;--amber:#c47a2c;--line:#ded5c6;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55;font-size:17px}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#f7f2ea;padding:34px 20px 26px}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.85;margin:0 0 6px}
+  header h1{margin:0;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.92;max-width:60ch;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:8px;overflow-x:auto;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav a{flex:0 0 auto;text-decoration:none;color:var(--moss-d);background:var(--leaf);
+    border:1px solid var(--leaf-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:30px;scroll-margin-top:60px}
+  .bs{font-family:ui-sans-serif,system-ui,sans-serif;display:inline-block;background:var(--moss);
+    color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:5px;font-weight:700}
+  h2{font-size:21px;margin:10px 0 4px;letter-spacing:-.01em}
+  h3{font-size:17px;margin:18px 0 2px;color:var(--moss-d)}
+  ul{margin:6px 0 8px;padding-left:20px}
+  li{margin:4px 0}
+  b.t{color:var(--moss-d)}
+  .term{background:#fff;border:1px solid var(--line);border-radius:10px;padding:2px 16px;margin:12px 0}
+  .term dt{font-weight:700;color:var(--moss-d);margin-top:12px;font-family:ui-sans-serif,system-ui,sans-serif;font-size:15px}
+  .term dd{margin:3px 0 12px;font-size:15px}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+  th{background:var(--moss);color:#fff;font-weight:600}
+  tr:nth-child(even) td{background:#f3eee5}
+  .tip{background:#fdf4e7;border:1px solid #f0dcc0;border-radius:8px;padding:10px 14px;margin:12px 0;
+    font-size:15px;font-family:ui-sans-serif,system-ui,sans-serif}
+  .tip b{color:var(--amber)}
+  .quiz{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 16px;margin-top:14px}
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:none}
+  summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;gap:8px;align-items:flex-start}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"?";flex:0 0 auto;width:22px;height:22px;background:var(--moss);color:#fff;
+    border-radius:50%;font-size:13px;display:flex;align-items:center;justify-content:center;font-family:ui-sans-serif,system-ui,sans-serif}
+  details[open] summary::before{content:"✓";background:var(--amber)}
+  .ans{margin:8px 0 2px 30px;font-size:15px;color:#3a2f1f}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);text-align:center;padding:0 18px 40px}
+</style>
+</head>
+<body>
+<header>
+  <p class="kicker">Scheikunde · Hoofdstuk 6 · §5</p>
+  <h1>Evenwichten beïnvloeden</h1>
+  <p>Hoe je de ligging van een evenwichtsreactie kunt beïnvloeden: concentratie, volume/druk, temperatuur en een katalysator.</p>
+</header>
+
+<nav>
+  <a href="#conc">Concentratie</a>
+  <a href="#vol">Volume / druk</a>
+  <a href="#temp">Temperatuur</a>
+  <a href="#kat">Katalysator</a>
+  <a href="#aflopend">Aflopende reactie</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="conc">
+  <span class="bs">Factor 1</span>
+  <h2>Invloed van concentratie</h2>
+  <p>In de industrie wil je het evenwicht zo veel mogelijk naar rechts → meer product. Neem <b class="t">H₂ + Cl₂ ⇌ 2 HCl</b>:</p>
+  <ul>
+    <li><b class="t">Beginstof toevoegen</b> (meer Cl₂): de snelheid naar rechts wordt groter → evenwicht verschuift naar <b class="t">rechts</b>; in het nieuwe evenwicht is er meer HCl.</li>
+    <li><b class="t">Product verwijderen</b> (HCl weghalen): de snelheid naar links neemt af → evenwicht verschuift óók naar <b class="t">rechts</b>.</li>
+  </ul>
+</section>
+
+<section id="vol">
+  <span class="bs">Factor 2</span>
+  <h2>Invloed van volume (= druk)</h2>
+  <dl class="term">
+    <dt>Regel</dt>
+    <dd>Bij <b class="t">volumeverkleining</b> (= drukverhoging) verschuift het evenwicht naar de kant met het <b class="t">minste aantal (gas)deeltjes</b>. Bij <b class="t">volumevergroting</b> (of verdunnen) naar de kant met de <b class="t">meeste</b> deeltjes.</dd>
+  </dl>
+  <div class="tip"><b>Voorbeeld:</b> N₂ + 3 H₂ ⇌ 2 NH₃ heeft links 4 gasdeeltjes en rechts 2. Volumeverkleining verschuift dus naar rechts (meer NH₃). Dit geldt ook voor opgeloste deeltjes als je verdunt.</div>
+</section>
+
+<section id="temp">
+  <span class="bs">Factor 3</span>
+  <h2>Invloed van temperatuur</h2>
+  <p>De waarde van K hangt af van de temperatuur. De energie-effecten van de heen- en teruggaande reactie zijn elkaars tegengestelde (rechts exotherm → links even sterk endotherm).</p>
+  <dl class="term">
+    <dt>Regel</dt>
+    <dd>Bij een <b class="t">temperatuurverhoging</b> verschuift het evenwicht naar de <b class="t">endotherme</b> kant; bij verlaging naar de exotherme kant.</dd>
+  </dl>
+  <div class="tip"><b>Voorbeeld:</b> bij de vorming van NH₃ is de reactie naar rechts exotherm. Temperatuur omhoog → evenwicht naar <b>links</b>; temperatuur omlaag → naar rechts.</div>
+</section>
+
+<section id="kat">
+  <span class="bs">Factor 4</span>
+  <h2>Invloed van een katalysator</h2>
+  <p>Een katalysator versnelt de heen- én de teruggaande reactie <b class="t">evenveel</b>. De ligging van het evenwicht en de samenstelling van het mengsel veranderen daarom <b class="t">niet</b>.</p>
+  <dl class="term">
+    <dt>Insteltijd</dt>
+    <dd>De tijd die het kost om een evenwicht in te stellen. Een katalysator verkort de insteltijd, maar heeft géén invloed op de ligging.</dd>
+  </dl>
+</section>
+
+<section id="aflopend">
+  <span class="bs">Speciaal</span>
+  <h2>Aflopende reactie</h2>
+  <dl class="term">
+    <dt>Aflopende reactie</dt>
+    <dd>Als je continu de reactieproducten verwijdert, wordt nooit evenwicht bereikt en verschuift het evenwicht geheel naar één kant.</dd>
+  </dl>
+</section>
+
+<section id="toets">
+  <h2 style="color:var(--moss-d)">Zelftoets</h2>
+  <p class="goal">Tik op een vraag voor het antwoord.</p>
+  <div class="quiz">
+    <details><summary>Je voegt een beginstof toe. Welke kant op verschuift het evenwicht?</summary>
+      <p class="ans">Naar rechts (naar de producten).</p></details>
+    <details><summary>Je verwijdert een reactieproduct. Welke kant op?</summary>
+      <p class="ans">Ook naar rechts.</p></details>
+    <details><summary>Naar welke kant verschuift het evenwicht bij volumeverkleining?</summary>
+      <p class="ans">Naar de kant met het minste aantal (gas)deeltjes.</p></details>
+    <details><summary>N₂ + 3 H₂ ⇌ 2 NH₃: wat doet drukverhoging?</summary>
+      <p class="ans">Verschuift naar rechts (van 4 naar 2 gasdeeltjes), dus meer NH₃.</p></details>
+    <details><summary>Naar welke kant verschuift een evenwicht bij temperatuurverhoging?</summary>
+      <p class="ans">Naar de endotherme kant.</p></details>
+    <details><summary>Wat doet een katalysator met de ligging en met de insteltijd?</summary>
+      <p class="ans">De ligging verandert niet; de insteltijd wordt korter.</p></details>
+    <details><summary>Wat is een aflopende reactie?</summary>
+      <p class="ans">Een reactie waarbij je producten blijft verwijderen, zodat er nooit evenwicht ontstaat en het evenwicht geheel naar één kant verschuift.</p></details>
+  </div>
+</section>
+
+<footer>Hoofdstuk 6, §5. Vetgedrukte begrippen leveren de meeste punten op.</footer>
+</main>
+</body>
+</html>

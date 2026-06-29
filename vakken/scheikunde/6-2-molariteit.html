@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SK 6.2 — Molariteit</title>
+<style>
+  :root{
+    --ink:#241c12;--moss:#8a6d4a;--moss-d:#5f4a30;--soil:#8a7a5e;
+    --leaf:#f1ebe2;--leaf-d:#e0d4c2;--paper:#faf8f4;--amber:#c47a2c;--line:#ded5c6;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55;font-size:17px}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#f7f2ea;padding:34px 20px 26px}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.85;margin:0 0 6px}
+  header h1{margin:0;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.92;max-width:60ch;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:8px;overflow-x:auto;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav a{flex:0 0 auto;text-decoration:none;color:var(--moss-d);background:var(--leaf);
+    border:1px solid var(--leaf-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:30px;scroll-margin-top:60px}
+  .bs{font-family:ui-sans-serif,system-ui,sans-serif;display:inline-block;background:var(--moss);
+    color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:5px;font-weight:700}
+  h2{font-size:21px;margin:10px 0 4px;letter-spacing:-.01em}
+  h3{font-size:17px;margin:18px 0 2px;color:var(--moss-d)}
+  ul{margin:6px 0 8px;padding-left:20px}
+  li{margin:4px 0}
+  b.t{color:var(--moss-d)}
+  .term{background:#fff;border:1px solid var(--line);border-radius:10px;padding:2px 16px;margin:12px 0}
+  .term dt{font-weight:700;color:var(--moss-d);margin-top:12px;font-family:ui-sans-serif,system-ui,sans-serif;font-size:15px}
+  .term dd{margin:3px 0 12px;font-size:15px}
+  .formule{background:#fff;border:1px solid var(--line);border-left:4px solid var(--moss);border-radius:8px;
+    padding:10px 16px;margin:12px 0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:16px;text-align:center}
+  .ex{background:#fbf7f0;border:1px solid var(--leaf-d);border-radius:10px;padding:4px 16px 12px;margin:14px 0}
+  .ex h4{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--moss-d);margin:12px 0 4px;text-transform:uppercase;letter-spacing:.06em}
+  .ex p{font-size:15px;margin:6px 0}
+  .tip{background:#fdf4e7;border:1px solid #f0dcc0;border-radius:8px;padding:10px 14px;margin:12px 0;
+    font-size:15px;font-family:ui-sans-serif,system-ui,sans-serif}
+  .tip b{color:var(--amber)}
+  .quiz{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 16px;margin-top:14px}
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:none}
+  summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;gap:8px;align-items:flex-start}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"?";flex:0 0 auto;width:22px;height:22px;background:var(--moss);color:#fff;
+    border-radius:50%;font-size:13px;display:flex;align-items:center;justify-content:center;font-family:ui-sans-serif,system-ui,sans-serif}
+  details[open] summary::before{content:"✓";background:var(--amber)}
+  .ans{margin:8px 0 2px 30px;font-size:15px;color:#3a2f1f}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);text-align:center;padding:0 18px 40px}
+</style>
+</head>
+<body>
+<header>
+  <p class="kicker">Scheikunde · Hoofdstuk 6 · §2</p>
+  <h1>Molariteit</h1>
+  <p>De molariteit van een oplossing berekenen en rekenen aan de concentratie van zouten (ionen) in een oplossing.</p>
+</header>
+
+<nav>
+  <a href="#mol">Molariteit</a>
+  <a href="#schema">Rekenschema</a>
+  <a href="#zouten">Zouten & ionen</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="mol">
+  <span class="bs">Kern</span>
+  <h2>Molariteit berekenen</h2>
+  <dl class="term">
+    <dt>Molariteit</dt>
+    <dd>Het aantal mol opgeloste stof per liter oplossing. Eenheid: mol L⁻¹, afgekort tot <b class="t">M</b> (molair).</dd>
+  </dl>
+  <div class="formule">molariteit = hoeveelheid opgeloste stof (mol) ÷ volume oplossing (L)</div>
+  <div class="ex">
+    <h4>Voorbeeld</h4>
+    <p>18 L water bevat 940 g SO₂. Bereken de molariteit.</p>
+    <p>1) Massa → mol: M(SO₂) = 64,064 g mol⁻¹, dus 940 ÷ 64,064 = 14,7 mol.</p>
+    <p>2) Molariteit: 14,7 mol ÷ 18 L = <b class="t">0,82 M</b>.</p>
+  </div>
+</section>
+
+<section id="schema">
+  <span class="bs">Omrekenen</span>
+  <h2>Rekenschema met molariteit</h2>
+  <p>Je kunt heen en weer rekenen tussen massa, mol, volume oplossing en (bij gassen) gasvolume:</p>
+  <ul>
+    <li><b class="t">volume stof ↔ massa</b>: × of ÷ dichtheid (g cm⁻³ of g dm⁻³)</li>
+    <li><b class="t">massa ↔ mol</b>: ÷ of × molmassa (g mol⁻¹)</li>
+    <li><b class="t">mol ↔ volume oplossing</b>: ÷ of × molariteit (mol L⁻¹)</li>
+    <li><b class="t">mol ↔ gasvolume</b>: × of ÷ molair volume (alleen bij gassen)</li>
+  </ul>
+</section>
+
+<section id="zouten">
+  <span class="bs">Let op het aantal deeltjes</span>
+  <h2>Molariteit van zouten en ionen</h2>
+  <p>Bij het oplossen van een zout splitst het in ionen. De <b class="t">molverhouding</b> uit de oplosvergelijking mag je rechtstreeks toepassen op de molariteit.</p>
+  <div class="formule">AlCl₃ (s) → Al³⁺ (aq) + 3 Cl⁻ (aq)</div>
+  <p>In een 1,0 M AlCl₃-oplossing is dus [Al³⁺] = 1,0 M en [Cl⁻] = <b class="t">3,0 M</b> (verhouding 1 : 1 : 3).</p>
+  <div class="tip"><b>Notatie:</b> de vierkante haken [ ] gebruik je <b>alleen</b> voor deeltjes die echt in de oplossing zitten, en alleen met eenheid mol L⁻¹ (M).</div>
+  <div class="ex">
+    <h4>Voorbeeld — molariteit van ionen</h4>
+    <p>Je lost 52 g MgBr₂ op tot 2,0 L oplossing. MgBr₂ (s) → Mg²⁺ (aq) + 2 Br⁻ (aq).</p>
+    <p>1) M(MgBr₂) = 24,31 + 2 × 79,90 = 184,1 g mol⁻¹ → 52 ÷ 184,1 = 0,28 mol.</p>
+    <p>2) Molariteit oplossing = 0,28 ÷ 2,0 = 0,14 M.</p>
+    <p>3) Verhoudingen: [Mg²⁺] = 0,14 × 1 = <b class="t">0,14 M</b>; [Br⁻] = 0,14 × 2 = <b class="t">0,28 M</b>.</p>
+  </div>
+</section>
+
+<section id="toets">
+  <h2 style="color:var(--moss-d)">Zelftoets</h2>
+  <p class="goal">Tik op een vraag voor het antwoord. Reken eerst zelf.</p>
+  <div class="quiz">
+    <details><summary>Wat is de molariteit van een oplossing?</summary>
+      <p class="ans">Het aantal mol opgeloste stof per liter oplossing (eenheid mol L⁻¹ = M).</p></details>
+    <details><summary>Welke formule gebruik je?</summary>
+      <p class="ans">molariteit = mol opgeloste stof ÷ volume oplossing in L.</p></details>
+    <details><summary>0,40 mol NaCl in 0,50 L water — wat is de molariteit?</summary>
+      <p class="ans">0,40 ÷ 0,50 = 0,80 M.</p></details>
+    <details><summary>Je hebt 0,30 M CaCl₂. Wat is [Cl⁻]?</summary>
+      <p class="ans">CaCl₂ → Ca²⁺ + 2 Cl⁻, dus [Cl⁻] = 2 × 0,30 = 0,60 M.</p></details>
+    <details><summary>Wanneer mag je de vierkante haken [ ] gebruiken?</summary>
+      <p class="ans">Alleen voor deeltjes die in de oplossing aanwezig zijn, en alleen met eenheid mol L⁻¹ (M).</p></details>
+    <details><summary>Hoe reken je van gram naar mol?</summary>
+      <p class="ans">Deel de massa (g) door de molmassa (g mol⁻¹).</p></details>
+  </div>
+</section>
+
+<footer>Hoofdstuk 6, §2. Vetgedrukte begrippen leveren de meeste punten op.</footer>
+</main>
+</body>
+</html>
