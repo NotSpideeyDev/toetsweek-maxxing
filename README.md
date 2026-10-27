@@ -12,25 +12,31 @@ Alles is gewone HTML — geen installatie nodig. Open `index.html` of zet de rep
 ## Structuur
 ```
 .
-├── index.html              # homepage: kies vak + hoofdstuk
+├── index.html              # homepage: kies jaar, vak + hoofdstuk
 ├── README.md
 └── vakken/
-    └── biologie/
-        ├── h5-ecologie.html
-        └── h6-mens-en-milieu.html
+    ├── jaar-4/
+    │   ├── aardrijkskunde/
+    │   ├── biologie/
+    │   ├── maatschappijleer/
+    │   └── scheikunde/
+    └── jaar-5/
+        └── toetsweek-1/
+            └── <vaknaam>/
 ```
+De homepage opent standaard het nieuwste jaar; met `index.html#jaar-4` kom je direct bij jaar 4.
 
 ## Een hoofdstuk toevoegen
-1. Zet je `.html`-bestand in de juiste vakmap, bijv. `vakken/biologie/h7-...html`.
-2. Open `index.html` en zoek bovenin de lijst `VAKKEN`.
-3. Voeg bij het juiste vak een regel toe in `hoofdstukken`:
+1. Zet je `.html`-bestand in de juiste map, bijv. `vakken/jaar-5/toetsweek-1/biologie/h1-...html`.
+2. Open `index.html` en zoek bovenin de lijst `JAREN`.
+3. Zoek het juiste jaar → toetsweek → vak en voeg een regel toe in `hoofdstukken`:
 ```js
-{ code:"H7", titel:"Titel", omschrijving:"Korte beschrijving.", link:"vakken/biologie/h7-...html", status:"klaar" }
+{ code:"H1", titel:"Titel", omschrijving:"Korte beschrijving.", link:"vakken/jaar-5/toetsweek-1/biologie/h1-...html", status:"klaar" }
 ```
 
 ## Een nieuw vak toevoegen
-1. Maak een map `vakken/<vaknaam>/`.
-2. Voeg een blok toe aan `VAKKEN` in `index.html`:
+1. Maak een map, bijv. `vakken/jaar-5/toetsweek-1/wiskunde/`.
+2. Voeg een blok toe aan `vakken` van de juiste toetsweek in `index.html`:
 ```js
 {
   naam: "Wiskunde",
@@ -38,10 +44,17 @@ Alles is gewone HTML — geen installatie nodig. Open `index.html` of zet de rep
   kleur: "#3c6e54",
   omschrijving: "VWO · ...",
   hoofdstukken: [
-    { code:"H1", titel:"...", omschrijving:"...", link:"vakken/wiskunde/h1.html", status:"klaar" }
+    { code:"H1", titel:"...", omschrijving:"...", link:"vakken/jaar-5/toetsweek-1/wiskunde/h1.html", status:"klaar" }
   ]
 }
 ```
+
+## Een nieuwe toetsweek toevoegen
+Voeg bij het juiste jaar in `JAREN` een blok toe aan `toetsweken`:
+```js
+{ naam: "Toetsweek 2", vakken: [ /* vakken zoals hierboven */ ] }
+```
+en maak de map `vakken/jaar-5/toetsweek-2/`.
 `status:"binnenkort"` toont een grijze placeholder in plaats van een link.
 
 ## Stijl van een nieuw hoofdstuk
