@@ -27,6 +27,13 @@
   .chip{cursor:pointer;border:1px solid var(--leaf-d);background:var(--leaf);
     color:var(--moss-d);padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600}
   .chip.active{background:var(--moss);color:#fff;border-color:var(--moss)}
+  .jarenbar{display:flex;gap:4px;margin:0 0 18px;border-bottom:2px solid var(--line);
+    font-family:ui-sans-serif,system-ui,sans-serif}
+  .jaar{cursor:pointer;border:0;background:none;color:var(--soil);padding:10px 16px;
+    font-size:16px;font-weight:700;border-bottom:3px solid transparent;margin-bottom:-2px}
+  .jaar.active{color:var(--moss-d);border-bottom-color:var(--moss)}
+  .toetsweek{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;text-transform:uppercase;
+    letter-spacing:.12em;color:var(--amber);margin:0 0 16px}
   .vak{margin-bottom:34px}
   .vak-head{display:flex;align-items:center;gap:14px;margin-bottom:6px}
   .badge{flex:0 0 auto;width:46px;height:46px;border-radius:12px;display:flex;
@@ -62,82 +69,127 @@
 </header>
 
 <main>
+  <div class="jarenbar" id="jaren"></div>
   <div class="filterbar" id="filters"></div>
   <div id="vakken"></div>
 </main>
 
 <footer>
-  Nieuw vak of hoofdstuk toevoegen? Zet je <code>.html</code>-bestand in <code>vakken/&lt;vaknaam&gt;/</code> en voeg één regel toe aan de lijst boven in <code>index.html</code>. Uitleg staat in <code>README.md</code>.
+  Nieuw vak of hoofdstuk toevoegen? Zet je <code>.html</code>-bestand in <code>vakken/&lt;jaar&gt;/…/&lt;vaknaam&gt;/</code> en voeg één regel toe aan de lijst boven in <code>index.html</code>. Uitleg staat in <code>README.md</code>.
 </footer>
 
 <script>
 /* =======================================================================
-   HIER VAKKEN & HOOFDSTUKKEN TOEVOEGEN
+   HIER JAREN, TOETSWEKEN, VAKKEN & HOOFDSTUKKEN TOEVOEGEN
+   - elk jaar heeft een lijst toetsweken; elke toetsweek een lijst vakken
+   - naam van een toetsweek leeg ("") = geen kopje boven die vakken
    - kleur: hex-code voor de badge
    - status "klaar" = klikbaar, "binnenkort" = grijze placeholder
    ======================================================================= */
-const VAKKEN = [
+const JAREN = [
   {
-    naam: "Biologie",
-    initiaal: "Bi",
-    kleur: "#3c6e54",
-    omschrijving: "VWO · Inleiding in de biologie & ecologie",
-    hoofdstukken: [
-      { code:"H5", titel:"Ecologie", omschrijving:"Ecosystemen, voedselrelaties, energie en successie.", link:"vakken/biologie/h5-ecologie.html", status:"klaar" },
-      { code:"H6", titel:"Mens en milieu", omschrijving:"Kringlopen, eutrofiëring, broeikaseffect en duurzaamheid.", link:"vakken/biologie/h6-mens-en-milieu.html", status:"klaar" }
+    id: "jaar-4",
+    naam: "Jaar 4",
+    toetsweken: [
+      {
+        naam: "",
+        vakken: [
+          {
+            naam: "Biologie",
+            initiaal: "Bi",
+            kleur: "#3c6e54",
+            omschrijving: "VWO · Inleiding in de biologie & ecologie",
+            hoofdstukken: [
+              { code:"H5", titel:"Ecologie", omschrijving:"Ecosystemen, voedselrelaties, energie en successie.", link:"vakken/jaar-4/biologie/h5-ecologie.html", status:"klaar" },
+              { code:"H6", titel:"Mens en milieu", omschrijving:"Kringlopen, eutrofiëring, broeikaseffect en duurzaamheid.", link:"vakken/jaar-4/biologie/h6-mens-en-milieu.html", status:"klaar" }
+            ]
+          },
+          {
+            naam: "Maatschappijleer",
+            initiaal: "Ma",
+            kleur: "#c47a2c",
+            omschrijving: "VWO · Pluralist society",
+            hoofdstukken: [
+              { code:"2.1–2.4", titel:"The rule of law", omschrijving:"Rechtsstaat, trias politica, opsporing en het rechtssysteem.", link:"vakken/jaar-4/maatschappijleer/h2-rule-of-law.html", status:"klaar" },
+              { code:"4.1–4.3", titel:"Pluralist society", omschrijving:"Cultuur, socialisatie, identiteit en hokjesdenken.", link:"vakken/jaar-4/maatschappijleer/h4-pluralist-society.html", status:"klaar" },
+              { code:"4.4–4.6", titel:"Migration & change", omschrijving:"Migratie, integratie en de veranderende samenleving.", link:"vakken/jaar-4/maatschappijleer/h4-migration-and-change.html", status:"klaar" }
+            ]
+          },
+          {
+            naam: "Aardrijkskunde",
+            initiaal: "Ak",
+            kleur: "#4a77a8",
+            omschrijving: "VWO · Actieve aarde & landschappen",
+            hoofdstukken: [
+              { code:"H1", titel:"Endogene processen", omschrijving:"Platentektoniek, gesteenten, vulkanisme en aardbevingen.", link:"vakken/jaar-4/aardrijkskunde/h1-endogene-processen.html", status:"klaar" },
+              { code:"H2", titel:"Exogene processen", omschrijving:"Straling, circulatie, klimaten, verwering en erosie.", link:"vakken/jaar-4/aardrijkskunde/h2-exogene-processen.html", status:"klaar" },
+              { code:"H3", titel:"Landschappen", omschrijving:"Geofactoren, landschapszones, degradatie en stroomgebieden.", link:"vakken/jaar-4/aardrijkskunde/h3-landschappen.html", status:"klaar" }
+            ]
+          },
+          {
+            naam: "Scheikunde",
+            initiaal: "Sk",
+            kleur: "#8a6d4a",
+            omschrijving: "VWO · H6 Reacties in evenwicht",
+            hoofdstukken: [
+              { code:"6.1", titel:"Reactiesnelheid", omschrijving:"Botsende-deeltjesmodel, vijf factoren en activeringsenergie.", link:"vakken/jaar-4/scheikunde/6-1-reactiesnelheid.html", status:"klaar" },
+              { code:"6.2", titel:"Molariteit", omschrijving:"Molariteit berekenen en concentratie van ionen in zouten.", link:"vakken/jaar-4/scheikunde/6-2-molariteit.html", status:"klaar" },
+              { code:"6.3", titel:"Evenwichtsreacties", omschrijving:"Chemisch, oplos- en verdelingsevenwicht.", link:"vakken/jaar-4/scheikunde/6-3-evenwichtsreacties.html", status:"klaar" },
+              { code:"6.4", titel:"Rekenen aan evenwichten", omschrijving:"Concentratiebreuk, K, BOE-tabel en oplosbaarheidsproduct.", link:"vakken/jaar-4/scheikunde/6-4-rekenen-aan-evenwichten.html", status:"klaar" },
+              { code:"6.5", titel:"Evenwichten beïnvloeden", omschrijving:"Concentratie, druk, temperatuur en katalysator.", link:"vakken/jaar-4/scheikunde/6-5-evenwichten-beinvloeden.html", status:"klaar" }
+            ]
+          },
+          {
+            naam: "Natuurkunde",
+            initiaal: "Na",
+            kleur: "#2a5340",
+            omschrijving: "VWO · nog toe te voegen",
+            hoofdstukken: []
+          }
+        ]
+      }
     ]
   },
   {
-    naam: "Maatschappijleer",
-    initiaal: "Ma",
-    kleur: "#c47a2c",
-    omschrijving: "VWO · Pluralist society",
-    hoofdstukken: [
-      { code:"2.1–2.4", titel:"The rule of law", omschrijving:"Rechtsstaat, trias politica, opsporing en het rechtssysteem.", link:"vakken/maatschappijleer/h2-rule-of-law.html", status:"klaar" },
-      { code:"4.1–4.3", titel:"Pluralist society", omschrijving:"Cultuur, socialisatie, identiteit en hokjesdenken.", link:"vakken/maatschappijleer/h4-pluralist-society.html", status:"klaar" },
-      { code:"4.4–4.6", titel:"Migration & change", omschrijving:"Migratie, integratie en de veranderende samenleving.", link:"vakken/maatschappijleer/h4-migration-and-change.html", status:"klaar" }
+    id: "jaar-5",
+    naam: "Jaar 5",
+    toetsweken: [
+      {
+        naam: "Toetsweek 1",
+        vakken: [
+          { naam:"Biologie", initiaal:"Bi", kleur:"#3c6e54", omschrijving:"VWO · nog toe te voegen", hoofdstukken: [] },
+          { naam:"Maatschappijleer", initiaal:"Ma", kleur:"#c47a2c", omschrijving:"VWO · nog toe te voegen", hoofdstukken: [] },
+          { naam:"Aardrijkskunde", initiaal:"Ak", kleur:"#4a77a8", omschrijving:"VWO · nog toe te voegen", hoofdstukken: [] },
+          { naam:"Scheikunde", initiaal:"Sk", kleur:"#8a6d4a", omschrijving:"VWO · nog toe te voegen", hoofdstukken: [] },
+          { naam:"Natuurkunde", initiaal:"Na", kleur:"#2a5340", omschrijving:"VWO · nog toe te voegen", hoofdstukken: [] }
+        ]
+      }
     ]
-  },
-  {
-    naam: "Aardrijkskunde",
-    initiaal: "Ak",
-    kleur: "#4a77a8",
-    omschrijving: "VWO · Actieve aarde & landschappen",
-    hoofdstukken: [
-      { code:"H1", titel:"Endogene processen", omschrijving:"Platentektoniek, gesteenten, vulkanisme en aardbevingen.", link:"vakken/aardrijkskunde/h1-endogene-processen.html", status:"klaar" },
-      { code:"H2", titel:"Exogene processen", omschrijving:"Straling, circulatie, klimaten, verwering en erosie.", link:"vakken/aardrijkskunde/h2-exogene-processen.html", status:"klaar" },
-      { code:"H3", titel:"Landschappen", omschrijving:"Geofactoren, landschapszones, degradatie en stroomgebieden.", link:"vakken/aardrijkskunde/h3-landschappen.html", status:"klaar" }
-    ]
-  },
-  {
-    naam: "Scheikunde",
-    initiaal: "Sk",
-    kleur: "#8a6d4a",
-    omschrijving: "VWO · H6 Reacties in evenwicht",
-    hoofdstukken: [
-      { code:"6.1", titel:"Reactiesnelheid", omschrijving:"Botsende-deeltjesmodel, vijf factoren en activeringsenergie.", link:"vakken/scheikunde/6-1-reactiesnelheid.html", status:"klaar" },
-      { code:"6.2", titel:"Molariteit", omschrijving:"Molariteit berekenen en concentratie van ionen in zouten.", link:"vakken/scheikunde/6-2-molariteit.html", status:"klaar" },
-      { code:"6.3", titel:"Evenwichtsreacties", omschrijving:"Chemisch, oplos- en verdelingsevenwicht.", link:"vakken/scheikunde/6-3-evenwichtsreacties.html", status:"klaar" },
-      { code:"6.4", titel:"Rekenen aan evenwichten", omschrijving:"Concentratiebreuk, K, BOE-tabel en oplosbaarheidsproduct.", link:"vakken/scheikunde/6-4-rekenen-aan-evenwichten.html", status:"klaar" },
-      { code:"6.5", titel:"Evenwichten beïnvloeden", omschrijving:"Concentratie, druk, temperatuur en katalysator.", link:"vakken/scheikunde/6-5-evenwichten-beinvloeden.html", status:"klaar" }
-    ]
-  },
-  {
-    naam: "Natuurkunde",
-    initiaal: "Na",
-    kleur: "#2a5340",
-    omschrijving: "VWO · nog toe te voegen",
-    hoofdstukken: []
   }
 ];
 
 /* ---- render (hier hoef je niets aan te passen) ---- */
 const vakkenEl = document.getElementById('vakken');
 const filtersEl = document.getElementById('filters');
+const jarenEl = document.getElementById('jaren');
+// standaard het nieuwste jaar; #jaar-4 in de url kiest een ander jaar
+let jaar = JAREN.find(j=> "#"+j.id === location.hash) || JAREN[JAREN.length-1];
 let actief = "Alle";
 
+function maakJaren(){
+  jarenEl.innerHTML = "";
+  JAREN.forEach(j=>{
+    const b = document.createElement('button');
+    b.className = "jaar" + (j===jaar?" active":"");
+    b.textContent = j.naam;
+    b.onclick = ()=>{ jaar=j; actief="Alle"; history.replaceState(null,"","#"+j.id); maakJaren(); maakFilters(); render(); };
+    jarenEl.appendChild(b);
+  });
+}
+
 function maakFilters(){
-  const namen = ["Alle", ...VAKKEN.map(v=>v.naam)];
+  const vaknamen = new Set(jaar.toetsweken.flatMap(t=>t.vakken.map(v=>v.naam)));
+  const namen = ["Alle", ...vaknamen];
   filtersEl.innerHTML = "";
   namen.forEach(n=>{
     const c = document.createElement('button');
@@ -150,7 +202,20 @@ function maakFilters(){
 
 function render(){
   vakkenEl.innerHTML = "";
-  VAKKEN.filter(v=> actief==="Alle" || v.naam===actief).forEach(v=>{
+  jaar.toetsweken.forEach(t=>{
+    const vakken = t.vakken.filter(v=> actief==="Alle" || v.naam===actief);
+    if(vakken.length === 0) return;
+    if(t.naam){
+      const h = document.createElement('h2');
+      h.className = "toetsweek";
+      h.textContent = t.naam;
+      vakkenEl.appendChild(h);
+    }
+    vakken.forEach(renderVak);
+  });
+}
+
+function renderVak(v){
     const sec = document.createElement('section');
     sec.className = "vak";
     sec.innerHTML = `
@@ -183,9 +248,9 @@ function render(){
     }
     sec.appendChild(cards);
     vakkenEl.appendChild(sec);
-  });
 }
 
+maakJaren();
 maakFilters();
 render();
 </script>
