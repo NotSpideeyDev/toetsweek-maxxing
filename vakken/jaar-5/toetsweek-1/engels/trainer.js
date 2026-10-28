@@ -11,7 +11,7 @@ const css = `
   .terms .row:first-child{border-top:0}
   .terms .row b{color:var(--moss-d)}
   @media (max-width:560px){.terms .row{grid-template-columns:minmax(0,1fr);gap:2px}}
-  .tr{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-top:14px;font-family:ui-sans-serif,system-ui,sans-serif}
+  .tr{background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.03);padding:16px 18px;margin-top:14px;font-family:ui-sans-serif,system-ui,sans-serif}
   .tr .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
   .tr .lbl{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);font-weight:700;margin:0 0 6px}
   .tr .group{margin-bottom:14px}
@@ -23,7 +23,7 @@ const css = `
   .bar{flex:1;height:8px;border-radius:99px;background:var(--leaf);overflow:hidden}
   .bar i{display:block;height:100%;background:var(--moss);transition:width .25s}
   .cnt{font-size:13px;color:var(--soil);font-variant-numeric:tabular-nums}
-  .q{font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;font-size:19px;line-height:1.45;margin:14px 0}
+  .q{font-size:19px;line-height:1.45;margin:14px 0}
   .q.big{font-size:26px;font-weight:700;color:var(--moss-d)}
   .ask{font-size:13px;color:var(--soil)}
   .grp{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);font-weight:700}
@@ -45,7 +45,7 @@ const css = `
   .fb del{color:#b9473f}
   .act{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;margin-top:12px}
   .hint{font-size:12px;color:var(--soil);margin-top:8px}
-  .score{font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;font-size:44px;font-weight:700;color:var(--moss-d);line-height:1}
+  .score{font-size:44px;font-weight:700;color:var(--moss-d);line-height:1}
   .miss{margin-top:12px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
   .miss div{padding:8px 12px;border-top:1px solid var(--line);font-size:14px}
   .miss div:first-child{border-top:0}
