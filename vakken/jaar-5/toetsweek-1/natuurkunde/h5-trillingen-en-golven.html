@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NA H5 — Trillingen en golven</title>
+<style>
+  :root{
+    --ink:#14241c;--moss:#2a5340;--moss-d:#1b3a2c;--soil:#5e7466;
+    --leaf:#e6efe9;--leaf-d:#c9dccf;--paper:#f9fbf9;--amber:#c47a2c;--line:#d3ddd6;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55;font-size:17px}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#f1f7f3;padding:34px 20px 26px}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.85;margin:0 0 6px}
+  header h1{margin:0;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.92;max-width:60ch;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:8px;overflow-x:auto;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav a{flex:0 0 auto;text-decoration:none;color:var(--moss-d);background:var(--leaf);
+    border:1px solid var(--leaf-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:30px;scroll-margin-top:60px}
+  .bs{font-family:ui-sans-serif,system-ui,sans-serif;display:inline-block;background:var(--moss);
+    color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:5px;font-weight:700}
+  h2{font-size:21px;margin:10px 0 4px;letter-spacing:-.01em}
+  ul{margin:6px 0 8px;padding-left:20px}
+  li{margin:4px 0}
+  b.t{color:var(--moss-d)}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+  table.fx td.eq{font-family:"Cambria Math","Times New Roman",serif;font-size:17px;white-space:nowrap;
+    background:#fff;color:var(--moss-d);font-weight:600;width:1%}
+  table.fx td{background:#fff}
+  .tip{background:#fdf4e7;border:1px solid #f0dcc0;border-radius:8px;padding:10px 14px;margin:12px 0;
+    font-size:15px;font-family:ui-sans-serif,system-ui,sans-serif}
+  .tip b{color:var(--amber)}
+  .vb{background:var(--leaf);border:1px solid var(--leaf-d);border-radius:10px;padding:10px 16px;margin:12px 0;font-size:15px}
+  .vb .lbl{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--amber);font-weight:700;margin:0 0 4px}
+  .vb p{margin:0}
+  .vb details{border:none;padding:8px 0 2px}
+  .vb summary{font-size:14px;font-family:ui-sans-serif,system-ui,sans-serif;color:var(--moss-d)}
+  .quiz{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 16px;margin-top:14px}
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:none}
+  summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;gap:8px;align-items:flex-start}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"?";flex:0 0 auto;width:22px;height:22px;background:var(--moss);color:#fff;
+    border-radius:50%;font-size:13px;display:flex;align-items:center;justify-content:center;font-family:ui-sans-serif,system-ui,sans-serif}
+  details[open] summary::before{content:"✓";background:var(--amber)}
+  .ans{margin:8px 0 2px 30px;font-size:15px;color:#22362b}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);text-align:center;padding:0 18px 40px}
+</style>
+</head>
+<body>
+<header>
+  <p class="kicker">Natuurkunde · Hoofdstuk 5</p>
+  <h1>Trillingen en golven</h1>
+  <p>Trillingen, fase, massa-veersysteem, resonantie, lopende en staande golven en interferentie. Per paragraaf de kern, de formules en een voorbeeldopdracht. Zelftoets onderaan.</p>
+</header>
+
+<nav>
+  <a href="#p1">5.1 Trillingen</a>
+  <a href="#p2">5.2 Resonantie</a>
+  <a href="#p3">5.3 Lopende golven</a>
+  <a href="#p4">5.4 Interferentie</a>
+  <a href="#p5">5.5 Staande golven</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="p1">
+  <span class="bs">§5.1</span>
+  <h2>Trillingen</h2>
+  <ul>
+    <li>Een <b class="t">trilling</b> is een periodieke beweging rond een <b class="t">evenwichtsstand</b>.</li>
+    <li>Begrippen: <b class="t">uitwijking u</b>, <b class="t">amplitude A</b> (maximale uitwijking), <b class="t">trillingstijd T</b>, <b class="t">frequentie f</b>.</li>
+    <li><b class="t">Harmonische trilling</b>: het (u,t)-diagram is een sinus.</li>
+    <li><b class="t">In fase</b>: Δφ = 0, 1, 2, … · <b class="t">In tegenfase</b>: Δφ = ½, 1½, … (<b class="t">gereduceerde fase</b> = alleen het deel achter de komma).</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">f = 1 / T</td><td>frequentie (Hz)</td></tr>
+    <tr><td class="eq">u(t) = A·sin(2π·t / T)</td><td>harmonische trilling</td></tr>
+    <tr><td class="eq">φ = t / T, Δφ = Δt / T</td><td>fase en faseverschil</td></tr>
+  </table>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Een slinger maakt 20 trillingen in 8,0 s. Bereken T en f, en de gereduceerde fase na 1,0 s (start in evenwichtsstand).</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">T = 8,0 / 20 = 0,40 s. f = 1 / 0,40 = 2,5 Hz. φ = 1,0 / 0,40 = 2,5 → gereduceerde fase 0,5 (het voorwerp gaat dan door de evenwichtsstand, in tegengestelde richting).</p></details>
+  </div>
+</section>
+
+<section id="p2">
+  <span class="bs">§5.2</span>
+  <h2>Massa-veersysteem en resonantie</h2>
+  <ul>
+    <li>De trillingstijd van een <b class="t">massa-veersysteem</b> hangt <b class="t">niet</b> af van de amplitude.</li>
+    <li><b class="t">Eigenfrequentie</b>: de frequentie waarmee een systeem uit zichzelf trilt.</li>
+    <li><b class="t">Resonantie</b>: aandrijven met de eigenfrequentie geeft een steeds grotere amplitude.</li>
+    <li><b class="t">Demping</b> (wrijving) maakt de amplitude kleiner.</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">T = 2π·√(m / C)</td><td>massa-veersysteem</td></tr>
+    <tr><td class="eq">T = 2π·√(l / g)</td><td>slinger</td></tr>
+  </table>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Een blokje van 0,50 kg hangt aan een veer met C = 20 N/m. Bereken de trillingstijd en de eigenfrequentie.</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">T = 2π·√(0,50 / 20) = 2π × 0,158 = 0,99 s. f<sub>0</sub> = 1 / 0,99 = 1,0 Hz.</p></details>
+  </div>
+</section>
+
+<section id="p3">
+  <span class="bs">§5.3</span>
+  <h2>Lopende golven</h2>
+  <ul>
+    <li>Een golf transporteert <b class="t">energie</b>, geen materie.</li>
+    <li><b class="t">Transversaal</b>: trilling loodrecht op de voortplantingsrichting (touw). <b class="t">Longitudinaal</b>: trilling evenwijdig aan de voortplantingsrichting (geluid).</li>
+    <li><b class="t">(u,x)-diagram</b> = momentopname van de golf. <b class="t">(u,t)-diagram</b> = beweging van één punt.</li>
+    <li><b class="t">Golflengte λ</b>: afstand tussen twee opeenvolgende punten die in fase trillen.</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">v = λ·f = λ / T</td><td>golfsnelheid (m/s)</td></tr>
+    <tr><td class="eq">v<sub>geluid</sub> ≈ 343 m/s</td><td>in lucht bij 20 °C</td></tr>
+  </table>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Een stemvork trilt met 440 Hz. Bereken de golflengte van het geluid in lucht.</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">λ = v / f = 343 / 440 = 0,78 m.</p></details>
+  </div>
+</section>
+
+<section id="p4">
+  <span class="bs">§5.4</span>
+  <h2>Interferentie</h2>
+  <ul>
+    <li><b class="t">Interferentie</b>: twee golven komen samen en hun uitwijkingen tellen op.</li>
+    <li>Bij twee bronnen die in fase trillen bepaalt het <b class="t">weglengteverschil</b> of er <b class="t">versterking</b> of <b class="t">uitdoving</b> is.</li>
+    <li>Punten met versterking liggen op <b class="t">buiklijnen</b>, punten met uitdoving op <b class="t">knooplijnen</b>.</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">Δx = n·λ</td><td>versterking (n = 0, 1, 2, …)</td></tr>
+    <tr><td class="eq">Δx = (n + ½)·λ</td><td>uitdoving</td></tr>
+  </table>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Twee luidsprekers trillen in fase met λ = 0,50 m. Punt P ligt op 3,00 m van de ene en 4,25 m van de andere luidspreker. Versterking of uitdoving?</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">Δx = 4,25 − 3,00 = 1,25 m = 2,5·λ → halve golflengte over → uitdoving.</p></details>
+  </div>
+</section>
+
+<section id="p5">
+  <span class="bs">§5.5</span>
+  <h2>Staande golven</h2>
+  <ul>
+    <li>Een <b class="t">staande golf</b> ontstaat door interferentie van een heengaande en een teruggekaatste golf.</li>
+    <li><b class="t">Knopen</b> bewegen niet; <b class="t">buiken</b> hebben de grootste amplitude. Afstand knoop–knoop = ½λ.</li>
+    <li><b class="t">Vast uiteinde = knoop</b>; <b class="t">open uiteinde = buik</b>.</li>
+    <li>n = 1 is de <b class="t">grondtoon</b>; hogere n zijn <b class="t">boventonen</b>.</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">L = n·½λ</td><td>beide uiteinden vast (snaar) of beide open</td></tr>
+    <tr><td class="eq">L = (2n − 1)·¼λ</td><td>één uiteinde open, één gesloten</td></tr>
+    <tr><td class="eq">f<sub>n</sub> = n·f<sub>1</sub></td><td>half open pijp: alleen oneven n</td></tr>
+  </table>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Een gitaarsnaar van 0,65 m heeft een grondtoon van 196 Hz. Bereken de golfsnelheid in de snaar en de frequentie van de derde harmonische.</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">Grondtoon: L = ½λ → λ = 1,30 m. v = λ·f = 1,30 × 196 = 2,5·10² m/s. f<sub>3</sub> = 3 × 196 = 588 Hz.</p></details>
+  </div>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Een pijp van 0,85 m is aan één kant gesloten. Bereken de grondfrequentie en de eerstvolgende toon.</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">L = ¼λ → λ = 3,40 m. f<sub>1</sub> = 343 / 3,40 = 1,0·10² Hz. Volgende toon: f = 3·f<sub>1</sub> = 3,0·10² Hz.</p></details>
+  </div>
+</section>
+
+<section id="toets">
+  <h2 style="color:var(--moss-d)">Zelftoets</h2>
+  <p class="goal">Tik op een vraag voor het antwoord.</p>
+  <div class="quiz">
+    <details><summary>Wat is het verschil tussen uitwijking en amplitude?</summary>
+      <p class="ans">Uitwijking u is de afstand tot de evenwichtsstand op een moment; amplitude A is de maximale uitwijking.</p></details>
+    <details><summary>Wanneer trillen twee punten in tegenfase?</summary>
+      <p class="ans">Als hun faseverschil ½, 1½, … is (gereduceerd faseverschil ½).</p></details>
+    <details><summary>Wat is resonantie?</summary>
+      <p class="ans">Een systeem aandrijven met zijn eigenfrequentie, waardoor de amplitude steeds groter wordt.</p></details>
+    <details><summary>Wat is het verschil tussen een transversale en een longitudinale golf? Geef van elk een voorbeeld.</summary>
+      <p class="ans">Transversaal: trilling loodrecht op de voortplantingsrichting (touw). Longitudinaal: trilling evenwijdig eraan (geluid).</p></details>
+    <details><summary>Wat laat een (u,x)-diagram zien, en wat een (u,t)-diagram?</summary>
+      <p class="ans">(u,x): momentopname van de hele golf. (u,t): de beweging van één punt in de tijd.</p></details>
+    <details><summary>Wanneer is er versterking bij twee bronnen die in fase trillen?</summary>
+      <p class="ans">Als het weglengteverschil een geheel aantal golflengtes is: Δx = n·λ.</p></details>
+    <details><summary>Wat zit er bij een vast en wat bij een open uiteinde van een staande golf?</summary>
+      <p class="ans">Vast uiteinde = knoop; open uiteinde = buik.</p></details>
+    <details><summary>Oefenopgave 1: Een golf in een touw heeft een snelheid van 3,0 m/s en een frequentie van 1,5 Hz. Bereken de golflengte.</summary>
+      <p class="ans">λ = v / f = 3,0 / 1,5 = 2,0 m.</p></details>
+    <details><summary>Oefenopgave 2: Een snaar van 0,80 m (beide uiteinden vast) trilt met 4 buiken. Bereken de golflengte.</summary>
+      <p class="ans">4 buiken → L = 4·½λ = 2λ → λ = 0,80 / 2 = 0,40 m.</p></details>
+  </div>
+</section>
+
+<footer>NOVA Natuurkunde VWO · Hoofdstuk 5. Teken bij staande golven altijd knopen en buiken in een schets.</footer>
+</main>
+</body>
+</html>

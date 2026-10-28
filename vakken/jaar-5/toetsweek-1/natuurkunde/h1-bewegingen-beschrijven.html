@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NA H1 — Bewegingen beschrijven</title>
+<style>
+  :root{
+    --ink:#14241c;--moss:#2a5340;--moss-d:#1b3a2c;--soil:#5e7466;
+    --leaf:#e6efe9;--leaf-d:#c9dccf;--paper:#f9fbf9;--amber:#c47a2c;--line:#d3ddd6;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55;font-size:17px}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#f1f7f3;padding:34px 20px 26px}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.85;margin:0 0 6px}
+  header h1{margin:0;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.92;max-width:60ch;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:8px;overflow-x:auto;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav a{flex:0 0 auto;text-decoration:none;color:var(--moss-d);background:var(--leaf);
+    border:1px solid var(--leaf-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:30px;scroll-margin-top:60px}
+  .bs{font-family:ui-sans-serif,system-ui,sans-serif;display:inline-block;background:var(--moss);
+    color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:5px;font-weight:700}
+  h2{font-size:21px;margin:10px 0 4px;letter-spacing:-.01em}
+  ul{margin:6px 0 8px;padding-left:20px}
+  li{margin:4px 0}
+  b.t{color:var(--moss-d)}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+  table.fx td.eq{font-family:"Cambria Math","Times New Roman",serif;font-size:17px;white-space:nowrap;
+    background:#fff;color:var(--moss-d);font-weight:600;width:1%}
+  table.fx td{background:#fff}
+  .tip{background:#fdf4e7;border:1px solid #f0dcc0;border-radius:8px;padding:10px 14px;margin:12px 0;
+    font-size:15px;font-family:ui-sans-serif,system-ui,sans-serif}
+  .tip b{color:var(--amber)}
+  .vb{background:var(--leaf);border:1px solid var(--leaf-d);border-radius:10px;padding:10px 16px;margin:12px 0;font-size:15px}
+  .vb .lbl{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--amber);font-weight:700;margin:0 0 4px}
+  .vb p{margin:0}
+  .vb details{border:none;padding:8px 0 2px}
+  .vb summary{font-size:14px;font-family:ui-sans-serif,system-ui,sans-serif;color:var(--moss-d)}
+  .quiz{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 16px;margin-top:14px}
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:none}
+  summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;gap:8px;align-items:flex-start}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"?";flex:0 0 auto;width:22px;height:22px;background:var(--moss);color:#fff;
+    border-radius:50%;font-size:13px;display:flex;align-items:center;justify-content:center;font-family:ui-sans-serif,system-ui,sans-serif}
+  details[open] summary::before{content:"✓";background:var(--amber)}
+  .ans{margin:8px 0 2px 30px;font-size:15px;color:#22362b}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);text-align:center;padding:0 18px 40px}
+</style>
+</head>
+<body>
+<header>
+  <p class="kicker">Natuurkunde · Hoofdstuk 1</p>
+  <h1>Bewegingen beschrijven</h1>
+  <p>Plaats, snelheid, versnelling en (x,t)- en (v,t)-diagrammen. Per paragraaf de kern, de formules en een voorbeeldopdracht. Zelftoets onderaan. Gebruik g = 9,81 m/s².</p>
+</header>
+
+<nav>
+  <a href="#p1">1.1 Plaats</a>
+  <a href="#p2">1.2 Snelheid</a>
+  <a href="#p3">1.3 Eenheden</a>
+  <a href="#p4">1.4 Versnelling</a>
+  <a href="#p5">1.5 v, a en x</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="p1">
+  <span class="bs">§1.1</span>
+  <h2>Plaats en verplaatsing bepalen</h2>
+  <ul>
+    <li><b class="t">Plaats x</b> meet je ten opzichte van een gekozen <b class="t">nulpunt</b> en <b class="t">positieve richting</b>.</li>
+    <li><b class="t">Verplaatsing</b> heeft een richting en kan negatief zijn; <b class="t">afstand</b> is altijd positief.</li>
+    <li>Een <b class="t">(x,t)-diagram</b> laat zien waar een voorwerp zich op elk moment bevindt.</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">Δx = x<sub>eind</sub> − x<sub>begin</sub></td><td>verplaatsing (m)</td></tr>
+  </table>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Een fietser rijdt van x = 200 m naar x = 50 m. Bepaal de verplaatsing en de afgelegde afstand.</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">Δx = 50 − 200 = −150 m (dus 150 m in negatieve richting). De afgelegde afstand is 150 m.</p></details>
+  </div>
+</section>
+
+<section id="p2">
+  <span class="bs">§1.2</span>
+  <h2>Snelheid</h2>
+  <ul>
+    <li>De <b class="t">gemiddelde snelheid</b> is de verplaatsing gedeeld door de tijd.</li>
+    <li>De <b class="t">momentane snelheid</b> is de helling van de <b class="t">raaklijn</b> aan het (x,t)-diagram.</li>
+    <li>Een rechte lijn in het (x,t)-diagram betekent een <b class="t">eenparige beweging</b> (constante snelheid).</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">v<sub>gem</sub> = Δx / Δt</td><td>gemiddelde snelheid (m/s)</td></tr>
+  </table>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Een hardloper legt 1,2 km af in 4,0 minuten. Bereken de gemiddelde snelheid in m/s.</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">Δx = 1,2·10³ m, Δt = 4,0 × 60 = 240 s. v = 1200 / 240 = 5,0 m/s.</p></details>
+  </div>
+</section>
+
+<section id="p3">
+  <span class="bs">§1.3</span>
+  <h2>Eenheden en significante cijfers</h2>
+  <ul>
+    <li>Reken in <b class="t">SI-eenheden</b>: m, s, kg.</li>
+    <li><b class="t">km/h ÷ 3,6 = m/s</b> en <b class="t">m/s × 3,6 = km/h</b>.</li>
+    <li><b class="t">Vermenigvuldigen en delen</b>: de uitkomst krijgt evenveel <b class="t">significante cijfers</b> als het getal met de minste.</li>
+    <li><b class="t">Optellen en aftrekken</b>: de uitkomst krijgt evenveel <b class="t">decimalen</b> als het getal met de minste decimalen.</li>
+    <li>Gebruik <b class="t">wetenschappelijke notatie</b> om het aantal significante cijfers duidelijk te maken (bijv. 1,20·10³ m).</li>
+  </ul>
+  <table>
+    <tr><td><b>k</b> (kilo) = 10³</td><td><b>M</b> (mega) = 10⁶</td><td><b>m</b> (milli) = 10⁻³</td><td><b>µ</b> (micro) = 10⁻⁶</td><td><b>n</b> (nano) = 10⁻⁹</td></tr>
+  </table>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>a) Reken 72 km/h om naar m/s. b) Bereken 3,0 × 2,45. c) Bereken 12,5 + 3,14.</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">a) 72 / 3,6 = 20 m/s.<br>b) 7,35 → 2 significante cijfers → 7,4.<br>c) 15,64 → 1 decimaal → 15,6.</p></details>
+  </div>
+</section>
+
+<section id="p4">
+  <span class="bs">§1.4</span>
+  <h2>Verandering van snelheid</h2>
+  <ul>
+    <li><b class="t">Versnelling</b> is de snelheidsverandering per seconde.</li>
+    <li>De <b class="t">helling van het (v,t)-diagram</b> is de versnelling.</li>
+    <li><b class="t">Eenparig versneld</b>: a is constant, het (v,t)-diagram is een rechte lijn. Bij <b class="t">vertraging</b> is a negatief.</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">a = Δv / Δt</td><td>versnelling (m/s²)</td></tr>
+  </table>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Een auto trekt op van stilstand tot 27 m/s in 9,0 s. Bereken de versnelling.</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">a = Δv / Δt = (27 − 0) / 9,0 = 3,0 m/s².</p></details>
+  </div>
+</section>
+
+<section id="p5">
+  <span class="bs">§1.5</span>
+  <h2>Versnelling, snelheid en verplaatsing</h2>
+  <ul>
+    <li>De <b class="t">oppervlakte onder het (v,t)-diagram</b> is de verplaatsing.</li>
+    <li><b class="t">Vrije val</b>: een voorwerp valt zonder luchtweerstand met a = g = 9,81 m/s².</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">v(t) = v<sub>0</sub> + a·t</td><td>snelheid bij eenparig versneld</td></tr>
+    <tr><td class="eq">x(t) = x<sub>0</sub> + v<sub>0</sub>·t + ½·a·t²</td><td>plaats bij eenparig versneld</td></tr>
+    <tr><td class="eq">v<sub>gem</sub> = (v<sub>begin</sub> + v<sub>eind</sub>) / 2</td><td>alleen bij eenparig versneld</td></tr>
+  </table>
+  <div class="tip"><b>Let op:</b> v<sub>gem</sub> = (v<sub>begin</sub> + v<sub>eind</sub>) / 2 mag je <b>alleen</b> gebruiken als de beweging eenparig versneld is.</div>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Een auto remt eenparig af van 20 m/s tot stilstand in 5,0 s. Bereken de versnelling en de remweg.</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">a = (0 − 20) / 5,0 = −4,0 m/s². v<sub>gem</sub> = (20 + 0) / 2 = 10 m/s, remweg s = v<sub>gem</sub>·t = 10 × 5,0 = 50 m (gelijk aan de oppervlakte van de driehoek in het (v,t)-diagram).</p></details>
+  </div>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Een steen valt 2,0 s vanuit stilstand. Bereken de eindsnelheid en de valhoogte.</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">v = g·t = 9,81 × 2,0 = 19,6 ≈ 20 m/s. h = ½·g·t² = ½ × 9,81 × 2,0² = 19,6 ≈ 20 m.</p></details>
+  </div>
+</section>
+
+<section id="toets">
+  <h2 style="color:var(--moss-d)">Zelftoets</h2>
+  <p class="goal">Tik op een vraag voor het antwoord.</p>
+  <div class="quiz">
+    <details><summary>Wat is het verschil tussen verplaatsing en afstand?</summary>
+      <p class="ans">Verplaatsing heeft een richting en kan negatief zijn; afstand is altijd positief.</p></details>
+    <details><summary>Hoe bepaal je de momentane snelheid uit een (x,t)-diagram?</summary>
+      <p class="ans">Met de helling van de raaklijn op dat moment.</p></details>
+    <details><summary>Wat betekent een rechte lijn in een (x,t)-diagram?</summary>
+      <p class="ans">Een eenparige beweging: de snelheid is constant.</p></details>
+    <details><summary>Wat haal je uit de helling en wat uit de oppervlakte van een (v,t)-diagram?</summary>
+      <p class="ans">Helling = versnelling; oppervlakte eronder = verplaatsing.</p></details>
+    <details><summary>Reken 90 km/h om naar m/s.</summary>
+      <p class="ans">90 / 3,6 = 25 m/s.</p></details>
+    <details><summary>Hoeveel significante cijfers heeft de uitkomst van 4,0 × 1,234?</summary>
+      <p class="ans">Twee (zoals 4,0): 4,936 → 4,9.</p></details>
+    <details><summary>Oefenopgave 1: Een trein trekt eenparig op van 0 tot 30 m/s in 60 s. Bereken de versnelling en de afgelegde afstand.</summary>
+      <p class="ans">a = 30 / 60 = 0,50 m/s²; s = v<sub>gem</sub>·t = 15 × 60 = 9,0·10² m.</p></details>
+    <details><summary>Oefenopgave 2: Je laat een steen in een put vallen en na 3,0 s hoor je hem de bodem raken (verwaarloos de geluidstijd). Hoe diep is de put?</summary>
+      <p class="ans">h = ½ × 9,81 × 3,0² = 44 m.</p></details>
+  </div>
+</section>
+
+<footer>NOVA Natuurkunde VWO · Hoofdstuk 1. Ken de formules en wanneer je ze mag gebruiken.</footer>
+</main>
+</body>
+</html>

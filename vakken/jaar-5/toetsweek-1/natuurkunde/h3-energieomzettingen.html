@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NA H3 — Energieomzettingen</title>
+<style>
+  :root{
+    --ink:#14241c;--moss:#2a5340;--moss-d:#1b3a2c;--soil:#5e7466;
+    --leaf:#e6efe9;--leaf-d:#c9dccf;--paper:#f9fbf9;--amber:#c47a2c;--line:#d3ddd6;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55;font-size:17px}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#f1f7f3;padding:34px 20px 26px}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.85;margin:0 0 6px}
+  header h1{margin:0;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.92;max-width:60ch;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:8px;overflow-x:auto;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav a{flex:0 0 auto;text-decoration:none;color:var(--moss-d);background:var(--leaf);
+    border:1px solid var(--leaf-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:30px;scroll-margin-top:60px}
+  .bs{font-family:ui-sans-serif,system-ui,sans-serif;display:inline-block;background:var(--moss);
+    color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:5px;font-weight:700}
+  h2{font-size:21px;margin:10px 0 4px;letter-spacing:-.01em}
+  ul{margin:6px 0 8px;padding-left:20px}
+  li{margin:4px 0}
+  b.t{color:var(--moss-d)}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+  table.fx td.eq{font-family:"Cambria Math","Times New Roman",serif;font-size:17px;white-space:nowrap;
+    background:#fff;color:var(--moss-d);font-weight:600;width:1%}
+  table.fx td{background:#fff}
+  .tip{background:#fdf4e7;border:1px solid #f0dcc0;border-radius:8px;padding:10px 14px;margin:12px 0;
+    font-size:15px;font-family:ui-sans-serif,system-ui,sans-serif}
+  .tip b{color:var(--amber)}
+  .vb{background:var(--leaf);border:1px solid var(--leaf-d);border-radius:10px;padding:10px 16px;margin:12px 0;font-size:15px}
+  .vb .lbl{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--amber);font-weight:700;margin:0 0 4px}
+  .vb p{margin:0}
+  .vb details{border:none;padding:8px 0 2px}
+  .vb summary{font-size:14px;font-family:ui-sans-serif,system-ui,sans-serif;color:var(--moss-d)}
+  .quiz{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 16px;margin-top:14px}
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:none}
+  summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;gap:8px;align-items:flex-start}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"?";flex:0 0 auto;width:22px;height:22px;background:var(--moss);color:#fff;
+    border-radius:50%;font-size:13px;display:flex;align-items:center;justify-content:center;font-family:ui-sans-serif,system-ui,sans-serif}
+  details[open] summary::before{content:"✓";background:var(--amber)}
+  .ans{margin:8px 0 2px 30px;font-size:15px;color:#22362b}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);text-align:center;padding:0 18px 40px}
+</style>
+</head>
+<body>
+<header>
+  <p class="kicker">Natuurkunde · Hoofdstuk 3</p>
+  <h1>Energieomzettingen</h1>
+  <p>Arbeid, kinetische, zwaarte- en veerenergie, behoud van energie, warmte, rendement en vermogen. Per paragraaf de kern, de formules en een voorbeeldopdracht. Zelftoets onderaan.</p>
+</header>
+
+<nav>
+  <a href="#p1">3.1 Arbeid</a>
+  <a href="#p2">3.2 E<sub>k</sub></a>
+  <a href="#p3">3.3 Veer</a>
+  <a href="#p4">3.4 Behoud</a>
+  <a href="#p5">3.5 Chemisch</a>
+  <a href="#p6">3.6 Warmte</a>
+  <a href="#p7">3.7 Vermogen</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="p1">
+  <span class="bs">§3.1</span>
+  <h2>Arbeid en verplaatsing</h2>
+  <ul>
+    <li>Een kracht verricht <b class="t">arbeid</b> als het voorwerp zich verplaatst met een component in de richting van de kracht.</li>
+    <li>Arbeid is <b class="t">negatief</b> als de kracht de beweging tegenwerkt (bijv. wrijving).</li>
+    <li>Staat de kracht <b class="t">loodrecht</b> op de verplaatsing, dan is W = 0.</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">W = F·s·cos α</td><td>arbeid (J); α = hoek tussen kracht en verplaatsing</td></tr>
+    <tr><td class="eq">E<sub>z</sub> = m·g·h</td><td>zwaarte-energie (J)</td></tr>
+    <tr><td class="eq">W<sub>z</sub> = −m·g·Δh</td><td>arbeid van de zwaartekracht</td></tr>
+  </table>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Je trekt een slee 12 m vooruit met een kracht van 150 N onder een hoek van 40° met de grond. Bereken de arbeid.</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">W = 150 × 12 × cos 40° = 1,4·10³ J.</p></details>
+  </div>
+</section>
+
+<section id="p2">
+  <span class="bs">§3.2</span>
+  <h2>Arbeid en snelheid</h2>
+  <ul>
+    <li>De <b class="t">totale arbeid</b> van alle krachten samen is gelijk aan de verandering van <b class="t">kinetische energie</b>.</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">E<sub>k</sub> = ½·m·v²</td><td>kinetische energie (J)</td></tr>
+    <tr><td class="eq">W<sub>tot</sub> = ΔE<sub>k</sub></td><td>wet van arbeid en kinetische energie</td></tr>
+  </table>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Een auto van 1000 kg versnelt van 10 m/s naar 20 m/s. Hoeveel arbeid is er netto verricht?</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">W<sub>tot</sub> = ½ × 1000 × (20² − 10²) = 1,5·10⁵ J.</p></details>
+  </div>
+</section>
+
+<section id="p3">
+  <span class="bs">§3.3</span>
+  <h2>Arbeid en veerkracht</h2>
+  <ul>
+    <li>De veerkracht is evenredig met de uitrekking (<b class="t">wet van Hooke</b>).</li>
+    <li>De arbeid om een veer uit te rekken is de <b class="t">oppervlakte onder het (F,u)-diagram</b> en wordt opgeslagen als <b class="t">veerenergie</b>.</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">F<sub>v</sub> = C·u</td><td>veerkracht (N); C in N/m, u in m</td></tr>
+    <tr><td class="eq">E<sub>v</sub> = ½·C·u²</td><td>veerenergie (J)</td></tr>
+  </table>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Een veer met C = 250 N/m wordt 12 cm uitgerekt. Bereken de veerkracht en de veerenergie.</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">F = 250 × 0,12 = 30 N. E<sub>v</sub> = ½ × 250 × 0,12² = 1,8 J.</p></details>
+  </div>
+</section>
+
+<section id="p4">
+  <span class="bs">§3.4</span>
+  <h2>Behoud van energie</h2>
+  <ul>
+    <li>Energie verdwijnt niet en ontstaat niet uit niets; ze wordt <b class="t">omgezet</b> in een andere vorm.</li>
+    <li><b class="t">Zonder wrijving</b> blijft de som van E<sub>k</sub>, E<sub>z</sub> en E<sub>v</sub> constant.</li>
+    <li><b class="t">Met wrijving</b> wordt een deel omgezet in <b class="t">warmte Q</b>.</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">E<sub>k</sub> + E<sub>z</sub> + E<sub>v</sub> = constant</td><td>zonder wrijving</td></tr>
+    <tr><td class="eq">E<sub>begin</sub> = E<sub>eind</sub> + Q</td><td>met wrijving</td></tr>
+  </table>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Een achtbaankarretje vertrekt vanuit stilstand op 30 m hoogte. Bereken de snelheid onderaan (zonder wrijving).</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">m·g·h = ½·m·v² → v = √(2·g·h) = √(2 × 9,81 × 30) = 24 m/s. De massa valt weg!</p></details>
+  </div>
+</section>
+
+<section id="p5">
+  <span class="bs">§3.5</span>
+  <h2>Energie om arbeid te verrichten</h2>
+  <ul>
+    <li>Brandstof en voedsel bevatten <b class="t">chemische energie</b>; bij verbranding komt die vrij.</li>
+    <li>De <b class="t">stookwaarde</b> staat in BINAS: per m³ (r<sub>v</sub>) of per kg (r<sub>m</sub>).</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">E<sub>ch</sub> = r<sub>v</sub>·V</td><td>r<sub>v</sub> in J/m³</td></tr>
+    <tr><td class="eq">E<sub>ch</sub> = r<sub>m</sub>·m</td><td>r<sub>m</sub> in J/kg</td></tr>
+  </table>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Een auto verbruikt 6,0 L benzine (r<sub>v</sub> = 33·10⁹ J/m³). Hoeveel chemische energie is dat?</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">V = 6,0·10⁻³ m³. E<sub>ch</sub> = 33·10⁹ × 6,0·10⁻³ = 2,0·10⁸ J.</p></details>
+  </div>
+</section>
+
+<section id="p6">
+  <span class="bs">§3.6</span>
+  <h2>Warmte en rendement</h2>
+  <ul>
+    <li>Arbeid door <b class="t">wrijving</b> wordt omgezet in warmte.</li>
+    <li>Het <b class="t">rendement</b> geeft aan welk deel van de toegevoerde energie nuttig wordt gebruikt.</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">Q = F<sub>w</sub>·s</td><td>warmte door wrijving</td></tr>
+    <tr><td class="eq">Q = c·m·ΔT</td><td>opwarmen; c = soortelijke warmte (J/(kg·K))</td></tr>
+    <tr><td class="eq">η = E<sub>nuttig</sub> / E<sub>in</sub> × 100%</td><td>rendement</td></tr>
+  </table>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Een waterkoker van 2,0 kW verwarmt in 5,0 min 1,5 kg water van 20 °C tot 100 °C (c = 4,18·10³ J/(kg·K)). Bereken het rendement.</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">Q = 4,18·10³ × 1,5 × 80 = 5,0·10⁵ J. E<sub>in</sub> = P·t = 2,0·10³ × 300 = 6,0·10⁵ J. η = 5,0/6,0 × 100% = 84%.</p></details>
+  </div>
+</section>
+
+<section id="p7">
+  <span class="bs">§3.7</span>
+  <h2>Vermogen</h2>
+  <ul>
+    <li><b class="t">Vermogen</b> is de energie (of arbeid) per seconde.</li>
+    <li><b class="t">1 kWh</b> is de energie die 1 kW in 1 uur levert.</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">P = E / t = W / t</td><td>vermogen (W)</td></tr>
+    <tr><td class="eq">P = F·v</td><td>bij constante snelheid</td></tr>
+    <tr><td class="eq">1 kWh = 3,6·10⁶ J</td><td>omrekening</td></tr>
+    <tr><td class="eq">η = P<sub>nuttig</sub> / P<sub>in</sub> × 100%</td><td>rendement met vermogens</td></tr>
+  </table>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Een auto rijdt met een constante snelheid van 25 m/s; de totale wrijvingskracht is 600 N. Bereken het nuttig vermogen van de motor.</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">Bij constante snelheid is F<sub>motor</sub> = F<sub>w</sub> = 600 N. P = F·v = 600 × 25 = 1,5·10⁴ W = 15 kW.</p></details>
+  </div>
+</section>
+
+<section id="toets">
+  <h2 style="color:var(--moss-d)">Zelftoets</h2>
+  <p class="goal">Tik op een vraag voor het antwoord.</p>
+  <div class="quiz">
+    <details><summary>Wanneer verricht een kracht géén arbeid?</summary>
+      <p class="ans">Als de kracht loodrecht op de verplaatsing staat (cos 90° = 0), of als er geen verplaatsing is.</p></details>
+    <details><summary>Wanneer is arbeid negatief?</summary>
+      <p class="ans">Als de kracht de beweging tegenwerkt, zoals wrijving.</p></details>
+    <details><summary>Wat zegt de wet van arbeid en kinetische energie?</summary>
+      <p class="ans">De totale arbeid van alle krachten is gelijk aan de verandering van de kinetische energie: W<sub>tot</sub> = ΔE<sub>k</sub>.</p></details>
+    <details><summary>Wat stelt de oppervlakte onder een (F,u)-diagram van een veer voor?</summary>
+      <p class="ans">De arbeid om de veer uit te rekken = de opgeslagen veerenergie.</p></details>
+    <details><summary>Wat gebeurt er met de energie als er wrijving is?</summary>
+      <p class="ans">Een deel wordt omgezet in warmte: E<sub>begin</sub> = E<sub>eind</sub> + Q.</p></details>
+    <details><summary>Hoeveel joule is 1 kWh?</summary>
+      <p class="ans">3,6·10⁶ J.</p></details>
+    <details><summary>Oefenopgave 1: Een boog (C = 800 N/m) wordt 0,40 m uitgetrokken en schiet een pijl van 50 g weg. Bereken de snelheid van de pijl (geen verliezen).</summary>
+      <p class="ans">E<sub>v</sub> = ½ × 800 × 0,40² = 64 J = ½ × 0,050 × v² → v = 51 m/s.</p></details>
+    <details><summary>Oefenopgave 2: Een elektromotor neemt 1,2 kW op en heeft een rendement van 75%. Met welke constante snelheid kan hij een massa van 100 kg omhoog hijsen?</summary>
+      <p class="ans">P<sub>nuttig</sub> = 0,75 × 1200 = 900 W. F = m·g = 981 N. v = P / F = 900 / 981 = 0,92 m/s.</p></details>
+  </div>
+</section>
+
+<footer>NOVA Natuurkunde VWO · Hoofdstuk 3. Schrijf bij energievragen altijd eerst op welke energie in welke vorm overgaat.</footer>
+</main>
+</body>
+</html>
