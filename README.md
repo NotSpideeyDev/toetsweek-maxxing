@@ -22,6 +22,7 @@ Alles is gewone HTML — geen installatie nodig. Open `index.html` of zet de rep
     │   └── scheikunde/
     └── jaar-5/
         └── toetsweek-1/
+            ├── natuurkunde/
             └── <vaknaam>/
 ```
 De homepage opent standaard het nieuwste jaar; met `index.html#jaar-4` kom je direct bij jaar 4.

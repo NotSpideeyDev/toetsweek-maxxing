@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NA H2 — Kracht en beweging</title>
+<style>
+  :root{
+    --ink:#14241c;--moss:#2a5340;--moss-d:#1b3a2c;--soil:#5e7466;
+    --leaf:#e6efe9;--leaf-d:#c9dccf;--paper:#f9fbf9;--amber:#c47a2c;--line:#d3ddd6;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55;font-size:17px}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#f1f7f3;padding:34px 20px 26px}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.85;margin:0 0 6px}
+  header h1{margin:0;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.92;max-width:60ch;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:8px;overflow-x:auto;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav a{flex:0 0 auto;text-decoration:none;color:var(--moss-d);background:var(--leaf);
+    border:1px solid var(--leaf-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:30px;scroll-margin-top:60px}
+  .bs{font-family:ui-sans-serif,system-ui,sans-serif;display:inline-block;background:var(--moss);
+    color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:5px;font-weight:700}
+  h2{font-size:21px;margin:10px 0 4px;letter-spacing:-.01em}
+  ul{margin:6px 0 8px;padding-left:20px}
+  li{margin:4px 0}
+  b.t{color:var(--moss-d)}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+  table.fx td.eq{font-family:"Cambria Math","Times New Roman",serif;font-size:17px;white-space:nowrap;
+    background:#fff;color:var(--moss-d);font-weight:600;width:1%}
+  table.fx td{background:#fff}
+  .tip{background:#fdf4e7;border:1px solid #f0dcc0;border-radius:8px;padding:10px 14px;margin:12px 0;
+    font-size:15px;font-family:ui-sans-serif,system-ui,sans-serif}
+  .tip b{color:var(--amber)}
+  .vb{background:var(--leaf);border:1px solid var(--leaf-d);border-radius:10px;padding:10px 16px;margin:12px 0;font-size:15px}
+  .vb .lbl{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--amber);font-weight:700;margin:0 0 4px}
+  .vb p{margin:0}
+  .vb details{border:none;padding:8px 0 2px}
+  .vb summary{font-size:14px;font-family:ui-sans-serif,system-ui,sans-serif;color:var(--moss-d)}
+  .quiz{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 16px;margin-top:14px}
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:none}
+  summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;gap:8px;align-items:flex-start}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"?";flex:0 0 auto;width:22px;height:22px;background:var(--moss);color:#fff;
+    border-radius:50%;font-size:13px;display:flex;align-items:center;justify-content:center;font-family:ui-sans-serif,system-ui,sans-serif}
+  details[open] summary::before{content:"✓";background:var(--amber)}
+  .ans{margin:8px 0 2px 30px;font-size:15px;color:#22362b}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);text-align:center;padding:0 18px 40px}
+</style>
+</head>
+<body>
+<header>
+  <p class="kicker">Natuurkunde · Hoofdstuk 2</p>
+  <h1>Kracht en beweging</h1>
+  <p>De wetten van Newton, krachten samenstellen en ontbinden, en krachtenevenwicht. Per paragraaf de kern, de formules en een voorbeeldopdracht. Zelftoets onderaan. Gebruik g = 9,81 m/s².</p>
+</header>
+
+<nav>
+  <a href="#p1">2.1 Newton</a>
+  <a href="#p2">2.2 Samenstellen</a>
+  <a href="#p3">2.3 Ontbinden</a>
+  <a href="#p4">2.4 Evenwicht</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="p1">
+  <span class="bs">§2.1</span>
+  <h2>Versnelling en kracht</h2>
+  <ul>
+    <li><b class="t">Eerste wet van Newton</b>: is de resulterende kracht 0, dan blijft het voorwerp stilstaan of eenparig bewegen.</li>
+    <li><b class="t">Tweede wet</b>: de resulterende kracht bepaalt de versnelling.</li>
+    <li><b class="t">Derde wet</b>: actie = −reactie; deze krachten werken op <b class="t">twee verschillende voorwerpen</b>.</li>
+    <li>Veelvoorkomende krachten: <b class="t">zwaartekracht</b>, <b class="t">normaalkracht</b>, <b class="t">wrijvingskracht</b>, <b class="t">spankracht</b>, <b class="t">luchtweerstand</b>.</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">F<sub>res</sub> = m·a</td><td>tweede wet van Newton (N)</td></tr>
+    <tr><td class="eq">F<sub>z</sub> = m·g</td><td>zwaartekracht (N)</td></tr>
+  </table>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Een auto van 1200 kg heeft een motorkracht van 3,8 kN; de totale wrijving is 0,8 kN. Bereken de versnelling.</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">F<sub>res</sub> = 3,8·10³ − 0,8·10³ = 3,0·10³ N. a = F<sub>res</sub> / m = 3000 / 1200 = 2,5 m/s².</p></details>
+  </div>
+</section>
+
+<section id="p2">
+  <span class="bs">§2.2</span>
+  <h2>Krachten samenstellen</h2>
+  <ul>
+    <li>Krachten zijn <b class="t">vectoren</b>: ze hebben een grootte en een richting.</li>
+    <li>Optellen met de <b class="t">kop-staartmethode</b> of de <b class="t">parallellogrammethode</b>.</li>
+    <li>Krachten in dezelfde richting tel je op, tegengesteld trek je af.</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">F<sub>res</sub> = √(F<sub>1</sub>² + F<sub>2</sub>²)</td><td>twee krachten loodrecht op elkaar</td></tr>
+    <tr><td class="eq">tan α = F<sub>2</sub> / F<sub>1</sub></td><td>richting van de resultante</td></tr>
+  </table>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Op een voorwerp werken 30 N naar het oosten en 40 N naar het noorden. Bepaal de resulterende kracht.</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">F<sub>res</sub> = √(30² + 40²) = 50 N. tan α = 40/30 → α = 53° ten noorden van oost.</p></details>
+  </div>
+</section>
+
+<section id="p3">
+  <span class="bs">§2.3</span>
+  <h2>Krachten ontbinden</h2>
+  <ul>
+    <li>Een kracht splits je op in twee <b class="t">componenten</b>, meestal loodrecht op elkaar.</li>
+    <li>Op een <b class="t">helling</b> ontbind je de zwaartekracht <b class="t">langs</b> en <b class="t">loodrecht op</b> de helling.</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">F<sub>x</sub> = F·cos α, F<sub>y</sub> = F·sin α</td><td>α gemeten vanaf de x-as</td></tr>
+    <tr><td class="eq">F<sub>z,∥</sub> = m·g·sin α</td><td>langs de helling</td></tr>
+    <tr><td class="eq">F<sub>z,⊥</sub> = m·g·cos α</td><td>loodrecht op de helling (= F<sub>n</sub> zonder andere krachten)</td></tr>
+  </table>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Een kist van 50 kg staat op een helling van 20°. Bereken de componenten van de zwaartekracht.</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">F<sub>z</sub> = 50 × 9,81 = 490,5 N. Langs: 490,5 × sin 20° = 1,7·10² N. Loodrecht: 490,5 × cos 20° = 4,6·10² N.</p></details>
+  </div>
+</section>
+
+<section id="p4">
+  <span class="bs">§2.4</span>
+  <h2>Krachten in evenwicht</h2>
+  <ul>
+    <li><b class="t">Evenwicht</b>: de resulterende kracht is 0, dus het voorwerp staat stil of beweegt eenparig.</li>
+    <li>Werk <b class="t">per richting</b>: de som van alle horizontale en de som van alle verticale componenten is 0.</li>
+    <li><b class="t">Schuifwrijving</b> groeit mee met de duwkracht tot een maximum; daarna gaat het voorwerp schuiven.</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">ΣF<sub>x</sub> = 0 en ΣF<sub>y</sub> = 0</td><td>voorwaarde voor evenwicht</td></tr>
+    <tr><td class="eq">F<sub>w,max</sub> = f·F<sub>n</sub></td><td>maximale schuifwrijving (f = wrijvingscoëfficiënt)</td></tr>
+  </table>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht</p>
+    <p>Een lamp van 2,0 kg hangt aan twee kabels die elk een hoek van 30° met de horizontaal maken. Bereken de spankracht per kabel.</p>
+    <details><summary>Uitwerking</summary>
+      <p class="ans">Verticaal evenwicht: 2·F<sub>s</sub>·sin 30° = m·g → F<sub>s</sub> = (2,0 × 9,81) / (2 × 0,5) = 19,6 ≈ 20 N.</p></details>
+  </div>
+</section>
+
+<section id="toets">
+  <h2 style="color:var(--moss-d)">Zelftoets</h2>
+  <p class="goal">Tik op een vraag voor het antwoord.</p>
+  <div class="quiz">
+    <details><summary>Wat zegt de eerste wet van Newton?</summary>
+      <p class="ans">Is de resulterende kracht 0, dan blijft een voorwerp stilstaan of beweegt het eenparig.</p></details>
+    <details><summary>Waarom heffen actie en reactie (derde wet) elkaar níet op?</summary>
+      <p class="ans">Ze werken op twee verschillende voorwerpen.</p></details>
+    <details><summary>Noem twee methoden om krachten op te tellen.</summary>
+      <p class="ans">De kop-staartmethode en de parallellogrammethode.</p></details>
+    <details><summary>Welke component van de zwaartekracht trekt een voorwerp langs een helling naar beneden?</summary>
+      <p class="ans">F<sub>z,∥</sub> = m·g·sin α.</p></details>
+    <details><summary>Wanneer is een voorwerp in evenwicht, en wat betekent dat voor de beweging?</summary>
+      <p class="ans">Als ΣF<sub>x</sub> = 0 en ΣF<sub>y</sub> = 0. Het voorwerp staat dan stil of beweegt eenparig.</p></details>
+    <details><summary>Hoe groot is de maximale schuifwrijving?</summary>
+      <p class="ans">F<sub>w,max</sub> = f·F<sub>n</sub>. Duw je harder, dan gaat het voorwerp schuiven.</p></details>
+    <details><summary>Oefenopgave 1: Een auto van 800 kg ondervindt een resulterende kracht van 2,4 kN. Bereken de versnelling.</summary>
+      <p class="ans">a = 2400 / 800 = 3,0 m/s².</p></details>
+    <details><summary>Oefenopgave 2: Een slee van 30 kg glijdt zonder wrijving een helling van 15° af. Bereken de versnelling.</summary>
+      <p class="ans">a = g·sin 15° = 9,81 × 0,259 = 2,5 m/s² (de massa valt weg).</p></details>
+  </div>
+</section>
+
+<footer>NOVA Natuurkunde VWO · Hoofdstuk 2. Teken altijd eerst alle krachten op het voorwerp.</footer>
+</main>
+</body>
+</html>
