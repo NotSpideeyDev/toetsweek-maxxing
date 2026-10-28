@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EN — Photography Terminology</title>
+<style>
+  :root{
+    --ink:#14241c;--moss:#7a3b4c;--moss-d:#5a2536;--soil:#6e5a60;
+    --leaf:#f3e8eb;--leaf-d:#e2cbd2;--paper:#fbf9f8;--amber:#c47a2c;--line:#e0d6d8;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55;font-size:17px}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#fbf3f5;padding:34px 20px 26px}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.85;margin:0 0 6px}
+  header h1{margin:0;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.92;max-width:60ch;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:8px;overflow-x:auto;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav a{flex:0 0 auto;text-decoration:none;color:var(--moss-d);background:var(--leaf);
+    border:1px solid var(--leaf-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:30px;scroll-margin-top:60px}
+  .bs{font-family:ui-sans-serif,system-ui,sans-serif;display:inline-block;background:var(--moss);
+    color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:5px;font-weight:700}
+  h2{font-size:21px;margin:10px 0 4px;letter-spacing:-.01em}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);text-align:center;padding:0 18px 40px}
+</style>
+</head>
+<body>
+<header>
+  <p class="kicker">English · Visual analysis</p>
+  <h1>Photography Terminology</h1>
+  <p>The terms for analysing a photo or visual text. Look at what your eyes are drawn to first and explain why. Practise the terms at the bottom.</p>
+</header>
+
+<nav id="nav"></nav>
+
+<main id="main"></main>
+<footer>Terminology: Photography (IB5&amp;6). Name the technique, then the effect it has.</footer>
+
+<script>
+const TERMS = [
+  ["Body language and gaze","Facial expressions, gestures, stance or position that convey the attitude, feelings or personality of the person shown. Also note the direction of the subject’s eyes."],
+  ["Composition","What is included in the image is deliberately placed (this also applies to what is left out): surroundings, objects, clothing, etc."],
+  ["Colour, hue and tone","In black-and-white images: the use of contrast, light and darkness. In colour images: colours signify feelings and evoke a response (e.g. red = passion, anger; blue = peace, coldness)."],
+  ["Contrast","The arrangement of opposite elements (light and dark, large and small, rough and smooth) to create interest, excitement or drama."],
+  ["Framing / Angle","The camera shots and angles, as in film: close-ups, extreme close-ups, medium shots, long shots, shots tilted up or down."],
+  ["Omissions","What has been deliberately left out of the image."],
+  ["Orientation / Point of view","Relates to framing and angle: is the viewer positioned above the image (looking down), below it, or at eye level?"],
+  ["Positioning","Which objects are placed in the foreground, middle ground or background, and for what purpose."],
+  ["Rule of thirds","Dividing an image into thirds from the top and sides to look at where people/objects are placed. The top third usually empowers; the bottom third disempowers."],
+  ["Salience","The part of the visual your eyes are drawn to first (the focal point), determined by colour, image and layout."],
+  ["Symbolism","The use of an image to represent one or more (often complex) ideas."],
+  ["Vectors","The lines our eyes follow when looking at a visual; composers use them to direct our reading path (e.g. tall upright figures lead the eye upward → powerful)."]
+];
+</script>
+<script src="trainer.js"></script>
+</body>
+</html>
