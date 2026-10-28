@@ -13,6 +13,7 @@ Alles is gewone HTML — geen installatie nodig. Open `index.html` of zet de rep
 ```
 .
 ├── index.html              # homepage: kies jaar, vak + hoofdstuk
+├── assets/site.css         # gedeelde stijl voor alle hoofdstukpagina's
 ├── README.md
 └── vakken/
     ├── jaar-4/
@@ -57,7 +58,15 @@ Voeg bij het juiste jaar in `JAREN` een blok toe aan `toetsweken`:
 ```
 en maak de map `vakken/jaar-5/toetsweek-2/`.
 `status:"binnenkort"` toont een grijze placeholder in plaats van een link.
+Vakken zonder hoofdstukken worden niet getoond op de homepage.
 
 ## Stijl van een nieuw hoofdstuk
 De bestaande biologie-bestanden zijn een goed sjabloon: kopieer er één, vervang de inhoud
-en houd dezelfde kleuren en opbouw aan (begrippen vetgedrukt, een zelftoets onderaan).
+en houd dezelfde opbouw aan (begrippen vetgedrukt, een zelftoets onderaan).
+Laad onderaan in `<head>` de gedeelde stijl (pas het aantal `../` aan) en zet een terug-link in de `<header>`:
+```html
+<link rel="stylesheet" href="../../../assets/site.css">
+...
+<header>
+  <a class="home" href="../../../index.html">← Alle vakken</a>
+```

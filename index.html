@@ -6,76 +6,77 @@
 <title>Studiehulp — kies wat je wilt leren</title>
 <style>
   :root{
-    --ink:#14241c;--moss:#3c6e54;--moss-d:#2a5340;--soil:#8a6d4a;
-    --leaf:#e8efe7;--leaf-d:#cfe0cd;--paper:#fbfaf6;--amber:#c47a2c;--line:#d8ddd4;
+    --ink:#18181b;--muted:#71717a;--line:#e4e4e7;--bg:#fafafa;--card:#ffffff;--hover:#f4f4f5;
+    --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{margin:0;background:var(--paper);color:var(--ink);
-    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55}
-  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#f4f8f3;
-    padding:48px 22px 38px}
-  .wrap{max-width:860px;margin:0 auto}
-  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
-    letter-spacing:.18em;font-size:12px;opacity:.8;margin:0 0 8px}
-  header h1{margin:0;font-size:34px;line-height:1.08;letter-spacing:-.01em}
-  header p{margin:12px 0 0;font-size:16px;opacity:.92;max-width:60ch;
-    font-family:ui-sans-serif,system-ui,sans-serif}
-  main{max-width:860px;margin:0 auto;padding:30px 22px 70px}
-  .filterbar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px;
-    font-family:ui-sans-serif,system-ui,sans-serif}
-  .chip{cursor:pointer;border:1px solid var(--leaf-d);background:var(--leaf);
-    color:var(--moss-d);padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600}
-  .chip.active{background:var(--moss);color:#fff;border-color:var(--moss)}
-  .jarenbar{display:flex;gap:4px;margin:0 0 18px;border-bottom:2px solid var(--line);
-    font-family:ui-sans-serif,system-ui,sans-serif}
-  .jaar{cursor:pointer;border:0;background:none;color:var(--soil);padding:10px 16px;
-    font-size:16px;font-weight:700;border-bottom:3px solid transparent;margin-bottom:-2px}
-  .jaar.active{color:var(--moss-d);border-bottom-color:var(--moss)}
-  .toetsweek{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;text-transform:uppercase;
-    letter-spacing:.12em;color:var(--amber);margin:0 0 16px}
-  .vak{margin-bottom:34px}
-  .vak-head{display:flex;align-items:center;gap:14px;margin-bottom:6px}
-  .badge{flex:0 0 auto;width:46px;height:46px;border-radius:12px;display:flex;
-    align-items:center;justify-content:center;font-weight:700;font-size:20px;color:#fff;
-    font-family:ui-sans-serif,system-ui,sans-serif}
-  .vak h2{margin:0;font-size:22px;letter-spacing:-.01em}
-  .vak .sub{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);margin:2px 0 0}
-  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin-top:14px}
-  a.card{display:block;text-decoration:none;color:inherit;background:#fff;
-    border:1px solid var(--line);border-radius:12px;padding:16px 18px;transition:.15s}
-  a.card:hover{border-color:var(--moss);transform:translateY(-2px);
-    box-shadow:0 6px 18px rgba(42,83,64,.10)}
-  a.card .ch{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;
-    letter-spacing:.06em;text-transform:uppercase;color:var(--amber);font-weight:700}
-  a.card h3{margin:4px 0 4px;font-size:18px}
-  a.card p{margin:0;font-size:14px;color:#4a5a50;
-    font-family:ui-sans-serif,system-ui,sans-serif}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px}
+  header{padding:64px 0 28px}
+  header .kicker{font-size:13px;font-weight:600;color:var(--muted);margin:0 0 10px}
+  header h1{margin:0;font-size:40px;line-height:1.1;letter-spacing:-.03em;font-weight:750}
+  header p{margin:14px 0 0;font-size:17px;color:var(--muted);max-width:56ch}
+  main{padding-bottom:64px}
+  .bar{position:sticky;top:0;z-index:5;background:rgba(250,250,250,.88);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);margin-bottom:32px}
+  .bar .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding-top:12px;padding-bottom:12px}
+  .jarenbar{display:inline-flex;background:var(--hover);border-radius:10px;padding:3px}
+  .jaar{cursor:pointer;border:0;background:none;color:var(--muted);padding:6px 14px;border-radius:8px;
+    font:inherit;font-size:14px;font-weight:600}
+  .jaar.active{background:var(--card);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+  .filterbar{display:flex;gap:4px;flex-wrap:wrap}
+  .chip{cursor:pointer;border:0;background:none;color:var(--muted);padding:6px 12px;border-radius:8px;
+    font:inherit;font-size:14px;font-weight:500}
+  .chip:hover{background:var(--hover);color:var(--ink)}
+  .chip.active{background:var(--ink);color:#fff}
+  .jaar:focus-visible,.chip:focus-visible,a.card:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+  .toetsweek{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 20px}
+  .vak{margin-bottom:44px}
+  .vak-head{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .dot{width:10px;height:10px;border-radius:50%;flex:0 0 auto}
+  .vak h2{margin:0;font-size:20px;font-weight:700;letter-spacing:-.02em}
+  .vak .sub{font-size:14px;color:var(--muted);margin:0 0 0 20px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin-top:16px}
+  a.card{display:block;text-decoration:none;color:inherit;background:var(--card);
+    border:1px solid var(--line);border-radius:12px;padding:16px 18px;
+    transition:border-color .15s,box-shadow .15s}
+  a.card:hover{border-color:#d4d4d8;box-shadow:0 4px 14px rgba(0,0,0,.06)}
+  a.card .ch{font-size:12px;font-weight:600;color:var(--accent)}
+  a.card h3{margin:2px 0 4px;font-size:16px;font-weight:650;letter-spacing:-.01em}
+  a.card p{margin:0;font-size:14px;color:var(--muted);line-height:1.5}
   .soon{display:flex;align-items:center;justify-content:center;text-align:center;
-    border:1px dashed var(--line);border-radius:12px;padding:16px;color:var(--soil);
-    font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;background:#faf8f2}
-  footer{max-width:860px;margin:0 auto;padding:0 22px 50px;
-    font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil)}
-  footer code{background:var(--leaf);padding:1px 6px;border-radius:4px;color:var(--moss-d)}
+    border:1px dashed var(--line);border-radius:12px;padding:16px;color:var(--muted);font-size:14px}
+  footer{border-top:1px solid var(--line);padding:24px 0 48px;font-size:13px;color:var(--muted)}
+  footer code{background:var(--hover);padding:1px 6px;border-radius:4px;color:var(--ink);font-size:12px}
+  @media (max-width:560px){header{padding-top:40px} header h1{font-size:32px}}
 </style>
 </head>
 <body>
 <header>
   <div class="wrap">
-    <p class="kicker">Studiehulp · samen leren</p>
+    <p class="kicker">Studiehulp</p>
     <h1>Kies wat je wilt leren</h1>
-    <p>Interactieve samenvattingen met begrippen en zelftoetsen. Klik op een hoofdstuk om te beginnen. Meer vakken volgen — iedereen mag bijdragen.</p>
+    <p>Samenvattingen met begrippen en zelftoetsen. Kies een hoofdstuk om te beginnen.</p>
   </div>
 </header>
 
 <main>
-  <div class="jarenbar" id="jaren"></div>
-  <div class="filterbar" id="filters"></div>
-  <div id="vakken"></div>
+  <div class="bar">
+    <div class="wrap">
+      <div class="jarenbar" id="jaren"></div>
+      <div class="filterbar" id="filters"></div>
+    </div>
+  </div>
+  <div class="wrap" id="vakken"></div>
 </main>
 
 <footer>
-  Nieuw vak of hoofdstuk toevoegen? Zet je <code>.html</code>-bestand in <code>vakken/&lt;jaar&gt;/…/&lt;vaknaam&gt;/</code> en voeg één regel toe aan de lijst boven in <code>index.html</code>. Uitleg staat in <code>README.md</code>.
+  <div class="wrap">
+    Nieuw vak of hoofdstuk toevoegen? Zet je <code>.html</code>-bestand in <code>vakken/&lt;jaar&gt;/…/&lt;vaknaam&gt;/</code> en voeg één regel toe aan de lijst boven in <code>index.html</code>. Uitleg staat in <code>README.md</code>.
+  </div>
 </footer>
 
 <script>
@@ -83,8 +84,9 @@
    HIER JAREN, TOETSWEKEN, VAKKEN & HOOFDSTUKKEN TOEVOEGEN
    - elk jaar heeft een lijst toetsweken; elke toetsweek een lijst vakken
    - naam van een toetsweek leeg ("") = geen kopje boven die vakken
-   - kleur: hex-code voor de badge
+   - kleur: hex-code voor het vak-accent
    - status "klaar" = klikbaar, "binnenkort" = grijze placeholder
+   - vakken zonder hoofdstukken worden niet getoond
    ======================================================================= */
 const JAREN = [
   {
@@ -138,13 +140,6 @@ const JAREN = [
               { code:"6.4", titel:"Rekenen aan evenwichten", omschrijving:"Concentratiebreuk, K, BOE-tabel en oplosbaarheidsproduct.", link:"vakken/jaar-4/scheikunde/6-4-rekenen-aan-evenwichten.html", status:"klaar" },
               { code:"6.5", titel:"Evenwichten beïnvloeden", omschrijving:"Concentratie, druk, temperatuur en katalysator.", link:"vakken/jaar-4/scheikunde/6-5-evenwichten-beinvloeden.html", status:"klaar" }
             ]
-          },
-          {
-            naam: "Natuurkunde",
-            initiaal: "Na",
-            kleur: "#2a5340",
-            omschrijving: "VWO · nog toe te voegen",
-            hoofdstukken: []
           }
         ]
       }
@@ -157,10 +152,6 @@ const JAREN = [
       {
         naam: "Toetsweek 1",
         vakken: [
-          { naam:"Biologie", initiaal:"Bi", kleur:"#3c6e54", omschrijving:"VWO · nog toe te voegen", hoofdstukken: [] },
-          { naam:"Maatschappijleer", initiaal:"Ma", kleur:"#c47a2c", omschrijving:"VWO · nog toe te voegen", hoofdstukken: [] },
-          { naam:"Aardrijkskunde", initiaal:"Ak", kleur:"#4a77a8", omschrijving:"VWO · nog toe te voegen", hoofdstukken: [] },
-          { naam:"Scheikunde", initiaal:"Sk", kleur:"#8a6d4a", omschrijving:"VWO · nog toe te voegen", hoofdstukken: [] },
           {
             naam: "Natuurkunde",
             initiaal: "Na",
@@ -210,8 +201,10 @@ function maakJaren(){
   });
 }
 
+const heeftInhoud = v=> v.hoofdstukken.length > 0;
+
 function maakFilters(){
-  const vaknamen = new Set(jaar.toetsweken.flatMap(t=>t.vakken.map(v=>v.naam)));
+  const vaknamen = new Set(jaar.toetsweken.flatMap(t=>t.vakken.filter(heeftInhoud).map(v=>v.naam)));
   const namen = ["Alle", ...vaknamen];
   filtersEl.innerHTML = "";
   namen.forEach(n=>{
@@ -226,7 +219,7 @@ function maakFilters(){
 function render(){
   vakkenEl.innerHTML = "";
   jaar.toetsweken.forEach(t=>{
-    const vakken = t.vakken.filter(v=> actief==="Alle" || v.naam===actief);
+    const vakken = t.vakken.filter(v=> heeftInhoud(v) && (actief==="Alle" || v.naam===actief));
     if(vakken.length === 0) return;
     if(t.naam){
       const h = document.createElement('h2');
@@ -239,38 +232,33 @@ function render(){
 }
 
 function renderVak(v){
-    const sec = document.createElement('section');
-    sec.className = "vak";
-    sec.innerHTML = `
-      <div class="vak-head">
-        <div class="badge" style="background:${v.kleur}">${v.initiaal}</div>
-        <div>
-          <h2>${v.naam}</h2>
-          <p class="sub">${v.omschrijving}</p>
-        </div>
-      </div>`;
-    const cards = document.createElement('div');
-    cards.className = "cards";
-    if(v.hoofdstukken.length === 0){
-      cards.innerHTML = `<div class="soon">Nog geen hoofdstukken — voeg ze toe in <b>index.html</b></div>`;
+  const sec = document.createElement('section');
+  sec.className = "vak";
+  sec.style.setProperty('--accent', v.kleur);
+  sec.innerHTML = `
+    <div class="vak-head">
+      <span class="dot" style="background:${v.kleur}"></span>
+      <h2>${v.naam}</h2>
+    </div>
+    <p class="sub">${v.omschrijving}</p>`;
+  const cards = document.createElement('div');
+  cards.className = "cards";
+  v.hoofdstukken.forEach(h=>{
+    if(h.status === "klaar"){
+      const a = document.createElement('a');
+      a.className = "card";
+      a.href = h.link;
+      a.innerHTML = `<span class="ch">${h.code}</span><h3>${h.titel}</h3><p>${h.omschrijving}</p>`;
+      cards.appendChild(a);
     } else {
-      v.hoofdstukken.forEach(h=>{
-        if(h.status === "klaar"){
-          const a = document.createElement('a');
-          a.className = "card";
-          a.href = h.link;
-          a.innerHTML = `<span class="ch">${h.code}</span><h3>${h.titel}</h3><p>${h.omschrijving}</p>`;
-          cards.appendChild(a);
-        } else {
-          const d = document.createElement('div');
-          d.className = "soon";
-          d.innerHTML = `${h.code} · ${h.titel}<br><small>binnenkort</small>`;
-          cards.appendChild(d);
-        }
-      });
+      const d = document.createElement('div');
+      d.className = "soon";
+      d.innerHTML = `${h.code} · ${h.titel}<br><small>binnenkort</small>`;
+      cards.appendChild(d);
     }
-    sec.appendChild(cards);
-    vakkenEl.appendChild(sec);
+  });
+  sec.appendChild(cards);
+  vakkenEl.appendChild(sec);
 }
 
 maakJaren();
