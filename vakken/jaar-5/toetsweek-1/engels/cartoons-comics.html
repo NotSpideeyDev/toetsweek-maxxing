@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EN — Cartoons &amp; Comics Terminology</title>
+<style>
+  :root{
+    --ink:#14241c;--moss:#7a3b4c;--moss-d:#5a2536;--soil:#6e5a60;
+    --leaf:#f3e8eb;--leaf-d:#e2cbd2;--paper:#fbf9f8;--amber:#c47a2c;--line:#e0d6d8;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55;font-size:17px}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#fbf3f5;padding:34px 20px 26px}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.85;margin:0 0 6px}
+  header h1{margin:0;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.92;max-width:60ch;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:8px;overflow-x:auto;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav a{flex:0 0 auto;text-decoration:none;color:var(--moss-d);background:var(--leaf);
+    border:1px solid var(--leaf-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:30px;scroll-margin-top:60px}
+  .bs{font-family:ui-sans-serif,system-ui,sans-serif;display:inline-block;background:var(--moss);
+    color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:5px;font-weight:700}
+  h2{font-size:21px;margin:10px 0 4px;letter-spacing:-.01em}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);text-align:center;padding:0 18px 40px}
+</style>
+</head>
+<body>
+<header>
+  <p class="kicker">English · Visual analysis</p>
+  <h1>Cartoons &amp; Comics Terminology</h1>
+  <p>The terms for analysing cartoons and comics: layout, drawing techniques and text. Film and photography terms (angle, point of view, composition) also apply. Practise the terms at the bottom.</p>
+</header>
+
+<nav id="nav"></nav>
+
+<main id="main"></main>
+<footer>Terminology: Cartoons &amp; Comics (IB5&amp;6).</footer>
+
+<script>
+const TERMS = [
+  ["Panel","A distinct segment of a comic containing a combination of image and text.","Layout"],
+  ["Frame","The lines and borders that contain the panels.","Layout"],
+  ["Gutter","The space between panels, where readers ‘read between the lines’ and imagine what happens.","Layout"],
+  ["Bleed","An image that extends to and/or beyond the edge of the page.","Layout"],
+  ["Foreground","The part of the panel closest to the viewer.","Layout"],
+  ["Midground","The natural resting place for the eye, where the artist places the image a viewer will most likely look at first.","Layout"],
+  ["Background","The back of the image, providing additional, subtextual information for the reader.","Layout"],
+  ["Graphic weight","The way some images draw the eye more than others, using dark tones, high contrast, patterns or brilliant colours.","Layout"],
+  ["Negative space","The areas between and around objects, which we tend to think of as empty.","Layout"],
+  ["Emanata","Lines and squiggles coming from a character or object to show movement or a state of being.","Drawing techniques"],
+  ["Symbolism","An image or object that represents a larger and more abstract idea.","Drawing techniques"],
+  ["Exaggeration","Stretching the truth, hyperbole and caricature to emphasise key ideas or attributes.","Drawing techniques"],
+  ["Facial expressions","How faces are portrayed: realistic like a portrait, or iconic (representing an idea or group of people).","Drawing techniques"],
+  ["Open blank","A face drawn without much expression or detail, inviting the audience to imagine what the character feels.","Drawing techniques"],
+  ["Hands / Feet","Their positioning expresses what is happening, e.g. raised palms = surprise, hands over mouth = fear or shame, turned-in feet = embarrassment.","Drawing techniques"],
+  ["Punchline","Often the final line of a cartoon: the lasting joke or message, often ironic, that cements its meaning.","Text"],
+  ["Text captions / Caption boxes","Boxes with text such as scene setting or description.","Text"],
+  ["Speech bubbles","Shapes that enclose dialogue and come from a specific speaker’s mouth.","Text"],
+  ["Thought bubble / Internal dialogue","A balloon holding a thought, with a series of dots or small bubbles leading up to it.","Text"],
+  ["External dialogue","Speech between characters, shown in speech bubbles.","Text"],
+  ["Lettering","A way of drawing attention to text, often highlighting onomatopoeia and words like ‘bang’ or ‘wow’.","Text"]
+];
+</script>
+<script src="trainer.js"></script>
+</body>
+</html>

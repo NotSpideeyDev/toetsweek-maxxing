@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EN — Film Terminology</title>
+<style>
+  :root{
+    --ink:#14241c;--moss:#7a3b4c;--moss-d:#5a2536;--soil:#6e5a60;
+    --leaf:#f3e8eb;--leaf-d:#e2cbd2;--paper:#fbf9f8;--amber:#c47a2c;--line:#e0d6d8;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55;font-size:17px}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#fbf3f5;padding:34px 20px 26px}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.85;margin:0 0 6px}
+  header h1{margin:0;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.92;max-width:60ch;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:8px;overflow-x:auto;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav a{flex:0 0 auto;text-decoration:none;color:var(--moss-d);background:var(--leaf);
+    border:1px solid var(--leaf-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:30px;scroll-margin-top:60px}
+  .bs{font-family:ui-sans-serif,system-ui,sans-serif;display:inline-block;background:var(--moss);
+    color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:5px;font-weight:700}
+  h2{font-size:21px;margin:10px 0 4px;letter-spacing:-.01em}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);text-align:center;padding:0 18px 40px}
+</style>
+</head>
+<body>
+<header>
+  <p class="kicker">English · Film analysis</p>
+  <h1>Film Terminology</h1>
+  <p>How directors use the camera, editing and sound to influence the viewer: shot types, angles, camera movement, editing and transitions. Practise the terms at the bottom.</p>
+</header>
+
+<nav id="nav"></nav>
+
+<main id="main"></main>
+<footer>Terminology: Film (IB5&amp;6). Always name the shot and explain its effect on the viewer.</footer>
+
+<script>
+const TERMS = [
+  ["Extreme long shot","A shot of e.g. a large crowd scene or scenery as far as the horizon.","Camera range"],
+  ["Long shot","A view of a situation or setting from a distance.","Camera range"],
+  ["Medium long shot","Shows a group of people interacting (e.g. a fight scene) with part of their surroundings in the picture.","Camera range"],
+  ["Full shot","Shows a figure’s entire body, to show action or a group of characters.","Camera range"],
+  ["Medium shot / Medium close shot","Shows a subject down to the waist, e.g. head and shoulders of two people in conversation.","Camera range"],
+  ["Close-up","A full-screen shot of a subject’s face, showing the finest details of expression.","Camera range"],
+  ["Extreme close-up","A shot of a hand, eye, mouth or object in detail.","Camera range"],
+  ["Establishing shot","Used at the start of a scene to show the location or setting; usually a long shot from a neutral position.","Point of view"],
+  ["Point-of-view shot / POV shot","Shows a scene from the perspective of a character.","Point of view"],
+  ["Over-the-shoulder shot","Used in dialogue scenes: a view of one partner from just behind and to the side of the other, so parts of both are visible.","Point of view"],
+  ["Reaction shot","A short shot of a character’s response to an action.","Point of view"],
+  ["Insert (shot)","A detail shot that quickly gives visual information needed to understand a scene, e.g. a newspaper page.","Point of view"],
+  ["Reverse-angle shot","A shot from the opposite perspective, e.g. after an over-the-shoulder shot.","Point of view"],
+  ["Aerial shot / Overhead / Bird’s eye","A long or extreme long shot of the ground from the air.","Camera angles"],
+  ["High-angle shot","Shows people or objects from above, higher than eye level.","Camera angles"],
+  ["Low-angle shot / Below shot","Shows people or objects from below, lower than eye level.","Camera angles"],
+  ["Eye-level shot / Straight-on angle","Views a subject from the level of a person’s eyes.","Camera angles"],
+  ["Panning shot / Pan","The camera moves horizontally from left to right (or the other way) across the picture.","Camera movement"],
+  ["Tilt shot","The camera tilts up or down around a vertical line.","Camera movement"],
+  ["Tracking shot / Trucking shot","The camera follows along next to or behind a moving object or person.","Camera movement"],
+  ["Zoom","The stationary camera appears to move closer to a subject (zooming in) or farther away (zooming out).","Camera movement"],
+  ["Master shot","A main shot of a whole scene from one camera in one position, intercut with other shots to add interest.","Editing / montage"],
+  ["Cutaway shot","A shot of something not shown in the master shot, but connected to the main action.","Editing / montage"],
+  ["Flashback","A scene or sequence about the past inserted into a film’s ‘present time’.","Editing / montage"],
+  ["Flash-forward","A scene or sequence that looks into the future.","Editing / montage"],
+  ["Match cut","Two scenes connected by a visual or sound parallel, e.g. one door closing and another opening.","Editing / montage"],
+  ["Split screen","Dividing the screen to show two or more pictures at the same time.","Editing / montage"],
+  ["Cut","A switch from one image or shot to another.","Transitions"],
+  ["Jump-cut","Switching back and forth between closely involved people (e.g. a conversation or chase), or using cuts to seem to move rapidly towards a subject.","Transitions"],
+  ["Fade-in","An image gradually appears from a black screen and becomes brighter until it reaches full strength.","Transitions"],
+  ["Fade-out","An image gradually disappears until the screen is completely black; used to end a scene.","Transitions"],
+  ["Dissolve / Cross-fade","A fade-out followed by a fade-in, to move slowly from one scene to the next.","Transitions"],
+  ["Backlighting","Filming a person or event against a background of light (especially the sun), giving an idealised or romantic effect.","Miscellaneous"],
+  ["Background music","The music accompanying scenes.","Miscellaneous"],
+  ["Diegetic sound","Any sound that comes from the world of the film: if the characters can hear it (dialogue, a piano in a restaurant, explosions), it’s this.","Miscellaneous"],
+  ["Non-diegetic sound","Sound that doesn’t come from the world of the film, added for effect: narration, soundtrack, sound effects outside the film world.","Miscellaneous"],
+  ["Composition","The arrangement of people or things in a painting, photograph or film scene.","Miscellaneous"],
+  ["Footage","A piece of film or video.","Miscellaneous"]
+];
+</script>
+<script src="trainer.js"></script>
+</body>
+</html>

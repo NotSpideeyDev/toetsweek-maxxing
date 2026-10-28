@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EN — Glossary of Literary Terms</title>
+<style>
+  :root{
+    --ink:#14241c;--moss:#7a3b4c;--moss-d:#5a2536;--soil:#6e5a60;
+    --leaf:#f3e8eb;--leaf-d:#e2cbd2;--paper:#fbf9f8;--amber:#c47a2c;--line:#e0d6d8;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55;font-size:17px}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#fbf3f5;padding:34px 20px 26px}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.85;margin:0 0 6px}
+  header h1{margin:0;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.92;max-width:60ch;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:8px;overflow-x:auto;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav a{flex:0 0 auto;text-decoration:none;color:var(--moss-d);background:var(--leaf);
+    border:1px solid var(--leaf-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:30px;scroll-margin-top:60px}
+  .bs{font-family:ui-sans-serif,system-ui,sans-serif;display:inline-block;background:var(--moss);
+    color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:5px;font-weight:700}
+  h2{font-size:21px;margin:10px 0 4px;letter-spacing:-.01em}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);text-align:center;padding:0 18px 40px}
+</style>
+</head>
+<body>
+<header>
+  <p class="kicker">English · Literature</p>
+  <h1>Glossary of Literary Terms</h1>
+  <p>The terms for analysing stories: plot, point of view, characters, irony, imagery and more. Practise the terms at the bottom.</p>
+</header>
+
+<nav id="nav"></nav>
+
+<main id="main"></main>
+<footer>Glossary of Literary Terms (IB5). Plot follows Freytag’s pyramid: exposition → rising action → climax → falling action → resolution.</footer>
+
+<script>
+const TERMS = [
+  ["Setting","The time and place in which the action of a narrative occurs. It can create atmosphere, affect the plot and help us understand the characters.","Story basics"],
+  ["Theme","The underlying main idea or message of a work. It may be stated or implied and should be formulated as a complete sentence.","Story basics"],
+  ["Conflict","A struggle between opposing characters or forces, from which the action develops and around which it revolves.","Story basics"],
+  ["Narrative","A story or the telling of a story; an account of a situation or event.","Story basics"],
+  ["Narrator","The speaker through whom the author presents a narrative; often, but not always, a character in the work.","Story basics"],
+  ["Story","A narrative of events in chronological order: the raw material from which the plot is built.","Story basics"],
+  ["Plot","A series of complications that are solved or explained at the end.","Plot"],
+  ["Exposition","The introduction of a work, in which background information is given for the plot development.","Plot"],
+  ["Rising action","The point at which major conflicts or problems are presented (the complication).","Plot"],
+  ["Crisis","The moment of highest tension in a story: the turning point when a decision has to be made that will determine the outcome.","Plot"],
+  ["Climax","The action or decision that determines the story’s outcome. Sometimes it happens at the same moment as the crisis.","Plot"],
+  ["Falling action","The events after the climax.","Plot"],
+  ["Resolution / Denouement","The final, usually very brief stage of the plot: the tension is over and unanswered questions may be explained.","Plot"],
+  ["Point of view","The outlook (angle) from which the events of a story are told.","Point of view"],
+  ["Third person limited","Point of view in which the author filters the story through the mind of one or more characters.","Point of view"],
+  ["Third person omniscient","Point of view in which the author knows everything about the story and characters, and sometimes addresses the reader directly.","Point of view"],
+  ["First person","Point of view in which a character (‘I’) narrates and cannot get into the minds of other characters.","Point of view"],
+  ["Character","A reasonable copy of a human being: the inner self that determines thought, speech and behaviour. Revealed by appearance, description, actions, dialogue, thoughts and symbols.","Characters"],
+  ["Round character","A character who is fully developed and believable.","Characters"],
+  ["Flat character","A character who seems one-dimensional and has no depth.","Characters"],
+  ["Dynamic character","A character who shows the capacity to change.","Characters"],
+  ["Static character","A character who does not change.","Characters"],
+  ["Hero / Heroine","The most important character, also called the main character.","Characters"],
+  ["Protagonist","The central or main character (may be an individual or a group).","Characters"],
+  ["Antagonist","The character set against the protagonist. An evil antagonist is a villain, but an antagonist is not necessarily a villain.","Characters"],
+  ["Foil","Usually a minor character who highlights the main character by showing contrasting characteristics or behaviour.","Characters"],
+  ["Telling name","A name that gives you information about a person (e.g. Mr. Nuttel, Lady Moping).","Characters"],
+  ["Archetype","The original model from which something is made; in literature, images, character types, settings and story patterns that (according to Carl Jung) are shared by people across all cultures.","Characters"],
+  ["Foreshadowing","Giving the reader hints of what is to come later in the story.","Techniques"],
+  ["Flashback","The presentation of events that happened before the opening of the story.","Techniques"],
+  ["Satire","A technique that ridicules people and their institutions to expose their weaknesses and evils, often to bring about change.","Techniques"],
+  ["Stereotype","Standardised, conventional ideas about characters, plots and settings.","Techniques"],
+  ["Allusion","A reference to a historical or literary figure or event (e.g. to myth, religion or other parts of culture).","Techniques"],
+  ["Style","How the writer handles language: how he or she says things.","Techniques"],
+  ["Surprise ending","The unexpected solution at the end of a story.","Techniques"],
+  ["Allegory","A narrative with at least two levels of meaning: the surface story and a deeper moral, political, philosophical or religious meaning.","Techniques"],
+  ["Epiphany","A sudden insight or revelation in which someone sees the true nature of something ordinary; an unexpected revelation of the truth.","Techniques"],
+  ["Dramatic irony","Irony in which the reader or viewer knows more about the actual situation than the characters.","Irony"],
+  ["Situational irony","Irony in which events turn out contrary to what is expected or what seems appropriate.","Irony"],
+  ["Verbal irony","Irony in which the surface meaning of what is written or said is the opposite of the intended meaning.","Irony"],
+  ["Imagery","Replacing one word by another to call up a certain picture or suggestion in the imagination.","Imagery"],
+  ["Metaphor","A figurative comparison of two unlike things without ‘like’ or ‘as’, e.g. ‘You are an angel.’","Imagery"],
+  ["Simile","A comparison introduced by ‘like’ or ‘as’, e.g. ‘She sings like a nightingale.’","Imagery"],
+  ["Personification","A figure of speech in which human characteristics are given to non-human things or events.","Imagery"],
+  ["Symbol","Something that stands for or suggests something larger and more complex, often an idea or range of ideas.","Imagery"]
+];
+</script>
+<script src="trainer.js"></script>
+</body>
+</html>
