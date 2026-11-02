@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BI T7 BS4 — Reflexen en het autonome zenuwstelsel</title>
+<style>
+  :root{
+    --ink:#14241c;--moss:#3c6e54;--moss-d:#2a5340;--soil:#5e7466;
+    --leaf:#e6efe9;--leaf-d:#c9dccf;--paper:#f9fbf9;--amber:#c47a2c;--line:#d3ddd6;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55;font-size:17px}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#f1f7f3;padding:34px 20px 26px}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.85;margin:0 0 6px}
+  header h1{margin:0;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.92;max-width:60ch;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:8px;overflow-x:auto;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav a{flex:0 0 auto;text-decoration:none;color:var(--moss-d);background:var(--leaf);
+    border:1px solid var(--leaf-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:30px;scroll-margin-top:60px}
+  .bs{font-family:ui-sans-serif,system-ui,sans-serif;display:inline-block;background:var(--moss);
+    color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:5px;font-weight:700}
+  h2{font-size:21px;margin:10px 0 4px;letter-spacing:-.01em}
+  ul{margin:6px 0 8px;padding-left:20px}
+  li{margin:4px 0}
+  b.t{color:var(--moss-d)}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+  table.fx td.eq{font-family:"Cambria Math","Times New Roman",serif;font-size:17px;white-space:nowrap;
+    background:#fff;color:var(--moss-d);font-weight:600;width:1%}
+  table.fx td{background:#fff}
+  .tip{background:#fdf4e7;border:1px solid #f0dcc0;border-radius:8px;padding:10px 14px;margin:12px 0;
+    font-size:15px;font-family:ui-sans-serif,system-ui,sans-serif}
+  .tip b{color:var(--amber)}
+  .vb{background:var(--leaf);border:1px solid var(--leaf-d);border-radius:10px;padding:10px 16px;margin:12px 0;font-size:15px}
+  .vb .lbl{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--amber);font-weight:700;margin:0 0 4px}
+  .vb p{margin:0}
+  .vb details{border:none;padding:8px 0 2px}
+  .vb summary{font-size:14px;font-family:ui-sans-serif,system-ui,sans-serif;color:var(--moss-d)}
+  .quiz{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 16px;margin-top:14px}
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:none}
+  summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;gap:8px;align-items:flex-start}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"?";flex:0 0 auto;width:22px;height:22px;background:var(--moss);color:#fff;
+    border-radius:50%;font-size:13px;display:flex;align-items:center;justify-content:center;font-family:ui-sans-serif,system-ui,sans-serif}
+  details[open] summary::before{content:"✓";background:var(--amber)}
+  .ans{margin:8px 0 2px 30px;font-size:15px;color:#22362b}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);text-align:center;padding:0 18px 40px}
+  th{background:var(--moss);color:#fff;font-weight:600}
+  tr:nth-child(even) td{background:#f3f5f0}
+</style>
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<header>
+  <a class="home" href="../../../../index.html">← Alle vakken</a>
+  <p class="kicker">Biologie · Thema 7 Regeling · Basisstof 4</p>
+  <h1>Reflexen en het autonome zenuwstelsel</h1>
+  <p>Bewuste en onbewuste reacties, de reflexboog, soorten reflexen en het orthosympatische en parasympatische zenuwstelsel. Zelftoets met de opdrachten 39–49 onderaan.</p>
+</header>
+
+<nav>
+  <a href="#doelen">Leerdoelen</a>
+  <a href="#bewust">Bewust vs. onbewust</a>
+  <a href="#reflexboog">Reflexboog</a>
+  <a href="#soorten">Soorten reflexen</a>
+  <a href="#autonoom">Autonoom</a>
+  <a href="#organisatie">Overzicht</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="doelen">
+  <span class="bs">Leerdoelen</span>
+  <ul>
+    <li><b class="t">7.4.1</b> Je kunt de functie van reflexen en een reflexboog beschrijven.</li>
+    <li><b class="t">7.4.2</b> Je kunt de werking van het autonome (of vegetatieve) zenuwstelsel beschrijven.</li>
+  </ul>
+</section>
+
+<section id="bewust">
+  <span class="bs">Basis</span>
+  <h2>Bewuste en onbewuste reacties</h2>
+  <ul>
+    <li>Het <b class="t">animale zenuwstelsel</b> regelt vooral <b class="t">bewuste reacties</b> en stuurt de <b class="t">skeletspieren</b> aan.</li>
+    <li>Bewuste beweging: impulsen ontstaan in <b class="t">bewegingscentra van de grote hersenen</b> → schakelneuronen → <b class="t">kleine hersenen</b> → schakelneuronen in <b class="t">hersenstam en ruggenmerg</b> → motorische neuronen → spieren trekken samen.</li>
+    <li>Het animale zenuwstelsel doet ook <b class="t">onbewuste</b> dingen: je zintuigen verwerken voortdurend prikkels waar je je niet bewust van bent.</li>
+  </ul>
+</section>
+
+<section id="reflexboog">
+  <span class="bs">7.4.1</span>
+  <h2>Reflexen en de reflexboog</h2>
+  <ul>
+    <li>Een <b class="t">reflex</b> is een <b class="t">vaste, snelle, onbewuste</b> reactie op een bepaalde prikkel (bijv. hand terugtrekken van een hete pan).</li>
+    <li>De weg die impulsen bij een reflex afleggen = de <b class="t">reflexboog</b>: <b class="t">receptor → conductoren in het zenuwstelsel → effector</b>.</li>
+    <li>De <b class="t">grote hersenen maken géén deel uit van een reflexboog</b>. Impulsen gaan via <b class="t">sensorische neuronen</b> naar <b class="t">schakelneuronen</b> in ruggenmerg of hersenstam en direct door naar <b class="t">motorische neuronen</b>.</li>
+    <li>Daardoor is de weg <b class="t">korter</b> en de reactie <b class="t">sneller</b>.</li>
+    <li>Reflexen van <b class="t">romp en ledematen</b> → via schakelneuronen in het <b class="t">ruggenmerg</b>. Reflexen van <b class="t">hoofd en hals</b> → via de <b class="t">hersenstam</b>.</li>
+    <li>Er gaan ook impulsen naar de grote hersenen, maar die komen pas aan als de reflex al gebeurd is → je wordt je <b class="t">later bewust</b> van je reactie.</li>
+    <li>Meestal: sensorisch neuron → schakelneuron → motorisch neuron. Bij de <b class="t">kniepeesreflex</b> gaat het sensorische neuron ook <b class="t">direct</b> naar het motorische neuron.</li>
+  </ul>
+  <table>
+    <tr><th>Onderdeel</th><th>Voorbeeld: terugtrekreflex (hete pan)</th></tr>
+    <tr><td>Receptor</td><td>pijnreceptoren in de huid</td></tr>
+    <tr><td>Conductoren</td><td>sensorisch neuron → schakelneuron (ruggenmerg) → motorisch neuron</td></tr>
+    <tr><td>Effector</td><td>buigspier (biceps) trekt samen; strekspier (triceps) ontspant</td></tr>
+  </table>
+  <div class="tip"><b>Let op:</b> cellichaam van het sensorische neuron ligt <i>buiten</i> het ruggenmerg (in de ruggenmergzenuwknoop), dat van het motorische neuron <i>in</i> het ruggenmerg.</div>
+</section>
+
+<section id="soorten">
+  <span class="bs">7.4.1</span>
+  <h2>Soorten reflexen</h2>
+  <ul>
+    <li><b class="t">Beschermende reflexen</b>: bijv. de terugtrekreflex bij een heet voorwerp.</li>
+    <li>De meeste reflexen dienen voor <b class="t">houding en beweging</b>: kleine spanningsverschillen in spieren → reflexmatige correcties, zodat je rechtop blijft staan (o.a. <b class="t">kniepeesreflex</b>, BiNaS 88K).</li>
+    <li>Andere voorbeelden: <b class="t">hoestreflex, slikreflex, pupilreflex, ooglidreflex, voetzoolreflex, zuigreflex</b>, niezen en de <b class="t">afscheiding van speeksel</b>.</li>
+    <li>Sommige reflexen kun je <b class="t">onderdrukken</b> (via de grote hersenen), andere niet.</li>
+  </ul>
+</section>
+
+<section id="autonoom">
+  <span class="bs">7.4.2</span>
+  <h2>Het autonome zenuwstelsel</h2>
+  <ul>
+    <li>Het <b class="t">autonome (vegetatieve)</b> zenuwstelsel staat <b class="t">niet onder invloed van de wil</b>. Het werkt nauw samen met het <b class="t">hormoonstelsel</b>.</li>
+    <li>Regelt o.a. de <b class="t">gladde spieren</b> van inwendige organen, de <b class="t">hartspier</b> en <b class="t">klieren</b>.</li>
+    <li>Twee delen met een <b class="t">tegengestelde werking</b>: het <b class="t">orthosympatische</b> en het <b class="t">parasympatische</b> zenuwstelsel. Samen handhaven ze de <b class="t">homeostase</b> (BiNaS 88L).</li>
+    <li>Elk doelwitorgaan krijgt <b class="t">twee zenuwen</b>: één ortho, één para → orgaan kan worden <b class="t">gestimuleerd of geremd</b>.</li>
+    <li>Beide delen zijn <b class="t">steeds actief</b>; per situatie overheerst er één. Centra in de <b class="t">hersenstam</b> coördineren dit.</li>
+  </ul>
+  <table>
+    <tr><th>Orgaan</th><th>Orthosympatisch <br><small>actie, energie vrijmaken</small></th><th>Parasympatisch <br><small>rust en herstel</small></th></tr>
+    <tr><td>Pupillen</td><td>verwijdt</td><td>vernauwt</td></tr>
+    <tr><td>Speeksel</td><td>remt afscheiding</td><td>stimuleert afscheiding</td></tr>
+    <tr><td>Longen</td><td>verhoogt ademfrequentie, verwijdt bronchiën</td><td>verlaagt ademfrequentie, vernauwt bronchiën</td></tr>
+    <tr><td>Hart</td><td>verhoogt hartslagfrequentie</td><td>verlaagt hartslagfrequentie</td></tr>
+    <tr><td>Maag / alvleesklier</td><td>remt afscheiding maag- en alvleessap</td><td>stimuleert afscheiding maag- en alvleessap</td></tr>
+    <tr><td>Lever / galblaas</td><td>stimuleert afgifte glucose (glycogeen → glucose)</td><td>stimuleert samentrekking galblaas; glucose → glycogeen</td></tr>
+    <tr><td>Darmen</td><td>remt darmsap en darmbeweging</td><td>stimuleert darmsap en darmbeweging</td></tr>
+    <tr><td>Bijniermerg</td><td>stimuleert afscheiding adrenaline</td><td>—</td></tr>
+    <tr><td>Bloedvaten</td><td>verwijdt naar skeletspieren</td><td>verwijdt naar verteringsstelsel</td></tr>
+    <tr><td>Nieren / urineblaas</td><td>remt nieren en samentrekking urineblaas</td><td>stimuleert nieren en samentrekking urineblaas</td></tr>
+    <tr><td>Geslachtsorganen</td><td>remt werking</td><td>stimuleert werking</td></tr>
+  </table>
+  <div class="tip"><b>Ezelsbruggetje:</b> ortho = <i>fight or flight</i> (sporten, stress), para = <i>rest and digest</i> (uitrusten na het eten).</div>
+</section>
+
+<section id="organisatie">
+  <span class="bs">Overzicht</span>
+  <h2>Functionele organisatie van het zenuwstelsel</h2>
+  <ul>
+    <li><b class="t">Centraal zenuwstelsel</b>: hersenen + ruggenmerg. <b class="t">Perifeer zenuwstelsel</b>: alle zenuwen daarbuiten.</li>
+    <li>Interne en externe prikkels → <b class="t">zintuigreceptoren</b> → <b class="t">sensorische neuronen</b> → centraal zenuwstelsel.</li>
+    <li>Centraal zenuwstelsel → <b class="t">motorische neuronen</b>, verdeeld in:
+      <ul>
+        <li><b class="t">animale zenuwstelsel</b> → controle van <b class="t">skeletspieren</b></li>
+        <li><b class="t">autonome zenuwstelsel</b> (ortho + para) → controle van <b class="t">gladde spieren, hartspieren en klieren</b></li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section id="toets">
+  <h2 style="color:var(--moss-d)">Zelftoets</h2>
+  <p class="goal">Tik op een vraag voor het antwoord. Opdrachten 39–49 uit het boek.</p>
+  <div class="quiz">
+    <details><summary>Wat is een reflex?</summary>
+      <p class="ans">Een vaste, snelle, onbewuste reactie op een bepaalde prikkel.</p></details>
+    <details><summary>Uit welke onderdelen bestaat een reflexboog?</summary>
+      <p class="ans">Receptor → conductoren in het zenuwstelsel (sensorisch neuron, schakelneuron, motorisch neuron) → effector.</p></details>
+    <details><summary>Waarom is een reflex sneller dan een bewuste reactie?</summary>
+      <p class="ans">De impulsen gaan niet via de grote hersenen maar direct via schakelneuronen in ruggenmerg of hersenstam → kortere weg.</p></details>
+    <details><summary>Wat is bijzonder aan de kniepeesreflex?</summary>
+      <p class="ans">Het sensorische neuron geeft impulsen ook direct door aan het motorische neuron (zonder schakelneuron).</p></details>
+    <details><summary>Welke twee delen heeft het autonome zenuwstelsel en wat doen ze?</summary>
+      <p class="ans">Orthosympatisch: lichaam klaarmaken voor activiteit (energie vrijmaken). Parasympatisch: rust en herstel, bevordert stofwisseling/vertering. Ze werken tegengesteld.</p></details>
+
+    <details><summary>39 · Is de "katachtige reflex" van een doelman een bewuste reactie of een reflex?</summary>
+      <p class="ans">Een bewuste reactie. De doelman ziet de bal, de grote hersenen bepalen de beweging (getraind, niet steeds dezelfde vaste reactie). Een reflex verloopt niet via de grote hersenen.</p></details>
+    <details><summary>40a · Welke typen neuronen zijn nummer 1, 2 en 3 (afb. 47)?</summary>
+      <p class="ans">1 = sensorisch neuron, 2 = schakelneuron, 3 = motorisch neuron.</p></details>
+    <details><summary>40b · Welke neuronen geleiden impulsen?</summary>
+      <p class="ans">1 (sensorisch), 2 en de schakelneuronen naar de andere kant van het ruggenmerg, 3 (motorisch naar buigspier rechterarm) en 5 (motorisch naar strekspier linkerarm).</p></details>
+    <details><summary>41 · Via welk deel van het CZS verloopt de slikreflex?</summary>
+      <p class="ans">Via de hersenstam (reflexen van hoofd en hals).</p></details>
+    <details><summary>42a · Julia trapt in een punaise. Beschrijf de reflexboog.</summary>
+      <p class="ans">Pijnreceptoren in de huid van de voet → sensorische neuronen → schakelneuronen in het ruggenmerg → motorische neuronen → beenspieren (buigspieren) trekken samen → been omhoog.</p></details>
+    <details><summary>42b · Wat zijn hier de conductoren, receptoren en effectoren?</summary>
+      <p class="ans">Receptoren: pijnreceptoren in de huid. Conductoren: sensorische neuronen, schakelneuronen en motorische neuronen. Effectoren: (buig)spieren van het been.</p></details>
+    <details><summary>43a · Jorn sport. Horen neuronen voor een verhoogde hartslag bij animaal, para of ortho?</summary>
+      <p class="ans">Orthosympatisch deel van het autonome zenuwstelsel.</p></details>
+    <details><summary>43b · Neuronen die de armspieren laten samentrekken?</summary>
+      <p class="ans">Animale zenuwstelsel (skeletspieren).</p></details>
+    <details><summary>43c · Jorn trapt op iets scherps en trekt zijn been op. Welk zenuwstelsel? Leg uit.</summary>
+      <p class="ans">Animale zenuwstelsel: het is wel een reflex, maar de beenspieren zijn skeletspieren en die worden door het animale zenuwstelsel aangestuurd.</p></details>
+    <details><summary>43d · Na het eten: neuronen die de spieren in de dunnedarmwand stimuleren?</summary>
+      <p class="ans">Parasympatisch deel van het autonome zenuwstelsel.</p></details>
+    <details><summary>44 · Mees houdt zijn adem in (a). Later moet hij weer ademhalen (b). Animaal of autonoom?</summary>
+      <p class="ans">a: animaal (bewust, onder invloed van de wil). b: autonoom (onbewust, niet onder invloed van de wil).</p></details>
+    <details><summary>45 · Waarom vindt de buigreflex van Mats' rechterarm eerder plaats dan de strekreflex van zijn linkerarm?</summary>
+      <p class="ans">De impulsen naar de linkerarm moeten via extra schakelneuronen naar de andere kant van het ruggenmerg. Die weg is langer en heeft meer synapsen, dus duurt het langer.</p></details>
+    <details><summary>46a · Patiënt met dwarslaesie in de nek: voelt hij de hete thee op zijn hand?</summary>
+      <p class="ans">Nee. De impulsen van de pijnreceptoren in de hand (onder de dwarslaesie) kunnen de grote hersenen niet bereiken, en alleen daar ontstaat gevoel.</p></details>
+    <details><summary>46b · Kan bij deze patiënt de terugtrekreflex plaatsvinden?</summary>
+      <p class="ans">Ja. De reflexboog loopt via het ruggenmerg onder de dwarslaesie; de hersenen zijn niet nodig.</p></details>
+    <details><summary>47a · Hoe kan je zenuwstelsel een reflex onderdrukken?</summary>
+      <p class="ans">Vanuit de grote hersenen gaan (bewust) impulsen via schakelneuronen naar het ruggenmerg, die de motorische neuronen van de reflex remmen/tegengaan.</p></details>
+    <details><summary>47b · Kun je met een ruggenprik je voet in een reflex terugtrekken?</summary>
+      <p class="ans">Nee. De sensorische en motorische neuronen zijn verdoofd, dus de reflexboog werkt niet: er komen geen impulsen van de receptoren en niet naar de spieren.</p></details>
+    <details><summary>47c · Kun je je voet tijdens de operatie bewust terugtrekken?</summary>
+      <p class="ans">Nee. De motorische neuronen zijn verdoofd, dus impulsen vanuit de hersenen bereiken de beenspieren niet.</p></details>
+    <details><summary>48a · Parasympatisch neuron naar de darmwand: hoogste impulsfrequentie bij hardlopen of film na maaltijd?</summary>
+      <p class="ans">Film na een maaltijd: in rust na het eten is het parasympatische deel actief en stimuleert het de darmbeweging. Bij hardlopen overheerst het orthosympatische deel.</p></details>
+    <details><summary>48b · Wat gebeurt er met je hartslag als medicijnen het parasympatische deel remmen?</summary>
+      <p class="ans">De hartslagfrequentie stijgt: het parasympatische deel verlaagt de hartslag, dus als dat geremd wordt overheerst het orthosympatische deel.</p></details>
+    <details><summary>49a · Stress: hypothalamus → ruggenmerg → bijniermerg → adrenaline. Welk deel van het autonome zenuwstelsel?</summary>
+      <p class="ans">Het orthosympatische deel: dat stimuleert de afscheiding van adrenaline door het bijniermerg (lichaam klaar voor actie).</p></details>
+    <details><summary>49b · Voordeel dat een stressreactie vooral door hormonen komt?</summary>
+      <p class="ans">Hormonen verspreiden zich via het bloed door het hele lichaam, dus ze bereiken veel organen tegelijk en hun werking houdt langer aan.</p></details>
+  </div>
+</section>
+
+<footer>Biologie VWO · Thema 7 Regeling · Basisstof 4. Vraag jezelf bij elke reactie af: bewust of onbewust, skeletspier of orgaan, ortho of para?</footer>
+</main>
+</body>
+</html>
