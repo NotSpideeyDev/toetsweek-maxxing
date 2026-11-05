@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NA §5.3 — Lopende golven</title>
+<link rel="stylesheet" href="h5.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<header>
+  <a class="home" href="../../../../index.html">← Alle vakken</a>
+  <p class="kicker">Natuurkunde · H5 Trillingen en golven · §5.3</p>
+  <h1>Lopende golven</h1>
+  <p>Transversaal en longitudinaal, golflengte, v = f·λ, echografie, buiging en het dopplereffect. Met uitwerkingen van opdracht 22–32.</p>
+</header>
+
+<nav>
+  <a href="#doelen">Leerdoelen</a>
+  <a href="#soorten">Soorten golven</a>
+  <a href="#snelheid">v = f·λ</a>
+  <a href="#echo">Echografie</a>
+  <a href="#doppler">Doppler</a>
+  <a href="#formules">Formules</a>
+  <a href="#opdrachten">Opdrachten</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="doelen">
+  <span class="bs">Leerdoelen</span>
+  <ul class="leerdoelen">
+    <li><span>5.3.1</span>Het verschil tussen longitudinale en transversale golven beschrijven.</li>
+    <li><span>5.3.2</span>De eigenschappen van een lopende golf beschrijven en toepassen op echografie.</li>
+    <li><span>5.3.3</span>Rekenen met het verband tussen golflengte, frequentie en voortplantingssnelheid.</li>
+    <li><span>5.3.4</span>Beschrijven wat het dopplereffect is.</li>
+    <li><span>5.3.5</span>Rekenen met afstand, tijd, snelheid, frequentie en golflengte.</li>
+  </ul>
+</section>
+
+<section id="soorten">
+  <span class="bs">Theorie</span>
+  <h2>Soorten golven</h2>
+  <ul>
+    <li>Laat je één uiteinde van een touw trillen, dan trekt elk stukje het volgende mee: elk punt voert dezelfde trilling uit, alleen <b>later</b>. Zo plant een <b class="t">golf</b> zich voort: een trilling die zich in de ruimte uitbreidt.</li>
+    <li>Een zich voortbewegende golf heet een <b class="t">lopende golf</b>.</li>
+    <li><b class="t">Transversale golf</b>: trillingsrichting <b>loodrecht</b> op de voortplantingsrichting (touw).</li>
+    <li><b class="t">Longitudinale golf</b>: trillingsrichting <b>gelijk aan</b> de voortplantingsrichting (lange slappe veer, geluid). Er ontstaan <b class="t">verdichtingen</b> en <b class="t">verdunningen</b>.</li>
+    <li>Transversale golven kunnen zich <b>niet in lucht</b> voortplanten: de moleculen zitten niet aan elkaar vast, dus de op-en-neerbeweging wordt niet doorgegeven. Geluid in lucht is dus longitudinaal.</li>
+    <li>Het <b>materiaal blijft op zijn plek</b>; alleen de trilling (energie) plant zich voort. Een schip op zee beweegt op en neer, het geluid van een concert komt aan zonder dat de lucht naar je toe "waait".</li>
+  </ul>
+</section>
+
+<section id="snelheid">
+  <span class="bs">Theorie</span>
+  <h2>Golflengte en voortplantingssnelheid</h2>
+  <ul>
+    <li><b class="t">Golflengte λ</b>: de lengte van het zich herhalende stuk van de golf (bv. top tot top, of verdichting tot verdichting).</li>
+    <li><b class="t">Kop van de golf</b>: het punt dat als laatste is gaan trillen.</li>
+    <li><b class="t">Voortplantingssnelheid v</b>: de snelheid waarmee de kop zich verplaatst: v = Δx/Δt.</li>
+    <li>In één periode T legt de kop precies één golflengte af: v = λ/T. Met 1/T = f:</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">v = f · λ</td><td>v in m s⁻¹, f in Hz, λ in m</td></tr>
+  </table>
+  <ul>
+    <li>v hangt af van het <b>medium</b> (stof, temperatuur), niet van de frequentie. De frequentie wordt bepaald door de <b>bron</b>.</li>
+    <li>Gaat een golf naar een ander medium, dan blijft f gelijk en verandert λ mee met v.</li>
+  </ul>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht 4</p>
+    <p>Een dumbbell valt op een betonnen vloer (T = 20 °C). a) Zoek v in beton en in lucht op. b) Bereken het tijdsverschil voor iemand op 20 m afstand. c) Is de golflengte van één trilling het grootst in beton of in lucht?</p>
+    <details><summary>Uitwerking</summary>
+      <div class="ans"><p>a) BiNaS 15A: v<sub>beton</sub> = 4,3·10³ m s⁻¹; v<sub>lucht</sub> = 0,343·10³ m s⁻¹.</p>
+      <p>b) Δt = Δx/v: beton 20/4,3·10³ = 4,65·10⁻³ s; lucht 20/343 = 58,3·10⁻³ s. Verschil = <b>54·10⁻³ s</b>.</p>
+      <p>c) f is gelijk; v = f·λ → λ evenredig met v. v<sub>beton</sub> is groter, dus <b>λ is het grootst in beton</b>.</p></div></details>
+  </div>
+</section>
+
+<section id="echo">
+  <span class="bs">Theorie</span>
+  <h2>Echografie en buiging</h2>
+  <ul>
+    <li>Met golven kun je afstanden bepalen. Onweer: licht komt vrijwel direct aan, geluid niet → afstand = v<sub>geluid</sub> × Δt.</li>
+    <li><b class="t">Echo</b>: geluid kaatst terug. Het geluid gaat <b>heen en terug</b>, dus afstand = ½·v·t.</li>
+    <li><b class="t">Echografie</b> gebruikt <b class="t">ultrasoon</b> geluid (frequentie hoger dan het menselijk oor kan horen, &gt; 20 kHz). Golven kaatsen terug op plekken waar de dichtheid van het weefsel en de geluidssnelheid verandert (bv. vruchtwater → babyhoofdje). Uit de tijdsduur volgt de positie → beeld.</li>
+    <li><b class="t">Buiging</b>: golven met een grotere golflengte gaan om kleine voorwerpen heen. Voor scherpe beelden moet λ klein zijn → hoge frequentie nodig, zeker omdat v in weefsel/vloeistof groot is.</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">s = ½ · v · t</td><td>afstand bij een echo (t = heen + terug)</td></tr>
+  </table>
+</section>
+
+<section id="doppler">
+  <span class="bs">Theorie</span>
+  <h2>Dopplereffect</h2>
+  <ul>
+    <li>Een politieauto met sirene klinkt hoog als hij nadert en laag als hij wegrijdt: het <b class="t">dopplereffect</b>.</li>
+    <li>Bron komt naar je toe: elke golf wordt iets dichter bij jou uitgezonden → golffronten zitten dichter op elkaar → <b>λ kleiner</b>. Geluidssnelheid blijft gelijk, dus door v = f·λ: <b>f hoger</b>.</li>
+    <li>Bron gaat van je af: λ groter → f lager.</li>
+  </ul>
+  <div class="onthoud">
+    <b>Onthoud</b>
+    <ul>
+      <li>Transversaal: trillingsrichting loodrecht op de voortplantingsrichting. Longitudinaal: trillingsrichting gelijk aan de voortplantingsrichting.</li>
+      <li>v = Δx/Δt; de voortplantingssnelheid hangt af van het medium.</li>
+      <li>v = f·λ.</li>
+      <li>Echografie gebruikt ultrasoon geluid; uit de tijd tussen uitzenden en ontvangen volgt de afstand en een beeld.</li>
+      <li>Dopplereffect: een naderende bron klinkt hoger, een wegrijdende bron lager.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="formules">
+  <span class="bs">Overzicht</span>
+  <h2>Formules §5.3</h2>
+  <table class="fx">
+    <tr><td class="eq">v = Δx / Δt</td><td>voortplantingssnelheid</td></tr>
+    <tr><td class="eq">v = λ / T = f · λ</td><td>golfvergelijking</td></tr>
+    <tr><td class="eq">s = ½ · v · t</td><td>echo</td></tr>
+    <tr><td class="eq">v<sub>lucht</sub> = 343 m s⁻¹</td><td>bij 20 °C (BiNaS 15A)</td></tr>
+    <tr><td class="eq">c = 3,00·10⁸ m s⁻¹</td><td>lichtsnelheid</td></tr>
+  </table>
+</section>
+
+<section id="opdrachten">
+  <span class="bs">Opdrachten</span>
+  <h2>Opdrachten uit het boek — met uitwerking</h2>
+  <p class="goal">Probeer eerst zelf, open dan de uitwerking. Controleer BiNaS-waarden zelf.</p>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">22</span><span class="titel">Lange veer</span><span class="niv">basis</span></div>
+    <p>Je beweegt het uiteinde van een horizontale lange veer links-rechts, boven-onder of voor-achter. Welke bewegingen geven een transversale en welke een longitudinale golf?</p>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>De beweging <b>in de lengterichting van de veer</b> (voor-achter, als de veer van je af ligt) geeft een <b>longitudinale</b> golf. De twee bewegingen <b>loodrecht</b> op de veer (links-rechts en boven-onder) geven <b>transversale</b> golven.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">23</span><span class="titel">Cartoon</span><span class="niv">basis</span></div>
+    <p>Figuur 19: een man wordt door een luidspreker weggeblazen. Leg uit wat er niet klopt.</p>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>Bij een geluidsgolf trillen de luchtmoleculen alleen heen en weer rond hun evenwichtsstand; de lucht stroomt niet van de luidspreker af. Er wordt energie getransporteerd, geen lucht, dus er is geen "wind" die de man wegblaast.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">24</span><span class="titel">Lichtgolven</span><span class="niv">basis</span></div>
+    <ol><li>Leg met een formule uit dat golven met een grote snelheid en kleine golflengte een grote frequentie hebben.</li><li>Zichtbaar licht heeft λ ≈ 6·10⁻⁷ m. Bereken de frequentie.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) f = v/λ: grote v in de teller en kleine λ in de noemer → grote f.</p>
+      <p>b) f = c/λ = 3,00·10⁸ / 6·10⁻⁷ = <b>5·10¹⁴ Hz</b>.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">25</span><span class="titel">Dopplereffect</span><span class="niv">basis</span></div>
+    <p>Een geluidsbron komt op je af. Nemen frequentie, golflengte en geluidssnelheid af, toe of blijven ze gelijk?</p>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>Golflengte <b>neemt af</b> (golffronten dichter op elkaar), geluidssnelheid <b>blijft gelijk</b> (hangt alleen af van de lucht), frequentie <b>neemt toe</b> (f = v/λ).</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">26</span><span class="titel">Tsunami</span><span class="niv">basis</span></div>
+    <p>De aardbeving (2004) bestond uit trillingen met f tussen 0,075 Hz en 0,163 Hz. De vloedgolf ging gemiddeld 900 km h⁻¹; de trillingen door de aardkorst gaan met de geluidssnelheid in steen.</p>
+    <ol><li>Bereken de maximale golflengte in de aardkorst.</li><li>Bereken hoelang vóór aankomst van de vloedgolf een waarschuwingssysteem kan worden ingeschakeld op 160 km van de aardbeving.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) Maximale λ bij de kleinste f. Neem v<sub>steen</sub> uit BiNaS (bv. graniet ≈ 6·10³ m s⁻¹): λ = v/f = 6·10³ / 0,075 ≈ <b>8·10⁴ m</b> (80 km).</p>
+      <p>b) Vloedgolf: 900 km/h = 250 m s⁻¹ → t = 160·10³/250 = 640 s. Aardkorst: t = 160·10³/6·10³ ≈ 27 s. Verschil ≈ <b>6,1·10² s ≈ 10 min</b>.</p>
+      <p class="let">Gebruik de waarde die jouw BiNaS-tabel geeft; de methode blijft gelijk.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">27</span><span class="titel">Parkeren</span><span class="niv">basis</span></div>
+    <p>Een parkeersensor zendt ultrasone golven uit die terugkaatsen.</p>
+    <ol><li>Leg met een formule uit dat ultrasone golven een kleine golflengte hebben vergeleken met spraak of muziek.</li><li>80 cm tussen auto en obstakel is nog net veilig. Bij welk tijdsverschil tussen uitzenden en ontvangen moet het systeem waarschuwen? (20 °C)</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) λ = v/f. Zelfde v (lucht), maar ultrasoon heeft een veel hogere f → kleinere λ.</p>
+      <p>b) Heen en terug: 2 × 0,80 = 1,60 m. t = 1,60/343 = <b>4,7·10⁻³ s</b>. Bij een kleiner tijdsverschil waarschuwen.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">28</span><span class="titel">Gehoor van een foetus</span><span class="niv">eindniveau</span></div>
+    <p>Echografie met f tussen 1,0 en 10 MHz. Geluidssnelheid in lichaamsweefsel = die in water van 40 °C.</p>
+    <ol><li>Bereken tussen welke waarden de golflengte ligt.</li><li>Leg met "buiging" uit waarom hoorbaar geluid niet geschikt is.</li><li>Afstand buikwand–kind 12 cm; puls duurt 110 µs; zodra het einde van de echo binnen is, start de volgende puls. Laat zien dat het afgeven van de pulsen gebeurt met een frequentie die het menselijk oor kan horen.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) v<sub>water,40 °C</sub> ≈ 1,53·10³ m s⁻¹ (BiNaS). λ = v/f: 1,53·10³/1,0·10⁶ = 1,5·10⁻³ m en 1,53·10³/10·10⁶ = 1,5·10⁻⁴ m. Dus tussen <b>0,15 mm en 1,5 mm</b>.</p>
+      <p>b) Hoorbaar geluid (≤ 20 kHz) heeft in weefsel λ ≥ 1,53·10³/2·10⁴ ≈ 8 cm. Zulke golven buigen om kleine details heen → je ziet ze niet, geen scherp beeld.</p>
+      <p>c) Looptijd heen + terug: 0,24/1,53·10³ = 1,57·10⁻⁴ s. Plus pulsduur: 1,57·10⁻⁴ + 1,10·10⁻⁴ = 2,67·10⁻⁴ s per puls. f = 1/2,67·10⁻⁴ ≈ <b>3,7·10³ Hz</b>: tussen 20 Hz en 20 kHz → hoorbaar.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">29</span><span class="titel">Donder</span><span class="niv">eindniveau</span></div>
+    <ol><li>Leg met een formule uit hoe je de afstand tot de inslag bepaalt.</li><li>Leg uit waarom een donderslag vaak een langer durend geluid is.</li><li>Leg uit bij welke van de drie flitsen in figuur 20 de waarnemer lang rommelend geluid hoort en bij welke een korte felle klap.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) Licht komt vrijwel direct aan. Tel de tijd t tot de donder: s = v<sub>geluid</sub> · t (≈ 343 m per seconde).</p>
+      <p>b) Het geluid ontstaat langs de hele bliksembaan. Verschillende delen liggen op verschillende afstanden van jou, dus het geluid komt na elkaar aan → rommelen.</p>
+      <p>c) <b>Korte felle klap</b>: de flits waarvan alle delen op ongeveer gelijke afstand van de waarnemer liggen (verschil in afstand klein). <b>Lang rommelend, steeds zwakker</b>: de flits die (schuin) van de waarnemer af loopt, met een groot verschil in afstand tussen begin en eind; de verre delen klinken later en zwakker.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">30</span><span class="titel">Draaimolen</span><span class="niv">eindniveau</span></div>
+    <p>Draaimolen met T = 4,0 s; een kind gilt met 500 Hz. Op t = 0 beweegt het kind dichtbij voor je langs naar rechts. Schets de frequentie die jij hoort voor één omwenteling.</p>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>t = 0: kind beweegt dwars langs je → geen snelheid naar je toe of van je af → <b>500 Hz</b>.</p>
+      <p>t = 0–2 s: kind beweegt van je af → f &lt; 500 Hz, laagste rond t = 1,0 s.</p>
+      <p>t = 2,0 s: aan de overkant, weer dwars → 500 Hz.</p>
+      <p>t = 2–4 s: kind komt naar je toe → f &gt; 500 Hz, hoogste rond t = 3,0 s. t = 4,0 s weer 500 Hz.</p>
+      <p>De grafiek lijkt op een "omgekeerde sinus" rond 500 Hz (begint dalend).</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">31</span><span class="titel">Koord</span><span class="niv">eindniveau</span></div>
+    <p>Transversale golf met snelheid v, amplitude A en golflengte λ. Maximale snelheid van een punt is v<sub>max</sub>. Hoe groot is v : v<sub>max</sub>? A 1:1 · B λ:A · C λ:4A · D λ:2πA</p>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>v = λ/T en v<sub>max</sub> = 2πA/T → v : v<sub>max</sub> = λ : 2πA → <b>D</b>.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr ster">32</span><span class="titel">Golven in touwen</span><span class="niv">eindniveau</span></div>
+    <p>De golfsnelheid in een touw is groter bij grotere spankracht. In een zware hangende kabel draagt elk stuk het gewicht van alles eronder. Je slingert het onderste deel heen en weer met vaste frequentie.</p>
+    <ol><li>Beredeneer welke vorm (figuur 21a, b of c) het touw krijgt.</li><li>Bij een zweep is de spankracht overal gelijk, maar de dikte varieert. Leg met energiebehoud uit dat het touw aan het smalle uiteinde sneller beweegt.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) Bovenaan is de spankracht het grootst (hele kabel hangt eraan) → v het grootst. f is overal gelijk, dus λ = v/f is <b>bovenaan het grootst en onderaan het kleinst</b>. Kies de figuur waarin de golven onderaan kort (dicht op elkaar) en bovenaan lang zijn.</p>
+      <p>b) De golfenergie blijft (bijna) behouden. Aan het smalle uiteinde zit minder massa per lengte; dezelfde kinetische energie ½mv² met kleinere m geeft een grotere v.</p></div></details>
+  </div>
+</section>
+
+<section id="toets">
+  <span class="bs">Zelftoets</span>
+  <h2>Snel checken</h2>
+  <div class="quiz">
+    <details><summary>Waarom kan een transversale golf zich niet in lucht voortplanten?</summary><p class="ans">Luchtmoleculen zitten niet aan elkaar vast; de beweging loodrecht op de voortplantingsrichting wordt niet doorgegeven.</p></details>
+    <details><summary>Wat bepaalt de frequentie en wat de snelheid van een golf?</summary><p class="ans">f: de bron. v: het medium.</p></details>
+    <details><summary>Wat gebeurt er met λ als geluid van lucht naar water gaat?</summary><p class="ans">f blijft gelijk, v wordt groter → λ wordt groter.</p></details>
+    <details><summary>Waarom gebruikt echografie hoge frequenties?</summary><p class="ans">Kleine golflengte → weinig buiging → kleine details zichtbaar, scherp beeld.</p></details>
+    <details><summary>Een echo komt na 0,40 s terug van een muur. Hoe ver is de muur (20 °C)?</summary><p class="ans">s = ½ × 343 × 0,40 = 69 m.</p></details>
+    <details><summary>Een golf heeft f = 250 Hz en λ = 1,4 m. Bereken v.</summary><p class="ans">v = f·λ = 250 × 1,4 = 3,5·10² m s⁻¹.</p></details>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="5-2-massa-veersysteem-resonantie.html"><small>← Vorige</small>§5.2 Massa-veersysteem en resonantie</a>
+  <a class="next" href="5-4-interferentie.html"><small>Volgende →</small>§5.4 Interferentie</a>
+</div>
+
+<footer>NOVA Natuurkunde VWO 5 · H5 §3 Lopende golven.</footer>
+</main>
+</body>
+</html>

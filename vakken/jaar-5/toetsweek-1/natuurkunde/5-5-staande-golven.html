@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NA §5.5 — Staande golven</title>
+<link rel="stylesheet" href="h5.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<header>
+  <a class="home" href="../../../../index.html">← Alle vakken</a>
+  <p class="kicker">Natuurkunde · H5 Trillingen en golven · §5.5</p>
+  <h1>Staande golven</h1>
+  <p>Knopen en buiken, snaren (twee vaste uiteinden), klankkleur, één open en één gesloten uiteinde, stemvork en blaasinstrumenten. Met uitwerkingen van opdracht 44–55.</p>
+</header>
+
+<nav>
+  <a href="#doelen">Leerdoelen</a>
+  <a href="#snaar">Snaren</a>
+  <a href="#klank">Klankkleur</a>
+  <a href="#open">Open/gesloten</a>
+  <a href="#blaas">Blaasinstrumenten</a>
+  <a href="#formules">Formules</a>
+  <a href="#opdrachten">Opdrachten</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="doelen">
+  <span class="bs">Leerdoelen</span>
+  <ul class="leerdoelen">
+    <li><span>5.5.1</span>De eigenschappen van staande golven benoemen.</li>
+    <li><span>5.5.2</span>Rekenen met de lengte van een snaar en de golflengten die daarop passen.</li>
+    <li><span>5.5.3</span>Rekenen met de lengte van een luchtkolom en de golflengten die daarop passen.</li>
+  </ul>
+</section>
+
+<section id="snaar">
+  <span class="bs">Theorie</span>
+  <h2>Staande golven in snaren</h2>
+  <ul>
+    <li>In een kamer kaatst geluid tegen de muren en <b>interfereert</b> met inkomend geluid. Bij bepaalde frequenties versterken heen- en teruggaande golf elkaar: een <b class="t">staande golf</b>. Ook in gitaarsnaren, trompetbuizen en een magnetron.</li>
+    <li>Het patroon verplaatst zich niet. Er zijn punten die niet bewegen: <b class="t">knopen (K)</b>. Punten die maximaal bewegen: <b class="t">buiken (B)</b>.</li>
+    <li>Alle punten tussen twee knopen gaan <b>gelijktijdig</b> omhoog en omlaag: ze zijn <b>in fase</b>. Aan weerszijden van een knoop zijn punten in tegenfase.</li>
+    <li>Afstand knoop–knoop (of buik–buik) = ½λ; knoop–buik = ¼λ.</li>
+    <li>Ontstaan: je slaat een snaar aan → golven lopen naar links en rechts, kaatsen heel vaak terug aan de uiteinden. Alleen golven met bepaalde λ en f versterken elkaar; de rest dooft uit. Het lijkt op resonantie, maar er is geen aandrijffrequentie (denk aan een tik tegen een stemvork: die gaat met zijn eigenfrequentie trillen).</li>
+  </ul>
+  <h3>Twee vaste uiteinden</h3>
+  <ul>
+    <li>Een gitaarsnaar is ingeklemd bij hals en kam: <b>beide uiteinden zijn knopen</b> (randvoorwaarde).</li>
+    <li>Eén buik: l = ½λ — de grootste golflengte, dus de laagste frequentie: de <b class="t">grondtoon</b>.</li>
+    <li>Twee buiken: l = 2·½λ → λ 2× zo klein, f 2× zo groot (1e boventoon). Drie buiken: l = 3·½λ → f 3× zo groot.</li>
+    <li>De frequenties boven de grondtoon heten <b class="t">boventonen</b>. Bij een snaar zijn ze <b>alle veelvouden</b> van de grondtoon.</li>
+    <li>Dezelfde formule geldt voor <b>twee open uiteinden</b> (dan zijn beide uiteinden buiken), bijvoorbeeld geluid in een buis die aan beide kanten open is, een ingeklemde staaf of een brugdeel op twee pijlers.</li>
+  </ul>
+  <figure>
+    <svg viewBox="0 0 420 210" role="img" aria-label="Staande golven in een snaar: grondtoon, eerste en tweede boventoon">
+      <g fill="none" stroke-width="2">
+        <path d="M30,35 Q190,0 350,35 Q190,70 30,35" stroke="#2a5340"/>
+        <path d="M30,105 Q110,75 190,105 Q270,135 350,105 M30,105 Q110,135 190,105 Q270,75 350,105" stroke="#2a5340"/>
+        <path d="M30,175 Q83,150 137,175 Q190,200 243,175 Q297,150 350,175 M30,175 Q83,200 137,175 Q190,150 243,175 Q297,200 350,175" stroke="#2a5340"/>
+      </g>
+      <g fill="#c47a2c"><circle cx="30" cy="35" r="4"/><circle cx="350" cy="35" r="4"/>
+        <circle cx="30" cy="105" r="4"/><circle cx="190" cy="105" r="4"/><circle cx="350" cy="105" r="4"/>
+        <circle cx="30" cy="175" r="4"/><circle cx="137" cy="175" r="4"/><circle cx="243" cy="175" r="4"/><circle cx="350" cy="175" r="4"/></g>
+      <g font-size="12" fill="#14241c"><text x="362" y="39">l = ½λ</text><text x="362" y="109">l = 2·½λ</text><text x="362" y="179">l = 3·½λ</text></g>
+    </svg>
+    <figcaption>Oranje stippen = knopen. Grondtoon, 1e boventoon, 2e boventoon.</figcaption>
+  </figure>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht 5</p>
+    <p>De grondtoon van de hoge E-snaar van een gitaar is e1 (329,63 Hz, BiNaS 15C). De snaar is 64,2 cm. Bereken de voortplantingssnelheid in de snaar.</p>
+    <details><summary>Uitwerking</summary>
+      <div class="ans"><p>Grondtoon n = 1: l = ½λ → λ = 2l = 2 × 0,642 = 1,284 m.</p>
+      <p>v = f·λ = 329,63 × 1,284 = <b>423,2 m s⁻¹</b>.</p></div></details>
+  </div>
+</section>
+
+<section id="klank">
+  <span class="bs">Theorie</span>
+  <h2>Klankkleur</h2>
+  <ul>
+    <li>Als je een snaar aanslaat, klinken de grondtoon en de boventonen <b>tegelijk</b>. Het oscillogram is daardoor geen zuivere sinus.</li>
+    <li>Een <b class="t">frequentiespectrum</b> laat zien welke frequenties in het geluid zitten en hoe sterk.</li>
+    <li>De verhouding van de sterkte van de boventonen bepaalt de <b class="t">klankkleur</b>. Die hangt af van hoe je aanslaat en welke boventonen de klankkast versterkt.</li>
+  </ul>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht 6</p>
+    <p>a) Bepaal met het oscillogram (fig. 34a) de grondtoon. b) Leg met het spectrum (fig. 34b) uit dat het om een aan twee kanten ingeklemde snaar gaat.</p>
+    <details><summary>Uitwerking</summary>
+      <div class="ans"><p>a) Grondtoon = laagste frequentie = grootste periode waarmee het patroon zich herhaalt. Lees meerdere perioden af: 9T = 0,0453 − 0,0027 = 0,0426 s → T = 4,73·10⁻³ s → f = 1/T = <b>211 Hz</b>.</p>
+      <p>b) Bij een snaar zijn de boventonen veelvouden van de grondtoon: 422, 633, 844 Hz, … Dat zie je in het spectrum, dus een aan twee kanten ingeklemde snaar.</p></div></details>
+  </div>
+</section>
+
+<section id="open">
+  <span class="bs">Theorie</span>
+  <h2>Eén open en één gesloten uiteinde</h2>
+  <ul>
+    <li>Een dunne metalen lat die aan één kant is ingeklemd: bij het <b>vaste (gesloten) uiteinde een knoop</b>, bij het <b>open uiteinde een buik</b>.</li>
+    <li>Grondtoon: l = ¼λ. Boventonen: l = 3·¼λ, 5·¼λ, … Per boventoon komt er een halve golflengte bij.</li>
+    <li>λ wordt 3×, 5×, … zo klein → f wordt <b>3×, 5×, …</b> zo groot. Alleen <b>oneven</b> veelvouden van de grondtoon!</li>
+    <li>v hangt af van materiaal en vorm en is gelijk voor alle frequenties.</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">l = (2n − 1) · ¼λ</td><td>één open + één gesloten uiteinde; n = 1 grondtoon, n = 2 eerste boventoon, …</td></tr>
+  </table>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht 7</p>
+    <p>Olifanten maken heel lage geluiden maar kunnen ook "trompetteren". Ga na of de grondtoon van een slurf (model: één open en één gesloten uiteinde, ≈ 1,5 m) overeenkomt met het trompetteren of met de lage toon.</p>
+    <details><summary>Uitwerking</summary>
+      <div class="ans"><p>f = v/(4l) = 343/(4 × 1,5) ≈ 57 Hz, ongeveer <b>50 Hz</b>. Dat is een lage toon: de grondtoon past niet bij het trompetteren.</p></div></details>
+  </div>
+</section>
+
+<section id="blaas">
+  <span class="bs">Theorie</span>
+  <h2>Stemvork en blaasinstrumenten</h2>
+  <ul>
+    <li>De klankkast van een stemvork is aan één kant open en aan de andere kant dicht. De lucht erin (een <b class="t">luchtkolom</b>) trilt mee → formule voor één open en één gesloten uiteinde.</li>
+    <li><b>Dwarsfluit</b>: beide zijden open → l = n·½λ.</li>
+    <li><b>Blokfluit</b>: zeker aan één kant open; of de blaaskant akoestisch open of dicht is, kun je niet zomaar zeggen.</li>
+    <li><b>Trompet</b>: aan één kant gesloten (waar je blaast), maar doordat de buis steeds breder wordt gedragen de boventonen zich toch als die van een snaar (alle veelvouden).</li>
+  </ul>
+  <div class="tip"><b>Truc:</b> teken altijd eerst de knopen (K) en buiken (B) in een schets. Tel dan hoeveel ¼λ of ½λ er in de lengte past.</div>
+  <div class="onthoud">
+    <b>Onthoud</b>
+    <ul>
+      <li>Een punt dat niet beweegt in een staande golf is een knoop; een punt dat maximaal beweegt is een buik.</li>
+      <li>Bij een staande golf trillen alle punten tussen twee knopen in fase.</li>
+      <li>Bij een snaar zijn de uiteinden altijd knopen.</li>
+      <li>Twee kanten vast of twee kanten open: l = n·½λ.</li>
+      <li>Eén kant open en één kant gesloten: l = (2n − 1)·¼λ.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="formules">
+  <span class="bs">Overzicht</span>
+  <h2>Formules §5.5</h2>
+  <table class="fx">
+    <tr><td class="eq">l = n · ½λ</td><td>twee vaste of twee open uiteinden; f<sub>n</sub> = n·f<sub>1</sub></td></tr>
+    <tr><td class="eq">l = (2n − 1) · ¼λ</td><td>één open, één gesloten; f = 1·, 3·, 5·f<sub>1</sub>, …</td></tr>
+    <tr><td class="eq">v = f · λ</td><td>v is voor alle frequenties in hetzelfde medium gelijk</td></tr>
+  </table>
+  <table>
+    <tr><th>Situatie</th><th>Uiteinden</th><th>Grondtoon</th><th>Boventonen</th></tr>
+    <tr><td>Snaar</td><td>K – K</td><td>λ = 2l</td><td>2f₁, 3f₁, 4f₁, …</td></tr>
+    <tr><td>Buis, twee kanten open</td><td>B – B</td><td>λ = 2l</td><td>2f₁, 3f₁, 4f₁, …</td></tr>
+    <tr><td>Buis, één kant dicht</td><td>K – B</td><td>λ = 4l</td><td>3f₁, 5f₁, 7f₁, …</td></tr>
+  </table>
+</section>
+
+<section id="opdrachten">
+  <span class="bs">Opdrachten</span>
+  <h2>Opdrachten uit het boek — met uitwerking</h2>
+  <p class="goal">Probeer eerst zelf, open dan de uitwerking. Kamertemperatuur: v<sub>lucht</sub> = 343 m s⁻¹.</p>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">44</span><span class="titel">Lopend en staand</span><span class="niv">basis</span></div>
+    <p>Lopende golven hebben nulpunten (uitwijking op een moment nul); staande golven hebben knopen.</p>
+    <ol><li>Noem een overeenkomst.</li><li>Leg uit wat het verschil is.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) In beide punten is de uitwijking (op dat moment) nul, en ze liggen ½λ uit elkaar.</p>
+      <p>b) Een nulpunt van een lopende golf verschuift mee met de golf en dat punt trilt gewoon (alleen even op u = 0). Een knoop ligt vast en beweegt <b>nooit</b>.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">45</span><span class="titel">Snaren</span><span class="niv">basis</span></div>
+    <p>De dikste snaar van een basgitaar: E1, grondtoon 41,20 Hz, lengte 87,0 cm.</p>
+    <ol><li>Bereken de voortplantingssnelheid in de snaar.</li><li>Inkorten met een vinger geeft B1 (61,74 Hz). Bereken de lengte van het trillende deel.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) λ = 2l = 1,740 m → v = 41,20 × 1,740 = <b>71,7 m s⁻¹</b>.</p>
+      <p>b) Zelfde snaar → zelfde v. λ = 71,69/61,74 = 1,161 m → l = ½λ = <b>0,581 m</b> (58,1 cm).</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">46</span><span class="titel">Doedelzak</span><span class="niv">basis</span></div>
+    <p>Bas-bourdon 80,0 cm, tenor-bourdons 40,0 cm. Onderaan een knoop, bovenaan een buik.</p>
+    <ol><li>Bereken de grondfrequenties (kamertemperatuur, 3 significante cijfers).</li><li>Leg uit of de grondtoon van een tenor-bourdon een boventoon van de bas-bourdon is.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) Knoop + buik: l = ¼λ. Bas: λ = 3,20 m → f = 343/3,20 = <b>107 Hz</b>. Tenor: λ = 1,60 m → f = <b>214 Hz</b>.</p>
+      <p>b) Boventonen van de bas zijn alleen oneven veelvouden: 3 × 107 = 321 Hz, 5 × 107 = 536 Hz, … 214 Hz = 2 × 107 Hz is een even veelvoud → <b>nee</b>.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">47</span><span class="titel">Gemeenschappelijke boventoon</span><span class="niv">basis</span></div>
+    <p>Een snaar met grondtoon 220 Hz, een andere met 330 Hz.</p>
+    <ol><li>Bereken de frequentie van de eerste gemeenschappelijke boventoon.</li><li>Leg uit waarom twee orgelpijpen met een open en een gesloten uiteinde (220 en 330 Hz) geen gemeenschappelijke boventonen hebben.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) Veelvouden van 220: 440, 660, … Veelvouden van 330: 660, … → <b>660 Hz</b>.</p>
+      <p>b) Pijpen hebben alleen oneven veelvouden: 220·(2n−1) en 330·(2m−1). Gelijkstellen: 2·(2n−1) = 3·(2m−1). Links staat een even getal, rechts een oneven getal → nooit gelijk. (660 Hz = 3 × 220 kan wel, maar 660 = 2 × 330 is een even veelvoud.)</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">48</span><span class="titel">Dikke en dunne snaren</span><span class="niv">eindniveau</span></div>
+    <p>De dunste snaren van een gitaar geven de hoogste tonen. Is v in dunne snaren groter, even groot of kleiner dan in dikke snaren?</p>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>Alle snaren zijn even lang → zelfde λ bij de grondtoon (λ = 2l). v = f·λ: hogere f bij gelijke λ → <b>v is groter</b> in de dunne snaren.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">49</span><span class="titel">Telefoonzendmast</span><span class="niv">eindniveau</span></div>
+    <p>Signalen planten zich voort met de lichtsnelheid, f = 900 MHz.</p>
+    <ol><li>Bereken de golflengte.</li><li>Bereken hoe lang een antenne moet zijn om het meest effectief uit te zenden (twee gesloten uiteinden, v = lichtsnelheid).</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) λ = c/f = 3,00·10⁸ / 900·10⁶ = <b>0,333 m</b>.</p>
+      <p>b) Grondtoon met twee gesloten uiteinden: l = ½λ = <b>0,167 m</b> (17 cm).</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">50</span><span class="titel">Brede buis</span><span class="niv">eindniveau</span></div>
+    <p>Bij een brede buis ligt de buik een eindje <i>buiten</i> het open uiteinde. Een buis (één kant open, één kant dicht) is 60 cm lang met diameter 10 cm.</p>
+    <ol><li>Bereken de grondtoon zonder rekening te houden met de dikte (kamertemperatuur).</li><li>Schets de buis met knoop en buik bij de grondtoon.</li><li>De buik ligt 0,3·d buiten het uiteinde. Bereken de grondtoon met deze correctie.</li><li>Bij welke verhouding lengte : breedte kun je de breedte verwaarlozen (afwijking max 1%)?</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) l = ¼λ → λ = 2,40 m → f = 343/2,40 = <b>143 Hz</b>.</p>
+      <p>b) Knoop bij het gesloten uiteinde, buik bij (net buiten) het open uiteinde; één kwart golflengte in de buis.</p>
+      <p>c) Effectieve lengte = 0,60 + 0,3 × 0,10 = 0,63 m → λ = 2,52 m → f = 343/2,52 = <b>136 Hz</b>.</p>
+      <p>d) f ∝ 1/l, dus de afwijking ≈ 0,3d/l ≤ 0,01 → l/d ≥ 30. De buis moet minstens <b>30× zo lang als breed</b> zijn.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">51</span><span class="titel">Trompet stemmen</span><span class="niv">eindniveau</span></div>
+    <p>De geluidssnelheid is hoger bij hogere temperatuur. Moet je bij warmer weer de buis uitschuiven of induwen?</p>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>Warmer → v groter. λ ligt vast door de lengte, dus f = v/λ wordt hoger: de trompet klinkt te hoog. Om f terug te brengen moet λ groter → buis langer → <b>uitschuiven</b>.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">52</span><span class="titel">Buitenoor</span><span class="niv">eindniveau</span></div>
+    <p>De gehoorgang is een buis van 28 mm, aan één kant gesloten door het trommelvlies. Geluid van 3,1 kHz wordt versterkt.</p>
+    <ol><li>Toon dat aan met een berekening.</li><li>Is de versterkte frequentie bij een baby groter of kleiner?</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) Eén kant dicht: l = ¼λ → λ = 4 × 0,028 = 0,112 m → f = 343/0,112 = 3,06·10³ Hz ≈ <b>3,1 kHz</b>.</p>
+      <p>b) Kortere gehoorgang → kleinere λ → <b>grotere</b> frequentie.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">53</span><span class="titel">Magnetron</span><span class="niv">eindniveau</span></div>
+    <p>f = 2450 MHz, v = lichtsnelheid. Bij alle wanden en het deurtje zitten knopen.</p>
+    <ol><li>Leg uit dat de staande golf in geen enkele richting overeenkomt met de grondtoon.</li><li>Leg uit waarom het voedsel meestal ronddraait.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) λ = 3,00·10⁸/2,45·10⁹ = 0,122 m. Grondtoon (knoop–knoop) vraagt l = ½λ = 6,1 cm. Een magnetron is in elke richting veel groter (≈ 20–35 cm) → er passen meerdere halve golflengten → een boventoon.</p>
+      <p>b) Bij de knopen trilt het veld niet → daar wordt het eten niet warm. Door het ronddraaien komt elk deel van het eten ook in de buiken → gelijkmatiger opwarmen.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">54</span><span class="titel">Antennes</span><span class="niv">eindniveau</span></div>
+    <p>5G werkt bij ≈ 3,5 GHz, FM-radio bij ≈ 100 MHz.</p>
+    <ol><li>Bij welke toepassing verwacht je de langste antenne?</li><li>Klopt dat met de praktijk?</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) De antennelengte hoort bij de golflengte (bv. ½λ). 5G: λ = 3,0·10⁸/3,5·10⁹ = 8,6 cm. FM: λ = 3,0 m. Dus de <b>autoradio</b> heeft de langste antenne.</p>
+      <p>b) Ja: een telefoon heeft een kleine ingebouwde antenne; een auto-antenne voor de radio is veel langer (een sprietje van tientallen cm of een draad in de ruit).</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr ster">55</span><span class="titel">Tabla</span><span class="niv">eindniveau</span></div>
+    <p>Het trommelvel heeft een buik in het midden en een knooplijn aan de rand. v = c·σ<sup>a</sup>·ρ<sup>b</sup> met σ in N m⁻¹ en ρ in kg m⁻².</p>
+    <ol><li>Bepaal a en b met een eenhedenbeschouwing.</li><li>f = 265 Hz bij D = 0,20 m, σ = 2,8·10² N m⁻¹, ρ = 2,5·10² kg m⁻². Bereken c.</li><li>De ketel (boven dicht met het vel, onder open) is 32,5 cm. Bepaal met figuur 39 bij welke temperatuur de trommel bij de grondtoon zo hard mogelijk klinkt.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) N m⁻¹ = kg s⁻². m s⁻¹ = (kg s⁻²)<sup>a</sup>·(kg m⁻²)<sup>b</sup>. m: 1 = −2b → b = −½. s: −1 = −2a → a = ½. kg: a + b = 0 ✓. Dus v = c·√(σ/ρ).</p>
+      <p>b) Knoop–buik–knoop over de diameter: D = ½λ → λ = 0,40 m → v = 265 × 0,40 = 106 m s⁻¹. √(σ/ρ) = √(280/250) = 1,06 → c = 106/1,06 ≈ <b>1,0·10²</b>.</p>
+      <p>c) Ketel: knoop bij het vel, buik bij de open onderkant → l = ¼λ → λ = 1,30 m. Resonantie bij 265 Hz als v = 265 × 1,30 = 345 m s⁻¹. Uit figuur 39: v = 345 m s⁻¹ bij ≈ <b>297 K</b> (≈ 24 °C).</p></div></details>
+  </div>
+</section>
+
+<section id="toets">
+  <span class="bs">Zelftoets</span>
+  <h2>Snel checken</h2>
+  <div class="quiz">
+    <details><summary>Wat is een knoop en wat is een buik?</summary><p class="ans">Knoop: punt dat nooit beweegt. Buik: punt dat maximaal beweegt.</p></details>
+    <details><summary>Hoe ver liggen twee knopen uit elkaar?</summary><p class="ans">½λ.</p></details>
+    <details><summary>Welke boventonen heeft een buis die aan één kant dicht is?</summary><p class="ans">Alleen oneven veelvouden van de grondtoon: 3f₁, 5f₁, …</p></details>
+    <details><summary>Wat bepaalt de klankkleur?</summary><p class="ans">De verhouding van de sterkte van de boventonen.</p></details>
+    <details><summary>Een buis, aan beide kanten open, is 0,50 m. Bereken de grondtoon.</summary><p class="ans">λ = 2l = 1,00 m → f = 343/1,00 = 343 Hz.</p></details>
+    <details><summary>Een snaar trilt met 4 buiken bij 600 Hz. Wat is de grondtoon?</summary><p class="ans">4 buiken = n = 4 → f₁ = 600/4 = 150 Hz.</p></details>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="5-4-interferentie.html"><small>← Vorige</small>§5.4 Interferentie</a>
+  <a class="next" href="5-afsluiting.html"><small>Volgende →</small>Afsluiting: eindopdrachten</a>
+</div>
+
+<footer>NOVA Natuurkunde VWO 5 · H5 §5 Staande golven.</footer>
+</main>
+</body>
+</html>

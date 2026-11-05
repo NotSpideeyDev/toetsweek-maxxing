@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NA §5.2 — Massa-veersysteem en resonantie</title>
+<link rel="stylesheet" href="h5.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<header>
+  <a class="home" href="../../../../index.html">← Alle vakken</a>
+  <p class="kicker">Natuurkunde · H5 Trillingen en golven · §5.2</p>
+  <h1>Massa-veersysteem en resonantie</h1>
+  <p>Eigenfrequentie, T = 2π√(m/C), aandrijffrequentie en resonantie. Met uitwerkingen van opdracht 11–21.</p>
+</header>
+
+<nav>
+  <a href="#doelen">Leerdoelen</a>
+  <a href="#mvs">Massa-veersysteem</a>
+  <a href="#resonantie">Resonantie</a>
+  <a href="#formules">Formules</a>
+  <a href="#opdrachten">Opdrachten</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="doelen">
+  <span class="bs">Leerdoelen</span>
+  <ul class="leerdoelen">
+    <li><span>5.2.1</span>Rekenen met het verband tussen massa, veerconstante en periode van een massa-veersysteem.</li>
+    <li><span>5.2.2</span>Uitleggen onder welke omstandigheden resonantie optreedt.</li>
+  </ul>
+</section>
+
+<section id="mvs">
+  <span class="bs">Theorie</span>
+  <h2>Massa-veersysteem</h2>
+  <ul>
+    <li>Veel systemen gedragen zich als een massa aan een veer: een auto op zijn vering, een atoom in een molecuul. Een kleine uitwijking geeft een <b>terugdrijvende kracht evenredig met de uitwijking</b> → harmonische trilling.</li>
+    <li><b class="t">Massa-veersysteem</b>: een massa die trilt aan een veer.</li>
+    <li><b class="t">Eigenfrequentie</b>: de frequentie waarmee het systeem gaat trillen na een verstoring.</li>
+    <li><b>Grotere massa → grotere T</b>: een grotere massa is trager, komt langzamer op gang en remt langzamer af.</li>
+    <li><b>Stuggere veer (grotere C) → kleinere T</b>: al bij een kleine uitwijking een grote terugdrijvende kracht.</li>
+    <li>T hangt <b>niet</b> af van de amplitude.</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">T = 2π · √(m / C)</td><td>T in s, m in kg, C = veerconstante in N m⁻¹</td></tr>
+    <tr><td class="eq">C = m · (2π / T)²</td><td>omgeschreven naar C</td></tr>
+  </table>
+  <div class="tip"><b>Verhoudingen:</b> m × 4 → T × 2. C × 4 → T ÷ 2 (dus f × 2). Gebruik dit voor snelle redeneervragen.</div>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht 3</p>
+    <p>Een massa van 100 g trilt aan een veer met T = 0,40 s. Bereken de veerconstante.</p>
+    <details><summary>Uitwerking</summary>
+      <div class="ans"><p>T = 2π√(m/C) → T/2π = √(m/C) → (T/2π)² = m/C → C = m·(2π/T)².</p>
+      <p>C = 0,100 × (2π/0,40)² = <b>25 N m⁻¹</b>.</p></div></details>
+  </div>
+</section>
+
+<section id="resonantie">
+  <span class="bs">Theorie</span>
+  <h2>Resonantie</h2>
+  <ul>
+    <li>Beweeg je hand met een veer + massa op en neer: de frequentie van je hand is de <b class="t">aandrijffrequentie</b>; de amplitude van je hand is A<sub>0</sub>.</li>
+    <li><b>Aandrijffrequentie ≪ eigenfrequentie</b>: de massa beweegt mee met bijna dezelfde amplitude A<sub>0</sub>.</li>
+    <li><b>Aandrijffrequentie dichter bij eigenfrequentie</b>: amplitude wordt groter (bij ⅔·f<sub>0</sub> ongeveer 2·A<sub>0</sub>).</li>
+    <li><b>Aandrijffrequentie = eigenfrequentie</b>: de amplitude wordt extreem groot → <b class="t">resonantie</b>.</li>
+    <li><b>Aandrijffrequentie ≫ eigenfrequentie</b>: amplitude neemt snel af; de massa blijft vrijwel stil hangen door zijn <b>traagheid</b> (te weinig tijd om te reageren).</li>
+    <li><b class="t">Resonantie</b> = het meetrillen van een systeem met een periodieke aandrijfkracht met een frequentie gelijk aan de eigenfrequentie.</li>
+    <li>Vaak ongewenst (gebouwen, bruggen): de ontwerper zorgt dat de eigenfrequenties niet gelijk zijn aan te verwachten aandrijffrequenties (stapfrequenties, wind).</li>
+  </ul>
+  <figure>
+    <svg viewBox="0 0 420 200" role="img" aria-label="Resonantiecurve: A/A0 tegen aandrijffrequentie met piek bij de eigenfrequentie">
+      <line x1="40" y1="170" x2="410" y2="170" stroke="#5e7466"/>
+      <line x1="40" y1="10" x2="40" y2="170" stroke="#5e7466"/>
+      <text x="6" y="20" font-size="12" fill="#5e7466">A/A₀</text>
+      <text x="300" y="190" font-size="12" fill="#5e7466">aandrijffrequentie →</text>
+      <line x1="40" y1="140" x2="44" y2="140" stroke="#5e7466"/><text x="26" y="144" font-size="11" fill="#5e7466">1</text>
+      <path d="M40,140 C90,138 110,130 120,110 C126,90 128,20 132,18 C136,20 138,90 146,120 C160,150 220,162 405,166" fill="none" stroke="#2a5340" stroke-width="2.5"/>
+      <line x1="132" y1="18" x2="132" y2="170" stroke="#c47a2c" stroke-dasharray="4 3"/>
+      <text x="100" y="186" font-size="12" fill="#c47a2c" font-weight="700">eigenfrequentie</text>
+    </svg>
+    <figcaption>Hoe dichter de aandrijffrequentie bij de eigenfrequentie, hoe groter de amplitude.</figcaption>
+  </figure>
+  <div class="onthoud">
+    <b>Onthoud</b>
+    <ul>
+      <li>Een massa-veersysteem heeft een periode T = 2π√(m/C).</li>
+      <li>De amplitude van een meetrillend systeem wordt groter naarmate de aandrijffrequentie dichter bij de eigenfrequentie ligt.</li>
+      <li>Resonantie is het meetrillen met een periodieke aandrijfkracht met een frequentie gelijk aan de eigenfrequentie.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="formules">
+  <span class="bs">Overzicht</span>
+  <h2>Formules §5.2</h2>
+  <table class="fx">
+    <tr><td class="eq">T = 2π · √(m / C)</td><td>periode massa-veersysteem</td></tr>
+    <tr><td class="eq">f<sub>0</sub> = 1 / T</td><td>eigenfrequentie</td></tr>
+    <tr><td class="eq">F<sub>v</sub> = C · u</td><td>veerkracht (wet van Hooke)</td></tr>
+    <tr><td class="eq">E<sub>veer</sub> = ½·C·u²</td><td>veerenergie</td></tr>
+    <tr><td class="eq">E<sub>k</sub> = ½·m·v²</td><td>kinetische energie</td></tr>
+  </table>
+</section>
+
+<section id="opdrachten">
+  <span class="bs">Opdrachten</span>
+  <h2>Opdrachten uit het boek — met uitwerking</h2>
+  <p class="goal">Probeer eerst zelf, open dan de uitwerking.</p>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">11</span><span class="titel">Massa's aan veren?</span><span class="niv">basis</span></div>
+    <p>Leg uit of het in de volgende situaties gaat om een massa-veersysteem.</p>
+    <ol><li>Een stuiterbal wordt door de zwaartekracht naar de aarde getrokken, stuitert en blijft met een bepaalde frequentie op en neer gaan.</li><li>Trek je de top van een dun boompje opzij, dan is de stam elastisch: 2× zo ver trekken kost 2× zoveel kracht. Losgelaten zwiept het heen en weer.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) <b>Nee.</b> In de lucht werkt alleen de (constante) zwaartekracht, die is niet evenredig met de uitwijking. Er is ook geen evenwichtsstand waar omheen hij trilt.</p>
+      <p>b) <b>Ja.</b> De terugdrijvende kracht is evenredig met de uitwijking (F = C·u), dus het gedraagt zich als een massa-veersysteem.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">12</span><span class="titel">Resonantie of niet</span><span class="niv">basis</span></div>
+    <p>De Millennium Bridge (Londen) ging heftig trillen toen veel mensen erover liepen.</p>
+    <ol><li>Hoe noem je de frequentie waarbij een voorwerp kan gaan resoneren?</li><li>Leg uit wat bij de Millennium Bridge de aandrijffrequentie veroorzaakte.</li><li>Bruggen kunnen ook trillen door wind langs de tuien. Leg uit of hier ook sprake is van resonantie.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) De <b>eigenfrequentie</b>.</p>
+      <p>b) De <b>stapfrequentie</b> van de voetgangers (iedereen ging ook nog in de pas lopen).</p>
+      <p>c) Ja: de wind laat langs de tuien wervels los met een regelmatige frequentie. Is die gelijk aan een eigenfrequentie van de brug/tui, dan treedt resonantie op.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">13</span><span class="titel">Volgorde</span><span class="niv">basis</span></div>
+    <p>Zet op volgorde van kleinste naar grootste eigenfrequentie: A m = 1,0 kg, C = 4,0 N m⁻¹ · B 2,0 kg, 4,0 N m⁻¹ · C 1,0 kg, 3,0 N m⁻¹ · D 2,0 kg, 10 N m⁻¹ · E 1,0 kg, 8,0 N cm⁻¹.</p>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>f = (1/2π)·√(C/m), dus vergelijk C/m: A = 4, B = 2, C = 3, D = 5, E = 800 (8,0 N/cm = 800 N/m!).</p>
+      <p>Volgorde: <b>B – C – A – D – E</b>.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">14</span><span class="titel">Boksbal</span><span class="niv">basis</span></div>
+    <p>Een boksbal op een veer heeft massa 3,5 kg. Na een stoot gaat hij van je af, komt terug en schiet door tot een punt vlak bij jou. Dit duurt 0,45 s. Bereken de veerconstante.</p>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>Evenwichtsstand → uiterste stand van je af (¼T) → terug door evenwichtsstand (¼T) → uiterste stand bij jou (¼T) = ¾T.</p>
+      <p>¾T = 0,45 s → T = 0,60 s.</p>
+      <p>C = m·(2π/T)² = 3,5 × (2π/0,60)² = <b>3,8·10² N m⁻¹</b>.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">15</span><span class="titel">Resonantie voorkomen</span><span class="niv">basis</span></div>
+    <p>Bij een constructie of machine wil je tijdens gebruik resonantie voorkomen; de aandrijffrequentie is gegeven. Leg met figuur 11 uit of de eigenfrequentie beter onder of boven de aandrijffrequentie kan liggen.</p>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>Ligt de eigenfrequentie <b>(ver) onder</b> de aandrijffrequentie, dan is de aandrijffrequentie veel groter dan de eigenfrequentie: de amplitude wordt heel klein (fig. 11d), de constructie staat vrijwel stil. Ligt hij erboven, dan trilt de constructie mee met amplitude ≈ A<sub>0</sub> of groter.</p>
+      <p>Dus: <b>eigenfrequentie onder de aandrijffrequentie</b> (bij het opstarten ga je wel kort door de resonantie heen).</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">16</span><span class="titel">Eigenfrequentie</span><span class="niv">basis</span></div>
+    <p>Een massa van 25 g trilt aan een veer met C = 60 N m⁻¹.</p>
+    <ol><li>Bereken de eigenfrequentie.</li><li>Bereken de veerconstante van een veer waarmee dezelfde massa met 2× zo grote frequentie trilt.</li><li>Geef een massa met bijbehorende veerconstante die samen 10 Hz geven. Onderbouw met een berekening.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) T = 2π√(0,025/60) = 0,128 s → f = 1/0,128 = <b>7,8 Hz</b>.</p>
+      <p>b) f × 2 → T ÷ 2 → C × 4 (want T ∝ 1/√C): C = 4 × 60 = <b>2,4·10² N m⁻¹</b>.</p>
+      <p>c) T = 0,10 s → C = m·(2π/T)² = m × 3,95·10³. Kies m = 0,100 kg → C = <b>3,9·10² N m⁻¹</b> (elke combinatie met C/m ≈ 3,9·10³ is goed).</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">17</span><span class="titel">Trillend atoom</span><span class="niv">eindniveau</span></div>
+    <p>Een massa van 100 g aan een veer met C = 4 N m⁻¹ heeft een eigenfrequentie van 1 Hz. Een atoom in een molecuul heeft een veel kleinere massa, en de terugdrijvende kracht is ook veel kleiner.</p>
+    <ol><li>Ga na of de bewering over de massa van 100 g klopt.</li><li>Leg uit welk van de twee verschillen leidt tot een hogere frequentie in het molecuul.</li><li>Trillingen in een molecuul hebben f ≈ 10¹⁴ Hz. Laat zien wat de orde van grootte van de veerconstante is.</li><li>Leg uit hoe het kan dat de veerconstante groot is, terwijl de kracht klein is.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) T = 2π√(0,100/4) = 0,99 s → f = 1,0 Hz. Klopt.</p>
+      <p>b) De <b>kleinere massa</b>: f = (1/2π)√(C/m), kleinere m → grotere f. (Een kleinere kracht/C zou f juist verlagen.)</p>
+      <p>c) C = m·(2πf)². Massa atoom ≈ 10⁻²⁶ kg (bv. C-atoom 2·10⁻²⁶ kg): C ≈ 10⁻²⁶ × (2π·10¹⁴)² ≈ 4·10³ N m⁻¹ → orde <b>10³ N m⁻¹</b>.</p>
+      <p>d) F = C·u, en de uitwijking u van een atoom is extreem klein (≈ 10⁻¹¹ m). Daardoor is de kracht klein ondanks de grote C.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">18</span><span class="titel">Resonantie op de weg</span><span class="niv">eindniveau</span></div>
+    <p>Een auto van ≈ 1000 kg zakt enkele cm als er een persoon van 60 kg instapt. Over hobbels werkt een periodieke aandrijfkracht.</p>
+    <ol><li>Leg met schattingen uit dat een auto niet heftig op en neer gaat op een weg met grote stenen (kinderkopjes) in de stad.</li><li>Geef drie redenen waarom een fietser meer last heeft van deze stenen. Twee hebben te maken met T = 2π√(m/C).</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) C ≈ F/u = 60 × 9,81 / 0,03 ≈ 2·10⁴ N m⁻¹. T = 2π√(1000/2·10⁴) ≈ 1,4 s → f<sub>0</sub> ≈ 0,7 Hz. Stenen ≈ 0,15 m breed, snelheid ≈ 30 km/h = 8 m/s → aandrijffrequentie ≈ 8/0,15 ≈ 50 Hz ≫ f<sub>0</sub>. De auto is te traag om mee te bewegen → amplitude klein.</p>
+      <p>b) 1) Een fiets(er) heeft een veel <b>kleinere massa</b> → hogere eigenfrequentie, dichter bij de aandrijffrequentie. 2) Een fiets heeft <b>geen/stugge vering</b> (grote C) → hogere eigenfrequentie. 3) Een fietser rijdt langzamer en de kleine wielen/smalle banden voelen elke steen apart (geen demping door schokdempers).</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">19</span><span class="titel">Afleiding via energie</span><span class="niv">eindniveau</span></div>
+    <p>Horizontaal massa-veersysteem zonder wrijving: kinetische energie ↔ veerenergie.</p>
+    <ol><li>Geef de formule voor de maximale veerenergie.</li><li>Geef de formule voor de maximale kinetische energie, in m en v<sub>max</sub>.</li><li>Leg uit dat die gelijk moeten zijn en druk v<sub>max</sub> uit in C, m en A.</li><li>Geef het verband tussen T, C en m.</li><li>Leid af dat v<sub>max</sub> = 2π·A/T.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) E<sub>veer,max</sub> = ½·C·A².</p>
+      <p>b) E<sub>k,max</sub> = ½·m·v<sub>max</sub>².</p>
+      <p>c) Energie blijft behouden. In de uiterste stand is v = 0 (alleen veerenergie), in de evenwichtsstand u = 0 (alleen kinetische energie). ½CA² = ½mv<sub>max</sub>² → v<sub>max</sub> = A·√(C/m).</p>
+      <p>d) T = 2π√(m/C) → √(C/m) = 2π/T.</p>
+      <p>e) Invullen: v<sub>max</sub> = A · 2π/T = 2π·A/T.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">20</span><span class="titel">Model voor resonantie</span><span class="niv">eindniveau</span></div>
+    <p>Vul het model van figuur 14 aan en onderzoek wanneer resonantie optreedt; maak een grafiek zoals figuur 12.</p>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>Modelregels:</p>
+      <p><code>F_a = F_0*sin(2*pi*t/T_a)</code><br><code>F_v = -C*u</code><br><code>Fres = F_a + F_v</code><br><code>a = Fres/m</code><br><code>v = v + a*dt</code><br><code>u = u + v*dt</code><br><code>t = t + dt</code></p>
+      <p>Startwaarden bv.: m = 0,10 kg, C = 10 N m⁻¹, u = 0, v = 0, F_0 = 0,10 N. Eigenperiode = 2π√(0,10/10) = 0,63 s.</p>
+      <p>Varieer T_a en noteer telkens de maximale u. Bij T_a ≈ 0,63 s (aandrijffrequentie = eigenfrequentie) wordt de amplitude het grootst → resonantie. Zonder wrijving blijft de amplitude dan groeien; voeg evt. een wrijvingskracht <code>-k*v</code> toe voor een eindige piek.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr ster">21</span><span class="titel">Differentiaalvergelijking</span><span class="niv">eindniveau</span></div>
+    <p>Uit a = F/m en F = −C·u volgt u″ = −C·u/m.</p>
+    <ol><li>Laat zien dat u(t) = A·sin(2π·t/T) een oplossing is.</li><li>Welke uitdrukking voor T volgt hieruit?</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) u′ = A·(2π/T)·cos(2πt/T); u″ = −A·(2π/T)²·sin(2πt/T) = −(2π/T)²·u. Dit heeft de vorm u″ = −(C/m)·u als (2π/T)² = C/m.</p>
+      <p>b) 2π/T = √(C/m) → <b>T = 2π√(m/C)</b>.</p></div></details>
+  </div>
+</section>
+
+<section id="toets">
+  <span class="bs">Zelftoets</span>
+  <h2>Snel checken</h2>
+  <div class="quiz">
+    <details><summary>Wat gebeurt er met T als de massa 4× zo groot wordt?</summary><p class="ans">T wordt 2× zo groot (T ∝ √m).</p></details>
+    <details><summary>Wat gebeurt er met f als de veer 4× zo stug wordt?</summary><p class="ans">T wordt 2× zo klein, dus f 2× zo groot.</p></details>
+    <details><summary>Hangt de periode van een massa-veersysteem af van de amplitude?</summary><p class="ans">Nee.</p></details>
+    <details><summary>Wat is resonantie?</summary><p class="ans">Meetrillen met een periodieke aandrijfkracht met een frequentie gelijk aan de eigenfrequentie; de amplitude wordt extreem groot.</p></details>
+    <details><summary>Waarom blijft de massa vrijwel stil bij een zeer hoge aandrijffrequentie?</summary><p class="ans">Door de traagheid heeft de massa niet genoeg tijd om op de aandrijfkracht te reageren.</p></details>
+    <details><summary>Een massa van 0,50 kg trilt met T = 1,2 s. Bereken C.</summary><p class="ans">C = 0,50 × (2π/1,2)² = 14 N m⁻¹.</p></details>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="5-1-trillingen.html"><small>← Vorige</small>§5.1 Trillingen</a>
+  <a class="next" href="5-3-lopende-golven.html"><small>Volgende →</small>§5.3 Lopende golven</a>
+</div>
+
+<footer>NOVA Natuurkunde VWO 5 · H5 §2 Massa-veersysteem en resonantie.</footer>
+</main>
+</body>
+</html>

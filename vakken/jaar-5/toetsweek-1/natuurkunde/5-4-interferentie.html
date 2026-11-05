@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NA §5.4 — Interferentie</title>
+<link rel="stylesheet" href="h5.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<header>
+  <a class="home" href="../../../../index.html">← Alle vakken</a>
+  <p class="kicker">Natuurkunde · H5 Trillingen en golven · §5.4</p>
+  <h1>Interferentie</h1>
+  <p>Fase, gereduceerde fase, faseverschil in tijd en plaats, constructieve en destructieve interferentie en weglengteverschil. Met uitwerkingen van opdracht 33–43.</p>
+</header>
+
+<nav>
+  <a href="#doelen">Leerdoelen</a>
+  <a href="#fase">Fase</a>
+  <a href="#lopend">Fase bij golven</a>
+  <a href="#interferentie">Interferentie</a>
+  <a href="#weglengte">Weglengteverschil</a>
+  <a href="#formules">Formules</a>
+  <a href="#opdrachten">Opdrachten</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="doelen">
+  <span class="bs">Leerdoelen</span>
+  <ul class="leerdoelen">
+    <li><span>5.4.1</span>Uitleggen wat de fase en de gereduceerde fase is bij een trilling en een golf.</li>
+    <li><span>5.4.2</span>Het faseverschil berekenen tussen twee tijdstippen in een trilling.</li>
+    <li><span>5.4.3</span>Het faseverschil berekenen tussen twee posities in een golf.</li>
+    <li><span>5.4.4</span>Met het weglengteverschil bij twee trillingsbronnen bepalen of er in een punt constructieve of destructieve interferentie is.</li>
+  </ul>
+</section>
+
+<section id="fase">
+  <span class="bs">Theorie</span>
+  <h2>Fase en faseverschil</h2>
+  <ul>
+    <li>Twee trillingen met gelijke A en T kunnen verschillen in <b>waar ze zijn</b> op t = 0. Schuif je B een kwart periode op, dan valt hij over A: B loopt ¼ periode achter (of 1¼, 2¼, …).</li>
+    <li><b class="t">Fase φ</b>: het aantal perioden dat verstreken is sinds een afgesproken begintijdstip. Geen eenheid.</li>
+    <li>φ = 0, 1, 2, … → voorwerp in de evenwichtsstand, op weg naar positieve uitwijking. φ = ¼, 1¼, … → maximale positieve uitwijking. φ = ½ → evenwichtsstand naar beneden. φ = ¾ → maximale negatieve uitwijking.</li>
+    <li><b class="t">Gereduceerde fase φ<sub>r</sub></b>: de fase zonder het aantal hele trillingen, een getal tussen 0 en 1. Geeft aan in welk deel van de periode het voorwerp zit. (φ = 2,75 → φ<sub>r</sub> = 0,75)</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">Δφ = Δt / T</td><td>faseverschil tussen twee tijdstippen van een trilling (geen eenheid)</td></tr>
+  </table>
+  <table>
+    <tr><th>φ<sub>r</sub></th><th>Positie</th><th>Beweegt</th></tr>
+    <tr><td>0</td><td>evenwichtsstand</td><td>omhoog (v max, positief)</td></tr>
+    <tr><td>¼</td><td>bovenste uiterste stand (+A)</td><td>stil</td></tr>
+    <tr><td>½</td><td>evenwichtsstand</td><td>omlaag (v max, negatief)</td></tr>
+    <tr><td>¾</td><td>onderste uiterste stand (−A)</td><td>stil</td></tr>
+  </table>
+</section>
+
+<section id="lopend">
+  <span class="bs">Theorie</span>
+  <h2>Fase bij lopende golven</h2>
+  <ul>
+    <li>Bij een lopende golf hebben verschillende punten een verschillende fase. Punten dichter bij de bron zijn eerder begonnen → <b>grotere fase</b>.</li>
+    <li>De <b>kop van de golf</b> begint op dit moment pas te trillen: fase 0. Eén golflengte terug (richting bron) heeft een punt precies één trilling gedaan: fase 1.</li>
+    <li>Het faseverschil tussen twee punten = hoeveel trillingen het ene punt meer heeft uitgevoerd dan het andere.</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">Δφ = Δx / λ</td><td>faseverschil tussen twee punten van een lopende golf</td></tr>
+  </table>
+  <div class="tip"><b>Afleiding (opdr. 39):</b> Δx = v·Δt en v = λ/T → Δx/λ = v·Δt/(v·T) = Δt/T. Beide formules zeggen hetzelfde.</div>
+</section>
+
+<section id="interferentie">
+  <span class="bs">Theorie</span>
+  <h2>Interferentie</h2>
+  <ul>
+    <li>Twee luidsprekers zenden dezelfde toon in fase uit. In een punt tellen de uitwijkingen van beide golven op: <b class="t">interferentie</b>.</li>
+    <li>Precies in het midden zijn de afstanden gelijk → trillingen in fase → ze versterken elkaar: <b class="t">constructieve interferentie</b> (gereduceerd faseverschil 0).</li>
+    <li>Op een plek waar het gereduceerde faseverschil ½ is, heeft de ene golf een berg als de andere een dal → ze heffen elkaar op, totale uitwijking steeds 0: <b class="t">destructieve interferentie</b>.</li>
+    <li>Toepassingen: <b>noise cancelling</b> ("antigeluid" → destructief), luidsprekers in een rij boven elkaar (line array) versterken het geluid vooral horizontaal (constructief).</li>
+  </ul>
+</section>
+
+<section id="weglengte">
+  <span class="bs">Theorie</span>
+  <h2>Weglengteverschil</h2>
+  <ul>
+    <li>Bij twee bronnen die <b>in fase</b> trillen kijk je naar het <b class="t">weglengteverschil</b> Δs = s<sub>2</sub> − s<sub>1</sub>.</li>
+    <li>Δs = <b>geheel aantal golflengten</b> (0, λ, 2λ, …) → <b>constructief</b> (punt P in de golfbak).</li>
+    <li>Δs = <b>half plus een geheel aantal golflengten</b> (½λ, 1½λ, …) → <b>destructief</b> (punt Q, staat vrijwel stil).</li>
+    <li>Hoe meer bronnen, hoe scherper het verschil tussen versterking en uitdoving. Een <b class="t">tralie</b> heeft heel veel smalle openingen naast elkaar → laserlicht geeft scherpe stippen.</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">Δs = n · λ</td><td>constructief (n = 0, 1, 2, …)</td></tr>
+    <tr><td class="eq">Δs = (n + ½) · λ</td><td>destructief</td></tr>
+  </table>
+  <div class="tip"><b>Let op:</b> trillen de bronnen in <b>tegenfase</b>, dan wisselen de voorwaarden om (Δs = n·λ geeft dan uitdoving).</div>
+  <div class="onthoud">
+    <b>Onthoud</b>
+    <ul>
+      <li>De fase geeft aan hoeveel trillingen hebben plaatsgevonden sinds een afgesproken begintijdstip.</li>
+      <li>Bij de gereduceerde fase laat je het aantal gehele trillingen weg.</li>
+      <li>Faseverschil tussen twee tijdstippen: Δφ = Δt/T. Tussen twee punten van een golf: Δφ = Δx/λ.</li>
+      <li>Constructief: weglengteverschil = geheel aantal λ, gereduceerd faseverschil 0.</li>
+      <li>Destructief: weglengteverschil = ½ + geheel aantal λ, gereduceerd faseverschil ½.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="formules">
+  <span class="bs">Overzicht</span>
+  <h2>Formules §5.4</h2>
+  <table class="fx">
+    <tr><td class="eq">φ = t / T</td><td>fase</td></tr>
+    <tr><td class="eq">Δφ = Δt / T</td><td>faseverschil in de tijd</td></tr>
+    <tr><td class="eq">Δφ = Δx / λ</td><td>faseverschil tussen twee punten</td></tr>
+    <tr><td class="eq">Δs = n·λ / (n+½)·λ</td><td>constructief / destructief</td></tr>
+  </table>
+</section>
+
+<section id="opdrachten">
+  <span class="bs">Opdrachten</span>
+  <h2>Opdrachten uit het boek — met uitwerking</h2>
+  <p class="goal">Probeer eerst zelf, open dan de uitwerking.</p>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">33</span><span class="titel">Trapeze</span><span class="niv">basis</span></div>
+    <p>Twee circusartiesten slingeren aan een trapeze; de ene laat bijna los en wordt bijna overgepakt door de andere.</p>
+    <ol><li>Leg uit waarom je uit figuur 29 niet de fase, maar wel de gereduceerde fase kunt zeggen.</li><li>Leg uit wat de gereduceerde fase van beide artiesten is op het moment van overpakken.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) De fase = aantal trillingen sinds het begin; dat zie je niet op een foto. Wel zie je waar ze in hun slingering zijn (positie en richting) → gereduceerde fase.</p>
+      <p>b) Bij het overpakken zijn beide in hun uiterste stand (even stil) en zo dicht mogelijk bij elkaar. Kies naar rechts positief: de linker artiest is rechts uiterst (φ<sub>r</sub> = ¼), de rechter artiest links uiterst (φ<sub>r</sub> = ¾). Ze zijn in tegenfase (verschil ½).</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">34</span><span class="titel">Functie en fase</span><span class="niv">basis</span></div>
+    <p>u(t) = 0,70 · sin(2π·t / 30)</p>
+    <ol><li>Bereken het faseverschil tussen t = 0 s en t = 0,10 s.</li><li>Bereken het tijdsverschil bij een faseverschil van 0,50.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>T = 30 s.</p>
+      <p>a) Δφ = Δt/T = 0,10/30 = <b>3,3·10⁻³</b>.</p>
+      <p>b) Δt = Δφ·T = 0,50 × 30 = <b>15 s</b>.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">35</span><span class="titel">Snapshot van een golf</span><span class="niv">basis</span></div>
+    <ol><li>Hoe groot is het faseverschil tussen twee opeenvolgende punten waar de uitwijking 0 is?</li><li>Bepaal het faseverschil tussen het beginpunt en het eindpunt van de golf in figuur 23.</li><li>Leg uit of er sprake is van interferentie bij het begin- en eindpunt.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) Twee opeenvolgende nulpunten liggen ½λ uit elkaar → <b>Δφ = ½</b>.</p>
+      <p>b) Δφ = Δx/λ = het aantal golflengten tussen begin en kop. Tel de golven in figuur 23 (≈ 3 golflengten → Δφ ≈ 3).</p>
+      <p>c) <b>Nee</b>: er is maar één golf. Interferentie vereist dat twee (of meer) golven in hetzelfde punt samenkomen.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">36</span><span class="titel">Rondzingen</span><span class="niv">basis</span></div>
+    <p>Twee microfoons 60 mm uit elkaar; bij één zijn plus en min verwisseld. Het luidsprekergeluid komt even hard in beide.</p>
+    <ol><li>Leg uit dat het faseverschil 0,5 is als ze hetzelfde signaal opvangen.</li><li>Ontstaat constructieve of destructieve interferentie?</li><li>Leg uit dat het geluid van de zanger niet volledig wordt uitgedoofd.</li><li>Bereken de golflengte van het geluid waarbij het faseverschil door de afstand ook 0,5 is.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) Plus en min verwisselen keert het signaal om: positief wordt negatief. Dat is hetzelfde als een halve periode verschuiven → Δφ = 0,5.</p>
+      <p>b) <b>Destructief</b>: het luidsprekergeluid dooft uit → geen rondzingen.</p>
+      <p>c) De mond van de zanger is veel dichter bij één microfoon → die vangt het geluid sterker op. De amplitudes zijn niet gelijk, dus ze heffen elkaar niet volledig op.</p>
+      <p>d) Δφ = Δx/λ = 0,5 met Δx = 0,060 m → λ = 0,060/0,5 = <b>0,12 m</b>.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">37</span><span class="titel">Trillend voorwerp</span><span class="niv">basis</span></div>
+    <p>u(t) = 0,50 · sin(2π·t / 60)</p>
+    <ol><li>Bereken het faseverschil tussen t = 0 s en t = 0,30 s.</li><li>Het faseverschil tussen twee tijdstippen is 5,25. Hoe groot is het gereduceerde faseverschil?</li><li>Bereken het tijdsverschil bij dit faseverschil.</li><li>Hoe groot is het faseverschil tussen twee opeenvolgende tijden waarop u = 0,5 m?</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>T = 60 s.</p>
+      <p>a) Δφ = 0,30/60 = <b>5,0·10⁻³</b>.</p>
+      <p>b) Hele trillingen weglaten: <b>0,25</b>.</p>
+      <p>c) Δt = 5,25 × 60 = <b>3,2·10² s</b> (315 s).</p>
+      <p>d) 0,5 m = A: die uitwijking komt maar één keer per periode voor (de top) → <b>Δφ = 1</b>.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">38</span><span class="titel">Luidsprekers</span><span class="niv">basis</span></div>
+    <p>Twee luidsprekers (fig. 24) spelen in fase een toon met λ = 1,0 m. Leg uit welke interferentie er is op 2,5 m van de linker luidspreker.</p>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>Methode: bepaal de afstand tot de rechter luidspreker (s<sub>2</sub> = afstand tussen luidsprekers − 2,5 m) en Δs = s<sub>2</sub> − 2,5.</p>
+      <p>Is Δs een geheel aantal keer 1,0 m → constructief. Is Δs 0,5; 1,5; 2,5 … m → destructief.</p>
+      <p>Bijvoorbeeld: luidsprekers 6,0 m uit elkaar → s<sub>2</sub> = 3,5 m → Δs = 1,0 m = 1·λ → <b>constructief</b>. <span class="let">(Gebruik de afstand uit jouw figuur.)</span></p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">39</span><span class="titel">Twee formules voor faseverschil</span><span class="niv">eindniveau</span></div>
+    <ol><li>Geef de twee formules voor het faseverschil.</li><li>Leid de formule voor twee punten in een golf af uit die voor twee tijdstippen. Gebruik v = Δx/Δt en v = λ/T.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) Δφ = Δt/T en Δφ = Δx/λ.</p>
+      <p>b) De golf heeft tijd Δt nodig om Δx af te leggen: Δt = Δx/v = Δx/(λ/T) = Δx·T/λ. Invullen: Δφ = Δt/T = Δx/λ.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">40</span><span class="titel">Richting horen</span><span class="niv">eindniveau</span></div>
+    <p>Toon van 440 Hz, lucht op kamertemperatuur. Afstand tussen de oren 18 cm.</p>
+    <ol><li>De bron is rechts van je. Bereken het faseverschil tussen beide oren.</li><li>De bron staat 3,0 m rechts van je rechteroor en 4,0 m voor je. Bereken opnieuw het faseverschil.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>λ = v/f = 343/440 = 0,780 m.</p>
+      <p>a) Δx = 0,18 m → Δφ = 0,18/0,780 = <b>0,23</b>.</p>
+      <p>b) Rechteroor: √(3,0² + 4,0²) = 5,00 m. Linkeroor: √(3,18² + 4,0²) = 5,11 m. Δx = 0,11 m → Δφ = 0,110/0,780 = <b>0,14</b>.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">41</span><span class="titel">Snurker</span><span class="niv">eindniveau</span></div>
+    <p>De Silent Partner meet het snurkgeluid en maakt "antigeluid" met speakertjes rond de neus.</p>
+    <ol><li>Leg uit of hier sprake is van constructieve of destructieve interferentie.</li><li>Leg uit dat neutraliseren gemakkelijker is voor lage dan voor hoge tonen. Betrek dat de ander twee oren heeft.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) <b>Destructief</b>: antigeluid in tegenfase dooft het snurken uit.</p>
+      <p>b) Snurkbron en speakertjes zitten niet precies op dezelfde plek. Voor uitdoving moet het weglengteverschil bij <b>beide oren</b> klein zijn t.o.v. λ. Lage tonen hebben een grote λ, dan maakt een klein verschil in afstand weinig faseverschil uit → bij beide oren uitdoving. Bij hoge tonen (kleine λ) verandert het faseverschil al sterk bij een paar cm → bij een van de oren geen uitdoving.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">42</span><span class="titel">Twee dimensies</span><span class="niv">eindniveau</span></div>
+    <p>Bron T zendt cirkelgolven uit met λ = 2,0 cm. TP = 3,0 cm, TQ = 4,0 cm. Hoe groot is φ<sub>P</sub> − φ<sub>Q</sub>? A −½ · B 0 · C ½ · D 1</p>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>P ligt dichter bij de bron en is dus eerder gaan trillen: grotere fase. φ<sub>P</sub> − φ<sub>Q</sub> = (4,0 − 3,0)/2,0 = +½ → <b>C</b>.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr ster">43</span><span class="titel">Matrixzender</span><span class="niv">eindniveau</span></div>
+    <ol><li>Leg met interferentie uit dat een verticale rij antennes (in fase) vooral horizontaal uitzendt.</li><li>Leg uit hoe een 4G/5G-antenne vooral in één richting kan zenden.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) In horizontale richting is de afstand van een ver punt tot alle antennes (vrijwel) gelijk → weglengteverschil 0 → alle golven in fase → constructief. In andere richtingen zijn er weglengteverschillen, waardoor golven elkaar deels uitdoven.</p>
+      <p>b) Door de zenders een bepaald faseverschil te geven, kun je het zo maken dat de golven juist in de richting van de telefoon in fase aankomen (constructief), en in andere richtingen elkaar uitdoven.</p></div></details>
+  </div>
+</section>
+
+<section id="toets">
+  <span class="bs">Zelftoets</span>
+  <h2>Snel checken</h2>
+  <div class="quiz">
+    <details><summary>Wat is het verschil tussen fase en gereduceerde fase?</summary><p class="ans">Fase = totaal aantal trillingen sinds het begintijdstip; gereduceerde fase = alleen het deel tussen 0 en 1.</p></details>
+    <details><summary>Waar is een voorwerp met φ<sub>r</sub> = ¾?</summary><p class="ans">In de onderste uiterste stand (−A).</p></details>
+    <details><summary>Welk punt van een golf heeft de grootste fase?</summary><p class="ans">Het punt het dichtst bij de bron (het langst aan het trillen).</p></details>
+    <details><summary>Wanneer is er destructieve interferentie bij twee bronnen in fase?</summary><p class="ans">Als Δs = (n + ½)·λ, gereduceerd faseverschil ½.</p></details>
+    <details><summary>Twee punten liggen 0,30 m uit elkaar in een golf met λ = 1,2 m. Bereken Δφ.</summary><p class="ans">Δφ = 0,30/1,2 = 0,25.</p></details>
+    <details><summary>Waarom geeft een tralie scherpere stippen dan twee spleten?</summary><p class="ans">Meer bronnen → het verschil tussen constructieve en destructieve interferentie wordt scherper.</p></details>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="5-3-lopende-golven.html"><small>← Vorige</small>§5.3 Lopende golven</a>
+  <a class="next" href="5-5-staande-golven.html"><small>Volgende →</small>§5.5 Staande golven</a>
+</div>
+
+<footer>NOVA Natuurkunde VWO 5 · H5 §4 Interferentie.</footer>
+</main>
+</body>
+</html>

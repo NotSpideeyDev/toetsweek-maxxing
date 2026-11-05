@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NA §5.1 — Trillingen</title>
+<link rel="stylesheet" href="h5.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<header>
+  <a class="home" href="../../../../index.html">← Alle vakken</a>
+  <p class="kicker">Natuurkunde · H5 Trillingen en golven · §5.1</p>
+  <h1>Trillingen</h1>
+  <p>Periode, frequentie, amplitude, harmonische trilling, u(t)-functie en maximale snelheid. Met uitwerkingen van opdracht 1–10.</p>
+</header>
+
+<nav>
+  <a href="#doelen">Leerdoelen</a>
+  <a href="#beschrijven">Beschrijven</a>
+  <a href="#harmonisch">Harmonisch</a>
+  <a href="#vmax">Max. snelheid</a>
+  <a href="#elektrisch">Elektrisch</a>
+  <a href="#formules">Formules</a>
+  <a href="#opdrachten">Opdrachten</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="doelen">
+  <span class="bs">Leerdoelen</span>
+  <ul class="leerdoelen">
+    <li><span>5.1.1</span>Uit een (u,t)-diagram de periode, amplitude en evenwichtsstand bepalen.</li>
+    <li><span>5.1.2</span>Rekenen met de periode en de frequentie.</li>
+    <li><span>5.1.3</span>Uitleggen wat een harmonische trilling is en wanneer die ontstaat.</li>
+    <li><span>5.1.4</span>De functie u(t) opstellen en interpreteren.</li>
+    <li><span>5.1.5</span>Rekenen met de maximale snelheid, de periode en de amplitude.</li>
+  </ul>
+</section>
+
+<section id="beschrijven">
+  <span class="bs">Theorie</span>
+  <h2>Trillingen beschrijven</h2>
+  <ul>
+    <li><b class="t">Evenwichtsstand</b>: de positie waar een massa aan een veer stil hangt.</li>
+    <li><b class="t">Trilling</b>: een <b class="t">periodieke beweging</b> (herhaalt zich) <b class="t">rond een evenwichtsstand</b>.</li>
+    <li><b class="t">Periode T</b> (trillingstijd): de tijd waarin de beweging zich één keer herhaalt.</li>
+    <li><b class="t">Uitwijking u</b>: de afstand tot de evenwichtsstand op een bepaald moment (kan negatief zijn).</li>
+    <li><b class="t">Amplitude A</b>: de maximale uitwijking. Zonder wrijving constant; met wrijving neemt A af tot stilstand (gedempte trilling).</li>
+    <li><b class="t">Frequentie f</b>: het aantal perioden per seconde, eenheid s⁻¹ = <b class="t">hertz (Hz)</b>.</li>
+    <li>Gaat een voorwerp <b>niet door de evenwichtsstand</b> (gewichtje aan touw boven je hoofd rondslingeren), dan is het wel periodiek maar <b>geen trilling</b>.</li>
+  </ul>
+  <figure>
+    <svg viewBox="0 0 420 180" role="img" aria-label="(u,t)-diagram met amplitude A en periode T">
+      <line x1="40" y1="90" x2="410" y2="90" stroke="#5e7466"/>
+      <line x1="40" y1="10" x2="40" y2="170" stroke="#5e7466"/>
+      <text x="398" y="106" font-size="12" fill="#5e7466">t (s)</text>
+      <text x="8" y="18" font-size="12" fill="#5e7466">u (m)</text>
+      <path d="M40,90 C65,90 70,30 90,30 C110,30 115,90 140,90 C165,90 170,150 190,150 C210,150 215,90 240,90 C265,90 270,30 290,30 C310,30 315,90 340,90 C365,90 370,150 390,150" fill="none" stroke="#2a5340" stroke-width="2.5"/>
+      <line x1="90" y1="90" x2="90" y2="30" stroke="#c47a2c" stroke-dasharray="4 3"/>
+      <text x="95" y="64" font-size="13" fill="#c47a2c" font-weight="700">A</text>
+      <line x1="40" y1="165" x2="240" y2="165" stroke="#c47a2c"/>
+      <line x1="40" y1="160" x2="40" y2="170" stroke="#c47a2c"/><line x1="240" y1="160" x2="240" y2="170" stroke="#c47a2c"/>
+      <text x="134" y="160" font-size="13" fill="#c47a2c" font-weight="700">T</text>
+      <text x="300" y="84" font-size="11" fill="#5e7466">evenwichtsstand (u = 0)</text>
+    </svg>
+    <figcaption>(u,t)-diagram: A is de hoogste top t.o.v. de evenwichtsstand, T is één volledige herhaling.</figcaption>
+  </figure>
+  <div class="tip"><b>Periode aflezen:</b> lees altijd meerdere perioden af en deel door het aantal. Dat is nauwkeuriger (bv. 9T = 0,0426 s → T = 4,73·10⁻³ s).</div>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht 1</p>
+    <p>Bepaal uit figuur 1c de evenwichtsstand, de amplitude en de frequentie (de grafiek gaat tussen +0,20 m en −0,20 m en herhaalt zich na 0,40 s).</p>
+    <details><summary>Uitwerking</summary>
+      <div class="ans"><p>Evenwichtsstand: u = 0 m. Amplitude A = 0,20 m.</p>
+      <p>T = 0,40 s → f = 1/T = 1/0,40 = <b>2,5 Hz</b>.</p></div></details>
+  </div>
+</section>
+
+<section id="harmonisch">
+  <span class="bs">Theorie</span>
+  <h2>Harmonische trilling</h2>
+  <ul>
+    <li>Heeft het (u,t)-diagram de vorm van een <b class="t">sinus</b> (sinusoïde), dan heet het een <b class="t">harmonische trilling</b>.</li>
+    <li>Die ontstaat doordat er op elk moment een <b class="t">resulterende kracht</b> werkt die <b>naar de evenwichtsstand</b> gericht is en <b>evenredig</b> is met de uitwijking:</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">F⃗<sub>res</sub> = −C · u⃗</td><td>C = (evenredigheids)constante in N m⁻¹; het minteken = tegengesteld aan de uitwijking</td></tr>
+  </table>
+  <ul>
+    <li>Massa aan veer: in de evenwichtsstand F<sub>res</sub> = 0 (zwaartekracht = veerkracht). Onder de evenwichtsstand is de veerkracht groter → F<sub>res</sub> omhoog; erboven is de veerkracht kleiner → F<sub>res</sub> omlaag.</li>
+    <li>Het (F<sub>res</sub>,u)-diagram is een <b>rechte dalende lijn door de oorsprong</b>.</li>
+  </ul>
+  <h3>De functie u(t)</h3>
+  <table class="fx">
+    <tr><td class="eq">u(t) = A · sin(2π·t / T)</td><td>u in m, t in s, A in m, T in s</td></tr>
+  </table>
+  <ul>
+    <li>Deze functie geldt als je <b>t = 0 kiest op het moment dat het voorwerp door de evenwichtsstand omhoog gaat</b>. Het startpunt is vrij te kiezen (bv. t = 0,1 s in figuur 1c).</li>
+    <li>2π·t/T is in <b>radialen</b> → zet je rekenmachine op <b>RAD</b>!</li>
+  </ul>
+</section>
+
+<section id="vmax">
+  <span class="bs">Theorie</span>
+  <h2>De maximale snelheid</h2>
+  <ul>
+    <li>De snelheid op een moment = de <b class="t">steilheid van de raaklijn</b> in het (u,t)-diagram (raaklijnmethode). Zo kun je een (v,t)-diagram maken.</li>
+    <li>Bij een harmonische trilling is het (v,t)-diagram óók een sinusfunctie.</li>
+    <li>In de <b>uiterste standen is v = 0</b>; in de <b>evenwichtsstand is v maximaal</b>.</li>
+    <li>In een halve periode legt het voorwerp 2A af: v<sub>gem</sub> = 2A / ½T = 4A/T. De maximale snelheid is groter:</li>
+  </ul>
+  <table class="fx">
+    <tr><td class="eq">v<sub>max</sub> = 2π·A / T</td><td>v<sub>max</sub> in m s⁻¹, A in m, T in s</td></tr>
+  </table>
+  <div class="tip"><b>Let op:</b> deze formule geldt alleen voor een harmonische trilling. Bij een gedempte trilling (A neemt af, T constant) mag je hem gebruiken met de amplitude op dát tijdstip; anders gebruik je de raaklijnmethode.</div>
+  <div class="vb">
+    <p class="lbl">Voorbeeldopdracht 2</p>
+    <p>Figuur 3a: A = 0,20 m, T = 0,40 s, startpunt t = 0,1 s (door evenwichtsstand omhoog). a) Stel u(t) op. b) Bepaal v<sub>max</sub> op twee manieren.</p>
+    <details><summary>Uitwerking</summary>
+      <div class="ans"><p>a) u(t) = 0,20 · sin(2π·t / 0,40) = 0,20 · sin(5π·t)</p>
+      <p>b) I — raaklijn in de evenwichtsstand: v<sub>max</sub> = Δu/Δt = (0,20 − (−0,20)) / (0,165 − 0,035) = 0,40/0,13 = 3,1 m s⁻¹.</p>
+      <p>II — formule: v<sub>max</sub> = 2π·0,20 / 0,40 = <b>3,1 m s⁻¹</b>. Klopt met figuur 3b.</p></div></details>
+  </div>
+</section>
+
+<section id="elektrisch">
+  <span class="bs">Theorie</span>
+  <h2>Elektrische trillingen</h2>
+  <ul>
+    <li>De spanning op de fasekant van het stopcontact wisselt met <b>50 Hz</b> tussen positief en negatief: een harmonische trilling waarbij de "uitwijking" een <b>spanning in volt</b> is.</li>
+    <li>Een <b class="t">oscilloscoop</b> toont een spanning als (U,t)-diagram: een <b class="t">oscillogram</b>.</li>
+    <li>Een <b class="t">cardiogram</b> is een oscillogram van de elektrische activiteit van het hart (in mV, met elektroden op de borstkas).</li>
+  </ul>
+</section>
+
+<section id="formules">
+  <span class="bs">Overzicht</span>
+  <h2>Formules §5.1</h2>
+  <table class="fx">
+    <tr><td class="eq">f = 1 / T</td><td>frequentie (Hz) en periode (s)</td></tr>
+    <tr><td class="eq">F⃗<sub>res</sub> = −C · u⃗</td><td>voorwaarde harmonische trilling</td></tr>
+    <tr><td class="eq">u(t) = A · sin(2π·t / T)</td><td>uitwijking als functie van de tijd (RAD!)</td></tr>
+    <tr><td class="eq">v<sub>max</sub> = 2π·A / T</td><td>maximale snelheid (in de evenwichtsstand)</td></tr>
+    <tr><td class="eq">v<sub>gem</sub> = 4A / T</td><td>gemiddelde snelheid over een halve periode</td></tr>
+  </table>
+  <div class="onthoud">
+    <b>Onthoud</b>
+    <ul>
+      <li>Een periodieke beweging geef je weer in een (u,t)-diagram.</li>
+      <li>f = 1/T.</li>
+      <li>Harmonische trilling als F<sub>res</sub> naar de evenwichtsstand wijst en evenredig is met de uitwijking: F⃗<sub>res</sub> = −C·u⃗.</li>
+      <li>Harmonisch: u(t) = A·sin(2π·t/T).</li>
+      <li>v<sub>max</sub> wordt bereikt waar u = 0: v<sub>max</sub> = 2π·A/T.</li>
+      <li>Een cardiogram is een oscillogram van de elektrische activiteit van het hart.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="opdrachten">
+  <span class="bs">Opdrachten</span>
+  <h2>Opdrachten uit het boek — met uitwerking</h2>
+  <p class="goal">Probeer eerst zelf, open dan de uitwerking. Aflees-antwoorden (uit figuren) kunnen iets afwijken.</p>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">1</span><span class="titel">Begrippen</span><span class="niv">basis</span></div>
+    <ol><li>Heeft de geluidsintensiteit (hard/zacht) te maken met de frequentie of de amplitude?</li><li>Heeft de toonhoogte te maken met de frequentie of de amplitude?</li><li>Leg uit dat de beweging van de aarde rond de zon wel periodiek is, maar geen trilling.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) Met de <b>amplitude</b>: grotere amplitude = harder.</p>
+      <p>b) Met de <b>frequentie</b>: hogere frequentie = hogere toon.</p>
+      <p>c) De beweging herhaalt zich elk jaar (periodiek), maar de aarde beweegt niet heen en weer door een evenwichtsstand, dus het is geen trilling.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">2</span><span class="titel">Trilling beschrijven</span><span class="niv">basis</span></div>
+    <p>Een massa aan een veer gaat harmonisch op en neer tussen hoogte 60,0 en 66,0 cm. Van laagste naar hoogste punt duurt 0,10 s.</p>
+    <ol><li>Bereken de evenwichtsstand.</li><li>Bereken de amplitude.</li><li>Bereken de frequentie.</li><li>Stel de functie u(t) op.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) Midden: (60,0 + 66,0)/2 = <b>63,0 cm</b>.</p>
+      <p>b) A = 66,0 − 63,0 = <b>3,0 cm</b> = 0,030 m.</p>
+      <p>c) Laag → hoog = halve periode: T = 2 × 0,10 = 0,20 s → f = 1/0,20 = <b>5,0 Hz</b>.</p>
+      <p>d) u(t) = 0,030 · sin(2π·t / 0,20) = <b>0,030 · sin(10π·t)</b> (u in m, t = 0 in evenwichtsstand omhoog).</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">3</span><span class="titel">Lichtnet</span><span class="niv">basis</span></div>
+    <p>Spanning met frequentie 50 Hz en amplitude 325 V.</p>
+    <ol><li>Teken het (U,t)-diagram, twee perioden.</li><li>Geef de functie U(t).</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) T = 1/50 = 0,020 s. Sinus van t = 0 tot 0,040 s, toppen +325 V (bij 0,005 en 0,025 s), dalen −325 V (bij 0,015 en 0,035 s), nuldoorgangen elke 0,010 s.</p>
+      <p>b) U(t) = 325 · sin(2π·t / 0,020) = <b>325 · sin(100π·t)</b>.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">4</span><span class="titel">Functie opstellen</span><span class="niv">basis</span></div>
+    <p>Figuur 6 is het (u,t)-diagram van een harmonische trilling.</p>
+    <ol><li>Stel u(t) op.</li><li>Bepaal v<sub>max</sub> met de waarden uit figuur 6 (zonder raaklijn).</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>Aflezen: top bij ≈ 1,25 m → A ≈ 1,3 m. Eerste top bij t ≈ 0,011 s (= ¼T), tweede top bij ≈ 0,055 s → T ≈ 0,044 s.</p>
+      <p>a) u(t) = 1,3 · sin(2π·t / 0,044) <span class="let">(controleer met je eigen aflezing)</span></p>
+      <p>b) v<sub>max</sub> = 2π·A/T = 2π × 1,3 / 0,044 ≈ <b>1,9·10² m s⁻¹</b>.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">5</span><span class="titel">Functie interpreteren</span><span class="niv">basis</span></div>
+    <p>Een trilling wordt beschreven door u(t) = 0,70 · sin(0,20 · t).</p>
+    <ol><li>Bereken de uitwijking op t = 0,10 s.</li><li>Bereken de periode.</li><li>Bereken de frequentie.</li><li>Teken het (u,t)-diagram voor twee perioden.</li><li>Bereken de maximale snelheid.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) u = 0,70 · sin(0,020) = <b>0,014 m</b> (rekenmachine op RAD).</p>
+      <p>b) 2π/T = 0,20 → T = 2π/0,20 = <b>31 s</b> (31,4 s).</p>
+      <p>c) f = 1/31,4 = <b>0,032 Hz</b>.</p>
+      <p>d) Sinus met A = 0,70 m, van 0 tot ≈ 63 s; toppen bij ≈ 7,9 s en 39 s.</p>
+      <p>e) v<sub>max</sub> = 2π × 0,70 / 31,4 = <b>0,14 m s⁻¹</b>.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">6</span><span class="titel">Meting met ultrageluid</span><span class="niv">eindniveau</span></div>
+    <p>Figuur 7: signaal van ultrageluid opgevangen door een ontvanger (tijd in µs).</p>
+    <ol><li>Leg uit of de ontvanger een harmonische trilling registreert.</li><li>Bepaal de frequentie van het signaal.</li><li>Zoek in BiNaS op of de proefpersoon deze signalen kan horen.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) Nee: de amplitude is niet constant (neemt snel af na ≈ 55 µs), dus geen zuivere sinus.</p>
+      <p>b) Tel het aantal trillingen in een stuk van bv. 10 µs en deel. Je vindt ongeveer 1 trilling per µs → T ≈ 1·10⁻⁶ s → <b>f ≈ 1·10⁶ Hz</b> <span class="let">(orde van grootte; lees zelf nauwkeurig af)</span>.</p>
+      <p>c) Gehoorgrens mens ≈ 20 Hz – 20 kHz. 1 MHz ligt ver boven 20 kHz → <b>niet hoorbaar</b>.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">7</span><span class="titel">Zaagtand</span><span class="niv">eindniveau</span></div>
+    <ol><li>Leg uit hoe je in één oogopslag ziet dat het geen harmonische trilling is.</li><li>Schets het (v,t)-diagram onder figuur 8.</li><li>Leg uit dat ook uit het verband tussen (u,t) en (v,t) volgt dat het geen harmonische trilling is.</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) De grafiek bestaat uit rechte lijnstukken, geen sinusvorm.</p>
+      <p>b) Steilheid is per stuk constant: tijdens het langzame stijgen een constante positieve v (horizontale lijn boven 0), tijdens het snelle dalen een constante, grotere negatieve v. Je krijgt een "blokgolf".</p>
+      <p>c) Bij een harmonische trilling is het (v,t)-diagram ook een sinus. Hier is het een blokvorm (v springt ineens), dus geen harmonische trilling.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">8</span><span class="titel">Pacemaker</span><span class="niv">eindniveau</span></div>
+    <p>Een pacemaker grijpt in als het ritme onder 60 bpm komt. Eén schaaldeel op de tijdas = 0,20 s. Bepaal het hartritme in figuur 9.</p>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>Methode: meet de tijd tussen de eerste en de laatste piek, tel het aantal perioden ertussen → T. Dan ritme = 60/T slagen per minuut.</p>
+      <p>Bijvoorbeeld: 4 schaaldelen tussen twee pieken → T = 0,80 s → 60/0,80 = 75 bpm.</p>
+      <p>Is het ritme &lt; 60 bpm (T &gt; 1,0 s, dus meer dan 5 schaaldelen tussen pieken), dan moet de pacemaker ingrijpen; anders niet. <span class="let">(Lees de figuur zelf af.)</span></p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr">9</span><span class="titel">Modellen</span><span class="niv">eindniveau</span></div>
+    <ol><li>Stel een computermodel op waarin een kracht F = −C·u op massa m werkt en de snelheid en uitwijking worden berekend.</li><li>Maak een (u,t)-grafiek; is het een harmonische trilling?</li><li>Varieer de beginuitwijking; klopt v<sub>max</sub> = 2π·A/T?</li><li>Leg uit dat F = −C<sub>1</sub>·u − C<sub>2</sub>·u⁵ bij grote beginuitwijking (u &gt; 1) géén harmonische trilling geeft (C<sub>1</sub> = C<sub>2</sub> = 1).</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) Modelregels: <code>F = -C*u</code>, <code>a = F/m</code>, <code>v = v + a*dt</code>, <code>u = u + v*dt</code>, <code>t = t + dt</code>. Startwaarden bv. m = 1, C = 4, u = 0,5, v = 0, dt = 0,001.</p>
+      <p>b) De grafiek is een sinus met constante A en T → harmonisch.</p>
+      <p>c) Grotere A geeft evenredig grotere v<sub>max</sub> bij gelijke T → klopt met v<sub>max</sub> = 2πA/T.</p>
+      <p>d) De kracht is niet meer evenredig met u (u⁵-term domineert bij u &gt; 1) → niet F = −C·u → de grafiek is geen sinus en T hangt af van de amplitude.</p></div></details>
+  </div>
+
+  <div class="opd">
+    <div class="kop"><span class="nr ster">10</span><span class="titel">Afleiding</span><span class="niv">eindniveau</span></div>
+    <ol><li>Geef de formule voor de maximale snelheid.</li><li>Leid met de kettingregel de formule af uit u(t) = A·sin(2π·t/T).</li></ol>
+    <details><summary>Uitwerking</summary><div class="ans">
+      <p>a) v<sub>max</sub> = 2π·A/T.</p>
+      <p>b) v(t) = u′(t) = A · cos(2π·t/T) · (2π/T) = (2π·A/T) · cos(2π·t/T). De cosinus is maximaal 1, dus v<sub>max</sub> = 2π·A/T.</p></div></details>
+  </div>
+</section>
+
+<section id="toets">
+  <span class="bs">Zelftoets</span>
+  <h2>Snel checken</h2>
+  <div class="quiz">
+    <details><summary>Wanneer is een periodieke beweging een trilling?</summary><p class="ans">Als het voorwerp heen en weer beweegt door een evenwichtsstand.</p></details>
+    <details><summary>Wat is het verschil tussen uitwijking en amplitude?</summary><p class="ans">u = afstand tot evenwichtsstand op een moment; A = de maximale uitwijking.</p></details>
+    <details><summary>Wanneer ontstaat een harmonische trilling?</summary><p class="ans">Als de resulterende kracht naar de evenwichtsstand wijst en evenredig is met de uitwijking: F = −C·u.</p></details>
+    <details><summary>Waar is de snelheid maximaal en waar nul?</summary><p class="ans">Maximaal in de evenwichtsstand, nul in de uiterste standen.</p></details>
+    <details><summary>Waarom moet je rekenmachine op RAD bij u(t)?</summary><p class="ans">Omdat 2π·t/T een hoek in radialen is.</p></details>
+    <details><summary>Een trilling heeft f = 4,0 Hz en A = 5,0 cm. Bereken v<sub>max</sub>.</summary><p class="ans">T = 0,25 s → v<sub>max</sub> = 2π × 0,050 / 0,25 = 1,3 m s⁻¹.</p></details>
+    <details><summary>Waarom is v<sub>max</sub> groter dan v<sub>gem</sub> = 4A/T?</summary><p class="ans">De snelheid varieert van 0 tot v<sub>max</sub>; het gemiddelde ligt dus lager. 2π ≈ 6,28 &gt; 4.</p></details>
+  </div>
+</section>
+
+<div class="pager">
+  <span></span>
+  <a class="next" href="5-2-massa-veersysteem-resonantie.html"><small>Volgende →</small>§5.2 Massa-veersysteem en resonantie</a>
+</div>
+
+<footer>NOVA Natuurkunde VWO 5 · H5 §1 Trillingen.</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,65 @@
+/* Stijl voor de losse paragraafpagina's van NA H5 (5.1 t/m 5.5).
+   Wordt vóór assets/site.css geladen. */
+:root{
+  --ink:#14241c;--moss:#2a5340;--moss-d:#1b3a2c;--soil:#5e7466;
+  --leaf:#e6efe9;--leaf-d:#c9dccf;--paper:#f9fbf9;--amber:#c47a2c;--line:#d3ddd6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px}
+header .kicker{text-transform:uppercase;margin:0 0 6px}
+header h1{margin:0}
+nav{position:sticky;top:0;z-index:5;padding:10px 14px;display:flex;gap:8px;overflow-x:auto}
+nav a{flex:0 0 auto;text-decoration:none;white-space:nowrap}
+main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+section{margin-top:30px;scroll-margin-top:60px}
+.bs{display:inline-block;font-size:12px;text-transform:uppercase;padding:3px 10px;border-radius:5px;font-weight:700}
+h2{font-size:21px;margin:10px 0 4px}
+h3{margin:22px 0 4px}
+ul,ol{margin:6px 0 8px;padding-left:20px}
+li{margin:4px 0}
+p{margin:8px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px}
+th,td{padding:7px 9px;text-align:left;vertical-align:top}
+table.fx td.eq{font-family:"Cambria Math","Times New Roman",serif;font-size:17px;white-space:nowrap;
+  color:var(--moss-d);font-weight:600;width:1%}
+.tip{margin:12px 0;font-size:15px}
+.vb{border-radius:10px;padding:10px 16px;margin:14px 0;font-size:15px}
+.vb .lbl{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;margin:0 0 4px}
+.vb details{border:none;padding:8px 0 2px}
+.quiz{background:#fff;padding:6px 16px;margin-top:14px}
+details{border-bottom:1px solid var(--line);padding:10px 0}
+details:last-child{border-bottom:none}
+summary{cursor:pointer;list-style:none;display:flex;gap:8px;align-items:flex-start}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"?";flex:0 0 auto;width:22px;height:22px;border-radius:50%;font-size:13px;
+  display:flex;align-items:center;justify-content:center}
+details[open] summary::before{content:"✓"}
+.ans{margin:8px 0 2px 30px;font-size:15px}
+.ans p{margin:4px 0}
+.goal{font-size:14px;margin:0 0 10px}
+.leerdoelen{list-style:none;padding:0}
+.leerdoelen li{display:flex;gap:10px}
+.leerdoelen li span{flex:0 0 auto;font-weight:700;color:var(--moss);font-size:14px;min-width:42px}
+.onthoud{background:var(--leaf);border-left:3px solid var(--moss);border-radius:0 10px 10px 0;padding:10px 16px;margin:14px 0}
+.onthoud ul{margin:4px 0}
+/* opdrachten uit het boek */
+.opd{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:14px 0}
+.opd .kop{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.opd .nr{background:var(--moss);color:#fff;font-weight:700;font-size:13px;border-radius:6px;padding:2px 9px}
+.opd .nr.ster::before{content:"★ "}
+.opd .titel{font-weight:650}
+.opd .niv{margin-left:auto;font-size:12px;color:var(--soil)}
+.opd ol{list-style:lower-alpha}
+.opd details{border:none;padding:6px 0 0}
+.opd summary{font-size:14px;color:var(--moss-d)}
+.let{font-size:13px;color:var(--soil);font-style:italic}
+figure{margin:14px 0;text-align:center}
+figure svg{max-width:100%;height:auto}
+figcaption{font-size:13px;color:var(--soil)}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:40px}
+.pager a{flex:1;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:12px 16px;background:#fff}
+.pager a:hover{border-color:var(--moss)}
+.pager a small{display:block;color:var(--soil);font-size:12px}
+.pager a.next{text-align:right}
+.pager span{flex:1}
