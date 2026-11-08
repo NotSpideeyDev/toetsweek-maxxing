@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BI T7 BS2 — Hormonale regulatie</title>
+<style>
+  :root{
+    --ink:#14241c;--moss:#3c6e54;--moss-d:#2a5340;--soil:#5e7466;
+    --leaf:#e6efe9;--leaf-d:#c9dccf;--paper:#f9fbf9;--amber:#c47a2c;--line:#d3ddd6;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55;font-size:17px}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#f1f7f3;padding:34px 20px 26px}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.85;margin:0 0 6px}
+  header h1{margin:0;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.92;max-width:60ch;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:8px;overflow-x:auto;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav a{flex:0 0 auto;text-decoration:none;color:var(--moss-d);background:var(--leaf);
+    border:1px solid var(--leaf-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:30px;scroll-margin-top:60px}
+  .bs{font-family:ui-sans-serif,system-ui,sans-serif;display:inline-block;background:var(--moss);
+    color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:5px;font-weight:700}
+  h2{font-size:21px;margin:10px 0 4px;letter-spacing:-.01em}
+  ul{margin:6px 0 8px;padding-left:20px}
+  li{margin:4px 0}
+  b.t{color:var(--moss-d)}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+  table.fx td.eq{font-family:"Cambria Math","Times New Roman",serif;font-size:17px;white-space:nowrap;
+    background:#fff;color:var(--moss-d);font-weight:600;width:1%}
+  table.fx td{background:#fff}
+  .tip{background:#fdf4e7;border:1px solid #f0dcc0;border-radius:8px;padding:10px 14px;margin:12px 0;
+    font-size:15px;font-family:ui-sans-serif,system-ui,sans-serif}
+  .tip b{color:var(--amber)}
+  .vb{background:var(--leaf);border:1px solid var(--leaf-d);border-radius:10px;padding:10px 16px;margin:12px 0;font-size:15px}
+  .vb .lbl{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--amber);font-weight:700;margin:0 0 4px}
+  .vb p{margin:0}
+  .vb details{border:none;padding:8px 0 2px}
+  .vb summary{font-size:14px;font-family:ui-sans-serif,system-ui,sans-serif;color:var(--moss-d)}
+  .quiz{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 16px;margin-top:14px}
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:none}
+  summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;gap:8px;align-items:flex-start}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"?";flex:0 0 auto;width:22px;height:22px;background:var(--moss);color:#fff;
+    border-radius:50%;font-size:13px;display:flex;align-items:center;justify-content:center;font-family:ui-sans-serif,system-ui,sans-serif}
+  details[open] summary::before{content:"✓";background:var(--amber)}
+  .ans{margin:8px 0 2px 30px;font-size:15px;color:#22362b}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);text-align:center;padding:0 18px 40px}
+  th{background:var(--moss);color:#fff;font-weight:600}
+  tr:nth-child(even) td{background:#f3f5f0}
+</style>
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<header>
+  <a class="home" href="../../../../index.html">← Alle vakken</a>
+  <p class="kicker">Biologie · Thema 7 Regeling · Basisstof 2</p>
+  <h1>Hormonale regulatie</h1>
+  <p>Hormonen en doelwitorganen, steroïd- en peptidehormonen, hypothalamus en hypofyse, schildklier, alvleesklier (insuline en glucagon) en bijnieren. Zelftoets met de opdrachten 14–23 onderaan.</p>
+</header>
+
+<nav>
+  <a href="#doelen">Leerdoelen</a>
+  <a href="#hormonen">Hormonen</a>
+  <a href="#werking">Werking</a>
+  <a href="#hypofyse">Hypofyse</a>
+  <a href="#schildklier">Schildklier</a>
+  <a href="#glucose">Glucose</a>
+  <a href="#bijnieren">Nieren &amp; bijnieren</a>
+  <a href="#overzicht">Overzicht</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="doelen">
+  <span class="bs">Leerdoelen</span>
+  <ul>
+    <li><b class="t">7.2.1</b> Je kunt beschrijven op welke manieren hormonen de cellen van weefsels en organen kunnen beïnvloeden.</li>
+    <li><b class="t">7.2.2</b> Je kunt de werking van hormoonklieren en hun hormonen beschrijven en afleiden hoe doelwitorganen op de hormonen reageren.</li>
+  </ul>
+</section>
+
+<section id="hormonen">
+  <span class="bs">7.2.1</span>
+  <h2>Hormonen en klieren</h2>
+  <ul>
+    <li>Cellen communiceren via <b class="t">signaalstoffen</b>. Signaalstoffen van <b class="t">hormoonklieren</b> = <b class="t">hormonen</b>.</li>
+    <li>Hormonen gaan in het <b class="t">bloed</b> en komen zo bij alle cellen, maar werken alleen in cellen met passende <b class="t">receptoren</b> → het <b class="t">doelwitorgaan</b>.</li>
+    <li>De binding kan een reactie <b class="t">starten of stoppen</b>.</li>
+    <li>De sterkte van de reactie hangt af van de <b class="t">hormoonconcentratie (hormoonspiegel)</b> en het <b class="t">aantal hormoonreceptoren</b>.</li>
+    <li>Hormonen blijven lang in bloed en weefsel → <b class="t">langdurige effecten</b>. Ze regelen geleidelijke processen: groei en ontwikkeling, stofwisseling, voortplanting.</li>
+  </ul>
+  <table>
+    <tr><th></th><th>Endocriene klier</th><th>Exocriene klier</th></tr>
+    <tr><td>Afgifte</td><td>direct aan het <b>bloed</b> (geen afvoerbuis)</td><td>via een <b>afvoerbuis</b></td></tr>
+    <tr><td>Naam afgifte</td><td><b>secretie</b></td><td><b>uitscheiding (excretie)</b></td></tr>
+    <tr><td>Voorbeeld</td><td>hormoonklieren (schildklier, hypofyse)</td><td>zweetklieren, speekselklieren</td></tr>
+  </table>
+</section>
+
+<section id="werking">
+  <span class="bs">7.2.1</span>
+  <h2>De werking van hormonen</h2>
+  <table>
+    <tr><th></th><th>Steroïdhormoon</th><th>Peptide-/eiwithormoon</th></tr>
+    <tr><td>Gemaakt uit</td><td>cholesterol; eigenschappen van vetten</td><td>aminozuren</td></tr>
+    <tr><td>Oplosbaar in</td><td><b>vet</b> → kan door het celmembraan</td><td><b>water</b> → kan <b>niet</b> door het celmembraan</td></tr>
+    <tr><td>Receptor</td><td>in het <b>cytoplasma</b></td><td>in het <b>celmembraan</b></td></tr>
+    <tr><td>Werking</td><td><b>hormoon-receptorcomplex</b> gaat via kernporie de kern in en zet <b>genen aan of uit</b> → cel maakt eiwitten (enzym, hormoon, receptor)</td><td>binnen in de cel ontstaat een <b>second messenger</b> → activeert een enzym → specifieke reactie in het cytoplasma of genregulatie</td></tr>
+    <tr><td>Voorbeelden</td><td>cortisol, testosteron, oestrogeen</td><td>insuline, glucagon, groeihormoon, ADH</td></tr>
+  </table>
+  <ul>
+    <li>Ook sommige hormonen die wél de cel in kunnen (zoals <b class="t">adrenaline</b>) werken via second messengers.</li>
+    <li>Een signaal via een membraanreceptor wordt in de cel <b class="t">versterkt</b>: van molecuul naar molecuul worden steeds meer signaalmoleculen geactiveerd. Eén extracellulair signaal → enorme intracellulaire reactie. Dit heet een <b class="t">signaalcascade (cascade)</b>.</li>
+  </ul>
+</section>
+
+<section id="hypofyse">
+  <span class="bs">7.2.2</span>
+  <h2>Hypothalamus en hypofyse</h2>
+  <ul>
+    <li>Hormoonklieren (BiNaS 89A): hypothalamus, hypofyse, schildklier, bijnieren, alvleesklier, eierstokken/teelballen.</li>
+    <li>De <b class="t">hypofyse</b> ligt midden in je hoofd onder de hersenen: <b class="t">hypofysevoorkwab</b> en <b class="t">hypofyseachterkwab</b>. Sommige hypofysehormonen (TSH, FSH, LH) sturen <b class="t">andere hormoonklieren</b> aan.</li>
+    <li>De <b class="t">hypothalamus</b> ligt net boven de hypofyse en regelt de hormoonsecretie door de hypofyse. Hier zijn <b class="t">zenuwstelsel en hormoonstelsel verbonden</b>.</li>
+    <li><b class="t">Neurosecretie</b>: neuronen in de hypothalamus maken hormonen = <b class="t">neurohormonen</b>.
+      <ul>
+        <li><b class="t">Oxytocine</b> en <b class="t">ADH</b> (antidiuretisch hormoon) worden via uitlopers van neuronen naar de <b class="t">achterkwab</b> vervoerd en daar aan het bloed afgegeven.</li>
+        <li><b class="t">Releasing hormonen (RH)</b> stimuleren de voorkwab om hormonen te maken (TSH, FSH, LH, groeihormoon, prolactine, ACTH). <b class="t">Inhibiting hormonen (IH)</b> remmen de voorkwab (groeihormoon, prolactine). Ze gaan via haarvaten/bloed naar de voorkwab.</li>
+        <li>Bijv. <b class="t">TRF (TSH releasing factor / TRH)</b> → voorkwab maakt TSH → TSH beïnvloedt de schildklier.</li>
+      </ul>
+    </li>
+  </ul>
+  <table>
+    <tr><th>Hormoon</th><th>Van</th><th>Doelwit / werking</th></tr>
+    <tr><td>TSH (thyreoïdstimulerend)</td><td>voorkwab</td><td>schildklier: groei, jodiumopname, aanmaak schildklierhormoon</td></tr>
+    <tr><td>FSH + LH</td><td>voorkwab</td><td>eierstokken/teelballen: geslachtscellen en geslachtshormonen</td></tr>
+    <tr><td>GH (groeihormoon)</td><td>voorkwab</td><td>botten e.a.: groei en ontwikkeling. Te veel → <b>reuzengroei</b>, te weinig → <b>dwerggroei</b></td></tr>
+    <tr><td>ACTH (adrenocorticotroop)</td><td>voorkwab</td><td>bijnierschors: aanmaak hormonen (cortisol); o.a. bij stress</td></tr>
+    <tr><td>Prolactine</td><td>voorkwab</td><td>melkklieren: vergroten en melkproductie</td></tr>
+    <tr><td>Oxytocine</td><td>achterkwab</td><td>baarmoeder: weeën; borsten: melksecretie bij zogen</td></tr>
+    <tr><td>ADH</td><td>achterkwab</td><td>nieren: <b>resorptie van water</b> bij urinevorming (diurese) → osmotische waarde bloed constant</td></tr>
+  </table>
+</section>
+
+<section id="schildklier">
+  <span class="bs">7.2.2</span>
+  <h2>Schildklier</h2>
+  <ul>
+    <li>Ligt in de hals, voor het strottenhoofd, tegen de luchtpijp. Maakt <b class="t">schildklierhormoon (thyroxine)</b>.</li>
+    <li>Schildklierhormoon verhoogt de <b class="t">stofwisseling</b> (verbranding van glucose) en stimuleert bij kinderen de <b class="t">groei</b>, het <b class="t">beenderstelsel</b> en het <b class="t">centrale zenuwstelsel</b>.</li>
+    <li><b class="t">Jodium</b> uit voeding is nodig om schildklierhormoon te maken.</li>
+    <li><b class="t">Negatieve terugkoppeling</b>: veel schildklierhormoon → remt TSH → minder schildklierhormoon. Weinig schildklierhormoon → meer TSH → meer schildklierhormoon.</li>
+  </ul>
+  <table>
+    <tr><th>Te veel schildklierhormoon</th><th>Te weinig schildklierhormoon</th></tr>
+    <tr><td>stofwisseling ↑: gewichtsverlies, meer eetlust, rusteloosheid</td><td>stofwisseling ↓: gewichtstoename, vermoeidheid, snel koud; bij kinderen achterstand in groei en ontwikkeling; vanaf geboorte → dwerggroei met beperkte geestelijke ontwikkeling</td></tr>
+  </table>
+  <div class="step"><ol>
+    <li>Hypothalamus → <b>TRH</b> (neurohormoon) → hypofyse(voorkwab)</li>
+    <li>Hypofyse → <b>TSH</b> → schildklier</li>
+    <li>Schildklier → <b>schildklierhormoon</b> → cellen in doelwitorganen</li>
+    <li>Schildklierhormoon <b>remt (−)</b> hypothalamus en hypofyse</li>
+  </ol></div>
+</section>
+
+<section id="glucose">
+  <span class="bs">7.2.2</span>
+  <h2>Spijsverteringsklieren en eilandjes van Langerhans</h2>
+  <ul>
+    <li><b class="t">Gastrine</b> (maagwand): stimuleert maagsapproductie als er voedsel in de maag komt.</li>
+    <li><b class="t">Secretine</b> (twaalfvingerige darm): lever → gal; alvleesklier → NaHCO₃ → pH stijgt.</li>
+    <li><b class="t">Cholecystokinine</b> (twaalfvingerige darm): galblaas → gal; alvleesklier → enzymen.</li>
+    <li>De <b class="t">alvleesklier</b> is exocrien (alvleessap via afvoerbuisje naar de twaalfvingerige darm) én endocrien: de <b class="t">eilandjes van Langerhans</b>.
+      <ul>
+        <li><b class="t">α-cellen → glucagon</b> &nbsp;·&nbsp; <b class="t">β-cellen → insuline</b></li>
+      </ul>
+    </li>
+    <li><b class="t">Bloedsuikerspiegel</b> = glucoseconcentratie in het bloed: tussen <b class="t">4,0 en 8,0 mmol/L</b>, normwaarde <b class="t">5,0 mmol/L</b> (0,9 g/L).</li>
+  </ul>
+  <table>
+    <tr><th>Glucose te hoog (na eten)</th><th>Glucose te laag (niet gegeten, sporten)</th></tr>
+    <tr><td>β-cellen maken meer <b>insuline</b><br>– meer glucosetransporteiwitten in celmembranen → cellen nemen meer glucose op<br>– lever en spieren: glucose → <b>glycogeen</b><br>– glucose → vetten en eiwitten<br>→ glucosegehalte daalt</td><td>α-cellen maken meer <b>glucagon</b><br>– lever en spieren: glycogeen → <b>glucose</b><br>– glucose wordt aan het bloed afgegeven<br>→ glucosegehalte stijgt</td></tr>
+  </table>
+</section>
+
+<section id="bijnieren">
+  <span class="bs">7.2.2</span>
+  <h2>Nieren en bijnieren</h2>
+  <ul>
+    <li>Nieren maken <b class="t">epo (erytropoëtine)</b> bij te weinig zuurstof → meer rode bloedcellen in het rode beenmerg. Zuurstof weer normaal → epo-productie geremd (negatieve terugkoppeling).</li>
+    <li><b class="t">Bijnieren</b> liggen als kapjes op de nieren: <b class="t">bijnierschors</b> en <b class="t">bijniermerg</b>.</li>
+    <li><b class="t">Bijniermerg → adrenaline</b> (stressreactie, snel en kortdurend): glycogeen → glucose in lever en spieren, glucose ↑, hartslag en ademfrequentie ↑, bloedvaten naar spieren en hersenen wijder; verteringsstelsel geremd.</li>
+    <li><b class="t">Bijnierschors</b> (gestimuleerd door ACTH) → <b class="t">cortisol</b> = stresshormoon: onderdrukt het afweersysteem en verhoogt (net als glucagon) de glucoseconcentratie. Ook <b class="t">aldosteron</b> (zoutretentie in de nier) en kleine hoeveelheden testosteron.</li>
+  </ul>
+</section>
+
+<section id="overzicht">
+  <span class="bs">Overzicht</span>
+  <h2>Kernbegrippen</h2>
+  <div class="tip"><b>Leer deze koppels:</b> α → glucagon (glucose omhoog) · β → insuline (glucose omlaag) · steroïd → receptor in cytoplasma · peptide → receptor in membraan + second messenger · achterkwab → oxytocine en ADH (gemaakt in hypothalamus) · voorkwab → TSH, FSH, LH, GH, ACTH, prolactine.</div>
+</section>
+
+<section id="toets">
+  <h2 style="color:var(--moss-d)">Zelftoets</h2>
+  <p class="goal">Tik op een vraag voor het antwoord. Opdrachten 14–23 uit het boek.</p>
+  <div class="quiz">
+    <details><summary>Waarom reageren sommige cellen wel op een hormoon en andere niet?</summary>
+      <p class="ans">Alleen cellen met receptoren waaraan het hormoon kan binden (cellen van het doelwitorgaan) reageren.</p></details>
+    <details><summary>Wat is het verschil tussen een endocriene en een exocriene klier?</summary>
+      <p class="ans">Endocrien: geeft hormonen direct af aan het bloed (secretie). Exocrien: geeft het product af via een afvoerbuis (excretie).</p></details>
+    <details><summary>Wat is een signaalcascade?</summary>
+      <p class="ans">Een signaal wordt in de cel via meerdere schakels doorgegeven, waarbij het steeds wordt versterkt.</p></details>
+    <details><summary>Wat is neurosecretie?</summary>
+      <p class="ans">Het maken van hormonen door neuronen (zenuwcellen); de hormonen heten neurohormonen.</p></details>
+
+    <details><summary>14a · De hypothalamus geeft een neurohormoon af dat de voorkwab aanzet tot prolactineproductie. Hoe noem je dit type hormoon?</summary>
+      <p class="ans">Een releasing hormoon (RH).</p></details>
+    <details><summary>14b · Leg uit dat de hypofyseachterkwab eigenlijk een voortzetting van de hypothalamus is.</summary>
+      <p class="ans">De achterkwab bestaat uit uitlopers van neuronen uit de hypothalamus. Oxytocine en ADH worden in de hypothalamus gemaakt, via die uitlopers naar de achterkwab vervoerd en daar aan het bloed afgegeven.</p></details>
+    <details><summary>15a/b · Is groeihormoon een steroïd- of peptidehormoon, en waar zitten de receptoren?</summary>
+      <p class="ans">Peptidehormoon (eiwithormoon). De receptoren zitten in het celmembraan.</p></details>
+    <details><summary>15c/d · Is cortisol een steroïd- of peptidehormoon, en waar zitten de receptoren?</summary>
+      <p class="ans">Steroïdhormoon. De receptoren zitten in het cytoplasma.</p></details>
+    <details><summary>16a · Hoe zorgt insuline dat de glucoseconcentratie na een bord spaghetti weer daalt?</summary>
+      <p class="ans">Insuline zorgt voor meer glucosetransporteiwitten in de celmembranen, zodat cellen meer glucose opnemen. In lever en spieren wordt glucose omgezet in glycogeen, en glucose wordt omgezet in vetten en eiwitten.</p></details>
+    <details><summary>16b · Afb. 20: noteer bij 1 t/m 7 het juiste onderdeel van de regelkring.</summary>
+      <p class="ans">1 hoge glucoseconcentratie · 2 insuline · 3 stimuleert de cellen om meer glucose op te nemen · 4 bloedsuikerspiegel daalt · 5 lage glucoseconcentratie · 6 glucagon · 7 bloedsuikerspiegel stijgt.</p></details>
+    <details><summary>16c · Welk effect heeft adrenaline op hartslag, ademfrequentie en spijsvertering?</summary>
+      <p class="ans">Hartslagfrequentie neemt toe, ademfrequentie neemt toe, spijsvertering wordt geremd.</p></details>
+    <details><summary>17 · Waarom adviseert de Gezondheidsraad bakkerszout (met jodium)?</summary>
+      <p class="ans">Jodium is nodig voor de aanmaak van schildklierhormoon. Bij een tekort ontstaat te weinig schildklierhormoon (lage stofwisseling, bij kinderen achterstand in groei en ontwikkeling, struma). Brood eet bijna iedereen, dus zo krijgt iedereen genoeg jodium.</p></details>
+    <details><summary>18a · Vul de lege vakjes van afb. 21 in.</summary>
+      <p class="ans">Hypothalamus → <b>TRH</b> (neurohormoon / releasing hormoon) → hypofyse → <b>TSH</b> → <b>schildklier</b> → schildklierhormoon → cellen in doelwitorganen. Let op: TSH komt uit de hypofyse<b>voorkwab</b>, niet de achterkwab.</p></details>
+    <details><summary>18b · Geeft pijl Q in afb. 22 een remming of een stimulering aan?</summary>
+      <p class="ans">Een stimulering. Q loopt van GH naar GHIF. GHIF remt de afgifte van GH. Bij negatieve terugkoppeling moet veel GH zorgen voor minder GH, dus moet GH de afgifte van GHIF stimuleren.</p></details>
+    <details><summary>19a · Welke conclusie trek je uit de proeven met gecastreerde hanen?</summary>
+      <p class="ans">De teelballen maken een stof (hormoon) die via het bloed de ontwikkeling van secundaire geslachtskenmerken regelt. Het werkt ook op een andere plek en als extract, dus het gaat niet via zenuwen maar via een stof in het bloed.</p></details>
+    <details><summary>19b · Een gelabeld hormoon komt in bepaalde organen in hoge concentraties voor. Conclusie?</summary>
+      <p class="ans">Het hormoon bindt alleen aan cellen met passende receptoren: dat zijn de doelwitorganen van dat hormoon.</p></details>
+    <details><summary>20 · Hoe kunnen hormonen de cellen van een rijpende follikel nieuwe receptoren laten maken?</summary>
+      <p class="ans">Het hormoon (via een hormoon-receptorcomplex of second messenger) zet genen in het DNA aan die coderen voor receptoreiwitten. De cel maakt dan meer receptoren.</p></details>
+    <details><summary>21a · Welk hormoon in de hypothalamus stimuleert indirect de afgifte van cortisol?</summary>
+      <p class="ans">CRH (corticotropine releasing hormoon): dat stimuleert de hypofyse om ACTH te maken, en ACTH stimuleert de bijnierschors om cortisol te maken.</p></details>
+    <details><summary>21b · Verwacht je bij AGS een hoge of lage ACTH-concentratie?</summary>
+      <p class="ans">Hoog. Er wordt (bijna) geen cortisol gemaakt, dus de negatieve terugkoppeling (cortisol remt ACTH) valt weg. De hypofyse blijft veel ACTH maken.</p></details>
+    <details><summary>21c · Wat gebeurt er met de testosteronconcentratie bij AGS?</summary>
+      <p class="ans">Die stijgt: de hoge ACTH-concentratie stimuleert de bijnierschors sterk, en de grondstoffen die niet in cortisol/aldosteron omgezet kunnen worden, worden omgezet in testosteron.</p></details>
+    <details><summary>21d · Waarom is AGS bij meisjes eenvoudiger op te sporen aan uiterlijke kenmerken?</summary>
+      <p class="ans">Door het extra testosteron krijgen meisjes mannelijke kenmerken (bijv. vermannelijkte uitwendige geslachtsorganen). Bij jongens valt extra testosteron minder op.</p></details>
+    <details><summary>21e · Welk hormoon wordt in lage hoeveelheden gemaakt bij de zoutverliezende vorm van AGS?</summary>
+      <p class="ans">Aldosteron.</p></details>
+    <details><summary>22 · Hoe kan een struma ontstaan door jodiumtekort?</summary>
+      <p class="ans">Te weinig jodium → te weinig schildklierhormoon → geen remming van TSH (negatieve terugkoppeling) → veel TSH → TSH stimuleert de vorming van schildklierweefsel → de schildklier wordt steeds groter.</p></details>
+    <details><summary>23 · Welk resultaat (A, B, C) hoort bij welke patiënt?</summary>
+      <p class="ans">Patiënt 1 (geen TRH): <b>A</b>: TSH laag, maar stijgt normaal na toediening van TRH. Patiënt 2 (geen TSH): <b>C</b>: TSH blijft laag. Patiënt 3 (geen schildklierhormoon): <b>B</b>: geen remming, dus TSH al hoog en na TRH nog hoger.</p></details>
+  </div>
+</section>
+
+<footer>Biologie VWO · Thema 7 Regeling · Basisstof 2. Vraag jezelf bij elk hormoon af: welke klier, welk doelwit, en hoe wordt het geremd?</footer>
+</main>
+</body>
+</html>
