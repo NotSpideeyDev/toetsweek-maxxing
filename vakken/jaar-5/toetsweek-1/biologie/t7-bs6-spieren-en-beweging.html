@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BI T7 BS6 — Spieren en beweging</title>
+<style>
+  :root{
+    --ink:#14241c;--moss:#3c6e54;--moss-d:#2a5340;--soil:#5e7466;
+    --leaf:#e6efe9;--leaf-d:#c9dccf;--paper:#f9fbf9;--amber:#c47a2c;--line:#d3ddd6;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55;font-size:17px}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#f1f7f3;padding:34px 20px 26px}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.85;margin:0 0 6px}
+  header h1{margin:0;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.92;max-width:60ch;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:8px;overflow-x:auto;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav a{flex:0 0 auto;text-decoration:none;color:var(--moss-d);background:var(--leaf);
+    border:1px solid var(--leaf-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:30px;scroll-margin-top:60px}
+  .bs{font-family:ui-sans-serif,system-ui,sans-serif;display:inline-block;background:var(--moss);
+    color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:5px;font-weight:700}
+  h2{font-size:21px;margin:10px 0 4px;letter-spacing:-.01em}
+  ul{margin:6px 0 8px;padding-left:20px}
+  li{margin:4px 0}
+  b.t{color:var(--moss-d)}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+  table.fx td.eq{font-family:"Cambria Math","Times New Roman",serif;font-size:17px;white-space:nowrap;
+    background:#fff;color:var(--moss-d);font-weight:600;width:1%}
+  table.fx td{background:#fff}
+  .tip{background:#fdf4e7;border:1px solid #f0dcc0;border-radius:8px;padding:10px 14px;margin:12px 0;
+    font-size:15px;font-family:ui-sans-serif,system-ui,sans-serif}
+  .tip b{color:var(--amber)}
+  .vb{background:var(--leaf);border:1px solid var(--leaf-d);border-radius:10px;padding:10px 16px;margin:12px 0;font-size:15px}
+  .vb .lbl{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--amber);font-weight:700;margin:0 0 4px}
+  .vb p{margin:0}
+  .vb details{border:none;padding:8px 0 2px}
+  .vb summary{font-size:14px;font-family:ui-sans-serif,system-ui,sans-serif;color:var(--moss-d)}
+  .quiz{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 16px;margin-top:14px}
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:none}
+  summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;gap:8px;align-items:flex-start}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"?";flex:0 0 auto;width:22px;height:22px;background:var(--moss);color:#fff;
+    border-radius:50%;font-size:13px;display:flex;align-items:center;justify-content:center;font-family:ui-sans-serif,system-ui,sans-serif}
+  details[open] summary::before{content:"✓";background:var(--amber)}
+  .ans{margin:8px 0 2px 30px;font-size:15px;color:#22362b}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);text-align:center;padding:0 18px 40px}
+  th{background:var(--moss);color:#fff;font-weight:600}
+  tr:nth-child(even) td{background:#f3f5f0}
+</style>
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<header>
+  <a class="home" href="../../../../index.html">← Alle vakken</a>
+  <p class="kicker">Biologie · Thema 7 Regeling · Basisstof 6</p>
+  <h1>Spieren en beweging</h1>
+  <p>Typen spierweefsel, bouw van een skeletspier, motorische eenheden, contractie, tonus, spier- en peesspoeltjes, antagonisten, spiervezels, training en doping. Zelftoets met de opdrachten 68–80 onderaan.</p>
+</header>
+
+<nav>
+  <a href="#doelen">Leerdoelen</a>
+  <a href="#typen">Spierweefsel</a>
+  <a href="#bouw">Skeletspier</a>
+  <a href="#eenheid">Motorische eenheid</a>
+  <a href="#contractie">Contractie</a>
+  <a href="#tonus">Tonus &amp; reflexen</a>
+  <a href="#antagonisten">Antagonisten</a>
+  <a href="#training">Training &amp; doping</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="doelen">
+  <span class="bs">Leerdoelen</span>
+  <ul>
+    <li><b class="t">7.6.1</b> Je kunt de bouw en functie van glad spierweefsel en dwarsgestreept spierweefsel beschrijven.</li>
+    <li><b class="t">7.6.2</b> Je kunt de bouw en werking van spieren beschrijven.</li>
+    <li><b class="t">7.6.3</b> Je kunt de effecten van training, revalidatie en dopinggebruik uitleggen.</li>
+  </ul>
+</section>
+
+<section id="typen">
+  <span class="bs">7.6.1</span>
+  <h2>Typen spierweefsel</h2>
+  <div class="tw"><table>
+    <tr><th></th><th>Glad spierweefsel</th><th>Dwarsgestreept spierweefsel</th><th>Hartspierweefsel</th></tr>
+    <tr><td>Bouw</td><td>langwerpige <b>spiercellen</b>, elk met één kern</td><td><b>spiervezels</b>: versmolten spiercellen met veel kernen; dwarse strepen</td><td>spiercellen met vertakkingen; dwarse strepen</td></tr>
+    <tr><td>Waar</td><td>huid, wand van darmkanaal, luchtwegvertakkingen, iris, bloedvaten</td><td>skeletspieren, gelaatsspieren</td><td>hart</td></tr>
+    <tr><td>Aansturing</td><td><b>autonoom</b> zenuwstelsel</td><td><b>animaal</b> zenuwstelsel</td><td><b>autonoom</b> zenuwstelsel</td></tr>
+    <tr><td>Contractie</td><td>traag, raakt niet snel vermoeid</td><td>snel, raakt snel vermoeid</td><td>—</td></tr>
+  </table></div>
+  <p>Dwarsgestreept spierweefsel speelt ook een rol bij de lichaamshouding en de warmteproductie.</p>
+</section>
+
+<section id="bouw">
+  <span class="bs">7.6.2</span>
+  <h2>Bouw van een skeletspier</h2>
+  <ul>
+    <li>Omgeven door een <b class="t">spierschede</b> van bindweefsel, die overgaat in de <b class="t">pezen</b>. Pezen bevestigen de spier aan het skelet, kunnen niet samentrekken en zijn slecht doorbloed.</li>
+    <li>Spier → <b class="t">spierbundels</b> (met bindweefsel) → <b class="t">spiervezels</b> → <b class="t">spierfibrillen (myofibrillen)</b> → <b class="t">filamenten</b>.</li>
+    <li>Dunne filamenten: <b class="t">actine</b>. Dikke filamenten: <b class="t">myosine</b>. Hun regelmatige ligging geeft lichte en donkere banden (BiNaS 90C).
+      <ul>
+        <li><b>Donkere band</b>: myosine (met overlappende actine).</li>
+        <li><b>Lichte band</b>: alleen actine.</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section id="eenheid">
+  <span class="bs">7.6.2</span>
+  <h2>Motorische eindplaatjes en acetylcholine</h2>
+  <ul>
+    <li><b class="t">Motorische eindplaatjes</b> = uiteinden van de vertakkingen van het axon van een motorisch neuron op de spiervezels; de meeste spiervezels hebben er één.</li>
+    <li><b class="t">Motorische eenheid</b> = één motorisch neuron + alle spiervezels die ermee verbonden zijn.</li>
+    <li>Een impuls → <b class="t">acetylcholine</b> komt <b>tegelijk in alle eindplaatjes</b> van de motorische eenheid vrij → bindt aan receptoren → EPSP → contractie.</li>
+    <li><b class="t">Alles-of-niets</b>: boven de prikkeldrempel trekken alle vezels van de eenheid tegelijk en <b>maximaal</b> samen. De kracht van een spier hangt af van het <b>aantal motorische eenheden</b> dat tegelijk samentrekt.</li>
+    <li>Motorische neuronen vuren niet gelijktijdig: sommige eenheden trekken samen terwijl andere ontspannen → spier raakt minder snel vermoeid.</li>
+  </ul>
+</section>
+
+<section id="contractie">
+  <span class="bs">7.6.2</span>
+  <h2>Contractie</h2>
+  <div class="step"><ol>
+    <li>In rust overlappen actine en myosine nauwelijks; de bindingsplaatsen voor myosine op actine zijn afgedekt.</li>
+    <li>Na impulsoverdracht diffunderen <b>Ca²⁺-ionen</b> de myofibrillen in en binden aan eiwitten op actine → <b>bindingsplaatsen komen vrij</b>.</li>
+    <li>De gebogen <b>myosinekoppen</b> splitsen <b>ATP</b> in ADP + P; met die energie strekken ze zich en binden aan actine.</li>
+    <li>ADP en P laten los → kop springt terug in de gebogen stand en <b>trekt het actinefilament mee</b>.</li>
+    <li>Actine en myosine schuiven in elkaar → spiervezel korter. <b>Lichte banden worden smaller, donkere banden blijven even breed.</b></li>
+    <li>Bindingen verbroken → spiervezel ontspant. Daarna een <b>herstelperiode</b>: afvalstoffen weg, zuurstof aangevoerd, ATP aangevuld.</li>
+  </ol></div>
+  <p><b class="t">Glycogeenkorrels</b> tussen de spierfibrillen zijn een voorraad glucose voor de energie (ATP) bij contractie.</p>
+</section>
+
+<section id="tonus">
+  <span class="bs">7.6.2</span>
+  <h2>Houding, tonus en reflexen</h2>
+  <ul>
+    <li>Ook ontspannen is een skeletspier niet maximaal ontspannen: telkens trekken een paar motorische eenheden samen → lichte kracht op de pezen = <b class="t">tonus (spierspanning)</b>. Belangrijk voor de lichaamshouding (zitten, staan).</li>
+    <li>Evenwicht via reflexen: helt je naar voren, dan trekken de kuitspieren reflexmatig samen.</li>
+    <li><b class="t">Spierspoeltjes</b> (tussen de spiervezels): gespecialiseerde vezels met een sensorisch uiteinde in een spiraal eromheen. Spier rekt → spoeltje rekt mee → sensorisch neuron meldt dit aan het CZS → motorisch neuron laat de spier samentrekken (<b>rekreflex</b>) → rek opgeheven. Tegelijk trekken de uiteinden van het spoeltje samen, zodat het weer op spanning is om nieuwe rek waar te nemen.</li>
+    <li><b class="t">Peesspoeltjes</b> (overgang pees–spier): gevoelig voor spierspanning. Ze kunnen via een schakelneuron in het ruggenmerg het motorische neuron van de rekreflex <b>remmen</b>. Bewegingen worden vloeiender en de spier wordt beschermd tegen te zware belasting.</li>
+  </ul>
+</section>
+
+<section id="antagonisten">
+  <span class="bs">7.6.2</span>
+  <h2>Antagonisten</h2>
+  <ul>
+    <li>Een spier kan een bot maar <b>één kant op</b> bewegen. Spieren met een tegengesteld effect zijn <b class="t">antagonisten</b>, bijv. <b>biceps</b> (buigt de arm) en <b>triceps</b> (strekt de arm).</li>
+    <li>Trekt de biceps samen, dan daalt de tonus van de triceps (<b>relaxatie</b>), zodat de biceps minder weerstand ondervindt. Bij strekken andersom.</li>
+  </ul>
+</section>
+
+<section id="training">
+  <span class="bs">7.6.3</span>
+  <h2>Spiervezels, training en doping</h2>
+  <div class="tw"><table>
+    <tr><th></th><th>Langzame (rode) spiervezels</th><th>Snelle (witte) spiervezels</th></tr>
+    <tr><td>Doorbloeding</td><td>goed</td><td>minder</td></tr>
+    <tr><td>Mitochondriën</td><td>veel</td><td>minder</td></tr>
+    <tr><td>Eigenschap</td><td>raken niet snel vermoeid</td><td>trekken sneller en krachtiger samen, raken snel vermoeid</td></tr>
+  </table></div>
+  <p>De verhouding is grotendeels genetisch bepaald.</p>
+  <ul>
+    <li><b class="t">Krachttraining</b>: spiervezels worden dikker (meer filamenten in de myofibrillen) → spieren zwaarder.</li>
+    <li><b class="t">Duurtraining</b> (uithoudingsvermogen): vooral de doorbloeding neemt toe; spieren worden niet zwaarder.</li>
+    <li><b class="t">Warming-up</b> (± 15 min): bloedsomloop gestimuleerd → meer zuurstof en glucose, minder blessures, snellere stofwisseling.</li>
+    <li><b class="t">Coolingdown</b>: hartslag geleidelijk omlaag, afvoer van afvalstoffen → minder stijfheid en spierpijn.</li>
+    <li>Beweegrichtlijnen voor jongeren: elke dag minstens een uur matig intensief bewegen, minstens 3× per week spier- en botversterkend, weinig stilzitten.</li>
+    <li><b class="t">Doping</b>:
+      <ul>
+        <li><b>Anabole steroïden</b> (werken als testosteron): meer spierweefsel en meer rode bloedcellen.</li>
+        <li><b>Epo</b>: meer rode bloedcellen → meer zuurstoftransport → groter uithoudingsvermogen.</li>
+        <li>Bijwerkingen: gewichtstoename, bloedstollingsziekten, leverschade, hartaandoeningen, beroerte, hoger cholesterol, zwakkere pezen. Verboden in wedstrijdsport.</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section id="toets">
+  <h2 style="color:var(--moss-d)">Zelftoets</h2>
+  <p class="goal">Tik op een vraag voor het antwoord. Opdrachten 68–80 uit het boek.</p>
+  <div class="quiz">
+    <details><summary>Wat is een motorische eenheid?</summary>
+      <p class="ans">Eén motorisch neuron samen met alle spiervezels die via motorische eindplaatjes met dit neuron verbonden zijn.</p></details>
+    <details><summary>Wat gebeurt er met de lichte en donkere banden bij contractie?</summary>
+      <p class="ans">De lichte banden worden smaller, de donkere banden blijven even breed.</p></details>
+    <details><summary>Wat is de rol van Ca²⁺ en ATP bij contractie?</summary>
+      <p class="ans">Ca²⁺ maakt de bindingsplaatsen op actine vrij. ATP levert de energie waarmee de myosinekoppen binden en het actinefilament meetrekken.</p></details>
+
+    <details><summary>68a · Lotte activeert één motorische eenheid. Worden een deel of alle eindplaatjes geactiveerd?</summary>
+      <p class="ans">Alle: acetylcholine komt tegelijk in alle motorische eindplaatjes van de eenheid vrij (alles-of-niets).</p></details>
+    <details><summary>68b · Lieke verdubbelt het gewicht. Verandert het aantal geactiveerde motorische eenheden?</summary>
+      <p class="ans">Ja, het neemt toe. Elke eenheid trekt altijd maximaal samen, dus meer kracht kan alleen door meer motorische eenheden tegelijk te activeren.</p></details>
+<figure class="fig"><a href="img/bs6-afb73.webp" target="_blank"><img src="img/bs6-afb73.webp" alt="Afbeelding 73: contractie van een deel van een spierfibril" loading="lazy"></a><figcaption>Afb. 73 · tik om te vergroten</figcaption></figure>
+    <details><summary>69a · In welke banden liggen de actine- en myosinefilamenten?</summary>
+      <p class="ans">Myosine ligt in de donkere banden (waar ook actine overlapt). In de lichte banden ligt alleen actine.</p></details>
+    <details><summary>69b · Functie van de glycogeenkorrels tussen de spierfibrillen?</summary>
+      <p class="ans">Voorraad glucose: daaruit wordt energie (ATP) vrijgemaakt voor de contractie.</p></details>
+    <details><summary>70 · Hoe werkt de stof in de inhalator die de luchtwegen verwijdt?</summary>
+      <p class="ans">De stof voorkomt dat acetylcholine werkt: hij bindt aan (blokkeert) de acetylcholinereceptoren van de gladde spieren in de luchtwegen, of remt de afgifte. Er ontstaan geen EPSP's, dus de spieren ontspannen en de luchtwegen worden wijder.</p></details>
+<figure class="fig"><a href="img/bs6-afb74.webp" target="_blank"><img src="img/bs6-afb74.webp" alt="Afbeelding 74: de aansturing van een spier" loading="lazy"></a><figcaption>Afb. 74 · tik om te vergroten</figcaption></figure>
+    <details><summary>71 · Axon 1 en 3 meer impulsen, axon 2 geen, axon 4 meer. Neemt de spierspanning meer of minder toe dan zonder neuron 4?</summary>
+      <p class="ans">Minder. Neuron 4 remt (⊖) neuron 6. Daardoor geeft neuron 6 minder impulsen aan de spier dan alleen door de stimulering van neuron 3. Neuron 5 wordt wel volledig gestimuleerd (2 remt niet).</p></details>
+<figure class="fig"><a href="img/bs6-afb79.webp" target="_blank"><img src="img/bs6-afb79.webp" alt="Afbeelding 79: de werking van een peesspoeltje" loading="lazy"></a><figcaption>Afb. 79 · tik om te vergroten</figcaption></figure>
+    <details><summary>72a · Peesspoeltje: combineer 1 t/m 4 met: de lading valt – de spier ontspant – motorisch neuron – sensorisch neuron.</summary>
+      <p class="ans">1 sensorisch neuron · 2 motorisch neuron · 3 de spier ontspant · 4 de lading valt.</p></details>
+    <details><summary>72b · Neemt de impulsfrequentie in neuron 2 toe of af?</summary>
+      <p class="ans">Af. Het peesspoeltje remt via een schakelneuron het motorische neuron, zodat de spier ontspant en niet beschadigt.</p></details>
+    <details><summary>73a · Heeft een gewichtheffer meer langzame of meer snelle spiervezels?</summary>
+      <p class="ans">Meer snelle (witte) vezels: die trekken snel en krachtig samen, en een gewichtheffer heeft kort veel kracht nodig.</p></details>
+    <details><summary>73b · En een duursporter?</summary>
+      <p class="ans">Meer langzame (rode) vezels: goed doorbloed, veel mitochondriën, raken niet snel vermoeid.</p></details>
+    <details><summary>73c · Waarom neemt een duursporter niet graag anabole steroïden?</summary>
+      <p class="ans">Anabole steroïden vergroten de spiermassa. De sporter wordt daardoor zwaarder en moet meer gewicht meedragen, terwijl extra kracht voor een duursport weinig oplevert.</p></details>
+    <details><summary>74 · Bal je vuist. Waar zitten de antagonisten van je vingers?</summary>
+      <p class="ans">Aan de bovenkant (handrugzijde) van de onderarm: de strekspieren van de vingers. De buigspieren zitten aan de binnenkant (handpalmzijde) van de onderarm.</p></details>
+    <details><summary>75 · Waarom worden hart, blaas en darmen bij ALS niet aangetast?</summary>
+      <p class="ans">Die spieren (hartspierweefsel en glad spierweefsel) worden aangestuurd door het autonome zenuwstelsel. ALS tast de motorische neuronen van het animale zenuwstelsel aan, die naar de skeletspieren gaan.</p></details>
+    <details><summary>76a · Waardoor functioneren de spieren bij de ziekte van Leigh niet goed?</summary>
+      <p class="ans">De mitochondriën maken te weinig ATP. Zonder genoeg ATP kunnen de myosinekoppen niet goed binden en loslaten, dus de contractie (en ontspanning) gaat slecht.</p></details>
+    <details><summary>76b · Is het aantal spiervezels per motorische eenheid in een oogspier groter of kleiner dan in de biceps?</summary>
+      <p class="ans">Kleiner. Oogspieren maken heel nauwkeurige bewegingen; met weinig vezels per eenheid kan de kracht heel fijn worden geregeld.</p></details>
+<figure class="fig"><a href="img/bs6-afb80.webp" target="_blank"><img src="img/bs6-afb80.webp" alt="Afbeelding 80: de vorming en werking van acetylcholine" loading="lazy"></a><figcaption>Afb. 80 · tik om te vergroten</figcaption></figure>
+    <details><summary>77a · Welk ionentransport veroorzaakt de depolarisatie van de postsynaptische cel?</summary>
+      <p class="ans">Na⁺-ionen stromen de spiervezel in via de ionkanalen die opengaan als acetylcholine aan de receptoreiwitten bindt (BiNaS 88G/88H).</p></details>
+    <details><summary>77b · Waarom geeft sarin spierkrampen die tot verstikking kunnen leiden?</summary>
+      <p class="ans">Acetylcholinesterase wordt blijvend geblokkeerd, dus acetylcholine wordt niet afgebroken en blijft aan de receptoren binden. Er ontstaan steeds EPSP's, dus de spieren blijven samentrekken (kramp). Ook de ademhalingsspieren (middenrif, tussenribspieren) verkrampen, waardoor je niet meer kunt ademen.</p></details>
+    <details><summary>78 · Waarom zie je er uitgerust of moe uit door een verschillende tonus van de gelaatsspieren?</summary>
+      <p class="ans">Uitgerust: hogere tonus (meer motorische eenheden afwisselend actief), dus de gelaatsspieren zijn strakker. Moe: lagere tonus, dus de spieren zijn slapper en oogleden en mondhoeken hangen.</p></details>
+<figure class="fig"><a href="img/bs6-afb76.webp" target="_blank"><img src="img/bs6-afb76.webp" alt="Afbeelding 76: de werking van een spierspoeltje" loading="lazy"></a><figcaption>Afb. 76 · tik om te vergroten</figcaption></figure>
+    <details><summary>79a · Waarom zou het ontbreken van impulsen in neuron P bij een ontspannen spier niet functioneel zijn?</summary>
+      <p class="ans">Met een 'basisfrequentie' kan de frequentie zowel omhoog (bij uitrekken) als omlaag (bij samentrekken). Zonder impulsen kan een afname niet worden doorgegeven, en weet het CZS niet of het spoeltje werkt.</p></details>
+    <details><summary>79b · Is de impulsfrequentie in Q evenredig of omgekeerd evenredig aan die in P?</summary>
+      <p class="ans">Omgekeerd evenredig. Hoe meer impulsen via Q, hoe sterker de spier samentrekt. Dan is het spierspoeltje minder gerekt en daalt de frequentie in P (afb. 76.3).</p></details>
+    <details><summary>79c · Leg uit dat de reflexmatige samentrekking na uitrekken negatieve terugkoppeling is.</summary>
+      <p class="ans">Uitrekken → spierspoeltje gerekt → hogere frequentie in P → via Q trekt de spier samen → de rek wordt opgeheven → frequentie in P daalt weer. Het resultaat heft de oorzaak op.</p></details>
+    <details><summary>80 · Waarom gebruikten sporters meldonium?</summary>
+      <p class="ans">Een betere zuurstofvoorziening van de hartspier laat het hart beter pompen, zodat er meer zuurstof naar de spieren gaat. Er kan meer aerobe verbranding plaatsvinden (meer ATP), dus het uithoudingsvermogen neemt toe.</p></details>
+  </div>
+</section>
+
+<footer>Biologie VWO · Thema 7 Regeling · Basisstof 6. Eén motorische eenheid = alles of niets; meer kracht = meer eenheden.</footer>
+</main>
+</body>
+</html>
