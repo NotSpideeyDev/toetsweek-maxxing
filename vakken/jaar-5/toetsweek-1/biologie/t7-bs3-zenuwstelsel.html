@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BI T7 BS3 — Het zenuwstelsel</title>
+<style>
+  :root{
+    --ink:#14241c;--moss:#3c6e54;--moss-d:#2a5340;--soil:#5e7466;
+    --leaf:#e6efe9;--leaf-d:#c9dccf;--paper:#f9fbf9;--amber:#c47a2c;--line:#d3ddd6;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55;font-size:17px}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#f1f7f3;padding:34px 20px 26px}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.85;margin:0 0 6px}
+  header h1{margin:0;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.92;max-width:60ch;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:8px;overflow-x:auto;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav a{flex:0 0 auto;text-decoration:none;color:var(--moss-d);background:var(--leaf);
+    border:1px solid var(--leaf-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:30px;scroll-margin-top:60px}
+  .bs{font-family:ui-sans-serif,system-ui,sans-serif;display:inline-block;background:var(--moss);
+    color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:5px;font-weight:700}
+  h2{font-size:21px;margin:10px 0 4px;letter-spacing:-.01em}
+  ul{margin:6px 0 8px;padding-left:20px}
+  li{margin:4px 0}
+  b.t{color:var(--moss-d)}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+  table.fx td.eq{font-family:"Cambria Math","Times New Roman",serif;font-size:17px;white-space:nowrap;
+    background:#fff;color:var(--moss-d);font-weight:600;width:1%}
+  table.fx td{background:#fff}
+  .tip{background:#fdf4e7;border:1px solid #f0dcc0;border-radius:8px;padding:10px 14px;margin:12px 0;
+    font-size:15px;font-family:ui-sans-serif,system-ui,sans-serif}
+  .tip b{color:var(--amber)}
+  .vb{background:var(--leaf);border:1px solid var(--leaf-d);border-radius:10px;padding:10px 16px;margin:12px 0;font-size:15px}
+  .vb .lbl{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--amber);font-weight:700;margin:0 0 4px}
+  .vb p{margin:0}
+  .vb details{border:none;padding:8px 0 2px}
+  .vb summary{font-size:14px;font-family:ui-sans-serif,system-ui,sans-serif;color:var(--moss-d)}
+  .quiz{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 16px;margin-top:14px}
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:none}
+  summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;gap:8px;align-items:flex-start}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"?";flex:0 0 auto;width:22px;height:22px;background:var(--moss);color:#fff;
+    border-radius:50%;font-size:13px;display:flex;align-items:center;justify-content:center;font-family:ui-sans-serif,system-ui,sans-serif}
+  details[open] summary::before{content:"✓";background:var(--amber)}
+  .ans{margin:8px 0 2px 30px;font-size:15px;color:#22362b}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);text-align:center;padding:0 18px 40px}
+  th{background:var(--moss);color:#fff;font-weight:600}
+  tr:nth-child(even) td{background:#f3f5f0}
+</style>
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<header>
+  <a class="home" href="../../../../index.html">← Alle vakken</a>
+  <p class="kicker">Biologie · Thema 7 Regeling · Basisstof 3</p>
+  <h1>Het zenuwstelsel</h1>
+  <p>Bouw en indeling van het zenuwstelsel, prikkels en impulsen, neuronen en synapsen, zenuwen, hersenen, hersencentra en ruggenmerg. Zelftoets met de opdrachten 27–37 onderaan.</p>
+</header>
+
+<nav>
+  <a href="#doelen">Leerdoelen</a>
+  <a href="#indeling">Indeling</a>
+  <a href="#prikkels">Prikkels</a>
+  <a href="#neuronen">Neuronen</a>
+  <a href="#synaps">Synaps</a>
+  <a href="#typen">Typen &amp; zenuwen</a>
+  <a href="#hersenen">Hersenen</a>
+  <a href="#centra">Hersencentra</a>
+  <a href="#ruggenmerg">Ruggenmerg</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="doelen">
+  <span class="bs">Leerdoelen</span>
+  <ul>
+    <li><b class="t">7.3.1</b> Je kunt de bouw en signaalverwerking van de verschillende typen neuronen beschrijven.</li>
+    <li><b class="t">7.3.2</b> Je kunt de bouw, functies en werking van de verschillende delen van het zenuwstelsel beschrijven.</li>
+  </ul>
+</section>
+
+<section id="indeling">
+  <span class="bs">7.3.2</span>
+  <h2>Bouw en indeling</h2>
+  <ul>
+    <li>Het <b class="t">zenuwstelsel</b> is een communicatienetwerk dat alle delen van het lichaam verbindt.</li>
+    <li>Indeling op <b class="t">bouw</b>:
+      <ul>
+        <li><b class="t">centrale zenuwstelsel (CZS)</b>: grote hersenen, kleine hersenen, hersenstam en ruggenmerg</li>
+        <li><b class="t">perifere zenuwstelsel</b>: zenuwen die alle lichaamsdelen met het CZS verbinden</li>
+      </ul>
+    </li>
+    <li>Indeling op <b class="t">functie</b>:
+      <ul>
+        <li><b class="t">animale zenuwstelsel</b>: bewuste reacties, houding en beweging; ook reflexen</li>
+        <li><b class="t">autonome (vegetatieve) zenuwstelsel</b>: werking van inwendige organen (hartslag, ademhaling, vertering, nieren, bloedvaten); niet onder invloed van de wil</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section id="prikkels">
+  <span class="bs">7.3.1</span>
+  <h2>Prikkels en impulsen</h2>
+  <ul>
+    <li>Een <b class="t">prikkel</b> is een invloed uit het milieu op een organisme (licht, geur, druk).</li>
+    <li>In zintuigcellen ontstaan door prikkels <b class="t">impulsen</b>: een soort elektrische signalen.</li>
+    <li><b class="t">Signaalverwerking</b>:
+      <ol>
+        <li>zintuigcellen vangen prikkels op en zetten ze om in impulsen;</li>
+        <li>zenuwcellen geleiden impulsen naar het CZS en van het CZS naar spieren en klieren;</li>
+        <li>spieren trekken samen of ontspannen; klieren scheiden stoffen af.</li>
+      </ol>
+    </li>
+  </ul>
+  <table>
+    <tr><th>Rol</th><th>Cellen</th><th>Wat doen ze?</th></tr>
+    <tr><td><b>Receptoren</b> (ontvangers)</td><td>zintuigcellen</td><td>prikkels opvangen → impulsen</td></tr>
+    <tr><td><b>Conductoren</b> (geleiders)</td><td>neuronen</td><td>impulsen geleiden</td></tr>
+    <tr><td><b>Effectoren</b> (uitvoerders)</td><td>spiercellen, kliercellen</td><td>samentrekken/ontspannen, stoffen afscheiden</td></tr>
+  </table>
+</section>
+
+<section id="neuronen">
+  <span class="bs">7.3.1</span>
+  <h2>Neuronen</h2>
+  <ul>
+    <li>Zenuwweefsel bevat <b class="t">neuronen (zenuwcellen)</b> en ondersteunende <b class="t">gliacellen</b> (stevigheid, myeline maken, beschermen en voeden van neuronen, homeostase van weefselvloeistof). Verhouding glia : neuronen ≈ <b class="t">9 : 1</b>.</li>
+    <li><b class="t">Gliacellen kunnen zich delen, de meeste neuronen niet.</b></li>
+    <li>Neuronen geleiden impulsen en geven signaalmoleculen af: <b class="t">neurotransmitters</b>.</li>
+    <li>Bouw: <b class="t">cellichaam</b> (kern, cytoplasma met mitochondriën, ribosomen, ER) met uitlopers. Cellichamen liggen in of dicht bij het CZS.
+      <ul>
+        <li><b class="t">Dendriet</b>: geleidt impulsen <b class="t">naar het cellichaam toe</b>.</li>
+        <li><b class="t">Axon</b>: geleidt impulsen <b class="t">van het cellichaam af</b>.</li>
+        <li>Uiteinden sterk vertakt → contact met veel cellen. Uitlopers kunnen meer dan een meter lang zijn.</li>
+      </ul>
+    </li>
+    <li><b class="t">Myelineschede</b>: om veel axonen, gevormd door gliacellen = <b class="t">cellen van Schwann</b>. Tussen twee cellen van Schwann zit een <b class="t">insnoering</b>. Uitloper zonder myelineschede = <b class="t">ongemyeliniseerd</b>.</li>
+  </ul>
+</section>
+
+<section id="synaps">
+  <span class="bs">7.3.1</span>
+  <h2>Cell junctions en synapsen</h2>
+  <ul>
+    <li><b class="t">Cell junction</b>: verbinding tussen cellen, voor hechting of communicatie.</li>
+    <li>Axonuiteinden eindigen in <b class="t">synapsen</b>: contactplaatsen waar een impuls wordt doorgegeven (zenuwcel → zenuwcel, spiercel of kliercel).</li>
+  </ul>
+  <div class="step"><ol>
+    <li>Impuls komt aan in het uiteinde van het axon.</li>
+    <li><b>Blaasjes met neurotransmitter</b> versmelten met het celmembraan → neurotransmitter komt vrij in de <b>synapsspleet</b>.</li>
+    <li>Neurotransmitter bindt aan <b>receptoren</b> in het membraan van de doelwitcel → reactie start of stopt (bijv. nieuwe impuls).</li>
+    <li>Neurotransmitter laat los en wordt weer opgenomen door het axon of afgebroken door <b>enzymen</b> → kan niet opnieuw binden.</li>
+  </ol></div>
+  <div class="tip"><b>Onthoud:</b> communicatie via neuronen is <b>snel en doelgericht</b> (zo kunnen veel spiercellen tegelijk samentrekken). Een synaps werkt maar in <b>één richting</b>: van axon naar de volgende cel.</div>
+</section>
+
+<section id="typen">
+  <span class="bs">7.3.1</span>
+  <h2>Typen neuronen en zenuwen</h2>
+  <table>
+    <tr><th>Type</th><th>Geleidt impulsen</th><th>Bouw / ligging</th></tr>
+    <tr><td><b>Sensorisch neuron</b> (gevoelszenuwcel)</td><td>van receptoren naar het CZS</td><td>één lange dendriet, één kort axon; cellichaam vlak bij het CZS</td></tr>
+    <tr><td><b>Schakelneuron</b> (schakelcel)</td><td>binnen het CZS</td><td>ontvangt van sensorische neuronen of andere schakelneuronen; geeft door aan motorische neuronen of andere schakelcellen; ligt geheel in het CZS</td></tr>
+    <tr><td><b>Motorisch neuron</b> (bewegingszenuwcel)</td><td>van het CZS naar spieren en klieren</td><td>meerdere korte dendrieten, één lang axon naar de effector; cellichaam in het CZS</td></tr>
+  </table>
+  <ul>
+    <li>Uitlopers liggen samen in <b class="t">zenuwen</b>, omgeven door een <b class="t">bindweefsellaag</b> (bescherming). Myeline isoleert de uitlopers van elkaar.</li>
+    <li><b class="t">Gevoelszenuw</b>: alleen sensorische uitlopers. <b class="t">Bewegingszenuw</b>: alleen motorische uitlopers. <b class="t">Gemengde zenuw</b>: allebei. De meeste zenuwen zijn gemengd (bijv. naar armen en benen).</li>
+  </ul>
+</section>
+
+<section id="hersenen">
+  <span class="bs">7.3.2</span>
+  <h2>Hersenen</h2>
+  <ul>
+    <li>Hersenen = <b class="t">grote hersenen</b>, <b class="t">kleine hersenen</b> en <b class="t">hersenstam</b>, omgeven door drie <b class="t">hersenvliezen</b>.</li>
+    <li><b class="t">Hersenvocht</b> (in de hersenholten) beschermt tegen schokken, vervoert voedingsstoffen en afvalstoffen en helpt bij de temperatuur.</li>
+    <li>Grote en kleine hersenen hebben een linker- en rechterhelft, verbonden door de <b class="t">hersenbalk</b>.</li>
+    <li><b class="t">Hersenschors</b> (buitenkant) = <b class="t">grijze stof</b>: cellichamen van schakelneuronen; sterk geplooid. <b class="t">Merg</b> (binnenkant) = <b class="t">witte stof</b>: axonen met myelineschede.</li>
+  </ul>
+  <table>
+    <tr><th>Deel</th><th>Functie</th></tr>
+    <tr><td>Grote hersenen</td><td>bewust worden van waarnemingen; impulsen voor bewuste bewegingen; geheugen</td></tr>
+    <tr><td>Kleine hersenen</td><td><b>evenwicht</b> en <b>coördinatie</b> van bewegingen; combineren waarnemingen met bewegingen</td></tr>
+    <tr><td>Hersenstam</td><td>verbinding grote/kleine hersenen ↔ ruggenmerg; centra voor hartritme, diameter bloedvaten, ademhalingsfrequentie; hersenzenuwen voor hoofd en hals</td></tr>
+    <tr><td>Verlengde merg</td><td>onderste deel hersenstam; hier <b>kruisen de impulsbanen</b>: linkerlichaamshelft ↔ rechterhersenhelft</td></tr>
+  </table>
+  <p>Ook in de lengtedoorsnede: thalamus, hypothalamus en hypofyse.</p>
+</section>
+
+<section id="centra">
+  <span class="bs">7.3.2</span>
+  <h2>Hersencentra</h2>
+  <ul>
+    <li>De hersenschors bestaat uit centra met verschillende functies (BiNaS 88C): bewegingscentra en gevoelscentra (gescheiden door de <b class="t">centrale groeve</b>), schrijf-, spraak-, reuk-, gehoor-, smaak- en <b class="t">gezichtscentrum</b> (achterkant).</li>
+    <li><b class="t">Gevoelscentra</b>: hier komen impulsen aan. De <b class="t">plaats</b> bepaalt de aard van de waarneming (impulsen in het gezichtscentrum → je ziet iets).
+      <ul>
+        <li><b class="t">Primair gevoelscentrum</b>: impulsen komen aan → je wordt je <b>bewust</b> van de prikkel.</li>
+        <li><b class="t">Secundair gevoelscentrum (associatiecentrum)</b>: verband met eerdere waarnemingen en geheugen → je kunt prikkels <b>interpreteren en begrijpen</b>. Schade aan het secundaire gehoorcentrum: wel horen, niet begrijpen.</li>
+      </ul>
+    </li>
+    <li><b class="t">Bewegingscentra</b>: hier ontstaan impulsen voor bewuste bewegingen. De plaats bepaalt welke skeletspieren bewegen. Een bewegingscentrum ligt vlak bij het gevoelscentrum van hetzelfde lichaamsdeel.
+      <ul>
+        <li><b class="t">Primair bewegingscentrum</b>: impulsen ontstaan → via hersenstam (hoofd/hals) of ruggenmerg (romp/ledematen) en motorische neuronen naar spieren.</li>
+        <li><b class="t">Secundair bewegingscentrum</b>: stemt de impulsen op elkaar af, met informatie over de houding.</li>
+      </ul>
+    </li>
+    <li>Door de kruising heeft de <b class="t">linkerhersenhelft</b> de centra voor de <b class="t">rechterlichaamshelft</b>, en andersom. De helften verschillen in functie: gezichten herkennen vooral rechts, spreken vooral links.</li>
+  </ul>
+</section>
+
+<section id="ruggenmerg">
+  <span class="bs">7.3.2</span>
+  <h2>Ruggenmerg</h2>
+  <ul>
+    <li>Ligt beschermd in het <b class="t">wervelkanaal</b> (gaten in de wervels), omgeven door drie <b class="t">ruggenmergvliezen</b>. In het midden het <b class="t">centrale kanaal</b> met vocht, verbonden met de hersenholten.</li>
+    <li>Loopt van de bovenste halswervel (<b class="t">atlas</b>) tot de tweede lendenwervel. <b class="t">31 paar ruggenmergzenuwen</b> (en 12 paar hersenzenuwen).</li>
+    <li>Ruggenmergzenuwen zijn <b class="t">gemengde zenuwen</b>:
+      <ul>
+        <li><b class="t">rugzijde</b>: sensorische uitlopers; verdikking = <b class="t">ruggenmergzenuwknoop (spinaal ganglion)</b> met cellichamen van sensorische neuronen;</li>
+        <li><b class="t">buikzijde</b>: uitlopers van motorische neuronen.</li>
+      </ul>
+    </li>
+    <li>Doorsnede: <b class="t">witte stof buiten</b> (uitlopers van schakelneuronen die impulsen van en naar de hersenen geleiden; wit door myeline), <b class="t">grijze stof binnen</b> (vlindervormig). In de grijze stof: midden en rugzijde cellichamen van <b class="t">schakelneuronen</b>, buikzijde cellichamen van <b class="t">motorische neuronen</b> (BiNaS 88J).</li>
+  </ul>
+  <div class="tip"><b>Let op het verschil:</b> hersenen = grijze stof <b>buiten</b>, witte stof binnen. Ruggenmerg = witte stof <b>buiten</b>, grijze stof binnen.</div>
+</section>
+
+<section id="toets">
+  <h2 style="color:var(--moss-d)">Zelftoets</h2>
+  <p class="goal">Tik op een vraag voor het antwoord. Opdrachten 27–37 uit het boek.</p>
+  <div class="quiz">
+    <details><summary>Wat is het verschil tussen een dendriet en een axon?</summary>
+      <p class="ans">Een dendriet geleidt impulsen naar het cellichaam toe, een axon van het cellichaam af.</p></details>
+    <details><summary>Wat gebeurt er in een synaps?</summary>
+      <p class="ans">Blaasjes met neurotransmitter versmelten met het membraan; de neurotransmitter gaat door de synapsspleet en bindt aan receptoren van de doelwitcel. Daarna wordt hij weer opgenomen of afgebroken.</p></details>
+    <details><summary>Waar ligt de grijze stof in de hersenen en in het ruggenmerg?</summary>
+      <p class="ans">Hersenen: grijze stof buiten (hersenschors). Ruggenmerg: grijze stof binnen (vlindervorm).</p></details>
+
+    <details><summary>27a · Kan een impuls in een schakelneuron worden doorgegeven aan een sensorisch neuron?</summary>
+      <p class="ans">Nee. Sensorische neuronen krijgen hun impulsen van receptoren en geleiden ze naar het CZS. Impulsen gaan in één richting: sensorisch → schakel → motorisch.</p></details>
+    <details><summary>27b · Kan een impuls via de dendriet worden doorgegeven aan een axon van een ander neuron?</summary>
+      <p class="ans">Nee. Een dendriet geleidt impulsen naar het cellichaam toe. Impulsen worden alleen via de synapsen aan het uiteinde van een axon doorgegeven, niet via een dendriet.</p></details>
+    <details><summary>27c · Kan een impuls in een schakelneuron worden doorgegeven aan een motorisch neuron?</summary>
+      <p class="ans">Ja. Schakelneuronen geven impulsen (via synapsen) door aan motorische neuronen.</p></details>
+    <details><summary>28a · Welke typen neuronen zitten in een zenuw tussen het ruggenmerg en de onderarm?</summary>
+      <p class="ans">Sensorische en motorische neuronen (het is een gemengde zenuw).</p></details>
+    <details><summary>28b · In welke richting geleidt een gemengde zenuw impulsen?</summary>
+      <p class="ans">In beide richtingen: sensorische uitlopers naar het CZS, motorische uitlopers van het CZS af. Elke uitloper zelf geleidt in één richting.</p></details>
+    <details><summary>29 · Waarom worden voor afgestorven neuronen geen nieuwe gemaakt?</summary>
+      <p class="ans">De meeste neuronen kunnen zich niet delen (alleen gliacellen kunnen dat).</p></details>
+    <details><summary>30 · Verminderde coördinatie na een hersenbloeding. Waar zat de bloeding?</summary>
+      <p class="ans">In de kleine hersenen.</p></details>
+    <details><summary>31 · Waarom geeft een bloeding links in de grote hersenen een verlamming rechts?</summary>
+      <p class="ans">De impulsbanen kruisen in het verlengde merg. De bewegingscentra in de linkerhersenhelft sturen de spieren van de rechterlichaamshelft aan.</p></details>
+    <details><summary>32a · Iemand duwt je. Beschrijf de weg van de impulsen naar de primaire gevoelscentra.</summary>
+      <p class="ans">Tast-/drukzintuigen in de huid → sensorische neuronen in een (ruggenmerg)zenuw → schakelneuronen in het ruggenmerg en de hersenstam (kruising in het verlengde merg) → primaire gevoelscentra in de hersenschors.</p></details>
+    <details><summary>32b · Functie van de primaire gevoelscentra?</summary>
+      <p class="ans">Je wordt je bewust van de duw (waar je wordt aangeraakt).</p></details>
+    <details><summary>32c · Functie van de secundaire gevoelscentra?</summary>
+      <p class="ans">De waarneming wordt vergeleken met eerdere waarnemingen en het geheugen: je begrijpt dat iemand je duwt.</p></details>
+    <details><summary>32d · Functie van de primaire en secundaire bewegingscentra?</summary>
+      <p class="ans">Primair: daar ontstaan de impulsen voor de bewuste bewegingen (opzij kijken, terugduwen). Secundair: die impulsen worden op elkaar afgestemd, met informatie over de houding, zodat de juiste spieren goed worden aangestuurd.</p></details>
+    <details><summary>33 · Hormonen of neurotransmitters: welke zijn het meest geschikt voor snelle bewegingen?</summary>
+      <p class="ans">Neurotransmitters. Neuronen geleiden impulsen snel en geven de neurotransmitter precies bij de doelwitcel af (snel en doelgericht). Hormonen gaan langzaam via het bloed door het hele lichaam.</p></details>
+    <details><summary>34a · Waarom nemen gezicht en handen zo'n groot oppervlak in op de homunculus?</summary>
+      <p class="ans">Gezicht en handen hebben heel veel zintuigcellen (en fijne spierbewegingen), dus komen er veel sensorische neuronen aan. Daarvoor is een groot deel van de hersenschors nodig.</p></details>
+    <details><summary>34b · Waar ontstaan de impulsen die de duim laten bewegen?</summary>
+      <p class="ans">In het (primaire) bewegingscentrum voor de duim, vóór de centrale groeve, vlak naast het gevoelscentrum van de duim, in de hersenhelft aan de andere kant dan de duim.</p></details>
+    <details><summary>35a · Waardoor ontstaat fantoompijn?</summary>
+      <p class="ans">De sensorische neuronen die vroeger naar het lichaamsdeel liepen, eindigen nu in de stomp en worden daar geprikkeld. De impulsen komen aan in het gevoelscentrum van het geamputeerde lichaamsdeel, dus de hersenen 'voelen' pijn in dat lichaamsdeel.</p></details>
+    <details><summary>35b · Blind na een val op het achterhoofd: welk gebied is beschadigd?</summary>
+      <p class="ans">Het gezichtscentrum: dat ligt in de achterkant van de grote hersenen (achterhoofdskwab).</p></details>
+    <details><summary>36a · Geleidt uitloper R (afb. 41) impulsen naar een effector of naar een receptor?</summary>
+      <p class="ans">Naar een effector. Impulsen worden nooit naar een receptor geleid: sensorische uitlopers geleiden juist ván de receptor naar het ruggenmerg. Controleer in afb. 41 dat R aan de buikzijde uittreedt (motorisch neuron).</p></details>
+    <details><summary>36b · Meeste witte stof: ter hoogte van de halswervels of van de lendenwervels?</summary>
+      <p class="ans">Halswervels. Daar lopen de uitlopers van en naar de hersenen voor het hele lichaam eronder. Lager in het ruggenmerg zijn al veel banen uitgetreden, dus er is minder witte stof.</p></details>
+    <details><summary>37 · Hond met dwarslaesie rechts. Welke tekening (afb. 42) geeft de situatie zonder dwarslaesie?</summary>
+      <p class="ans"><b>A.</b> Rechts verlamd → de motorische banen naar rechts lopen aan de rechterkant. Links niet verlamd → motorische banen naar links lopen links. Rechts én links ongevoelig → alle sensorische banen (van rechts en, na kruising, van links) lopen naar de hersenen aan de rechterkant. In A gaan beide opstijgende banen aan de rechterkant omhoog en daalt aan elke kant een motorische baan af.</p></details>
+  </div>
+</section>
+
+<footer>Biologie VWO · Thema 7 Regeling · Basisstof 3. Volg bij elke vraag de weg van de impuls: receptor → sensorisch → schakel → motorisch → effector.</footer>
+</main>
+</body>
+</html>
