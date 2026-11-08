@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BI T7 BS1 — Regeling en homeostase</title>
+<style>
+  :root{
+    --ink:#14241c;--moss:#3c6e54;--moss-d:#2a5340;--soil:#5e7466;
+    --leaf:#e6efe9;--leaf-d:#c9dccf;--paper:#f9fbf9;--amber:#c47a2c;--line:#d3ddd6;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55;font-size:17px}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#f1f7f3;padding:34px 20px 26px}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.85;margin:0 0 6px}
+  header h1{margin:0;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.92;max-width:60ch;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:8px;overflow-x:auto;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav a{flex:0 0 auto;text-decoration:none;color:var(--moss-d);background:var(--leaf);
+    border:1px solid var(--leaf-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:30px;scroll-margin-top:60px}
+  .bs{font-family:ui-sans-serif,system-ui,sans-serif;display:inline-block;background:var(--moss);
+    color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:5px;font-weight:700}
+  h2{font-size:21px;margin:10px 0 4px;letter-spacing:-.01em}
+  ul{margin:6px 0 8px;padding-left:20px}
+  li{margin:4px 0}
+  b.t{color:var(--moss-d)}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+  table.fx td.eq{font-family:"Cambria Math","Times New Roman",serif;font-size:17px;white-space:nowrap;
+    background:#fff;color:var(--moss-d);font-weight:600;width:1%}
+  table.fx td{background:#fff}
+  .tip{background:#fdf4e7;border:1px solid #f0dcc0;border-radius:8px;padding:10px 14px;margin:12px 0;
+    font-size:15px;font-family:ui-sans-serif,system-ui,sans-serif}
+  .tip b{color:var(--amber)}
+  .vb{background:var(--leaf);border:1px solid var(--leaf-d);border-radius:10px;padding:10px 16px;margin:12px 0;font-size:15px}
+  .vb .lbl{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--amber);font-weight:700;margin:0 0 4px}
+  .vb p{margin:0}
+  .vb details{border:none;padding:8px 0 2px}
+  .vb summary{font-size:14px;font-family:ui-sans-serif,system-ui,sans-serif;color:var(--moss-d)}
+  .quiz{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 16px;margin-top:14px}
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:none}
+  summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;gap:8px;align-items:flex-start}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"?";flex:0 0 auto;width:22px;height:22px;background:var(--moss);color:#fff;
+    border-radius:50%;font-size:13px;display:flex;align-items:center;justify-content:center;font-family:ui-sans-serif,system-ui,sans-serif}
+  details[open] summary::before{content:"✓";background:var(--amber)}
+  .ans{margin:8px 0 2px 30px;font-size:15px;color:#22362b}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);text-align:center;padding:0 18px 40px}
+  th{background:var(--moss);color:#fff;font-weight:600}
+  tr:nth-child(even) td{background:#f3f5f0}
+</style>
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<header>
+  <a class="home" href="../../../../index.html">← Alle vakken</a>
+  <p class="kicker">Biologie · Thema 7 Regeling · Basisstof 1</p>
+  <h1>Regeling en homeostase</h1>
+  <p>Normwaarde, dynamisch evenwicht, regelkringen, negatieve en positieve terugkoppeling en het in- en uitwendig milieu. Zelftoets met de opdrachten 1–9 onderaan.</p>
+</header>
+
+<nav>
+  <a href="#doelen">Leerdoelen</a>
+  <a href="#homeostase">Homeostase</a>
+  <a href="#regelkring">Regelkring</a>
+  <a href="#terugkoppeling">Terugkoppeling</a>
+  <a href="#milieu">In- en uitwendig milieu</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="doelen">
+  <span class="bs">Leerdoelen</span>
+  <ul>
+    <li><b class="t">7.1.1</b> Je kunt uitleggen wat homeostase is.</li>
+    <li><b class="t">7.1.2</b> Je kunt uitleggen hoe regelkringen een rol spelen bij het handhaven van de homeostase bij de mens.</li>
+  </ul>
+</section>
+
+<section id="homeostase">
+  <span class="bs">7.1.1</span>
+  <h2>Homeostase</h2>
+  <ul>
+    <li>Een organisme neemt stoffen op uit de omgeving (zuurstof, voedingsstoffen) en geeft stoffen af (CO₂, urine, ontlasting, zweet).</li>
+    <li>Je lichaam houdt veel factoren rond een bepaalde waarde: de <b class="t">normwaarde</b>. Bijv. <b class="t">zuurstofconcentratie</b> en <b class="t">glucoseconcentratie</b> in het bloed, de <b class="t">osmotische waarde</b> van lichaamsvloeistoffen en de <b class="t">lichaamstemperatuur</b>.</li>
+    <li>Die waarden zijn niet constant maar <b class="t">schommelen</b> rond de normwaarde → <b class="t">dynamisch evenwicht</b>. Lichaamstemperatuur schommelt rond <b class="t">36,4 °C</b>, omdat omgevingstemperatuur en activiteit hem steeds beïnvloeden.</li>
+    <li>Een <b class="t">regelkring</b> zorgt dat een factor rond de normwaarde blijft schommelen.</li>
+    <li><b class="t">Homeostase</b> = het in stand houden van een dynamisch evenwicht in het <b class="t">inwendige milieu</b> (Grieks: <i>homoios</i> = gelijk, <i>stasis</i> = toestand).</li>
+    <li>Homeostase is een vorm van <b class="t">zelfregulatie</b>: het organisme houdt zichzelf zo in leven.</li>
+  </ul>
+</section>
+
+<section id="regelkring">
+  <span class="bs">7.1.2</span>
+  <h2>Regelkringen</h2>
+  <ul>
+    <li>Een regelkring bestaat uit een <b class="t">sensor</b>, een <b class="t">controlecentrum</b> en een <b class="t">effector</b> (= uitvoerder).</li>
+    <li>Voorbeeld uit de techniek: <b class="t">centrale verwarming</b>.</li>
+  </ul>
+  <table>
+    <tr><th>Onderdeel</th><th>Verwarming</th><th>Functie</th></tr>
+    <tr><td>Sensor</td><td>thermostaat</td><td>meet de temperatuur; hierop stel je de normwaarde in</td></tr>
+    <tr><td>Controlecentrum</td><td>verwarmingsketel</td><td>krijgt het signaal en verwarmt water (of stopt ermee)</td></tr>
+    <tr><td>Effector</td><td>radiatoren</td><td>geven warmte af aan de kamer</td></tr>
+  </table>
+  <div class="step"><ol>
+    <li>Temperatuur onder normwaarde → thermostaat geeft signaal → ketel slaat aan → radiatoren warm → temperatuur stijgt.</li>
+    <li>Normwaarde bereikt → geen signaal meer → ketel stopt → radiatoren koelen af → temperatuur daalt langzaam.</li>
+    <li>Onder normwaarde → opnieuw signaal. Zo blijft de temperatuur min of meer gelijk.</li>
+  </ol></div>
+</section>
+
+<section id="terugkoppeling">
+  <span class="bs">7.1.2</span>
+  <h2>Negatieve en positieve terugkoppeling</h2>
+  <table>
+    <tr><th></th><th>Negatieve terugkoppeling</th><th>Positieve terugkoppeling</th></tr>
+    <tr><td>Wat?</td><td>toename van het resultaat <b>remt</b> het proces (en afname stimuleert het)</td><td>toename van het resultaat <b>versterkt</b> het proces</td></tr>
+    <tr><td>Gevolg</td><td>waarde blijft rond de normwaarde → <b>homeostase</b></td><td>proces gaat steeds sneller tot een eindpunt</td></tr>
+    <tr><td>Voorbeelden</td><td>verwarming, lichaamstemperatuur, bloeddruk, testosteron</td><td>weeën (oxytocine), bloedstolling, prolactine bij borstvoeding</td></tr>
+  </table>
+  <div class="tip"><b>Tip:</b> In schema's (BiNaS 89C) staat bij negatieve terugkoppeling een <b>−</b> (remming) en een <b>+</b> (stimulering). Vraag jezelf af: gaat de waarde terug naar de normwaarde (negatief) of schiet hij verder door (positief)?</div>
+</section>
+
+<section id="milieu">
+  <span class="bs">7.1.1</span>
+  <h2>In- en uitwendig milieu</h2>
+  <ul>
+    <li>Bij meercellige organismen hebben de meeste cellen geen direct contact met het <b class="t">uitwendige milieu</b> (de omgeving).</li>
+    <li>Tussen de cellen van een weefsel zit <b class="t">weefselvloeistof</b>. <b class="t">Bloed + weefselvloeistof = inwendig milieu</b>.</li>
+    <li>Tussen inwendig en uitwendig milieu zit <b class="t">ten minste één cellaag</b>.</li>
+    <li>De inhoud van <b class="t">darmen, longen en blaas</b> hoort bij het <b class="t">uitwendige</b> milieu.</li>
+    <li>Homeostatische regelkringen zorgen dat de omstandigheden in het inwendige milieu niet te veel veranderen.</li>
+  </ul>
+</section>
+
+<section id="toets">
+  <h2 style="color:var(--moss-d)">Zelftoets</h2>
+  <p class="goal">Tik op een vraag voor het antwoord. Opdrachten 1–9 uit het boek.</p>
+  <div class="quiz">
+    <details><summary>Wat is homeostase?</summary>
+      <p class="ans">Het in stand houden van een dynamisch evenwicht in het inwendige milieu van een organisme.</p></details>
+    <details><summary>Wat is een dynamisch evenwicht?</summary>
+      <p class="ans">Een waarde is niet precies constant, maar schommelt rond een normwaarde zonder er te ver van af te wijken.</p></details>
+    <details><summary>Uit welke drie onderdelen bestaat een regelkring?</summary>
+      <p class="ans">Sensor, controlecentrum en effector.</p></details>
+    <details><summary>Wat is het verschil tussen negatieve en positieve terugkoppeling?</summary>
+      <p class="ans">Negatief: toename van het resultaat remt het proces (waarde blijft rond normwaarde). Positief: toename van het resultaat versterkt het proces.</p></details>
+    <details><summary>Wat hoort bij het inwendige milieu?</summary>
+      <p class="ans">Bloed en weefselvloeistof. De inhoud van darmen, longen en blaas hoort bij het uitwendige milieu.</p></details>
+
+    <details><summary>1 · Hoort het vocht in een blaar bij het inwendige of uitwendige milieu?</summary>
+      <p class="ans">Inwendig milieu: het vocht is weefselvloeistof en ligt onder de huid, dus er zit een cellaag tussen het vocht en de omgeving.</p></details>
+    <details><summary>2a · Hoort lucht in de buis van Eustachius bij het inwendige of uitwendige milieu?</summary>
+      <p class="ans">Uitwendig milieu: de buis staat via de keelholte in open verbinding met de buitenlucht; de lucht zit niet tussen cellen.</p></details>
+    <details><summary>2b · Waar hoort het vocht tussen de cellen van darmwand, longweefsel en blaaswand bij?</summary>
+      <p class="ans">Bij het inwendige milieu: het is weefselvloeistof en er zit ten minste één cellaag tussen dit vocht en de inhoud van darm, long of blaas.</p></details>
+    <details><summary>3a · Is de aanmaak van testosteron een voorbeeld van positieve of negatieve terugkoppeling? (BiNaS 89C)</summary>
+      <p class="ans">Negatief: een hoge testosteronconcentratie remt de hypothalamus en hypofyse, waardoor er minder testosteron wordt gemaakt.</p></details>
+    <details><summary>3b · Leg uit dat bij de aanmaak van testosteron een dynamisch evenwicht ontstaat.</summary>
+      <p class="ans">Is er veel testosteron, dan wordt de aanmaak geremd en daalt de concentratie. Is er weinig, dan valt de remming weg en stijgt hij weer. De concentratie schommelt dus rond een normwaarde.</p></details>
+    <details><summary>4 · Oxytocine en weeën: positieve of negatieve terugkoppeling?</summary>
+      <p class="ans">Positief: weeën → druk van het hoofdje → meer oxytocine → sterkere weeën → nog meer druk. Het resultaat versterkt het proces.</p></details>
+    <details><summary>5a · Bloedstolling (ADP trekt meer bloedplaatjes aan): positief of negatief?</summary>
+      <p class="ans">Positief: geactiveerde bloedplaatjes geven ADP af, dat nog meer bloedplaatjes aantrekt, die weer ADP afgeven. Het proces versterkt zichzelf.</p></details>
+    <details><summary>5b · Waarom is deze terugkoppeling belangrijk bij bloedstolling?</summary>
+      <p class="ans">Zo wordt de wond snel gedicht en blijft het bloedverlies beperkt.</p></details>
+    <details><summary>5c · Hoe helpt snelle bloedstolling de homeostase van het inwendige milieu?</summary>
+      <p class="ans">Er gaat weinig bloed verloren, dus bloedvolume en bloeddruk blijven op peil, en er komen minder ziekteverwekkers het inwendige milieu binnen.</p></details>
+    <details><summary>6a · Heeft de patiënt aan het begin van de koortsaanval het koud of warm?</summary>
+      <p class="ans">Koud: de normwaarde is verhoogd, dus de echte lichaamstemperatuur ligt eronder. Het lichaam "voelt" dat als te koud en gaat rillen om warmte te maken.</p></details>
+    <details><summary>6b · Dagen later voelt de patiënt zich warm en gaat zweten. Wat is er met de normwaarde gebeurd?</summary>
+      <p class="ans">De normwaarde is weer gedaald (naar ±36,4 °C). De lichaamstemperatuur is nog hoog en ligt nu boven de normwaarde, dus het lichaam koelt af door te zweten.</p></details>
+    <details><summary>7a · Prolactine: noem de sensoren, het controlecentrum en de effectoren.</summary>
+      <p class="ans">Sensoren: gevoelige zenuwuiteinden in de tepel. Controlecentrum: de hersenen (hypothalamus/hypofyse). Effectoren: de melkklieren.</p></details>
+    <details><summary>7b · Is de afgifte van prolactine negatieve of positieve terugkoppeling?</summary>
+      <p class="ans">Positief: hoe meer de baby drinkt, hoe meer prolactine wordt afgegeven en hoe meer melk wordt gemaakt. Het resultaat versterkt het proces.</p></details>
+    <details><summary>7c · Hoe beïnvloedt langzaam afbouwen van de voedingen de prolactine en de melkproductie?</summary>
+      <p class="ans">Minder voedingen → de tepel wordt minder geprikkeld en de borst blijft langer vol, zodat de stof in de melk toeneemt → de hersenen geven minder prolactine af → minder melk. Door langzaam af te bouwen daalt de productie geleidelijk.</p></details>
+    <details><summary>8 · Quinn staat op (afb. 4 en 5). Hoe ziet de regelkring eruit?</summary>
+      <p class="ans">Bloeddruk daalt (B: <b>−</b>) → bloeddrukzintuigen in halsslagader/aorta → impulsen naar het verlengde merg → verlengde merg stuurt het hart aan: hartslag omhoog (A: <b>+</b>) → bloeddruk in de halsslagader stijgt weer (C: <b>+</b>). Pijlen: halsslagader → verlengde merg → hart → halsslagader.</p></details>
+    <details><summary>9 · Leg met afb. 6 uit dat de koningsvis een normwaarde voor lichaamstemperatuur heeft.</summary>
+      <p class="ans">Als de vis dieper zwemt, daalt de watertemperatuur van ±14 °C naar ±9–10 °C, maar de temperatuur van de borstvinspier blijft rond 13–14 °C. De lichaamstemperatuur wordt dus rond een vaste waarde gehouden.</p></details>
+  </div>
+</section>
+
+<footer>Biologie VWO · Thema 7 Regeling · Basisstof 1. Vraag jezelf bij elke regelkring af: wat is de sensor, het controlecentrum en de effector, en is het negatief of positief?</footer>
+</main>
+</body>
+</html>
