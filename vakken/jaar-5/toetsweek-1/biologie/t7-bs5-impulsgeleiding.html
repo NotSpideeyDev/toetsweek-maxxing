@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BI T7 BS5 — Impulsgeleiding</title>
+<style>
+  :root{
+    --ink:#14241c;--moss:#3c6e54;--moss-d:#2a5340;--soil:#5e7466;
+    --leaf:#e6efe9;--leaf-d:#c9dccf;--paper:#f9fbf9;--amber:#c47a2c;--line:#d3ddd6;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.55;font-size:17px}
+  header{background:linear-gradient(160deg,var(--moss-d),var(--moss));color:#f1f7f3;padding:34px 20px 26px}
+  header .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.18em;font-size:12px;opacity:.85;margin:0 0 6px}
+  header h1{margin:0;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  header p{margin:10px 0 0;font-size:15px;opacity:.92;max-width:60ch;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:8px;overflow-x:auto;font-family:ui-sans-serif,system-ui,sans-serif}
+  nav a{flex:0 0 auto;text-decoration:none;color:var(--moss-d);background:var(--leaf);
+    border:1px solid var(--leaf-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+  nav a:hover{background:var(--leaf-d)}
+  main{max-width:760px;margin:0 auto;padding:8px 18px 60px}
+  section{margin-top:30px;scroll-margin-top:60px}
+  .bs{font-family:ui-sans-serif,system-ui,sans-serif;display:inline-block;background:var(--moss);
+    color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:5px;font-weight:700}
+  h2{font-size:21px;margin:10px 0 4px;letter-spacing:-.01em}
+  ul{margin:6px 0 8px;padding-left:20px}
+  li{margin:4px 0}
+  b.t{color:var(--moss-d)}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+  table.fx td.eq{font-family:"Cambria Math","Times New Roman",serif;font-size:17px;white-space:nowrap;
+    background:#fff;color:var(--moss-d);font-weight:600;width:1%}
+  table.fx td{background:#fff}
+  .tip{background:#fdf4e7;border:1px solid #f0dcc0;border-radius:8px;padding:10px 14px;margin:12px 0;
+    font-size:15px;font-family:ui-sans-serif,system-ui,sans-serif}
+  .tip b{color:var(--amber)}
+  .vb{background:var(--leaf);border:1px solid var(--leaf-d);border-radius:10px;padding:10px 16px;margin:12px 0;font-size:15px}
+  .vb .lbl{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--amber);font-weight:700;margin:0 0 4px}
+  .vb p{margin:0}
+  .vb details{border:none;padding:8px 0 2px}
+  .vb summary{font-size:14px;font-family:ui-sans-serif,system-ui,sans-serif;color:var(--moss-d)}
+  .quiz{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 16px;margin-top:14px}
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:none}
+  summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;gap:8px;align-items:flex-start}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"?";flex:0 0 auto;width:22px;height:22px;background:var(--moss);color:#fff;
+    border-radius:50%;font-size:13px;display:flex;align-items:center;justify-content:center;font-family:ui-sans-serif,system-ui,sans-serif}
+  details[open] summary::before{content:"✓";background:var(--amber)}
+  .ans{margin:8px 0 2px 30px;font-size:15px;color:#22362b}
+  .goal{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--soil);font-weight:600;margin:0 0 10px}
+  footer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soil);text-align:center;padding:0 18px 40px}
+  th{background:var(--moss);color:#fff;font-weight:600}
+  tr:nth-child(even) td{background:#f3f5f0}
+</style>
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<header>
+  <a class="home" href="../../../../index.html">← Alle vakken</a>
+  <p class="kicker">Biologie · Thema 7 Regeling · Basisstof 5</p>
+  <h1>Impulsgeleiding</h1>
+  <p>Rustpotentiaal, actiepotentiaal, refractaire periode, impulsfrequentie, sprongsgewijze geleiding, synapsen, EPSP en IPSP en neurotransmitters. Zelftoets met de opdrachten 53–65 onderaan.</p>
+</header>
+
+<nav>
+  <a href="#doelen">Leerdoelen</a>
+  <a href="#rust">Rustpotentiaal</a>
+  <a href="#actie">Actiepotentiaal</a>
+  <a href="#frequentie">Sterkte &amp; frequentie</a>
+  <a href="#geleiding">Geleiding</a>
+  <a href="#synaps">Synaps</a>
+  <a href="#psp">EPSP &amp; IPSP</a>
+  <a href="#nt">Neurotransmitters</a>
+  <a href="#toets">Zelftoets</a>
+</nav>
+
+<main>
+
+<section id="doelen">
+  <span class="bs">Leerdoelen</span>
+  <ul>
+    <li><b class="t">7.5.1</b> Je kunt beschrijven hoe impulsgeleiding plaatsvindt.</li>
+    <li><b class="t">7.5.2</b> Je kunt beschrijven hoe impulsoverdracht plaatsvindt.</li>
+  </ul>
+</section>
+
+<section id="rust">
+  <span class="bs">7.5.1</span>
+  <h2>Rustpotentiaal</h2>
+  <ul>
+    <li><b class="t">Na⁺ en K⁺</b> vormen de basis voor impulsgeleiding (BiNaS 88D).
+      <ul>
+        <li><b class="t">Binnen</b> (cytoplasma): veel <b>K⁺</b> en negatief geladen grote moleculen (eiwitten).</li>
+        <li><b class="t">Buiten</b> (intercellulaire ruimte): veel <b>Na⁺</b> en Cl⁻.</li>
+      </ul>
+    </li>
+    <li>In rust: buitenkant membraan <b class="t">positief</b>, binnenkant <b class="t">negatief</b>. Dit spanningsverschil is bij alle neuronen ongeveer <b class="t">−70 mV</b> = de <b class="t">rustpotentiaal</b>.</li>
+    <li>In stand gehouden door <b class="t">natrium-kaliumpompen</b> (ionenpompen, BiNaS 88E): <b>actief transport</b> met energie uit <b>ATP</b>: Na⁺ de cel uit, K⁺ de cel in. Sommige ionen diffunderen via kanalen terug (passief transport), dus de pomp moet continu werken.</li>
+  </ul>
+</section>
+
+<section id="actie">
+  <span class="bs">7.5.1</span>
+  <h2>Actiepotentiaal</h2>
+  <ul>
+    <li>Door een prikkel of door binding van neurotransmitters verandert de <b class="t">permeabiliteit</b> van het membraan: <b class="t">ionkanalen</b> gaan open (elk kanaal laat één specifiek ion door).</li>
+  </ul>
+  <table>
+    <tr><th>Fase</th><th>Wat gebeurt er?</th><th>Potentiaal</th></tr>
+    <tr><td>1 Rustfase</td><td>Na⁺- en K⁺-kanalen dicht</td><td>−70 mV</td></tr>
+    <tr><td>2 Depolarisatie</td><td>Na⁺-kanalen open → Na⁺ stroomt de cel in → binnenkant minder negatief. Bij de <b>drempelwaarde</b> (≈ −50 mV) ontstaat een <b>actiepotentiaal</b></td><td>tot ≈ +30 mV (± 1 ms)</td></tr>
+    <tr><td>3 Repolarisatie</td><td>Na⁺-kanalen dicht, K⁺-kanalen open → K⁺ stroomt naar buiten → binnenkant weer negatief</td><td>terug naar −70 mV</td></tr>
+    <tr><td>4 Hyperpolarisatie</td><td>K⁺-kanalen sluiten <b>vertraagd</b> → even lager dan −70 mV</td><td>&lt; −70 mV</td></tr>
+    <tr><td>5 Rustfase</td><td>Na-K-pomp herstelt de oorspronkelijke ionenverdeling</td><td>−70 mV</td></tr>
+  </table>
+  <ul>
+    <li><b class="t">Refractaire periode (herstelfase)</b>: van het begin van de actiepotentiaal tot herstel van de rustpotentiaal kan dat stuk membraan (bijna) geen nieuwe impuls geleiden. Duurt ook ongeveer <b>1 ms</b>. BiNaS 88F.</li>
+  </ul>
+</section>
+
+<section id="frequentie">
+  <span class="bs">7.5.1</span>
+  <h2>Impulssterkte en impulsfrequentie</h2>
+  <ul>
+    <li><b class="t">Alles-of-nietsprincipe</b>: te zwakke prikkel → te weinig Na⁺-kanalen open → drempelwaarde niet gehaald → geen impuls. De kleinste prikkel die wél een impuls geeft = de <b class="t">prikkeldrempel</b>.</li>
+    <li><b class="t">Impulssterkte</b> = grootte van de spanningsverandering: voor <b>alle neuronen gelijk</b>.</li>
+    <li><b class="t">Impulsfrequentie</b> = aantal impulsen per tijdseenheid (vaak per ms). <b>Sterkere prikkel → hogere impulsfrequentie</b> (hard geluid, brullende leeuw).</li>
+    <li>In motorische neuronen: hogere impulsfrequentie → krachtiger spiersamentrekking of meer afgifte door klieren.</li>
+  </ul>
+  <div class="tip"><b>Onthoud:</b> de sterkte van een prikkel wordt doorgegeven via de <b>frequentie</b>, nooit via de impulssterkte.</div>
+</section>
+
+<section id="geleiding">
+  <span class="bs">7.5.1</span>
+  <h2>Geleiding langs de uitloper</h2>
+  <h3>Ongemyeliniseerde uitloper</h3>
+  <div class="step"><ol>
+    <li>Op plaats P stromen Na⁺-ionen naar binnen → actiepotentiaal.</li>
+    <li>De Na⁺-instroom depolariseert het aangrenzende membraan Q tot de drempelwaarde → ook daar gaan Na⁺-kanalen open.</li>
+    <li>Ondertussen stromen bij P K⁺-ionen naar buiten → P repolariseert (herstelfase).</li>
+    <li>Dit herhaalt zich steeds in het volgende stuk: de impuls verplaatst zich langs het membraan.</li>
+  </ol></div>
+  <h3>Sprongsgewijze impulsgeleiding</h3>
+  <ul>
+    <li>Bij een axon met <b class="t">myelineschede</b> kan de lading alleen veranderen bij de <b class="t">insnoeringen</b>. De impuls 'springt' van insnoering naar insnoering.</li>
+    <li>Tot wel <b class="t">50× zo snel</b> als zonder myelineschede.</li>
+  </ul>
+</section>
+
+<section id="synaps">
+  <span class="bs">7.5.2</span>
+  <h2>Neurotransmitters en impulsoverdracht</h2>
+  <ul>
+    <li>Een synaps bestaat uit een <b class="t">presynaptisch membraan</b> (uiteinde axon), de <b class="t">synapsspleet</b> en een <b class="t">postsynaptisch membraan</b> (doelwitcel). BiNaS 88G.</li>
+    <li>Zonder impuls: rustpotentiaal aan beide kanten.</li>
+    <li>Impuls komt aan → neurotransmitters in de spleet → binden aan <b class="t">receptoreiwitten op ionkanalen</b> → ruimtelijke structuur verandert → kanaal gaat open → ionen diffunderen de cel in.</li>
+    <li>Neurotransmitters blijven heel kort: ze worden door <b>enzymen afgebroken</b> of door het presynaptische membraan <b>opgenomen</b>. Het effect duurt enkele milliseconden.</li>
+  </ul>
+</section>
+
+<section id="psp">
+  <span class="bs">7.5.2</span>
+  <h2>EPSP, IPSP en summatie</h2>
+  <table>
+    <tr><th></th><th>EPSP</th><th>IPSP</th></tr>
+    <tr><td>Naam</td><td><b>exciterend</b> postsynaptisch potentiaal (exciteren = opwekken)</td><td><b>inhiberend</b> postsynaptisch potentiaal (inhiberen = remmen)</td></tr>
+    <tr><td>Kanalen</td><td>Na⁺- en K⁺-kanalen open</td><td>K⁺- en/of Cl⁻-kanalen open; Na⁺-kanalen dicht</td></tr>
+    <tr><td>Effect</td><td>kleine <b>depolarisatie</b></td><td>kleine <b>hyperpolarisatie</b></td></tr>
+  </table>
+  <ul>
+    <li>Eén EPSP is niet genoeg om de drempelwaarde te halen.</li>
+    <li>Komt uit meerdere axonuiteinden tegelijk of kort na elkaar neurotransmitter vrij, dan tellen de depolarisaties op: <b class="t">summatie</b>. Zo kan de drempelwaarde wél worden gehaald.</li>
+    <li>IPSP's kunnen het effect van EPSP's <b>neutraliseren</b>. Alleen als de som van alle EPSP's en IPSP's de drempelwaarde overschrijdt, ontstaat een actiepotentiaal.</li>
+  </ul>
+</section>
+
+<section id="nt">
+  <span class="bs">7.5.2</span>
+  <h2>Soorten neurotransmitters en stoffen</h2>
+  <ul>
+    <li>Meer dan 50 verschillende neurotransmitters, vooral in de hersenen.</li>
+    <li><b class="t">Direct</b>: receptoreiwit opent of sluit zelf een ionkanaal (snel).</li>
+    <li><b class="t">Indirect</b>: via een <b class="t">second messenger</b> (cascade) → trager en langer durend. Bijv. <b>noradrenaline, dopamine, serotonine, histamine</b>; rol bij gevoelens en slaap.</li>
+    <li>Geneesmiddelen, genotsmiddelen en drugs beïnvloeden de impulsoverdracht door:
+      <ul>
+        <li>aanmaak of afgifte van neurotransmitters te stimuleren of te remmen;</li>
+        <li>afbraak of heropname te remmen (neurotransmitter blijft langer in de spleet);</li>
+        <li>een neurotransmitter te <b>imiteren</b> (binden aan dezelfde receptor).</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section id="toets">
+  <h2 style="color:var(--moss-d)">Zelftoets</h2>
+  <p class="goal">Tik op een vraag voor het antwoord. Opdrachten 53–65 uit het boek.</p>
+  <div class="quiz">
+    <details><summary>Hoe groot is de rustpotentiaal en hoe wordt die in stand gehouden?</summary>
+      <p class="ans">Ongeveer −70 mV. De natrium-kaliumpomp pompt met ATP Na⁺ de cel uit en K⁺ de cel in.</p></details>
+    <details><summary>Wat gebeurt er bij depolarisatie en bij repolarisatie?</summary>
+      <p class="ans">Depolarisatie: Na⁺-kanalen open, Na⁺ de cel in. Repolarisatie: Na⁺-kanalen dicht, K⁺-kanalen open, K⁺ de cel uit.</p></details>
+    <details><summary>Wat is het verschil tussen een EPSP en een IPSP?</summary>
+      <p class="ans">EPSP: kleine depolarisatie (opwekkend). IPSP: kleine hyperpolarisatie (remmend).</p></details>
+
+    <details><summary>53a · Je balt je vuist. Verandert de impulssterkte in de motorische neuronen?</summary>
+      <p class="ans">Nee. De impulssterkte is voor alle neuronen altijd gelijk (alles-of-nietsprincipe).</p></details>
+    <details><summary>53b · Verandert de impulsfrequentie?</summary>
+      <p class="ans">Ja, die wordt hoger. Een hogere impulsfrequentie geeft een krachtiger samentrekking van de spieren.</p></details>
+    <details><summary>53c · Verandert de geleidingssnelheid?</summary>
+      <p class="ans">Nee. De snelheid hangt af van het neuron zelf (bijv. myelineschede), niet van de prikkel.</p></details>
+    <details><summary>53d · Je steekt in het donker een kaars aan. Impulsfrequentie in de oogzenuw hoger of lager?</summary>
+      <p class="ans">Hoger: de prikkel (licht) wordt sterker.</p></details>
+    <details><summary>54 · Kan op een plek die net begint te repolariseren een depolarisatie ontstaan?</summary>
+      <p class="ans">Nee. Die plek zit in de refractaire periode: de Na⁺-kanalen zijn dicht en de normale ionenverdeling is nog niet hersteld.</p></details>
+    <details><summary>55 · Waarom verloopt de impulsgeleiding bij MS veel langzamer?</summary>
+      <p class="ans">Door de beschadigde myelineschede is er geen sprongsgewijze geleiding meer. De impuls moet over het hele membraan worden geleid (of lekt weg), en dat gaat veel langzamer.</p></details>
+    <details><summary>56 · Wordt het neuron in afb. 61 geactiveerd als alle synapsen worden gestimuleerd?</summary>
+      <p class="ans">Tel de oranje axonuiteinden (elk een EPSP) en de gele (elk een IPSP). Is het aantal oranje minstens 2 groter dan het aantal gele, dan wordt het neuron geactiveerd; anders niet. Controleer de telling in je boek.</p></details>
+    <details><summary>57a · Is het deel van neuron 2 in afb. 62 het uiteinde van een axon of een dendriet?</summary>
+      <p class="ans">Een dendriet: neuron 2 ontvangt de impuls (receptoren in het membraan); de impulsrichting is van neuron 1 naar neuron 2.</p></details>
+    <details><summary>57b/c · Waar zitten de ionkanalen voor impulsgeleiding en waardoor openen/sluiten ze?</summary>
+      <p class="ans">In het celmembraan van het axon van neuron 1. Ze openen en sluiten door een verandering van de membraanpotentiaal (depolarisatie).</p></details>
+    <details><summary>57d/e · Waar zitten de ionkanalen voor impulsoverdracht en waardoor openen/sluiten ze?</summary>
+      <p class="ans">In het postsynaptische membraan van neuron 2. Ze openen door binding van de neurotransmitter (glutamaat) aan de receptoreiwitten en sluiten weer als die loslaat.</p></details>
+    <details><summary>58 · Op welke twee manieren maakt de astrocyt de impulsoverdracht mogelijk?</summary>
+      <p class="ans">1. Hij neemt glutamaat op uit de synapsspleet, zodat de receptoren weer vrij komen en een nieuwe impuls kan worden overgedragen. 2. Hij zet glutamaat om in glutamine en geeft dat aan neuron 1, dat er weer glutamaat (neurotransmitter) van maakt. (Ook herstelt hij de ionenverdeling met de Na-K-pomp.)</p></details>
+    <details><summary>59a · Waarom gebruikt een neuron zonder impuls toch energie?</summary>
+      <p class="ans">De natrium-kaliumpomp moet steeds met ATP Na⁺ naar buiten en K⁺ naar binnen pompen, omdat ionen terugdiffunderen. Zo blijft de rustpotentiaal bestaan.</p></details>
+    <details><summary>59b · Actiepotentiaal en refractaire periode duren elk 2 ms. Maximale impulsfrequentie per seconde?</summary>
+      <p class="ans">Eén impuls duurt 2 + 2 = 4 ms. 1000 / 4 = 250 impulsen per seconde.</p></details>
+    <details><summary>59c · Welk gevolg heeft de refractaire periode voor de richting van de impuls?</summary>
+      <p class="ans">Het stuk membraan waar de impuls net was, zit in de refractaire periode en kan niet opnieuw depolariseren. De impuls kan dus niet terug en gaat maar één kant op.</p></details>
+    <details><summary>60 · Prikkel op Q, 100 m/s. Is de rustpotentiaal op P hersteld als de impuls bij S is?</summary>
+      <p class="ans">Nee. Q → S = 0,10 m → 0,10 / 100 = 1 ms. Q → P = 0,05 m → 0,5 ms. Als de impuls bij S is, is de actiepotentiaal op P pas 0,5 ms bezig. Actiepotentiaal + refractaire periode duren samen ongeveer 2 ms (BiNaS 88F), dus P is nog niet hersteld.</p></details>
+    <details><summary>61a · Waarom kan de impuls bij kunstmatige prikkeling twee kanten op?</summary>
+      <p class="ans">1. Aan beide kanten van de geprikkelde plek is het membraan nog in rust (niet refractair), dus beide kanten kunnen depolariseren. 2. De Na⁺-ionen die naar binnen stromen, verspreiden zich naar beide kanten en depolariseren het membraan aan beide kanten.</p></details>
+    <details><summary>62 · Worden EPSP's effectiever of minder effectief door gelijktijdige IPSP's?</summary>
+      <p class="ans">Minder effectief: IPSP's hyperpolariseren het membraan en neutraliseren (een deel van) de depolarisatie, dus wordt de drempelwaarde minder snel gehaald.</p></details>
+    <details><summary>63 · Neuron 1, 2 en 3 worden tegelijk geactiveerd. Wordt neuron 7 geactiveerd?</summary>
+      <p class="ans">Ja (lees de tekens in afb. 65 goed na). Neuron 4 krijgt van 1 alleen een ⊖ → niet actief. Neuron 6 krijgt van 3 twee ⊕ → actief. Neuron 5 krijgt ⊕ van 1, 2 en 6 en geen ⊖ (4 is niet actief) → actief. Neuron 7 krijgt ⊕ van 5 en 6 en geen ⊖ van 4 → verschil 2 → geactiveerd.</p></details>
+    <details><summary>64 · Hoe kan botox rimpels laten verdwijnen?</summary>
+      <p class="ans">Botuline voorkomt de afgifte van acetylcholine door motorische neuronen. Dan ontstaan er geen EPSP's/impulsen in de gelaatsspieren, dus die trekken niet meer samen en ontspannen. De huid wordt gladder.</p></details>
+    <details><summary>65 · Hoe beïnvloeden organofosforverbindingen de EPSP's van acetylcholine?</summary>
+      <p class="ans">Acetylcholinesterase wordt geremd, dus acetylcholine wordt niet afgebroken en blijft aan de receptoren binden. De EPSP's houden aan / ontstaan steeds opnieuw, waardoor spieren blijven samentrekken (krampen, verlamming).</p></details>
+  </div>
+</section>
+
+<footer>Biologie VWO · Thema 7 Regeling · Basisstof 5. Na⁺ naar binnen = depolarisatie, K⁺ naar buiten = repolarisatie.</footer>
+</main>
+</body>
+</html>
